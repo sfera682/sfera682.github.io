@@ -95,7 +95,7 @@ html, body {
 
 body {
 	font-family: 'Raleway', sans-serif;
-	color: var(--color-black);
+	color: #fff;
 	font-size: 1rem;
 	background-color: #fff;
 	margin-top: 0;
@@ -106,7 +106,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 }
 
 p b {
-	color: var(--color-black);
+	color: #fff;
 	font-weight: 700;
 }
 p strong {
@@ -631,7 +631,7 @@ body.body-home {
 }
 
 .banner {
-    padding: 0;
+    padding: 100px 0 0 0;
     position: relative;
 }
 
@@ -643,7 +643,7 @@ body.body-home {
     right: 0;
     bottom: 0;
     background:
-      linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 30%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0.3) 70%, rgba(255,255,255,0.1) 100%),
+      linear-gradient(90deg, rgba(20, 100, 255, 0.98) 0%, rgba(20, 100, 255, 0.9) 30%, rgba(20, 100, 255, 0.8) 50%, rgba(20, 100, 255, 0.7) 70%, rgba(20, 100, 255, 0.6) 100%),
       url(assets/img/bg.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -673,11 +673,43 @@ body.body-home {
 	font-size: 16px;
 	line-height: 1.6;
 }
-.banner-lead {
+.lead-line {
+	margin-bottom: 25px;
+	font-size: 28px;
+	font-weight: 700;
+	line-height: 1.4;
+	color: #fff;
+	text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+	list-style: none;
+	padding-left: 0;
+}
+
+.lead-line:last-child {
+	margin-bottom: 0;
+}
+
+.banner-lead-list {
 	margin-bottom: 16px;
-	font-size: 16px;
-	font-weight: 600;
-	line-height: 1.6;
+	list-style: none;
+	padding-left: 0;
+}
+
+.banner-lead-list .lead-line {
+	margin-bottom: 25px;
+	font-size: 28px;
+	font-weight: 700;
+	line-height: 1.4;
+	color: #fff;
+	text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+	padding-left: 40px;
+	background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="%23ffffff"><circle cx="10" cy="10" r="6"/></svg>');
+	background-repeat: no-repeat;
+	background-position: left 8px center;
+	background-size: 12px 12px;
+}
+
+.banner-lead-list .lead-line:last-child {
+	margin-bottom: 0;
 }
 .benefits-list li {
     display: flex;
@@ -712,7 +744,7 @@ body.body-home {
 	margin-bottom: 10px;
 }
 .banner-list li strong {
-	color: #313131;
+	color: #fff;
 }
 
 @media (max-width: 575.98px) {
@@ -768,25 +800,54 @@ body.body-home {
 .form-control {
 	padding: 12px;
 	border-radius: 16px;
-	border: 1px solid #313131;
+	border: 1px solid #fff;
 	background-color: transparent;
+	color: #fff !important;
+}
+
+.form-control::placeholder {
+	color: #fff !important;
+	opacity: 0.7;
+}
+
+input.form-control {
+	color: #fff !important;
+}
+
+input.form-control::placeholder {
+	color: #fff !important;
+	opacity: 0.7;
+}
+
+.form-control:focus {
+	background-color: #1a1a2e !important;
+	color: #fff !important;
+	border-color: #fff !important;
+	box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25) !important;
+}
+
+input.form-control:focus {
+	background-color: #1a1a2e !important;
+	color: #fff !important;
+	border-color: #fff !important;
+	box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25) !important;
 }
 .banner-form-btn {
 	padding: 12px;
 	border-radius: 16px;
 	font-weight: 600;
 	color: #fff;
-	background-color: #5265D8;
+	background-color: #28A745;
 }
 .form-check-input:checked {
-	background-color: #5265D8;
-	border-color: #5265D8;
+	background-color: #28A745;
+	border-color: #28A745;
 }
 .form-check span {
 	font-size: 12px;
 }
 .form-check span a {
-	color: #5265D8;
+	color: #FFD700;
 }
 .banner .card {
 	padding: 32px;
@@ -1183,7 +1244,7 @@ body.body-home {
 	border-radius: 16px;
 	font-weight: 600;
 	text-decoration: none;
-	color: #313131;
+	color: #fff;
 }
 .review-new .card {
 	border: 1.58px solid #e2eaf2;
@@ -1623,7 +1684,7 @@ body.body-home {
 }
 .all-objects .work-example a {
 	text-decoration: none;
-	color: #313131;
+	color: #fff;
 }
 .all-objects .work-descr {
 	position: absolute;
@@ -1741,7 +1802,7 @@ body.body-home {
 /*contacts-vse*/
 .contacts-vse a {
 	text-decoration: none;
-	color: #313131;
+	color: #fff;
 }
 .contacts-vse a:hover {
 	color: #5265D8;
@@ -1924,16 +1985,23 @@ body.body-home {
 		gap: 4px;
 	}
 	.banner {
-		padding: 0;
+		padding: 60px 0 0 0;
 	}
 	.banner::before {
 		background-position: 70% center;
 	}
 	.banner-title {
-		margin-bottom: 16px;
+		margin-bottom: 50px;
 		font-weight: 700;
-		font-size: 24px;
+		font-size: 28px;
 		line-height: 110%;
+	}
+	
+	.banner-lead-list .lead-line {
+		font-size: 20px;
+		margin-bottom: 18px;
+		padding-left: 32px;
+		background-size: 10px 10px;
 	}
 	.banner-list {
 		margin-bottom: 16px;
@@ -2257,7 +2325,7 @@ body.body-home {
 		margin-right: unset;
 	}
 	.banner {
-		padding: 0;
+		padding: 60px 0 0 0;
 	}
 	.banner-title {
 		font-size: 38px;
@@ -2372,7 +2440,7 @@ body.body-home {
 		margin-right: unset;
 	}
 	.banner {
-		padding: 0;
+		padding: 60px 0 0 0;
 	}
 	.banner .card {
 		padding: 16px;
