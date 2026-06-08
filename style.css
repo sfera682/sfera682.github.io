@@ -20,7 +20,6 @@ body {
 }
 
 a {
-    text-transform: none;
     text-decoration: none;
     color: inherit;
     transition: all 0.3s ease;
@@ -30,7 +29,6 @@ ul {
     list-style: none;
 }
 
-/* ЦВЕТОВЫЕ КЛАССЫ */
 .text-blue {
     color: #007bff;
 }
@@ -56,17 +54,9 @@ ul {
     padding: 10px 18px;
 }
 
-.btn--whatsapp-header:hover {
-    background-color: #0056b3;
-}
-
 .btn--primary {
     background-color: #007bff;
     color: white;
-}
-
-.btn--primary:hover {
-    background-color: #0056b3;
 }
 
 .btn--outline {
@@ -75,12 +65,7 @@ ul {
     color: #007bff;
 }
 
-.btn--outline:hover {
-    background-color: #007bff;
-    color: white;
-}
-
-/* ШАПКА САЙТА */
+/* ШАПКА */
 .header {
     background: #fff;
     padding: 20px 0;
@@ -112,17 +97,11 @@ ul {
 .logo__text {
     font-weight: 700;
     font-size: 18px;
-    letter-spacing: 0.5px;
 }
 
 .nav {
     display: flex;
     gap: 30px;
-}
-
-.nav__link {
-    font-weight: 500;
-    color: #333;
 }
 
 .nav__link.active, .nav__link:hover {
@@ -139,10 +118,9 @@ ul {
     font-weight: 600;
 }
 
-/* ПЕРВЫЙ ЭКРАН */
+/* ГЕРОЙ КУХНИ */
 .hero {
     background-color: #f4f9ff;
-    overflow: hidden;
     position: relative;
 }
 
@@ -155,7 +133,6 @@ ul {
 .hero__content {
     flex: 1;
     padding: 50px 0;
-    z-index: 2;
 }
 
 .hero__title {
@@ -163,7 +140,6 @@ ul {
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 15px;
-    color: #1e272e;
 }
 
 .hero__subtitle {
@@ -181,12 +157,10 @@ ul {
     align-items: center;
     gap: 10px;
     margin-bottom: 12px;
-    font-size: 16px;
 }
 
 .features-list i {
     color: #007bff;
-    font-size: 18px;
 }
 
 .hero__actions {
@@ -200,36 +174,24 @@ ul {
     background-image: url('https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1000&q=80');
     background-size: cover;
     background-position: center;
-    position: relative;
 }
 
-.hero__image::before {
-    content: '';
-    position: absolute;
-    left: 0; top: 0; bottom: 0; width: 150px;
-    background: linear-gradient(to right, #f4f9ff, transparent);
-}
-
-/* ЗАГОЛОВКИ СЕКЦИЙ */
+/* СЕКЦИИ */
 .section-title {
     text-align: center;
     font-size: 32px;
     font-weight: 700;
     margin-bottom: 5px;
-    color: #1e272e;
 }
 
 .section-subtitle {
     text-align: center;
     color: #747d8c;
     margin-bottom: 40px;
-    font-size: 16px;
 }
 
-/* СЕКЦИЯ ДО / ПОСЛЕ */
 .works {
     padding: 80px 0;
-    background-color: #fff;
 }
 
 .works__grid {
@@ -244,7 +206,6 @@ ul {
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.05);
     overflow: hidden;
-    border: 1px solid #f1f2f6;
 }
 
 .project-card__images {
@@ -272,13 +233,11 @@ ul {
     background: #007bff;
     color: white;
     padding: 6px 14px;
-    font-size: 12px;
     font-weight: 700;
     border-radius: 4px;
     z-index: 5;
 }
 
-/* Линия-разделитель имитирующая слайдер */
 .slider-divider {
     position: absolute;
     left: 50%;
@@ -303,8 +262,6 @@ ul {
     justify-content: center;
     box-shadow: 0 2px 10px rgba(0,0,0,0.15);
     color: #007bff;
-    font-size: 10px;
-    gap: 2px;
 }
 
 .project-card__info {
@@ -326,7 +283,6 @@ ul {
     align-items: center;
     gap: 10px;
     margin-bottom: 12px;
-    font-size: 15px;
 }
 
 .project-card__list i {
@@ -336,7 +292,7 @@ ul {
 /* ПОЧЕМУ ВЫБИРАЮТ НАС */
 .advantages {
     padding: 80px 0;
-    background-color: #f8fa9b0; /* Светлая подложка как на скрине */
+    background-color: #f8fafc;
 }
 
 .advantages__grid {
@@ -362,29 +318,17 @@ ul {
     margin-bottom: 15px;
 }
 
-.adv-item__text {
-    font-size: 14px;
-    color: #2c3e50;
-}
-
-/* ФОРМА ЗАХВАТА СИНЯЯ */
+/* ФОРМА СИНЯЯ */
 .cta-form-block {
     background: linear-gradient(135deg, #54a0ff, #007bff);
     border-radius: 16px;
     padding: 40px;
     color: white;
-    box-shadow: 0 10px 30px rgba(0,123,255,0.2);
 }
 
 .cta-form-block__content h3 {
     font-size: 26px;
     margin-bottom: 8px;
-}
-
-.cta-form-block__content p {
-    font-size: 15px;
-    opacity: 0.9;
-    margin-bottom: 25px;
 }
 
 .cta-form {
@@ -398,23 +342,13 @@ ul {
     padding: 15px;
     border: 1px solid rgba(255,255,255,0.3);
     border-radius: 8px;
-    font-size: 15px;
     outline: none;
-}
-
-.cta-form input::placeholder {
-    color: #a4b0be;
 }
 
 .btn--submit {
     background-color: #2f3542;
     color: white;
     font-weight: 600;
-    padding: 0 30px;
-}
-
-.btn--submit:hover {
-    background-color: #1e222b;
 }
 
 .cta-form-block__socials {
@@ -423,8 +357,6 @@ ul {
     justify-content: space-between;
     border-top: 1px solid rgba(255,255,255,0.2);
     padding-top: 20px;
-    font-size: 14px;
-    opacity: 0.9;
 }
 
 .social-icons {
@@ -440,7 +372,6 @@ ul {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 18px;
 }
 
 .social-icon--wa { color: #25D366; }
@@ -450,7 +381,6 @@ ul {
 .footer {
     background-color: #f1f5f9;
     padding: 60px 0 20px 0;
-    font-size: 14px;
     color: #64748b;
 }
 
@@ -464,24 +394,12 @@ ul {
 
 .footer__col h4 {
     color: #1e293b;
-    font-size: 13px;
-    font-weight: 700;
     margin-bottom: 20px;
-    letter-spacing: 0.5px;
 }
 
 .footer__col a {
     display: block;
     margin-bottom: 12px;
-}
-
-.footer__col a:hover {
-    color: #007bff;
-}
-
-.footer__desc {
-    margin-top: 15px;
-    line-height: 1.5;
 }
 
 .footer__phone {
@@ -496,10 +414,6 @@ ul {
     margin-top: 15px;
 }
 
-.footer__socials a {
-    font-size: 20px;
-}
-
 .footer__socials .wa { color: #25D366; }
 .footer__socials .tg { color: #0088cc; }
 
@@ -509,7 +423,7 @@ ul {
     font-size: 12px;
 }
 
-/* АДАПТИВНОСТЬ ПОД МОБИЛЬНЫЕ УСТРОЙСТВА */
+/* МЕДИА-ЗАПРОСЫ */
 @media (max-width: 992px) {
     .header__container, .hero__container, .project-card, .footer__container {
         flex-direction: column;
@@ -519,29 +433,15 @@ ul {
     }
     .project-card__images, .project-card__info, .cta-form {
         width: 100%;
-        flex-direction: column;
     }
     .hero__image {
         display: none;
     }
     .footer__container {
         grid-template-columns: 1fr;
-        gap: 20px;
     }
     .adv-item {
         border-right: none;
         border-bottom: 1px solid #e4e7eb;
-    }
-}
-
-@media (max-width: 576px) {
-    .advantages__grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .hero__title {
-        font-size: 28px;
-    }
-    .hero__actions {
-        flex-direction: column;
     }
 }
