@@ -1,3 +1,22 @@
+.banner-form-btn {
+    background-color: #4D92FA;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.banner-form-btn:hover {
+    background-color: #3B7BDD;
+}
+
+.form-control {
+    padding: 12px;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+}
 /* уведомление о заявке */
 .form-alert {
 	position: fixed;
