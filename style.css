@@ -1,32 +1,16 @@
-/* --- Глобальные стили --- */
+/* ОБЩИЕ СТИЛИ */
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Inter', sans-serif; background-color: #ffffff; color: #1e293b; line-height: 1.6; }
+body { font-family: 'Inter', sans-serif; }
 .container { width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 
-/* --- Шапка --- */
-.header { background: #fff; padding: 20px 0; border-bottom: 1px solid #e2e8f0; position: sticky; top: 0; z-index: 1000; }
-.header__container { display: flex; justify-content: space-between; align-items: center; }
-.logo__img { width: 50px; }
-
-/* --- Иконки (Точные пути из твоей папки assets/img/) --- */
+/* ИКОНКИ — исправлены пути под ваши файлы */
 .icon-small { content: url('./assets/img/phone-icon.png'); width: 20px; height: 20px; vertical-align: middle; }
 .icon-btn { content: url('./assets/img/WhatsApp_icon.png'); width: 22px; height: 22px; vertical-align: middle; }
+.footer__socials img { width: 24px; height: 24px; vertical-align: middle; }
 
-/* --- Кнопки --- */
-.btn { display: inline-flex; align-items: center; gap: 10px; padding: 12px 24px; border-radius: 8px; font-weight: 600; cursor: pointer; border: none; background: #007bff; color: #fff; transition: 0.3s; }
-.btn:hover { background: #0056b3; transform: translateY(-2px); }
-
-/* --- Сетка работ (Инстаграм) --- */
-.works-page { padding: 60px 0; }
-.works__grid-gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; }
-.work-card { border-radius: 16px; overflow: hidden; border: 1px solid #e2e8f0; background: #f8fafc; min-height: 700px; }
+/* СЕТКА РАБОТ */
+.works__grid-gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin: 40px 0; }
+.work-card { border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden; min-height: 700px; background: #f8fafc; }
 .work-card blockquote { width: 100% !important; margin: 0 !important; }
 
-/* --- Подвал --- */
-.footer { background: #f1f5f9; padding: 50px 0; margin-top: 60px; color: #64748b; }
-
-/* --- Адаптив --- */
-@media (max-width: 768px) {
-    .works__grid-gallery { grid-template-columns: 1fr; }
-    .header__container { flex-direction: column; gap: 15px; }
-}
+@media (max-width: 768px) { .works__grid-gallery { grid-template-columns: 1fr; } }
