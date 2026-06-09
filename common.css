@@ -1,10 +1,16 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Segoe UI', sans-serif; color: #1e293b; line-height: 1.6; }
+body { font-family: 'Inter', sans-serif; color: #1e293b; background-color: #f8fafc; }
 .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
 /* Шапка */
-.header { padding: 20px 0; border-bottom: 1px solid #e2e8f0; background: #fff; }
-.header-wrap { display: flex; justify-content: space-between; align-items: center; }
-.nav { display: flex; gap: 30px; font-weight: 500; }
-.nav a { text-decoration: none; color: #1e293b; }
-.btn-wa { display: flex; align-items: center; gap: 8px; background: #007bff; color: white; padding: 12px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; }
+.header { padding: 25px 0; background: #fff; border-bottom: 1px solid #e2e8f0; }
+.header-flex { display: flex; justify-content: space-between; align-items: center; }
+.nav a { margin-left: 30px; text-decoration: none; color: #1e293b; font-weight: 500; }
+.btn-wa { display: flex; align-items: center; gap: 10px; background: #007bff; color: white; padding: 12px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; }
+
+/* Футер */
+.footer { background: #fff; padding: 60px 0 30px; border-top: 1px solid #e2e8f0; margin-top: 80px; }
+.footer-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; }
+.footer h4 { margin-bottom: 20px; font-size: 16px; }
+.footer p, .footer a { color: #64748b; font-size: 14px; text-decoration: none; display: block; margin-bottom: 10px; }
+.copyright { text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid #e2e8f0; font-size: 13px; color: #94a3b8; }
