@@ -9,3 +9,12 @@ body { font-family: 'Inter', sans-serif; background-color: #f8fafc; }
 
 .footer { padding: 60px 0; border-top: 1px solid #e2e8f0; background: #fff; margin-top: 50px; }
 .footer-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; color: #64748b; }
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('assets/font/Raleway-Regular.ttf') format('truetype');
+}
+body { font-family: 'Raleway', sans-serif; background: #f8fafc; margin: 0; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+.header { background: #fff; padding: 20px 0; border-bottom: 1px solid #e2e8f0; }
+.header-wrap { display: flex; justify-content: space-between; align-items: center; }
