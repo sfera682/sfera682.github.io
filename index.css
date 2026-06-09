@@ -4,6 +4,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: #f8fafc;
@@ -94,9 +95,10 @@ body {
     display: block;
 }
 
-/* ГЛАВНЫЙ ЭКРАН (Сине-стальной градиент и разводка в две колонки) */
+/* ГЛАВНЫЙ ЭКРАН (Теперь с красивым синим затемнением поверх фото кухни bg) */
 .hero-section {
-    background: linear-gradient(135deg, #1e2e3d 0%, #111b24 100%);
+    background: linear-gradient(135deg, rgba(30, 46, 61, 0.85) 0%, rgba(17, 27, 36, 0.9) 100%), 
+                url('assets/img/bg.png') center/cover no-repeat;
     padding: 70px 0;
     color: #ffffff;
     min-height: 520px;
