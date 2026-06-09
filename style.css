@@ -15,7 +15,7 @@ body {
 
 .container {
     width: 100%;
-    max-width: 1000px; /* Сузили контейнер, чтобы карточки в 2 ряда не были гигантскими на больших экранах */
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -231,16 +231,17 @@ ul {
     font-size: 16px;
 }
 
-/* Умная адаптивная сетка (видео сами встают по ширине экрана) */
+/* Умная адаптивная сетка (видео сами встают по ширине) */
 .works__grid-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    /* Уменьшили minmax до 310px, чтобы в 1200px контейнер влезало 3 полноценных поста */
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
     gap: 30px;
-    max-width: 1200px; /* Немного расширили контейнер, чтобы на больших мониторах влезало больше видео */
+    max-width: 1200px;
     margin: 0 auto;
 }
 
-/* Адаптивный контейнер под автоматический пост с подписью из Instagram */
+/* ИСПРАВЛЕННЫЙ блок адаптивного контейнера Instagram: убрали min-height */
 .work-card {
     background: #ffffff;
     border-radius: 12px;
@@ -248,8 +249,8 @@ ul {
     overflow: hidden;
     border: 1px solid #e2e8f0;
     width: 100%;
-    min-height: 780px; /* Высота под плеер Инстаграма и текст под ним */
-    display: flex;
+    /* ГЛАВНОЕ ИСПРАВЛЕНИЕ: высота карточки теперь гибкая */
+    height: auto; 
     transition: transform 0.3s ease;
 }
 
@@ -259,8 +260,8 @@ ul {
 
 .work-card iframe {
     width: 100% !important;
-    height: 100% !important;
-    min-height: 780px;
+    /* iframe теперь занимает 100% по высоте гибкого контейнера */
+    height: 100% !important; 
     border: none !important;
     margin: 0 !important;
     padding: 0 !important;
@@ -478,7 +479,7 @@ ul {
     color: #94a3b8;
 }
 
-/* АДАПТИВНОСТЬ (МОБИЛЬНЫЕ УСТРОЙСТВА И ПЛАНШЕТЫ) */
+/* АДАПТИВНОСТЬ (МОБИЛЬНЫЕ УСТРОЙСТВА) */
 @media (max-width: 768px) {
     .hero__container {
         flex-direction: column;
@@ -495,15 +496,10 @@ ul {
         justify-content: center;
     }
     
-    /* На смартфонах вытягиваем видео по одному в ряд */
     .works__grid-gallery {
         grid-template-columns: 1fr;
         max-width: 100%;
         gap: 20px;
-    }
-    
-    .work-card, .work-card iframe {
-        min-height: 620px; /* Чуть уменьшаем высоту для мобильных экранов */
     }
     
     .advantages__grid {
