@@ -1,13 +1,18 @@
-.hero { display: flex; align-items: center; gap: 40px; padding: 60px 0; }
-.hero-text { flex: 1; }
-.hero-text h1 { font-size: 48px; margin-bottom: 20px; }
-.hero-img { flex: 1; border-radius: 20px; }
+/* Hero Секция */
+.hero { display: flex; align-items: center; gap: 60px; padding: 60px 0; }
+.hero__text h1 { font-size: 48px; line-height: 1.1; margin-bottom: 20px; color: #1e293b; }
+.hero__img { width: 50%; border-radius: 20px; object-fit: cover; }
 
-.features { padding: 60px 0; text-align: center; }
-.features-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 15px; margin-top: 40px; }
-.feat-card { padding: 20px; border: 1px solid #e2e8f0; border-radius: 12px; }
+/* Сетка преимуществ */
+.features-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 20px; padding: 40px 0; }
+.feature-card { background: #fff; padding: 30px 15px; border-radius: 12px; text-align: center; border: 1px solid #e2e8f0; }
 
-.form-block { background: #1e73be; color: white; padding: 50px; border-radius: 20px; display: flex; justify-content: space-between; align-items: center; }
-.form-inputs { display: flex; gap: 10px; }
-.form-inputs input { padding: 12px; border-radius: 8px; border: none; }
-.btn-submit { background: #007bff; color: white; border: none; padding: 12px 20px; border-radius: 8px; cursor: pointer; }
+/* Блок записи */
+.contact-form { background: #3b82f6; padding: 50px; border-radius: 20px; color: #fff; display: flex; justify-content: space-between; align-items: center; }
+.form-inputs { display: flex; gap: 15px; }
+.form-inputs input { padding: 15px; border-radius: 8px; border: none; width: 220px; }
+.btn-submit { background: #007bff; color: white; padding: 15px 25px; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; }
+
+/* Подвал */
+.footer { padding: 60px 0; background: #fff; border-top: 1px solid #e2e8f0; }
+.footer__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; }
