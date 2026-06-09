@@ -15,7 +15,7 @@ body {
 
 .container {
     width: 100%;
-    max-width: 1100px; /* Идеальная ширина для двух крупных колонок */
+    max-width: 1100px; /* Идеальный размер для двух красивых колонок */
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -224,22 +224,20 @@ ul {
     text-transform: uppercase;
 }
 
+/* Скрыли подзаголовок, чтобы Инстаграм не воровал его текст */
 .section-subtitle {
-    text-align: center;
-    color: #64748b;
-    margin-bottom: 50px;
-    font-size: 16px;
+    display: none;
 }
 
-/* ВОЗВРАЩАЕМ КРАСИВЫЕ ДВЕ КОЛОНКИ: так плеер Инстаграма гарантированно покажет текст */
+/* Сетка строго на 2 видео в ряд на компьютерах */
 .works__grid-gallery {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 35px;
-    margin: 0 auto;
+    margin: 40px auto 0 auto;
 }
 
-/* Оптимальные настройки под авто-пост */
+/* Карточка без жесткого ограничения снизу */
 .work-card {
     background: #ffffff;
     border-radius: 12px;
@@ -247,7 +245,7 @@ ul {
     overflow: hidden;
     border: 1px solid #e2e8f0;
     width: 100%;
-    min-height: 820px; /* Дали запас по высоте, чтобы длинные тексты точно раскрывались */
+    height: auto; 
     display: flex;
     transition: transform 0.3s ease;
 }
@@ -256,29 +254,30 @@ ul {
     transform: translateY(-5px);
 }
 
+/* Фиксированная высота ТОЛЬКО для видеочасти, а текст Инстаграм раскроет ниже сам */
 .work-card iframe {
     width: 100% !important;
-    height: 100% !important;
-    min-height: 820px;
+    height: 520px !important; 
+    min-height: 520px !important;
     border: none !important;
     margin: 0 !important;
     padding: 0 !important;
 }
 
-/* Нижний блок ссылки на Instagram */
+/* Блок ссылки на Инстаграм в самом низу страницы */
 .youtube-channel-block {
     text-align: center;
     margin-top: 50px;
     padding: 30px;
-    background: #fff5f5;
-    border: 1px dashed #feb2b2;
+    background: #f4f9ff;
+    border: 1px dashed #007bff;
     border-radius: 12px;
 }
 
 .youtube-channel-block p {
     font-size: 16px;
     font-weight: 500;
-    color: #c53030;
+    color: #007bff;
 }
 
 /* ПОЧЕМУ ВЫБИРАЮТ НАС */
@@ -477,14 +476,15 @@ ul {
     color: #94a3b8;
 }
 
-/* АДАПТИВНОСТЬ */
+/* АДАПТИВНОСТЬ НА МОБИЛЬНЫХ */
 @media (max-width: 900px) {
     .works__grid-gallery {
-        grid-template-columns: 1fr; /* На планшетах и мобильных строго в 1 ряд */
-        max-width: 500px; /* Чтобы плееры не растягивались на весь экран по ширине */
+        grid-template-columns: 1fr; /* На планшетах и телефонах строго в 1 колонку */
+        max-width: 480px; /* Чтобы плееры не растягивались сосиской вширь */
     }
-    .work-card, .work-card iframe {
-        min-height: 720px;
+    .work-card iframe {
+        height: 480px !important;
+        min-height: 480px !important;
     }
 }
 
