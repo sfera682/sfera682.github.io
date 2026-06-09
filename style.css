@@ -15,7 +15,7 @@ body {
 
 .container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1000px; /* Немного уменьшили контейнер, чтобы 2 видео в ряд смотрелись аккуратно и не гигантски */
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -68,17 +68,6 @@ ul {
     background-color: transparent;
     border: 2px solid #007bff;
     color: #007bff;
-}
-
-.btn--youtube {
-    background-color: #ff0000;
-    color: white;
-    font-weight: 600;
-    margin-top: 15px;
-}
-
-.btn--youtube:hover {
-    background-color: #cc0000;
 }
 
 /* ШАПКА */
@@ -219,7 +208,7 @@ ul {
     min-height: 400px;
 }
 
-/* СЕКЦИЯ ОТДЕЛЬНОЙ СТРАНИЦЫ ПОРТФОЛИО */
+/* СЕКЦИЯ ГАЛЕРЕИ РАБОТ */
 .works-page {
     padding: 60px 0 80px 0;
     background: #ffffff;
@@ -242,18 +231,20 @@ ul {
     font-size: 16px;
 }
 
-/* Плиточная сетка под плееры YouTube Shorts */
+/* Изменили на 2 видео в ряд для идеального отображения Shorts */
 .works__grid-gallery {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px; /* Увеличили расстояние между карточками для красоты */
+    max-width: 800px; /* Центрируем саму сетку, чтобы карточки не растягивались слишком сильно */
+    margin: 0 auto;
 }
 
 .work-card {
     background: #ffffff;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-    overflow: hidden; /* Срезает всё лишнее, что выходит за границы */
+    overflow: hidden;
     border: 1px solid #e2e8f0;
     display: flex;
     flex-direction: column;
@@ -264,11 +255,11 @@ ul {
     transform: translateY(-5px);
 }
 
-/* Маскируем верхнюю панель YouTube */
+/* Идеальные пропорции под вертикальный формат */
 .work-card__video {
     position: relative;
     width: 100%;
-    padding-top: 177.77%; /* Соотношение сторон 9:16 (как в смартфонах) */
+    padding-top: 177.77%; /* Чистый формат 9:16 */
     background: #000;
     overflow: hidden;
     border-radius: 12px 12px 0 0;
@@ -276,11 +267,10 @@ ul {
 
 .work-card__video iframe {
     position: absolute;
-    top: -60px; /* Сдвигаем плеер вверх, пряча надписи и аватарку */
+    top: -55px; /* Срезаем верхнюю плашку с именем автора */
     left: 0;
     width: 100%;
-    height: calc(100% + 60px); /* Компенсируем сдвиг, чтобы снизу не было пустоты */
-    object-fit: cover;
+    height: calc(100% + 55px); /* Заполняем пространство */
 }
 
 .work-card__caption {
@@ -292,10 +282,10 @@ ul {
     background: #f8fafc;
     border-top: 1px solid #e2e8f0;
     margin: 0;
-    z-index: 2; /* Гарантирует правильное наложение текста */
+    z-index: 2;
 }
 
-/* Блок ссылки на соцсети */
+/* Блок ссылки на Instagram */
 .youtube-channel-block {
     text-align: center;
     margin-top: 50px;
@@ -507,13 +497,7 @@ ul {
     color: #94a3b8;
 }
 
-/* АДАПТИВНОСТЬ (МОБИЛЬНЫЕ УСТРОЙСТВА) */
-@media (max-width: 1024px) {
-    .works__grid-gallery {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
+/* АДАПТИВНОСТЬ */
 @media (max-width: 768px) {
     .hero__container {
         flex-direction: column;
@@ -530,7 +514,7 @@ ul {
         justify-content: center;
     }
     .works__grid-gallery {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* На телефонах видео встают по одному в ряд */
     }
     .advantages__grid {
         grid-template-columns: repeat(3, 1fr);
