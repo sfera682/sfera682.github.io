@@ -2,48 +2,75 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="common.css">
-    <link rel="stylesheet" href="index.css">
-    <title>SFERA PROM KZ — Обновление кухонь</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SFERA PROM KZ — Профессиональное обновление кухонь</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header class="header">
-        <div class="container header-flex">
-            <img src="assets/img/logo.png" style="width:140px;">
+        <div class="container header-inner">
+            <div class="logo-box">
+                <img src="assets/img/logo.png" alt="Logo">
+                <span class="logo-text">SFERA PROM KZ</span>
+            </div>
             <nav class="nav">
-                <a href="index.html">Главная</a>
-                <a href="works.html">Наши работы</a>
-                <a href="catalog.html">Каталог</a>
+                <a href="#">Главная</a>
+                <a href="#">Наши работы</a>
+                <a href="#">Каталог</a>
             </nav>
-            <a href="https://wa.me/77760680458" class="btn-wa"><img src="assets/img/WhatsApp_icon.png" style="width:20px;"> Написать в WhatsApp</a>
+            <a href="#" class="btn-wa-top"><img src="assets/img/whatsapp-icon.png" alt="WA"> +7 776 068 04 58</a>
         </div>
     </header>
 
-    <main class="container">
-        <section class="hero">
-            <div class="hero-text">
+    <main>
+        <section class="hero container">
+            <div class="hero-content">
                 <h1>Обновляем кухни с заботой о деталях</h1>
-                <p>Профессиональное обновление кухонных гарнитуров в Павлодаре</p>
+                <p class="hero-desc">Профессиональное обновление кухонных гарнитуров в Павлодаре</p>
+                <ul class="features-list">
+                    <li>Замена фасадов без полной замены кухни</li>
+                    <li>Замена и установка столешниц</li>
+                    <li>Ремонт и доработка кухонных гарнитуров</li>
+                    <li>Бесплатный выезд на замер</li>
+                    <li>Гарантия на выполненные работы</li>
+                </ul>
+                <div class="hero-actions">
+                    <button class="btn-main">Получить консультацию в WhatsApp</button>
+                    <button class="btn-sec">Открыть каталог материалов</button>
+                </div>
             </div>
-            <img src="assets/img/bg.png" class="hero-image">
+            <div class="hero-image">
+                <img src="assets/img/hero-kitchen.png" alt="Kitchen">
+            </div>
         </section>
 
         <section class="why-us">
-            <h2>ПОЧЕМУ ВЫБИРАЮТ НАС</h2>
-            <div class="why-grid">
-                <div class="card">Более 250 работ</div>
-                <div class="card">Бесплатный выезд на замер</div>
-                <div class="card">Гарантия качества</div>
+            <div class="container">
+                <h2>ПОЧЕМУ ВЫБИРАЮТ НАС</h2>
+                <div class="why-grid">
+                    <div class="why-item"><img src="assets/img/icon1.png"><p>Более 250<br>обновлённых кухонь</p></div>
+                    <div class="why-item"><img src="assets/img/icon2.png"><p>Бесплатный выезд<br>на замер</p></div>
+                    <div class="why-item"><img src="assets/img/icon3.png"><p>Гарантия<br>качества</p></div>
+                    <div class="why-item"><img src="assets/img/icon4.png"><p>Соблюдение<br>сроков</p></div>
+                    <div class="why-item"><img src="assets/img/icon5.png"><p>Индивидуальный<br>подход</p></div>
+                    <div class="why-item"><img src="assets/img/icon6.png"><p>Работаем<br>по Павлодару</p></div>
+                </div>
             </div>
         </section>
 
-        <section class="form-section">
-            <div class="form-box">
-                <h2>Хотите обновить свою кухню?</h2>
-                <div class="form-inputs">
-                    <input type="text" placeholder="Ваше имя">
-                    <input type="tel" placeholder="Ваш телефон">
-                    <button class="btn-send">Получить консультацию</button>
+        <section class="cta-form">
+            <div class="container">
+                <div class="cta-box">
+                    <div class="cta-text">
+                        <h2>Хотите обновить свою кухню?</h2>
+                        <p>Оставьте заявку и получите бесплатную консультацию специалиста</p>
+                    </div>
+                    <div class="cta-inputs">
+                        <input type="text" placeholder="Ваше имя">
+                        <input type="tel" placeholder="Ваш телефон">
+                        <button class="btn-cta">Получить консультацию</button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -51,14 +78,11 @@
 
     <footer class="footer">
         <div class="container footer-grid">
-            <div><img src="assets/img/logo.png" style="width:120px;"><p>Обновление кухонь в Павлодаре</p></div>
-            <div><h4>НАВИГАЦИЯ</h4><a href="index.html">Главная</a><a href="works.html">Наши работы</a></div>
+            <div><img src="assets/img/logo.png" style="width:100px;"><p>Профессиональное обновление кухонь</p></div>
+            <div><h4>НАВИГАЦИЯ</h4><a href="#">Главная</a><a href="#">Наши работы</a><a href="#">Каталог</a></div>
             <div><h4>КОНТАКТЫ</h4><p>+7 776 068 04 58</p></div>
-            <div><h4>РАБОТАЕМ ПО ПАВЛОДАРУ</h4><p>Продлеваем срок службы кухни.</p></div>
+            <div><h4>РАБОТАЕМ ПО ПАВЛОДАРУ</h4><p>Помогаем продлить срок службы кухни без покупки нового гарнитура</p></div>
         </div>
-        <div class="container copyright">© 2024 SFERA PROM KZ. Все права защищены.</div>
     </footer>
-</body>
-</html>
 </body>
 </html>
