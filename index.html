@@ -2,64 +2,96 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>SFERA PROM KZ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обновление и реставрация кухонь в Павлодаре</title>
     <link rel="stylesheet" href="common.css">
     <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 </head>
 <body>
+
     <header class="header">
-        <div class="container header-wrap">
-            <img src="assets/img/logo.png" alt="Logo">
+        <div class="container header__container">
+            <a href="index.html" class="logo">
+                <img src="assets/img/logo.png" alt="Логотип">
+            </a>
+            
             <nav class="nav">
-                <a href="#">Главная</a>
-                <a href="#">Наши работы</a>
-                <a href="#">Каталог</a>
+                <a href="index.html" class="nav__link active">Главная</a>
+                <a href="catalog.html" class="nav__link">Каталог</a>
+                <a href="works.html" class="nav__link">Наши работы</a>
             </nav>
-            <a href="#" class="btn-wa">Написать в WhatsApp</a>
+
+            <div class="header__contacts">
+                <a href="tel:+77710580453" class="phone-link">
+                    <img src="assets/img/phone-icon.png" alt="Телефон" class="icon">
+                    <span>+7 (771) 058-04-53</span>
+                </a>
+                <div class="social-icons">
+                    <a href="https://wa.me/77710580453" target="_blank" class="social-link">
+                        <img src="assets/img/WhatsApp_icon.png" alt="WhatsApp">
+                    </a>
+                    <a href="https://instagram.com/" target="_blank" class="social-link">
+                        <img src="assets/img/Instagram.svg.png" alt="Instagram">
+                    </a>
+                </div>
+            </div>
         </div>
     </header>
 
-    <main class="container">
-        <section class="hero">
-            <div class="hero-text">
-                <h1>Обновляем кухни с заботой о деталях</h1>
-                <p>Профессиональное обновление кухонных гарнитуров в Павлодаре</p>
+    <section class="hero">
+        <div class="container hero__container">
+            <div class="hero__content">
+                <h1 class="hero__title">Кухни под ключ в Павлодаре</h1>
+                <p class="hero__subtitle">Профессиональное обновление, замена фасадов и столешниц. Подарите вашей кухне вторую жизнь со скидкой до 50% от стоимости нового гарнитура!</p>
+                <div class="hero__buttons">
+                    <a href="https://wa.me/77710580453" target="_blank" class="btn btn--primary">Рассчитать стоимость</a>
+                    <a href="catalog.html" class="btn btn--secondary">Смотреть материалы</a>
+                </div>
             </div>
-            <img src="assets/img/bg.png" alt="Кухня">
-        </section>
+        </div>
+    </section>
 
-        <section class="why-us">
-            <h2>ПОЧЕМУ ВЫБИРАЮТ НАС</h2>
-            <div class="features-grid">
-                <div class="card"><img src="assets/img/list1.png"><p>Более 250<br>обновлённых кухонь</p></div>
-                <div class="card"><img src="assets/img/list2.png"><p>Бесплатный выезд<br>на замер</p></div>
-                <div class="card"><img src="assets/img/list3.png"><p>Гарантия<br>качества</p></div>
-                <div class="card"><img src="assets/img/list4.png"><p>Соблюдение<br>сроков</p></div>
-                <div class="card"><img src="assets/img/list5.png"><p>Индивидуальный<br>подход</p></div>
-                <div class="card"><img src="assets/img/list6.png"><p>Работаем<br>по Павлодару</p></div>
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Почему выбирают нас</h2>
+            <div class="features__grid">
+                <div class="feature-card">
+                    <img src="assets/img/list1.png" alt="Иконка" class="feature-card__icon">
+                    <p class="feature-card__text">Более 250 обновленных кухонь</p>
+                </div>
+                <div class="feature-card">
+                    <img src="assets/img/list2.png" alt="Иконка" class="feature-card__icon">
+                    <p class="feature-card__text">Бесплатный выезд на замер</p>
+                </div>
+                <div class="feature-card">
+                    <img src="assets/img/list3.png" alt="Иконка" class="feature-card__icon">
+                    <p class="feature-card__text">Гарантия качества на материалы</p>
+                </div>
+                <div class="feature-card">
+                    <img src="assets/img/list4.png" alt="Иконка" class="feature-card__icon">
+                    <p class="feature-card__text">Строгое соблюдение сроков</p>
+                </div>
+                <div class="feature-card">
+                    <img src="assets/img/list5.png" alt="Иконка" class="feature-card__icon">
+                    <p class="feature-card__text">Индивидуальный подход к дизайну</p>
+                </div>
             </div>
-        </section>
-
-        <section class="contact-box">
-            <div class="contact-left">
-                <h2>Хотите обновить свою кухню?</h2>
-                <p>Оставьте заявку и получите бесплатную консультацию специалиста</p>
-            </div>
-            <div class="contact-right">
-                <input type="text" placeholder="Ваше имя">
-                <input type="tel" placeholder="Ваш телефон">
-                <button class="btn-send">Получить консультацию</button>
-            </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
     <footer class="footer">
-        <div class="container footer-grid">
-            <div><img src="assets/img/logo.png" style="width:100px;"></div>
-            <div><h4>НАВИГАЦИЯ</h4><a href="#">Главная</a></div>
-            <div><h4>КОНТАКТЫ</h4><p>+7 776 068 04 58</p></div>
-            <div><h4>РАБОТАЕМ ПО ПАВЛОДАРУ</h4></div>
+        <div class="container footer__container">
+            <p class="footer__copy">© 2026 Обновление кухонь. Все права защищены.</p>
+            <p class="footer__location">Работаем по Павлодару</p>
+            <div class="footer__contacts">
+                <span class="phone-text">+7 (771) 058-04-53</span>
+            </div>
         </div>
+    </footer>
+
+</body>
+</html>
     </footer>
 </body>
 </html>
