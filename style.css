@@ -70,6 +70,17 @@ ul {
     color: #007bff;
 }
 
+.btn--youtube {
+    background-color: #ff0000;
+    color: white;
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+.btn--youtube:hover {
+    background-color: #cc0000;
+}
+
 /* ШАПКА */
 .header {
     background: #fff;
@@ -202,7 +213,7 @@ ul {
 .hero__image {
     flex: 1;
     align-self: stretch;
-    background-image: url('./bg.png');
+    background-image: url('./assets/img/bg.png'); /* Исправленный рабочий путь к фону */
     background-size: cover;
     background-position: center;
     min-height: 400px;
@@ -231,10 +242,10 @@ ul {
     font-size: 16px;
 }
 
-/* Плиточная сетка для 27 видеороликов */
+/* Плиточная сетка под плееры YouTube Shorts */
 .works__grid-gallery {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 видео в ряд на ПК */
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
 }
 
@@ -254,15 +265,18 @@ ul {
 }
 
 .work-card__video {
+    position: relative;
     width: 100%;
-    height: 380px; /* Идеальное соотношение сторон под вертикальные Reels */
+    height: 420px; /* Идеальная высота для вертикальных видео */
     background: #000;
 }
 
-.work-card__video video {
+.work-card__video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
 }
 
 .work-card__caption {
@@ -274,6 +288,22 @@ ul {
     background: #f8fafc;
     border-top: 1px solid #e2e8f0;
     margin: 0;
+}
+
+/* Блок ссылки на Ютуб-канал */
+.youtube-channel-block {
+    text-align: center;
+    margin-top: 50px;
+    padding: 30px;
+    background: #fff5f5;
+    border: 1px dashed #feb2b2;
+    border-radius: 12px;
+}
+
+.youtube-channel-block p {
+    font-size: 16px;
+    font-weight: 500;
+    color: #c53030;
 }
 
 /* ПОЧЕМУ ВЫБИРАЮТ НАС */
@@ -475,7 +505,7 @@ ul {
 /* АДАПТИВНОСТЬ (МОБИЛЬНЫЕ УСТРОЙСТВА) */
 @media (max-width: 1024px) {
     .works__grid-gallery {
-        grid-template-columns: repeat(2, 1fr); /* 2 видео в ряд на планшетах */
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -495,7 +525,7 @@ ul {
         justify-content: center;
     }
     .works__grid-gallery {
-        grid-template-columns: 1fr; /* 1 видео в ряд на телефонах */
+        grid-template-columns: 1fr;
     }
     .advantages__grid {
         grid-template-columns: repeat(3, 1fr);
