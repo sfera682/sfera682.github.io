@@ -259,10 +259,10 @@ ul {
 .work-card__video {
     position: relative;
     width: 100%;
-    padding-top: 177.77%; /* Строгое вертикальное соотношение 9:16 */
-    background: #000;
+    height: 720px; /* Фиксированная высота карточки, чтобы вертикальный контент и текст снизу полностью помещались */
+    background: #fff;
     overflow: hidden;
-    border-radius: 12px 12px 0 0;
+    border-radius: 12px;
 }
 
 .work-card__video iframe {
