@@ -1,14 +1,13 @@
 .hero { display: flex; align-items: center; gap: 40px; padding: 60px 0; }
-.hero-img { width: 500px; border-radius: 20px; }
-.hero-btns { display: flex; gap: 15px; margin-top: 20px; }
-.btn-primary { padding: 15px 25px; background: #007bff; color: white; border-radius: 8px; text-decoration: none; }
-.btn-outline { padding: 15px 25px; border: 2px solid #007bff; color: #007bff; border-radius: 8px; text-decoration: none; }
+.hero-text { flex: 1; }
+.hero-text h1 { font-size: 48px; margin-bottom: 20px; }
+.hero-img { flex: 1; border-radius: 20px; }
 
-.why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; padding: 40px 0; }
-.card { padding: 30px; border: 1px solid #e2e8f0; border-radius: 15px; text-align: center; }
+.features { padding: 60px 0; text-align: center; }
+.features-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 15px; margin-top: 40px; }
+.feat-card { padding: 20px; border: 1px solid #e2e8f0; border-radius: 12px; }
 
-.form-box { background: #1e293b; color: white; padding: 50px; border-radius: 20px; text-align: center; }
-.form-box input { padding: 15px; border-radius: 8px; border: none; margin: 10px; width: 250px; }
-.btn-whatsapp { background: #25d366; color: white; padding: 15px 30px; border: none; border-radius: 8px; cursor: pointer; }
-
-.footer-grid { display: flex; justify-content: space-between; padding: 40px 0; border-top: 1px solid #eee; }
+.form-block { background: #1e73be; color: white; padding: 50px; border-radius: 20px; display: flex; justify-content: space-between; align-items: center; }
+.form-inputs { display: flex; gap: 10px; }
+.form-inputs input { padding: 12px; border-radius: 8px; border: none; }
+.btn-submit { background: #007bff; color: white; border: none; padding: 12px 20px; border-radius: 8px; cursor: pointer; }
