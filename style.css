@@ -1,27 +1,22 @@
-/* --- ГЛОБАЛЬНЫЕ СТИЛИ --- */
+/* Базовый сброс */
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Inter', sans-serif; background-color: #ffffff; color: #1e293b; line-height: 1.6; }
-.container { width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+body { font-family: 'Inter', sans-serif; background-color: #ffffff; color: #1e293b; }
 
-/* --- ШАПКА --- */
-.header { padding: 20px 0; border-bottom: 1px solid #e2e8f0; background: #fff; }
+/* Ограничитель ширины (чтобы не ехало) */
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+/* Шапка и Логотип (исправляем размер) */
+.header { padding: 15px 0; border-bottom: 1px solid #eee; }
 .header__container { display: flex; justify-content: space-between; align-items: center; }
-.logo__img { width: 50px; }
+.logo__img { width: 50px; height: 50px; object-fit: contain; }
 
-/* --- ИКОНКИ (Твои пути) --- */
-.icon-small { content: url('./assets/img/phone-icon.png'); width: 20px; height: 20px; vertical-align: middle; }
-.icon-btn { content: url('./assets/img/WhatsApp_icon.png'); width: 22px; height: 22px; vertical-align: middle; }
+/* Иконки (ограничиваем размер, чтобы не были на весь экран) */
+.icon-small { width: 20px; height: 20px; vertical-align: middle; }
+.icon-btn { width: 22px; height: 22px; vertical-align: middle; }
 
-/* --- КНОПКИ --- */
-.btn { display: inline-flex; align-items: center; gap: 10px; padding: 12px 24px; border-radius: 8px; background: #007bff; color: white; text-decoration: none; font-weight: 600; transition: 0.3s; }
-.btn:hover { background: #0056b3; }
+/* Кнопка WhatsApp */
+.btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; background: #007bff; color: white; border-radius: 6px; text-decoration: none; }
 
-/* --- СЕТКА ДЛЯ ВСЕГО --- */
-.works__grid-gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; margin: 40px 0; }
-.work-card { border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden; min-height: 700px; background: #f8fafc; }
-.work-card blockquote { width: 100% !important; margin: 0 !important; }
-
-/* --- FOOTER (Чтобы не улетал) --- */
-.footer { background: #f1f5f9; padding: 50px 0; margin-top: 60px; text-align: center; color: #64748b; }
-
-@media (max-width: 768px) { .works__grid-gallery { grid-template-columns: 1fr; } }
+/* Сетка работ */
+.works__grid-gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.work-card { border: 1px solid #eee; border-radius: 8px; overflow: hidden; min-height: 500px; }
