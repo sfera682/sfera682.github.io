@@ -15,7 +15,7 @@ body {
 
 .container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1100px; /* Идеальная ширина для двух крупных колонок */
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -231,26 +231,24 @@ ul {
     font-size: 16px;
 }
 
-/* Умная адаптивная сетка (видео сами встают по ширине) */
+/* ВОЗВРАЩАЕМ КРАСИВЫЕ ДВЕ КОЛОНКИ: так плеер Инстаграма гарантированно покажет текст */
 .works__grid-gallery {
     display: grid;
-    /* Уменьшили minmax до 310px, чтобы в 1200px контейнер влезало 3 полноценных поста */
-    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
-    gap: 30px;
-    max-width: 1200px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
     margin: 0 auto;
 }
 
-/* ИСПРАВЛЕННЫЙ блок адаптивного контейнера Instagram: убрали min-height */
+/* Оптимальные настройки под авто-пост */
 .work-card {
     background: #ffffff;
     border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.04);
     overflow: hidden;
     border: 1px solid #e2e8f0;
     width: 100%;
-    /* ГЛАВНОЕ ИСПРАВЛЕНИЕ: высота карточки теперь гибкая */
-    height: auto; 
+    min-height: 820px; /* Дали запас по высоте, чтобы длинные тексты точно раскрывались */
+    display: flex;
     transition: transform 0.3s ease;
 }
 
@@ -260,8 +258,8 @@ ul {
 
 .work-card iframe {
     width: 100% !important;
-    /* iframe теперь занимает 100% по высоте гибкого контейнера */
-    height: 100% !important; 
+    height: 100% !important;
+    min-height: 820px;
     border: none !important;
     margin: 0 !important;
     padding: 0 !important;
@@ -479,7 +477,17 @@ ul {
     color: #94a3b8;
 }
 
-/* АДАПТИВНОСТЬ (МОБИЛЬНЫЕ УСТРОЙСТВА) */
+/* АДАПТИВНОСТЬ */
+@media (max-width: 900px) {
+    .works__grid-gallery {
+        grid-template-columns: 1fr; /* На планшетах и мобильных строго в 1 ряд */
+        max-width: 500px; /* Чтобы плееры не растягивались на весь экран по ширине */
+    }
+    .work-card, .work-card iframe {
+        min-height: 720px;
+    }
+}
+
 @media (max-width: 768px) {
     .hero__container {
         flex-direction: column;
@@ -495,13 +503,6 @@ ul {
     .hero__actions {
         justify-content: center;
     }
-    
-    .works__grid-gallery {
-        grid-template-columns: 1fr;
-        max-width: 100%;
-        gap: 20px;
-    }
-    
     .advantages__grid {
         grid-template-columns: repeat(3, 1fr);
     }
