@@ -231,12 +231,12 @@ ul {
     font-size: 16px;
 }
 
-/* Сетка строго на 2 видео в ряд */
+/* Умная адаптивная сетка (видео сами встают по ширине экрана) */
 .works__grid-gallery {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 30px;
-    max-width: 900px;
+    max-width: 1200px; /* Немного расширили контейнер, чтобы на больших мониторах влезало больше видео */
     margin: 0 auto;
 }
 
