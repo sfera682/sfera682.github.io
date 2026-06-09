@@ -1,11 +1,10 @@
-/* Общие настройки для точности */
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Inter', sans-serif; color: #1e293b; background-color: #f8fafc; }
+body { font-family: 'Segoe UI', sans-serif; color: #1e293b; line-height: 1.6; }
 .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
 /* Шапка */
-.header { padding: 25px 0; background: #fff; border-bottom: 1px solid #e2e8f0; }
-.header__inner { display: flex; justify-content: space-between; align-items: center; }
-.nav { display: flex; gap: 40px; font-weight: 500; }
+.header { padding: 20px 0; border-bottom: 1px solid #e2e8f0; background: #fff; }
+.header-wrap { display: flex; justify-content: space-between; align-items: center; }
+.nav { display: flex; gap: 30px; font-weight: 500; }
 .nav a { text-decoration: none; color: #1e293b; }
-.btn-wa-header { display: flex; align-items: center; gap: 10px; background: #007bff; color: #fff; padding: 12px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; }
+.btn-wa { display: flex; align-items: center; gap: 8px; background: #007bff; color: white; padding: 12px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; }
