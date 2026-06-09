@@ -1,101 +1,4 @@
-/* Обнуление базовых отступов */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #f8fafc;
-    color: #0f172a;
-}
-
-/* Общий контейнер для выравнивания по центру */
-.main-container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* СТИЛИ ШАПКИ (Выстраиваем всё строго в линию) */
-.site-header {
-    background-color: #ffffff;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    padding: 15px 0;
-}
-
-.header-flex {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-/* Логотип-шар */
-.site-logo img {
-    max-height: 50px;
-    width: auto;
-    display: block;
-}
-
-/* Меню */
-.site-nav {
-    display: flex;
-    gap: 30px;
-}
-
-.nav-item {
-    text-decoration: none;
-    color: #334155;
-    font-weight: 500;
-    font-size: 0.95rem;
-    transition: color 0.2s;
-}
-
-.nav-item:hover, .nav-item.active {
-    color: #1e2e3d;
-    font-weight: 600;
-}
-
-/* Блок контактов в шапке */
-.header-contacts-block {
-    display: flex;
-    align-items: center;
-    gap: 25px;
-}
-
-.phone-number-link {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    text-decoration: none;
-    color: #0f172a;
-    font-weight: 600;
-    font-size: 1rem;
-}
-
-/* Укрощаем гигантскую черную трубку телефона */
-.header-icon-phone {
-    width: 18px !important;
-    height: 18px !important;
-    object-fit: contain;
-}
-
-.header-socials {
-    display: flex;
-    gap: 12px;
-    align-items: center;
-}
-
-.social-icon-btn img {
-    width: 26px !important;
-    height: 26px !important;
-    object-fit: contain;
-    display: block;
-}
-
-/* ГЛАВНЫЙ ЭКРАН (Теперь с красивым синим затемнением поверх фото кухни bg) */
+/* ГЛАВНЫЙ ЭКРАН (Синий фон + фото кухни bg.png) */
 .hero-section {
     background: linear-gradient(135deg, rgba(30, 46, 61, 0.85) 0%, rgba(17, 27, 36, 0.9) 100%), 
                 url('assets/img/bg.png') center/cover no-repeat;
@@ -113,7 +16,6 @@ body {
     gap: 40px;
 }
 
-/* Левая колонка (Тексты) */
 .hero-info {
     flex: 1;
     max-width: 620px;
@@ -124,7 +26,6 @@ body {
     font-weight: 800;
     letter-spacing: 0.5px;
     margin-bottom: 15px;
-    color: #ffffff;
     line-height: 1.2;
 }
 
@@ -136,7 +37,6 @@ body {
     color: #cbd5e1;
 }
 
-/* Список с галочками */
 .hero-bullets {
     list-style: none;
 }
@@ -162,7 +62,7 @@ body {
     font-weight: 600;
 }
 
-/* Правая колонка (Форма) */
+/* Форма захвата */
 .hero-form-box {
     flex: 0 0 380px;
 }
@@ -217,7 +117,7 @@ body {
     background: #2c4257;
 }
 
-/* БЛОК ПРЕИМУЩЕСТВ (6 карточек в один ровный ряд) */
+/* БЛОК ПРЕИМУЩЕСТВ */
 .why-us {
     padding: 60px 0;
     background-color: #ffffff;
