@@ -236,7 +236,7 @@ ul {
     margin: 40px auto 0 auto;
 }
 
-/* Карточка имеет запас по высоте под длинные тексты */
+/* ЖЕСТКАЯ ВЫСОТА для теста */
 .work-card {
     background: #ffffff;
     border-radius: 12px;
@@ -244,14 +244,13 @@ ul {
     overflow: hidden;
     border: 1px solid #e2e8f0;
     width: 100%;
-    min-height: 840px; 
+    height: 900px; 
     display: flex;
 }
 
 .work-card iframe {
     width: 100% !important;
     height: 100% !important; 
-    min-height: 840px !important;
     border: none !important;
     margin: 0 !important;
     padding: 0 !important;
@@ -437,103 +436,4 @@ ul {
     display: block;
     margin-bottom: 12px;
     color: #64748b;
-}
-
-.footer__link:hover {
-    color: #007bff;
-}
-
-.footer__desc {
-    margin-top: 15px;
-    font-size: 14px;
-}
-
-.footer__phone {
-    font-size: 16px;
-    font-weight: 700;
-    color: #1e293b;
-    display: inline-flex;
-    align-items: center;
-}
-
-.footer__socials {
-    display: flex;
-    gap: 12px;
-    margin-top: 20px;
-}
-
-.footer__copy {
-    text-align: center;
-    padding-top: 25px;
-    font-size: 13px;
-    color: #94a3b8;
-}
-
-/* АДАПТИВНОСТЬ */
-@media (max-width: 900px) {
-    .works__grid-gallery {
-        grid-template-columns: 1fr;
-        max-width: 480px;
-    }
-    .work-card, .work-card iframe {
-        min-height: 760px;
-    }
-}
-
-@media (max-width: 768px) {
-    .hero__container {
-        flex-direction: column;
-        text-align: center;
-        padding: 40px 20px;
-    }
-    .hero__image {
-        display: none;
-    }
-    .features-list li {
-        justify-content: center;
-    }
-    .hero__actions {
-        justify-content: center;
-    }
-    .advantages__grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-    .adv-item {
-        border-right: none;
-        margin-bottom: 20px;
-    }
-    .cta-form {
-        flex-direction: column;
-    }
-    .footer__container {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media (max-width: 576px) {
-    .header__container {
-        flex-direction: column;
-        gap: 15px;
-    }
-    .nav {
-        gap: 15px;
-    }
-    .header__contacts {
-        flex-direction: column;
-        gap: 10px;
-    }
-    .advantages__grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .footer__container {
-        grid-template-columns: 1fr;
-    }
-    .cta-form-block__socials {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
-    }
-    .cta-form-block__socials span {
-        max-width: 100%;
-    }
-}
+}http://googleusercontent.com/image_generation_content/0
