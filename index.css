@@ -1,14 +1,9 @@
 .hero { display: flex; align-items: center; justify-content: space-between; padding: 60px 0; gap: 40px; }
-.hero-image { width: 500px; height: 350px; object-fit: cover; border-radius: 20px; }
 .hero-text h1 { font-size: 52px; line-height: 1.1; margin-bottom: 20px; }
-
+.hero-image { width: 500px; border-radius: 20px; }
 .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; padding: 40px 0; }
-.item { padding: 30px; border: 1px solid #e2e8f0; border-radius: 15px; text-align: center; }
-
+.card { padding: 40px; border: 1px solid #e2e8f0; border-radius: 15px; text-align: center; background: white; }
 .form-box { background: #1e293b; padding: 50px; border-radius: 20px; color: white; display: flex; justify-content: space-between; align-items: center; }
 .form-inputs { display: flex; gap: 15px; }
 .form-inputs input { padding: 15px; border-radius: 8px; border: none; width: 220px; }
-.btn-send { background: #22c55e; color: white; padding: 15px 25px; border: none; border-radius: 8px; cursor: pointer; }
-
-.btn-main { padding: 15px 30px; background: #007bff; color: white; border-radius: 8px; border: none; }
-.btn-sec { padding: 15px 30px; background: transparent; border: 2px solid #007bff; color: #007bff; border-radius: 8px; }
+.btn-send { background: #22c55e; color: white; padding: 15px 25px; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; }
