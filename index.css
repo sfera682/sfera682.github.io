@@ -5,8 +5,9 @@
 .features-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 20px; margin: 40px 0; }
 .card { padding: 30px 15px; border-radius: 15px; text-align: center; border: 1px solid #e2e8f0; background: #fff; }
 
+/* Темно-синий блок как на макете */
 .contact-box { 
-    background: #1e293b; /* Тот самый темно-синий цвет */
+    background: #1e293b; 
     padding: 50px; 
     border-radius: 20px; 
     color: white; 
@@ -15,5 +16,5 @@
     align-items: center; 
 }
 .contact-right { display: flex; gap: 10px; }
-.contact-right input { padding: 15px; border-radius: 8px; border: none; width: 220px; }
-.btn-send { background: #007bff; color: white; border: none; padding: 15px 25px; border-radius: 8px; cursor: pointer; }
+.contact-right input { padding: 15px; border-radius: 8px; border: none; }
+.btn-send { background: #22c55e; color: white; border: none; padding: 15px 25px; border-radius: 8px; cursor: pointer; }
