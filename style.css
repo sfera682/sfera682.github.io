@@ -15,7 +15,7 @@ body {
 
 .container {
     width: 100%;
-    max-width: 1000px; /* Немного уменьшили контейнер, чтобы 2 видео в ряд смотрелись аккуратно и не гигантски */
+    max-width: 1000px; /* Сузили контейнер, чтобы карточки в 2 ряда не были слишком огромными на больших экранах */
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -231,12 +231,12 @@ ul {
     font-size: 16px;
 }
 
-/* Изменили на 2 видео в ряд для идеального отображения Shorts */
+/* Сетка на 2 видео в ряд */
 .works__grid-gallery {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 40px; /* Увеличили расстояние между карточками для красоты */
-    max-width: 800px; /* Центрируем саму сетку, чтобы карточки не растягивались слишком сильно */
+    gap: 40px; /* Большие красивые отступы между видео */
+    max-width: 800px; /* Ограничили ширину сетки, чтобы видео встали ровно и без пустот */
     margin: 0 auto;
 }
 
@@ -255,11 +255,11 @@ ul {
     transform: translateY(-5px);
 }
 
-/* Идеальные пропорции под вертикальный формат */
+/* Окна адаптивного плеера под Instagram Reels */
 .work-card__video {
     position: relative;
     width: 100%;
-    padding-top: 177.77%; /* Чистый формат 9:16 */
+    padding-top: 177.77%; /* Строгое вертикальное соотношение 9:16 */
     background: #000;
     overflow: hidden;
     border-radius: 12px 12px 0 0;
@@ -267,10 +267,11 @@ ul {
 
 .work-card__video iframe {
     position: absolute;
-    top: -55px; /* Срезаем верхнюю плашку с именем автора */
+    top: 0;
     left: 0;
     width: 100%;
-    height: calc(100% + 55px); /* Заполняем пространство */
+    height: 100%;
+    border: none;
 }
 
 .work-card__caption {
@@ -285,7 +286,7 @@ ul {
     z-index: 2;
 }
 
-/* Блок ссылки на Instagram */
+/* Нижний блок ссылки на Инсту */
 .youtube-channel-block {
     text-align: center;
     margin-top: 50px;
@@ -336,7 +337,7 @@ ul {
     line-height: 1.4;
 }
 
-/* СИНЯЯ ФОРМА */
+/* СИНЯЯ ФОРМА ОБРАТНОЙ СВЯЗИ */
 .cta-form-block {
     background: linear-gradient(135deg, #3b82f6, #1d4ed8);
     border-radius: 16px;
@@ -497,7 +498,7 @@ ul {
     color: #94a3b8;
 }
 
-/* АДАПТИВНОСТЬ */
+/* АДАПТИВНОСТЬ (МОБИЛКИ И ПЛАНШЕТЫ) */
 @media (max-width: 768px) {
     .hero__container {
         flex-direction: column;
@@ -513,9 +514,13 @@ ul {
     .hero__actions {
         justify-content: center;
     }
+    
+    /* На телефонах перестраиваем видео в один ряд, чтобы удобно листалось пальцем */
     .works__grid-gallery {
-        grid-template-columns: 1fr; /* На телефонах видео встают по одному в ряд */
+        grid-template-columns: 1fr;
+        max-width: 100%;
     }
+    
     .advantages__grid {
         grid-template-columns: repeat(3, 1fr);
     }
