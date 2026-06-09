@@ -213,7 +213,7 @@ ul {
 .hero__image {
     flex: 1;
     align-self: stretch;
-    background-image: url('./assets/img/bg.png'); /* Исправленный рабочий путь к фону */
+    background-image: url('./assets/img/bg.png');
     background-size: cover;
     background-position: center;
     min-height: 400px;
@@ -253,7 +253,7 @@ ul {
     background: #ffffff;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-    overflow: hidden;
+    overflow: hidden; /* Срезает всё лишнее, что выходит за границы */
     border: 1px solid #e2e8f0;
     display: flex;
     flex-direction: column;
@@ -264,19 +264,23 @@ ul {
     transform: translateY(-5px);
 }
 
+/* Маскируем верхнюю панель YouTube */
 .work-card__video {
     position: relative;
     width: 100%;
-    height: 420px; /* Идеальная высота для вертикальных видео */
+    padding-top: 177.77%; /* Соотношение сторон 9:16 (как в смартфонах) */
     background: #000;
+    overflow: hidden;
+    border-radius: 12px 12px 0 0;
 }
 
 .work-card__video iframe {
     position: absolute;
-    top: 0;
+    top: -60px; /* Сдвигаем плеер вверх, пряча надписи и аватарку */
     left: 0;
     width: 100%;
-    height: 100%;
+    height: calc(100% + 60px); /* Компенсируем сдвиг, чтобы снизу не было пустоты */
+    object-fit: cover;
 }
 
 .work-card__caption {
@@ -288,9 +292,10 @@ ul {
     background: #f8fafc;
     border-top: 1px solid #e2e8f0;
     margin: 0;
+    z-index: 2; /* Гарантирует правильное наложение текста */
 }
 
-/* Блок ссылки на Ютуб-канал */
+/* Блок ссылки на соцсети */
 .youtube-channel-block {
     text-align: center;
     margin-top: 50px;
