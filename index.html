@@ -4,42 +4,50 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="common.css">
     <link rel="stylesheet" href="index.css">
-    <title>SFERA PROM KZ — Обновление кухонь</title>
+    <title>SFERA PROM KZ</title>
 </head>
 <body>
     <header class="header">
-        <div class="container header__inner">
-            <img src="assets/img/logo.png" style="width:150px;">
+        <div class="container header-wrap">
+            <img src="assets/img/logo.png" style="width:140px;">
             <nav class="nav">
-                <a href="#">Главная</a>
-                <a href="#">Наши работы</a>
-                <a href="#">Каталог</a>
+                <a href="#">Главная</a><a href="#">Наши работы</a><a href="#">Каталог</a>
             </nav>
-            <a href="#" class="btn-wa-header"><img src="assets/img/WhatsApp_icon.png" style="width:20px;"> Написать в WhatsApp</a>
+            <a href="#" class="btn-wa"><img src="assets/img/WhatsApp_icon.png" style="width:20px;"> Написать в WhatsApp</a>
         </div>
     </header>
 
     <main class="container">
         <section class="hero">
-            <div class="hero__text">
+            <div class="hero-content">
                 <h1>Обновляем кухни с заботой о деталях</h1>
                 <p>Профессиональное обновление кухонных гарнитуров в Павлодаре</p>
+                <div class="btns-group">
+                    <button class="btn-wa" style="background:#007bff">Получить консультацию</button>
+                    <button class="btn-wa" style="background:transparent; border:2px solid #007bff; color:#007bff">Открыть каталог</button>
+                </div>
             </div>
-            <img src="assets/img/bg.png" class="hero__img">
+            <img src="assets/img/bg.png" class="hero-img">
         </section>
 
-        <section class="features-grid">
-            <div class="feature-card">250+ Кухонь</div>
-            <div class="feature-card">Замер</div>
-            <div class="feature-card">Гарантия</div>
+        <section class="why-us">
+            <h2>ПОЧЕМУ ВЫБИРАЮТ НАС</h2>
+            <div class="features-grid">
+                <div class="card"><img src="assets/img/list1.png"><p>250+ работ</p></div>
+                <div class="card"><img src="assets/img/list2.png"><p>Замер</p></div>
+                <div class="card"><img src="assets/img/list3.png"><p>Гарантия</p></div>
+                <div class="card"><img src="assets/img/list4.png"><p>Сроки</p></div>
+                <div class="card"><img src="assets/img/list5.png"><p>Подход</p></div>
+                <div class="card"><img src="assets/img/check-icon.png"><p>Павлодар</p></div>
+            </div>
         </section>
 
-        <section class="contact-form">
+        <section class="contact-block">
             <h2>Хотите обновить свою кухню?</h2>
-            <div class="form-inputs">
+            <div class="form-group">
                 <input type="text" placeholder="Ваше имя">
                 <input type="text" placeholder="Ваш телефон">
-                <button class="btn-submit">Получить консультацию</button>
+                <button class="btn-wa" style="background:#25d366">Получить консультацию</button>
             </div>
         </section>
     </main>
