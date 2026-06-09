@@ -3,153 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SFERA PROM KZ — Обновление кухонных гарнитуров в Павлодаре</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>SFERA PROM KZ — Обновление кухонь в Павлодаре</title>
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
 
     <header class="header">
         <div class="container header__container">
-            <div class="logo">
-                <img src="./assets/img/logo.png" alt="SFERA PROM KZ" class="logo__img">
-                <span class="logo__text">SFERA PROM KZ</span>
-            </div>
-            <nav class="nav">
-                <a href="./index.html" class="nav__link active">Главная</a>
-                <a href="./works.html" class="nav__link">Наши работы</a>
+            <img src="./assets/img/logo.png" class="logo__img" alt="Sfera Prom">
+            <nav>
+                <a href="index.html">Главная</a>
+                <a href="works.html">Наши работы</a>
+                <a href="catalog.html">Каталог</a>
             </nav>
-            <div class="header__contacts">
-                <a href="tel:+77760680458" class="phone-link">
-                    <img src="./assets/img/phone-icon.png" alt="Телефон" class="icon-small"> +7 776 068 04 58
-                </a>
-                <a href="https://wa.me/77760680458" class="btn btn--whatsapp-header" target="_blank">
-                    <img src="./assets/img/WhatsApp_icon.png" alt="WhatsApp" class="icon-btn"> Написать в WhatsApp
-                </a>
-            </div>
+            <a href="https://wa.me/77760680458" class="btn"><img src="./assets/img/WhatsApp_icon.png" class="icon-btn"> Написать в WhatsApp</a>
         </div>
     </header>
 
-    <section class="hero">
-        <div class="container hero__container">
+    <main>
+        <section class="hero container">
             <div class="hero__content">
-                <h1 class="hero__title">Обновляем кухни <br><span class="text-blue">с заботой о деталях</span></h1>
-                <p class="hero__subtitle">Профессиональное обновление кухонных гарнитуров в Павлодаре</p>
-                
-                <ul class="features-list">
-                    <li><i class="fa-regular fa-circle-check"></i> Замена фасадов без полной замены кухни</li>
-                    <li><i class="fa-regular fa-circle-check"></i> Замена и установка столешниц</li>
-                    <li><i class="fa-regular fa-circle-check"></i> Ремонт и доработка кухонных гарнитуров</li>
-                    <li><i class="fa-regular fa-circle-check"></i> Бесплатный выезд на замер</li>
-                    <li><i class="fa-regular fa-circle-check"></i> Гарантия на выполненные работы</li>
+                <h1>Обновляем кухни с заботой о деталях</h1>
+                <p>Профессиональное обновление кухонных гарнитуров в Павлодаре</p>
+                <ul>
+                    <li>Замена фасадов без полной замены кухни</li>
+                    <li>Замена и установка столешниц</li>
                 </ul>
+                <a href="#" class="btn">Получить консультацию</a>
+            </div>
+        </section>
 
-                <div class="hero__actions">
-                    <a href="https://wa.me/77760680458" class="btn btn--primary" target="_blank">
-                        <img src="./assets/img/WhatsApp_icon.png" alt="WhatsApp" class="icon-btn"> Получить консультацию в WhatsApp
-                    </a>
-                    <a href="./works.html" class="btn btn--outline">Смотреть наши работы</a>
-                </div>
+        <section class="features container">
+            <h2>ПОЧЕМУ ВЫБИРАЮТ НАС</h2>
+            <div class="features__grid">
+                <div class="feature-card">Более 250 выполненных работ</div>
+                <div class="feature-card">Бесплатный выезд на замер</div>
+                <div class="feature-card">Гарантия качества</div>
             </div>
-            <div class="hero__image"></div>
-        </div>
-    </section>
-
-    <section class="advantages">
-        <div class="container">
-            <h2 class="section-title">ПОЧЕМУ ВЫБИРАЮТ НАС</h2>
-            <div class="advantages__grid">
-                <div class="adv-item">
-                    <div class="adv-item__icon"><i class="fa-solid fa-shield-halved"></i></div>
-                    <p class="adv-item__text"><strong>Более 250</strong><br>выполненных работ</p>
-                </div>
-                <div class="adv-item">
-                    <div class="adv-item__icon"><i class="fa-solid fa-compass-drafting"></i></div>
-                    <p class="adv-item__text"><strong>Бесплатный</strong><br>выезд на замер</p>
-                </div>
-                <div class="adv-item">
-                    <div class="adv-item__icon"><i class="fa-regular fa-circle-check"></i></div>
-                    <p class="adv-item__text"><strong>Гарантия</strong><br>качества</p>
-                </div>
-                <div class="adv-item">
-                    <div class="adv-item__icon"><i class="fa-regular fa-clock"></i></div>
-                    <p class="adv-item__text"><strong>Соблюдение</strong><br>сроков</p>
-                </div>
-                <div class="adv-item">
-                    <div class="adv-item__icon"><i class="fa-regular fa-thumbs-up"></i></div>
-                    <p class="adv-item__text"><strong>Индивидуальный</strong><br>подход</p>
-                </div>
-                <div class="adv-item">
-                    <div class="adv-item__icon"><i class="fa-solid fa-location-dot"></i></div>
-                    <p class="adv-item__text"><strong>Работаем</strong><br>по Павлодару</p>
-                </div>
-            </div>
-
-            <div class="cta-form-block">
-                <div class="cta-form-block__content">
-                    <h3>Хотите обновить свою кухню?</h3>
-                    <p>Оставьте заявку и получите бесплатную консультацию специалиста</p>
-                </div>
-                <form class="cta-form">
-                    <input type="text" placeholder="Ваше имя" required class="cta-input">
-                    <input type="tel" placeholder="Ваш телефон" required class="cta-input">
-                    <button type="submit" class="btn btn--submit">Получить консультацию</button>
-                </form>
-                <div class="cta-form-block__socials">
-                    <span>Напишите нам в WhatsApp или Instagram и получите консультацию по вашей кухне</span>
-                    <div class="social-icons">
-                        <a href="https://wa.me/77760680458" class="social-icon" target="_blank">
-                            <img src="./assets/img/WhatsApp_icon.png" alt="WhatsApp">
-                        </a>
-                        <a href="https://www.instagram.com/sfera_prom_kz" class="social-icon" target="_blank">
-                            <img src="./assets/img/Instagram.svg.png" alt="Instagram">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container footer__container">
-            <div class="footer__col">
-                <div class="logo">
-                    <img src="./assets/img/logo.png" alt="SFERA PROM KZ" class="logo__img">
-                    <span class="logo__text">SFERA PROM KZ</span>
-                </div>
-                <p class="footer__desc">Профессиональное обновление кухонных гарнитуров в Павлодаре</p>
-            </div>
-            <div class="footer__col">
-                <h4>НАВИГАЦИЯ</h4>
-                <a href="./index.html" class="footer__link">Главная</a>
-                <a href="./works.html" class="footer__link">Наши работы</a>
-            </div>
-            <div class="footer__col">
-                <h4>КОНТАКТЫ</h4>
-                <a href="tel:+77760680458" class="footer__phone">
-                    <img src="./assets/img/phone-icon.png" alt="Телефон" class="icon-small"> +7 776 068 04 58
-                </a>
-                <div class="footer__socials">
-                    <a href="https://wa.me/77760680458" target="_blank">
-                        <img src="./assets/img/WhatsApp_icon.png" alt="WhatsApp">
-                    </a>
-                    <a href="https://www.instagram.com/sfera_prom_kz" target="_blank">
-                        <img src="./assets/img/Instagram.svg.png" alt="Instagram">
-                    </a>
-                </div>
-            </div>
-            <div class="footer__col">
-                <h4>РАБОТАЕМ ПО ПАВЛОДАРУ</h4>
-                <p>Помогаем продлить срок службы кухни без покупки нового гарнитура</p>
-            </div>
-        </div>
-        <div class="footer__copy">
-            © 2026 SFERA PROM KZ. Все права защищены.
-        </div>
-    </footer>
+        </section>
+    </main>
 
 </body>
 </html>
