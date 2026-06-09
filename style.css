@@ -1,4 +1,4 @@
-/* ОБЩИЕ СБРОСЫ И СТИЛИ */
+/* ОБЩИЕ СТИЛИ */
 * {
     margin: 0;
     padding: 0;
@@ -10,6 +10,7 @@ body {
     background-color: #ffffff;
     color: #2c3e50;
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 .container {
@@ -44,7 +45,11 @@ ul {
     font-size: 15px;
     cursor: pointer;
     border: none;
-    transition: background 0.3s ease;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
 }
 
 .btn--whatsapp-header {
@@ -68,7 +73,7 @@ ul {
 /* ШАПКА */
 .header {
     background: #fff;
-    padding: 20px 0;
+    padding: 15px 0;
     border-bottom: 1px solid #eaeaea;
     position: sticky;
     top: 0;
@@ -87,21 +92,26 @@ ul {
     gap: 10px;
 }
 
-.logo__circle {
-    width: 35px;
-    height: 35px;
-    background: linear-gradient(135deg, #74b9ff, #007bff);
-    border-radius: 50%;
+.logo__img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
 }
 
 .logo__text {
     font-weight: 700;
     font-size: 18px;
+    color: #1e293b;
 }
 
 .nav {
     display: flex;
     gap: 30px;
+}
+
+.nav__link {
+    font-weight: 500;
+    color: #64748b;
 }
 
 .nav__link.active, .nav__link:hover {
@@ -116,35 +126,53 @@ ul {
 
 .phone-link {
     font-weight: 600;
+    color: #1e293b;
+    display: flex;
+    align-items: center;
 }
 
-/* ГЕРОЙ КУХНИ */
+.icon-small {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+    margin-right: 6px;
+}
+
+.icon-btn {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+/* ПЕРВЫЙ ЭКРАН */
 .hero {
     background-color: #f4f9ff;
-    position: relative;
+    overflow: hidden;
 }
 
 .hero__container {
     display: flex;
     align-items: center;
-    min-height: 550px;
+    min-height: 580px;
+    gap: 40px;
 }
 
 .hero__content {
-    flex: 1;
-    padding: 50px 0;
+    flex: 1.2;
+    padding: 40px 0;
 }
 
 .hero__title {
-    font-size: 42px;
+    font-size: 46px;
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 15px;
+    color: #1e293b;
 }
 
 .hero__subtitle {
-    font-size: 18px;
-    color: #57606f;
+    font-size: 19px;
+    color: #475569;
     margin-bottom: 30px;
 }
 
@@ -155,12 +183,15 @@ ul {
 .features-list li {
     display: flex;
     align-items: center;
-    gap: 10px;
-    margin-bottom: 12px;
+    gap: 12px;
+    margin-bottom: 14px;
+    font-size: 16px;
+    color: #334155;
 }
 
 .features-list i {
     color: #007bff;
+    font-size: 18px;
 }
 
 .hero__actions {
@@ -171,122 +202,78 @@ ul {
 .hero__image {
     flex: 1;
     align-self: stretch;
-    background-image: url('https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1000&q=80');
+    background-image: url('./bg.png');
     background-size: cover;
     background-position: center;
+    min-height: 400px;
 }
 
-/* СЕКЦИИ */
+/* СЕКЦИЯ ОТДЕЛЬНОЙ СТРАНИЦЫ ПОРТФОЛИО */
+.works-page {
+    padding: 60px 0 80px 0;
+    background: #ffffff;
+    min-height: 60vh;
+}
+
 .section-title {
     text-align: center;
     font-size: 32px;
     font-weight: 700;
+    color: #1e293b;
     margin-bottom: 5px;
+    text-transform: uppercase;
 }
 
 .section-subtitle {
     text-align: center;
-    color: #747d8c;
-    margin-bottom: 40px;
+    color: #64748b;
+    margin-bottom: 50px;
+    font-size: 16px;
 }
 
-.works {
-    padding: 80px 0;
-}
-
-.works__grid {
-    display: flex;
-    flex-direction: column;
+/* Плиточная сетка для 27 видеороликов */
+.works__grid-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 видео в ряд на ПК */
     gap: 30px;
 }
 
-.project-card {
-    display: flex;
-    background: #fff;
+.work-card {
+    background: #ffffff;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.05);
     overflow: hidden;
-}
-
-.project-card__images {
+    border: 1px solid #e2e8f0;
     display: flex;
-    position: relative;
-    width: 65%;
+    flex-direction: column;
+    transition: transform 0.3s ease;
 }
 
-.img-box {
-    position: relative;
-    flex: 1;
-    height: 320px;
+.work-card:hover {
+    transform: translateY(-5px);
 }
 
-.img-box img {
+.work-card__video {
+    width: 100%;
+    height: 380px; /* Идеальное соотношение сторон под вертикальные Reels */
+    background: #000;
+}
+
+.work-card__video video {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.badge {
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    background: #007bff;
-    color: white;
-    padding: 6px 14px;
-    font-weight: 700;
-    border-radius: 4px;
-    z-index: 5;
-}
-
-.slider-divider {
-    position: absolute;
-    left: 50%;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background: #fff;
-    z-index: 4;
-}
-
-.slider-arrow {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 36px;
-    height: 36px;
-    background: #fff;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
-    color: #007bff;
-}
-
-.project-card__info {
-    width: 35%;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.project-card__title {
-    font-size: 22px;
-    margin-bottom: 15px;
-    color: #007bff;
-}
-
-.project-card__list li {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 12px;
-}
-
-.project-card__list i {
-    color: #007bff;
+.work-card__caption {
+    padding: 15px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #1e293b;
+    text-align: center;
+    background: #f8fafc;
+    border-top: 1px solid #e2e8f0;
+    margin: 0;
 }
 
 /* ПОЧЕМУ ВЫБИРАЮТ НАС */
@@ -298,14 +285,14 @@ ul {
 .advantages__grid {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    gap: 20px;
+    gap: 15px;
     margin-bottom: 60px;
 }
 
 .adv-item {
     text-align: center;
-    padding: 20px 10px;
-    border-right: 1px solid #e4e7eb;
+    padding: 15px 10px;
+    border-right: 1px solid #e2e8f0;
 }
 
 .adv-item:last-child {
@@ -318,17 +305,30 @@ ul {
     margin-bottom: 15px;
 }
 
-/* ФОРМА СИНЯЯ */
+.adv-item__text {
+    font-size: 14px;
+    color: #475569;
+    line-height: 1.4;
+}
+
+/* СИНЯЯ ФОРМА */
 .cta-form-block {
-    background: linear-gradient(135deg, #54a0ff, #007bff);
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
     border-radius: 16px;
     padding: 40px;
     color: white;
 }
 
 .cta-form-block__content h3 {
-    font-size: 26px;
+    font-size: 28px;
     margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.cta-form-block__content p {
+    font-size: 16px;
+    margin-bottom: 25px;
+    opacity: 0.9;
 }
 
 .cta-form {
@@ -337,51 +337,86 @@ ul {
     margin-bottom: 25px;
 }
 
-.cta-form input {
+.cta-input {
     flex: 1;
-    padding: 15px;
-    border: 1px solid rgba(255,255,255,0.3);
+    padding: 16px;
+    border: 1px solid rgba(255,255,255,0.25);
+    background: rgba(255,255,255,0.1);
     border-radius: 8px;
     outline: none;
+    color: white;
+    font-size: 15px;
+}
+
+.cta-input::placeholder {
+    color: rgba(255,255,255,0.7);
+}
+
+.cta-input:focus {
+    background: rgba(255,255,255,0.2);
+    border-color: white;
 }
 
 .btn--submit {
-    background-color: #2f3542;
+    background-color: #1e293b;
     color: white;
     font-weight: 600;
+    padding: 0 32px;
+}
+
+.btn--submit:hover {
+    background-color: #0f172a;
 }
 
 .cta-form-block__socials {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-top: 1px solid rgba(255,255,255,0.2);
-    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.15);
+    padding-top: 25px;
+    font-size: 15px;
+}
+
+.cta-form-block__socials span {
+    max-width: 60%;
+    opacity: 0.9;
 }
 
 .social-icons {
     display: flex;
-    gap: 10px;
+    gap: 12px;
 }
 
-.social-icon {
-    width: 35px;
-    height: 35px;
-    background: white;
+.social-icons .social-icon,
+.footer__socials a {
+    width: 44px;
+    height: 44px;
+    background: #ffffff;
     border-radius: 50%;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
 }
 
-.social-icon--wa { color: #25D366; }
-.social-icon--tg { color: #0088cc; }
+.social-icons .social-icon img,
+.footer__socials a img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.social-icons .social-icon:hover,
+.footer__socials a:hover {
+    transform: scale(1.1);
+}
 
 /* ПОДВАЛ */
 .footer {
     background-color: #f1f5f9;
-    padding: 60px 0 20px 0;
-    color: #64748b;
+    padding: 60px 0 25px 0;
+    color: #475569;
 }
 
 .footer__container {
@@ -389,59 +424,118 @@ ul {
     grid-template-columns: 2fr 1fr 1.5fr 2fr;
     gap: 40px;
     padding-bottom: 40px;
-    border-bottom: 1px solid #cbd5e1;
+    border-bottom: 1px solid #e2e8f0;
 }
 
 .footer__col h4 {
     color: #1e293b;
     margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
-.footer__col a {
+.footer__link {
     display: block;
     margin-bottom: 12px;
+    color: #64748b;
+}
+
+.footer__link:hover {
+    color: #007bff;
+}
+
+.footer__desc {
+    margin-top: 15px;
+    font-size: 14px;
 }
 
 .footer__phone {
     font-size: 16px;
     font-weight: 700;
     color: #1e293b;
+    display: inline-flex;
+    align-items: center;
 }
 
 .footer__socials {
     display: flex;
     gap: 12px;
-    margin-top: 15px;
+    margin-top: 20px;
 }
-
-.footer__socials .wa { color: #25D366; }
-.footer__socials .tg { color: #0088cc; }
 
 .footer__copy {
     text-align: center;
-    padding-top: 20px;
-    font-size: 12px;
+    padding-top: 25px;
+    font-size: 13px;
+    color: #94a3b8;
 }
 
-/* МЕДИА-ЗАПРОСЫ */
-@media (max-width: 992px) {
-    .header__container, .hero__container, .project-card, .footer__container {
+/* АДАПТИВНОСТЬ (МОБИЛЬНЫЕ УСТРОЙСТВА) */
+@media (max-width: 1024px) {
+    .works__grid-gallery {
+        grid-template-columns: repeat(2, 1fr); /* 2 видео в ряд на планшетах */
+    }
+}
+
+@media (max-width: 768px) {
+    .hero__container {
         flex-direction: column;
-    }
-    .advantages__grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-    .project-card__images, .project-card__info, .cta-form {
-        width: 100%;
+        text-align: center;
+        padding: 40px 20px;
     }
     .hero__image {
         display: none;
     }
-    .footer__container {
-        grid-template-columns: 1fr;
+    .features-list li {
+        justify-content: center;
+    }
+    .hero__actions {
+        justify-content: center;
+    }
+    .works__grid-gallery {
+        grid-template-columns: 1fr; /* 1 видео в ряд на телефонах */
+    }
+    .advantages__grid {
+        grid-template-columns: repeat(3, 1fr);
     }
     .adv-item {
         border-right: none;
-        border-bottom: 1px solid #e4e7eb;
+        margin-bottom: 20px;
+    }
+    .cta-form {
+        flex-direction: column;
+    }
+    .footer__container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .header__container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .nav {
+        gap: 15px;
+    }
+    .header__contacts {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .advantages__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .footer__container {
+        grid-template-columns: 1fr;
+    }
+    .cta-form-block__socials {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    .cta-form-block__socials span {
+        max-width: 100%;
     }
 }
