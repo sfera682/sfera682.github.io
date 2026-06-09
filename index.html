@@ -8,46 +8,47 @@
 </head>
 <body>
     <header class="header">
-        <div class="container header-wrap">
-            <img src="assets/img/logo.png" style="width:140px;">
+        <div class="container header-flex">
+            <img src="assets/img/logo.png" class="logo">
             <nav class="nav">
-                <a href="#">Главная</a><a href="#">Наши работы</a><a href="#">Каталог</a>
+                <a href="index.html">Главная</a>
+                <a href="works.html">Наши работы</a>
+                <a href="catalog.html">Каталог</a>
             </nav>
-            <a href="#" class="btn-wa"><img src="assets/img/WhatsApp_icon.png" style="width:20px;"> Написать в WhatsApp</a>
+            <a href="https://wa.me/77760680458" class="btn-wa">Написать в WhatsApp</a>
         </div>
     </header>
 
     <main class="container">
         <section class="hero">
-            <div class="hero-content">
+            <div class="hero-text">
                 <h1>Обновляем кухни с заботой о деталях</h1>
                 <p>Профессиональное обновление кухонных гарнитуров в Павлодаре</p>
-                <div class="btns-group">
-                    <button class="btn-wa" style="background:#007bff">Получить консультацию</button>
-                    <button class="btn-wa" style="background:transparent; border:2px solid #007bff; color:#007bff">Открыть каталог</button>
+                <div class="hero-btns">
+                    <button class="btn-main">Получить консультацию</button>
+                    <button class="btn-sec">Открыть каталог</button>
                 </div>
             </div>
-            <img src="assets/img/bg.png" class="hero-img">
+            <img src="assets/img/bg.png" class="hero-image">
         </section>
 
         <section class="why-us">
             <h2>ПОЧЕМУ ВЫБИРАЮТ НАС</h2>
-            <div class="features-grid">
-                <div class="card"><img src="assets/img/list1.png"><p>250+ работ</p></div>
-                <div class="card"><img src="assets/img/list2.png"><p>Замер</p></div>
-                <div class="card"><img src="assets/img/list3.png"><p>Гарантия</p></div>
-                <div class="card"><img src="assets/img/list4.png"><p>Сроки</p></div>
-                <div class="card"><img src="assets/img/list5.png"><p>Подход</p></div>
-                <div class="card"><img src="assets/img/check-icon.png"><p>Павлодар</p></div>
+            <div class="why-grid">
+                <div class="item"><img src="assets/img/list1.png"><span>Более 250 работ</span></div>
+                <div class="item"><img src="assets/img/list2.png"><span>Выезд на замер</span></div>
+                <div class="item"><img src="assets/img/list3.png"><span>Гарантия</span></div>
             </div>
         </section>
 
-        <section class="contact-block">
-            <h2>Хотите обновить свою кухню?</h2>
-            <div class="form-group">
-                <input type="text" placeholder="Ваше имя">
-                <input type="text" placeholder="Ваш телефон">
-                <button class="btn-wa" style="background:#25d366">Получить консультацию</button>
+        <section class="form-section">
+            <div class="form-box">
+                <h2>Хотите обновить свою кухню?</h2>
+                <div class="form-inputs">
+                    <input type="text" placeholder="Ваше имя">
+                    <input type="tel" placeholder="Ваш телефон">
+                    <button class="btn-send">Получить консультацию</button>
+                </div>
             </div>
         </section>
     </main>
