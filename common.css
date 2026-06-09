@@ -1,15 +1,8 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Inter', sans-serif; background-color: #ffffff; color: #1e293b; line-height: 1.6; }
-.container { width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-
-/* Шапка */
-.header { padding: 20px 0; border-bottom: 1px solid #e2e8f0; }
+body { font-family: 'Inter', sans-serif; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+.header { padding: 20px 0; border-bottom: 1px solid #eee; }
 .header__container { display: flex; justify-content: space-between; align-items: center; }
 .logo__img { width: 50px; }
-
-/* Иконки (путь без папки css/) */
-.icon-small { content: url('./assets/img/phone-icon.png'); width: 20px; height: 20px; vertical-align: middle; }
-.icon-btn { content: url('./assets/img/WhatsApp_icon.png'); width: 22px; height: 22px; vertical-align: middle; }
-
-/* Кнопка */
-.btn { display: inline-flex; align-items: center; gap: 10px; padding: 12px 24px; border-radius: 8px; background: #007bff; color: white; text-decoration: none; font-weight: 600; }
+.icon-btn { width: 22px; vertical-align: middle; }
+.btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; background: #007bff; color: white; border-radius: 8px; text-decoration: none; }
