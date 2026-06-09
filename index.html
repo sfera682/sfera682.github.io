@@ -15,16 +15,20 @@
     <header class="header">
         <div class="container header__container">
             <div class="logo">
-                <div class="logo__circle"></div>
+                <img src="./логотип.png" alt="SFERA PROM KZ" class="logo__img">
                 <span class="logo__text">SFERA PROM KZ</span>
             </div>
             <nav class="nav">
-                <a href="#" class="nav__link active">Главная</a>
-                <a href="#works" class="nav__link">Наши работы</a>
+                <a href="./index.html" class="nav__link active">Главная</a>
+                <a href="./works.html" class="nav__link">Наши работы</a>
             </nav>
             <div class="header__contacts">
-                <a href="tel:+77760680458" class="phone-link"><i class="fa-solid fa-phone"></i> +7 776 068 04 58</a>
-                <a href="https://wa.me/77760680458" class="btn btn--whatsapp-header"><i class="fa-brands fa-whatsapp"></i> Написать в WhatsApp</a>
+                <a href="tel:+77760680458" class="phone-link">
+                    <img src="./значок телефона.png" alt="Телефон" class="icon-small"> +7 776 068 04 58
+                </a>
+                <a href="https://wa.me/77760680458" class="btn btn--whatsapp-header" target="_blank">
+                    <img src="./WhatsApp_icon.png" alt="WhatsApp" class="icon-btn"> Написать в WhatsApp
+                </a>
             </div>
         </div>
     </header>
@@ -44,68 +48,13 @@
                 </ul>
 
                 <div class="hero__actions">
-                    <a href="https://wa.me/77760680458" class="btn btn--primary"><i class="fa-brands fa-whatsapp"></i> Получить консультацию</a>
-                    <a href="#works" class="btn btn--outline">Смотреть наши работы</a>
+                    <a href="https://wa.me/77760680458" class="btn btn--primary" target="_blank">
+                        <img src="./WhatsApp_icon.png" alt="WhatsApp" class="icon-btn"> Получить консультацию в WhatsApp
+                    </a>
+                    <a href="./works.html" class="btn btn--outline">Смотреть наши работы</a>
                 </div>
             </div>
             <div class="hero__image"></div>
-        </div>
-    </section>
-
-    <section class="works" id="works">
-        <div class="container">
-            <h2 class="section-title">ДО / ПОСЛЕ</h2>
-            <p class="section-subtitle">Реальные примеры наших работ</p>
-
-            <div class="works__grid">
-                <div class="project-card">
-                    <div class="project-card__images">
-                        <div class="img-box">
-                            <span class="badge badge--before">ДО</span>
-                            <img src="https://images.unsplash.com/photo-1556912173-3bb406ef7e77?auto=format&fit=crop&w=500&q=80" alt="До">
-                        </div>
-                        <div class="slider-divider">
-                            <div class="slider-arrow"><i class="fa-solid fa-chevron-left"></i><i class="fa-solid fa-chevron-right"></i></div>
-                        </div>
-                        <div class="img-box">
-                            <span class="badge badge--after">ПОСЛЕ</span>
-                            <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=500&q=80" alt="После">
-                        </div>
-                    </div>
-                    <div class="project-card__info">
-                        <h3 class="project-card__title">Проект №1</h3>
-                        <ul class="project-card__list">
-                            <li><i class="fa-regular fa-circle-check"></i> Замена фасадов</li>
-                            <li><i class="fa-regular fa-circle-check"></i> Новая столешница</li>
-                            <li><i class="fa-regular fa-circle-check"></i> Замена фурнитуры</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-card__images">
-                        <div class="img-box">
-                            <span class="badge badge--before">ДО</span>
-                            <img src="https://images.unsplash.com/photo-1565183997392-2f6f122e5912?auto=format&fit=crop&w=500&q=80" alt="До">
-                        </div>
-                        <div class="slider-divider">
-                            <div class="slider-arrow"><i class="fa-solid fa-chevron-left"></i><i class="fa-solid fa-chevron-right"></i></div>
-                        </div>
-                        <div class="img-box">
-                            <span class="badge badge--after">ПОСЛЕ</span>
-                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=500&q=80" alt="После">
-                        </div>
-                    </div>
-                    <div class="project-card__info">
-                        <h3 class="project-card__title">Проект №2</h3>
-                        <ul class="project-card__list">
-                            <li><i class="fa-regular fa-circle-check"></i> Замена фасадов</li>
-                            <li><i class="fa-regular fa-circle-check"></i> Установка новой столешницы</li>
-                            <li><i class="fa-regular fa-circle-check"></i> Замена фурнитуры</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -145,15 +94,19 @@
                     <p>Оставьте заявку и получите бесплатную консультацию специалиста</p>
                 </div>
                 <form class="cta-form">
-                    <input type="text" placeholder="Ваше имя" required>
-                    <input type="tel" placeholder="Ваш телефон" required>
-                    <button type="submit" class="btn btn--submit"><i class="fa-solid fa-phone"></i> Получить консультацию</button>
+                    <input type="text" placeholder="Ваше имя" required class="cta-input">
+                    <input type="tel" placeholder="Ваш телефон" required class="cta-input">
+                    <button type="submit" class="btn btn--submit">Получить консультацию</button>
                 </form>
                 <div class="cta-form-block__socials">
-                    <span>Напишите нам в WhatsApp или Telegram</span>
+                    <span>Напишите нам в WhatsApp или Instagram и получите консультацию по вашей кухне</span>
                     <div class="social-icons">
-                        <a href="https://wa.me/77760680458" class="social-icon social-icon--wa"><i class="fa-brands fa-whatsapp"></i></a>
-                        <a href="https://t.me/77760680458" class="social-icon social-icon--tg"><i class="fa-brands fa-telegram"></i></a>
+                        <a href="https://wa.me/77760680458" class="social-icon" target="_blank">
+                            <img src="./WhatsApp_icon.png" alt="WhatsApp">
+                        </a>
+                        <a href="https://www.instagram.com/sfera_prom_kz" class="social-icon" target="_blank">
+                            <img src="./Instagram.svg.png" alt="Instagram">
+                        </a>
                     </div>
                 </div>
             </div>
@@ -164,22 +117,28 @@
         <div class="container footer__container">
             <div class="footer__col">
                 <div class="logo">
-                    <div class="logo__circle"></div>
+                    <img src="./логотип.png" alt="SFERA PROM KZ" class="logo__img">
                     <span class="logo__text">SFERA PROM KZ</span>
                 </div>
                 <p class="footer__desc">Профессиональное обновление кухонных гарнитуров в Павлодаре</p>
             </div>
             <div class="footer__col">
                 <h4>НАВИГАЦИЯ</h4>
-                <a href="#">Главная</a>
-                <a href="#works">Наши работы</a>
+                <a href="./index.html" class="footer__link">Главная</a>
+                <a href="./works.html" class="footer__link">Наши работы</a>
             </div>
             <div class="footer__col">
                 <h4>КОНТАКТЫ</h4>
-                <a href="tel:+77760680458" class="footer__phone"><i class="fa-solid fa-phone"></i> +7 776 068 04 58</a>
+                <a href="tel:+77760680458" class="footer__phone">
+                    <img src="./значок телефона.png" alt="Телефон" class="icon-small"> +7 776 068 04 58
+                </a>
                 <div class="footer__socials">
-                    <a href="https://wa.me/77760680458" class="wa"><i class="fa-brands fa-whatsapp"></i></a>
-                    <a href="https://t.me/77760680458" class="tg"><i class="fa-brands fa-telegram"></i></a>
+                    <a href="https://wa.me/77760680458" target="_blank">
+                        <img src="./WhatsApp_icon.png" alt="WhatsApp">
+                    </a>
+                    <a href="https://www.instagram.com/sfera_prom_kz" target="_blank">
+                        <img src="./Instagram.svg.png" alt="Instagram">
+                    </a>
                 </div>
             </div>
             <div class="footer__col">
