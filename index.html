@@ -3,19 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Наши работы — Обновление кухонь в Павлодаре</title>
+    <title>Обновление и реставрация кухонь в Павлодаре</title>
     
+    <!-- Подключаем шрифт Montserrat -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
+    <!-- Стили -->
     <link rel="stylesheet" href="common.css">
-    <link rel="stylesheet" href="works.css">
+    <link rel="stylesheet" href="index.css">
     
     <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 </head>
 <body>
 
+    <!-- ШАПКА САЙТА -->
     <header class="site-header">
         <div class="main-container header-flex">
             <a href="index.html" class="site-logo">
@@ -23,9 +26,9 @@
             </a>
             
             <nav class="site-nav">
-                <a href="index.html" class="nav-item">Главная</a>
+                <a href="index.html" class="nav-item active">Главная</a>
                 <a href="catalog.html" class="nav-item">Каталог</a>
-                <a href="works.html" class="nav-item active">Наши работы</a>
+                <a href="works.html" class="nav-item">Наши работы</a>
             </nav>
 
             <div class="header-contacts-block">
@@ -37,7 +40,7 @@
                     <a href="https://wa.me/77760680458" target="_blank" class="social-icon-btn">
                         <img src="assets/img/WhatsApp_icon.png" alt="WhatsApp">
                     </a>
-                    <a href="https://instagram.com/jur_pomosh" target="_blank" class="social-icon-btn">
+                    <a href="https://instagram.com/" target="_blank" class="social-icon-btn">
                         <img src="assets/img/Instagram.svg.png" alt="Instagram">
                     </a>
                 </div>
@@ -45,67 +48,37 @@
         </div>
     </header>
 
-    <section class="page-title-section">
+    <!-- ГЛАВНЫЙ ЭКРАН -->
+    <section class="hero-section">
         <div class="main-container">
-            <h1 class="page-main-title">НАШИ РАБОТЫ</h1>
-            <p class="page-subtitle">Реальные видео-обзоры до/после из нашего Instagram</p>
-        </div>
-    </section>
-
-    <section class="works-gallery-section">
-        <div class="main-container">
-            
-            <div class="works-grid">
-                
-                <div class="work-card">
-                    <div class="work-card__video">
-                        <iframe src="https://www.instagram.com/reel/C7436_toExW/embed/" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
-                    </div>
-                    <div class="work-card__content">
-                        <h3 class="work-card__title">Замена фасадов и столешницы</h3>
-                        <p class="work-card__desc">Полное обновление внешнего вида кухни всего за 5 дней без демонтажа старого корпуса.</p>
-                        <span class="work-card__city">г. Павлодар</span>
-                    </div>
+            <div class="hero-content">
+                <h1 class="hero-title">Обновление и реставрация кухонь в Павлодаре</h1>
+                <p class="hero-subtitle">Подарите вашей кухне вторую жизнь: замена фасадов, столешниц и фурнитуры без переплат за новый корпус!</p>
+                <div class="hero-actions">
+                    <a href="https://wa.me/77760680458" target="_blank" class="hero-btn-primary">Рассчитать стоимость</a>
+                    <a href="works.html" class="hero-btn-secondary">Смотреть работы</a>
                 </div>
-
-                <div class="work-card">
-                    <div class="work-card__video">
-                        <iframe src="https://www.instagram.com/reel/C7436_toExW/embed/" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
-                    </div>
-                    <div class="work-card__content">
-                        <h3 class="work-card__title">Матовые фасады и доводчики</h3>
-                        <p class="work-card__desc">Установили современные стильные фасады и петли с доводчиками для плавного закрывания.</p>
-                        <span class="work-card__city">г. Павлодар</span>
-                    </div>
-                </div>
-
-                <div class="work-card">
-                    <div class="work-card__video">
-                        <iframe src="https://www.instagram.com/reel/C7436_toExW/embed/" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
-                    </div>
-                    <div class="work-card__content">
-                        <h3 class="work-card__title">Реставрация угловой кухни</h3>
-                        <p class="work-card__desc">Освежили фартук, заменили изношенную рабочую поверхность и добавили подсветку.</p>
-                        <span class="work-card__city">г. Павлодар</span>
-                    </div>
-                </div>
-
             </div>
-
         </div>
     </section>
 
-    <section class="works-cta-section">
+    <!-- ПРЕИМУЩЕСТВА -->
+    <section class="features-section">
         <div class="main-container">
-            <div class="cta-box">
-                <h2 class="cta-box__title">Хотите так же обновить свою кухню?</h2>
-                <p class="cta-box__subtitle">Запишитесь на бесплатный замер. Мастер приедет с образцами материалов и проконсультирует вас.</p>
-                
-                <form class="cta-inline-form">
-                    <input type="text" placeholder="Ваше имя" required class="cta-input">
-                    <input type="tel" placeholder="Номер телефона" required class="cta-input">
-                    <button type="submit" class="cta-btn">Получить консультацию</button>
-                </form>
+            <h2 class="section-title">Почему выбирают нас</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3 class="feature-card__title">Экономия до 60%</h3>
+                    <p class="feature-card__text">Реставрация и замена внешних элементов обходится значительно дешевле покупки нового гарнитура.</p>
+                </div>
+                <div class="feature-card">
+                    <h3 class="feature-card__title">Быстрые сроки</h3>
+                    <p class="feature-card__text">Большинство работ по обновлению выполняются в срок от 3 до 7 дней.</p>
+                </div>
+                <div class="feature-card">
+                    <h3 class="feature-card__title">Качественные материалы</h3>
+                    <p class="feature-card__text">Используем только проверенные износостойкие МДФ-панели, столешницы и надежную фурнитуру.</p>
+                </div>
             </div>
         </div>
     </section>
