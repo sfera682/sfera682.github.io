@@ -15,7 +15,7 @@ body {
 
 .container {
     width: 100%;
-    max-width: 1100px; /* Идеальный размер для двух красивых колонок */
+    max-width: 1100px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -224,12 +224,11 @@ ul {
     text-transform: uppercase;
 }
 
-/* Скрыли подзаголовок, чтобы Инстаграм не воровал его текст */
 .section-subtitle {
     display: none;
 }
 
-/* Сетка строго на 2 видео в ряд на компьютерах */
+/* Две колонки на ПК */
 .works__grid-gallery {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -237,7 +236,7 @@ ul {
     margin: 40px auto 0 auto;
 }
 
-/* Карточка без жесткого ограничения снизу */
+/* Карточка имеет запас по высоте под длинные тексты */
 .work-card {
     background: #ffffff;
     border-radius: 12px;
@@ -245,26 +244,20 @@ ul {
     overflow: hidden;
     border: 1px solid #e2e8f0;
     width: 100%;
-    height: auto; 
+    min-height: 840px; 
     display: flex;
-    transition: transform 0.3s ease;
 }
 
-.work-card:hover {
-    transform: translateY(-5px);
-}
-
-/* Фиксированная высота ТОЛЬКО для видеочасти, а текст Инстаграм раскроет ниже сам */
 .work-card iframe {
     width: 100% !important;
-    height: 520px !important; 
-    min-height: 520px !important;
+    height: 100% !important; 
+    min-height: 840px !important;
     border: none !important;
     margin: 0 !important;
     padding: 0 !important;
 }
 
-/* Блок ссылки на Инстаграм в самом низу страницы */
+/* Блок Инстаграма внизу страницы */
 .youtube-channel-block {
     text-align: center;
     margin-top: 50px;
@@ -476,15 +469,14 @@ ul {
     color: #94a3b8;
 }
 
-/* АДАПТИВНОСТЬ НА МОБИЛЬНЫХ */
+/* АДАПТИВНОСТЬ */
 @media (max-width: 900px) {
     .works__grid-gallery {
-        grid-template-columns: 1fr; /* На планшетах и телефонах строго в 1 колонку */
-        max-width: 480px; /* Чтобы плееры не растягивались сосиской вширь */
+        grid-template-columns: 1fr;
+        max-width: 480px;
     }
-    .work-card iframe {
-        height: 480px !important;
-        min-height: 480px !important;
+    .work-card, .work-card iframe {
+        min-height: 760px;
     }
 }
 
