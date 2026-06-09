@@ -15,7 +15,7 @@ body {
 
 .container {
     width: 100%;
-    max-width: 1000px; /* Сузили контейнер, чтобы карточки в 2 ряда не были слишком огромными на больших экранах */
+    max-width: 1000px; /* Сузили контейнер, чтобы карточки в 2 ряда не были гигантскими на больших экранах */
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -231,23 +231,25 @@ ul {
     font-size: 16px;
 }
 
-/* Сетка на 2 видео в ряд */
+/* Сетка строго на 2 видео в ряд */
 .works__grid-gallery {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 40px; /* Большие красивые отступы между видео */
-    max-width: 800px; /* Ограничили ширину сетки, чтобы видео встали ровно и без пустот */
+    gap: 30px;
+    max-width: 900px;
     margin: 0 auto;
 }
 
+/* Адаптивный контейнер под автоматический пост с подписью из Instagram */
 .work-card {
     background: #ffffff;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.05);
     overflow: hidden;
     border: 1px solid #e2e8f0;
+    width: 100%;
+    min-height: 780px; /* Высота под плеер Инстаграма и текст под ним */
     display: flex;
-    flex-direction: column;
     transition: transform 0.3s ease;
 }
 
@@ -255,38 +257,16 @@ ul {
     transform: translateY(-5px);
 }
 
-/* Окна адаптивного плеера под Instagram Reels */
-.work-card__video {
-    position: relative;
-    width: 100%;
-    height: 720px; /* Фиксированная высота карточки, чтобы вертикальный контент и текст снизу полностью помещались */
-    background: #fff;
-    overflow: hidden;
-    border-radius: 12px;
+.work-card iframe {
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 780px;
+    border: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
-.work-card__video iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
-}
-
-.work-card__caption {
-    padding: 15px;
-    font-size: 15px;
-    font-weight: 500;
-    color: #1e293b;
-    text-align: center;
-    background: #f8fafc;
-    border-top: 1px solid #e2e8f0;
-    margin: 0;
-    z-index: 2;
-}
-
-/* Нижний блок ссылки на Инсту */
+/* Нижний блок ссылки на Instagram */
 .youtube-channel-block {
     text-align: center;
     margin-top: 50px;
@@ -498,7 +478,7 @@ ul {
     color: #94a3b8;
 }
 
-/* АДАПТИВНОСТЬ (МОБИЛКИ И ПЛАНШЕТЫ) */
+/* АДАПТИВНОСТЬ (МОБИЛЬНЫЕ УСТРОЙСТВА И ПЛАНШЕТЫ) */
 @media (max-width: 768px) {
     .hero__container {
         flex-direction: column;
@@ -515,10 +495,15 @@ ul {
         justify-content: center;
     }
     
-    /* На телефонах перестраиваем видео в один ряд, чтобы удобно листалось пальцем */
+    /* На смартфонах вытягиваем видео по одному в ряд */
     .works__grid-gallery {
         grid-template-columns: 1fr;
         max-width: 100%;
+        gap: 20px;
+    }
+    
+    .work-card, .work-card iframe {
+        min-height: 620px; /* Чуть уменьшаем высоту для мобильных экранов */
     }
     
     .advantages__grid {
