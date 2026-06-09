@@ -3,25 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Обновление и реставрация кухонь в Павлодаре</title>
+    <title>Кухни под ключ в Павлодаре</title>
     <link rel="stylesheet" href="common.css">
     <link rel="stylesheet" href="index.css">
     <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 </head>
 <body>
 
+    <!-- ШАПКА -->
     <header class="header">
         <div class="container header__container">
             <a href="index.html" class="logo">
                 <img src="assets/img/logo.png" alt="Логотип">
             </a>
-            
             <nav class="nav">
                 <a href="index.html" class="nav__link active">Главная</a>
                 <a href="catalog.html" class="nav__link">Каталог</a>
                 <a href="works.html" class="nav__link">Наши работы</a>
             </nav>
-
             <div class="header__contacts">
                 <a href="tel:+77710580453" class="phone-link">
                     <img src="assets/img/phone-icon.png" alt="Телефон" class="icon">
@@ -39,59 +38,99 @@
         </div>
     </header>
 
+    <!-- ГЛАВНЫЙ ЭКРАН (Точно по макету: текст слева, форма справа) -->
     <section class="hero">
         <div class="container hero__container">
-            <div class="hero__content">
-                <h1 class="hero__title">Кухни под ключ в Павлодаре</h1>
-                <p class="hero__subtitle">Профессиональное обновление, замена фасадов и столешниц. Подарите вашей кухне вторую жизнь со скидкой до 50% от стоимости нового гарнитура!</p>
-                <div class="hero__buttons">
-                    <a href="https://wa.me/77710580453" target="_blank" class="btn btn--primary">Рассчитать стоимость</a>
-                    <a href="catalog.html" class="btn btn--secondary">Смотреть материалы</a>
+            
+            <!-- Левая часть: Текст и буллиты -->
+            <div class="hero__left">
+                <h1 class="hero__title">КУХНИ ПОД КЛЮЧ <br><span class="hero__subtitle-main">От производителя в Павлодаре</span></h1>
+                
+                <ul class="hero__features">
+                    <li>
+                        <img src="assets/img/check-icon.png" alt="v">
+                        <span>Выезд дизайнера-замерщика — <strong>БЕСПЛАТНО</strong></span>
+                    </li>
+                    <li>
+                        <img src="assets/img/check-icon.png" alt="v">
+                        <span>Собственное производство и сборка</span>
+                    </li>
+                    <li>
+                        <img src="assets/img/check-icon.png" alt="v">
+                        <span>Гарантия на материалы по договору</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Правая часть: Форма захвата -->
+            <div class="hero__right">
+                <div class="lead-form">
+                    <h3 class="lead-form__title">Рассчитать стоимость кухни</h3>
+                    <p class="lead-form__subtitle">Оставьте заявку, и мы свяжемся с вами в течение 15 минут</p>
+                    <form action="#">
+                        <input type="text" placeholder="Ваше имя" required class="form-input">
+                        <input type="tel" placeholder="Номер телефона" required class="form-input">
+                        <button type="submit" class="form-btn">Узнать цену</button>
+                    </form>
                 </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- БЛОК: О НАШЕЙ КОМПАНИИ -->
+    <section class="about">
+        <div class="container about__container">
+            <div class="about__content">
+                <h2 class="block-title">О компании</h2>
+                <p class="about__lead">Мы создаем кухни, на которых хочется собираться всей семьей.</p>
+                <p class="about__text">Наша специализация — профессиональное обновление, реставрация и изготовление кухонных гарнитуров. Мы помогаем обновить фасады и столешницы, экономя бюджет наших клиентов, но сохраняя бескомпромиссное качество.</p>
+            </div>
+            <div class="about__image">
+                <!-- Сюда временно ставим bg.png или любую кухонную картинку -->
+                <img src="assets/img/bg.png" alt="Наша работа" class="about__img-file">
             </div>
         </div>
     </section>
 
-    <section class="features">
+    <!-- БЛОК: ПОЧЕМУ ВЫБИРАЮТ НАС (Иконки с подписями в 2 колонки) -->
+    <section class="advantages">
         <div class="container">
-            <h2 class="section-title">Почему выбирают нас</h2>
-            <div class="features__grid">
-                <div class="feature-card">
-                    <img src="assets/img/list1.png" alt="Иконка" class="feature-card__icon">
-                    <p class="feature-card__text">Более 250 обновленных кухонь</p>
+            <h2 class="block-title block-title--center">Почему именно мы?</h2>
+            
+            <div class="advantages__grid">
+                <div class="adv-item">
+                    <img src="assets/img/list1.png" alt="icon" class="adv-item__icon">
+                    <div class="adv-item__body">
+                        <h4>Большой опыт</h4>
+                        <p>Более 250 успешно обновленных кухонных гарнитуров в Павлодаре.</p>
+                    </div>
                 </div>
-                <div class="feature-card">
-                    <img src="assets/img/list2.png" alt="Иконка" class="feature-card__icon">
-                    <p class="feature-card__text">Бесплатный выезд на замер</p>
+                <div class="adv-item">
+                    <img src="assets/img/list2.png" alt="icon" class="adv-item__icon">
+                    <div class="adv-item__body">
+                        <h4>Бесплатный замер</h4>
+                        <p>Приедем в удобное время с образцами материалов, фасадов и столешниц.</p>
+                    </div>
                 </div>
-                <div class="feature-card">
-                    <img src="assets/img/list3.png" alt="Иконка" class="feature-card__icon">
-                    <p class="feature-card__text">Гарантия качества на материалы</p>
+                <div class="adv-item">
+                    <img src="assets/img/list3.png" alt="icon" class="adv-item__icon">
+                    <div class="adv-item__body">
+                        <h4>Гарантия качества</h4>
+                        <p>Используем только проверенные долговечные материалы и фурнитуру.</p>
+                    </div>
                 </div>
-                <div class="feature-card">
-                    <img src="assets/img/list4.png" alt="Иконка" class="feature-card__icon">
-                    <p class="feature-card__text">Строгое соблюдение сроков</p>
-                </div>
-                <div class="feature-card">
-                    <img src="assets/img/list5.png" alt="Иконка" class="feature-card__icon">
-                    <p class="feature-card__text">Индивидуальный подход к дизайну</p>
+                <div class="adv-item">
+                    <img src="assets/img/list4.png" alt="icon" class="adv-item__icon">
+                    <div class="adv-item__body">
+                        <h4>Точные сроки</h4>
+                        <p>Фиксируем дату сдачи работы в договоре и строго ее соблюдаем.</p>
+                    </div>
                 </div>
             </div>
+
         </div>
     </section>
 
-    <footer class="footer">
-        <div class="container footer__container">
-            <p class="footer__copy">© 2026 Обновление кухонь. Все права защищены.</p>
-            <p class="footer__location">Работаем по Павлодару</p>
-            <div class="footer__contacts">
-                <span class="phone-text">+7 (771) 058-04-53</span>
-            </div>
-        </div>
-    </footer>
-
-</body>
-</html>
-    </footer>
 </body>
 </html>
