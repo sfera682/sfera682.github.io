@@ -1,148 +1,141 @@
-/* УНИКАЛЬНЫЕ СТИЛИ СТРАНИЦЫ НАШИХ РАБОТ С ВИДЕО */
+/* ==========================================================================
+   СТРАНИЦА "НАШИ РАБОТЫ" (works.css)
+   ========================================================================== */
 
-.page-title-section {
-    padding: 50px 0 20px 0;
+/* Основной контейнер страницы */
+.works-page {
+    padding: 60px 0;
+    background-color: #fcfcfc; /* Светлый приятный фон, как на макете */
+    min-height: calc(100vh - 200px); /* Чтобы футер не прилипал к верху, если видео долго грузятся */
+}
+
+/* Главный заголовок */
+.section-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    color: #1e293b;
     text-align: center;
-    background-color: #ffffff;
-}
-
-.page-main-title {
-    font-size: 2.2rem;
-    font-weight: 800;
-    color: #0f172a;
-    letter-spacing: 0.5px;
-    margin-bottom: 10px;
-}
-
-.page-subtitle {
-    font-size: 1rem;
-    color: #64748b;
-}
-
-/* Сетка под видео (3 колонки) */
-.works-gallery-section {
-    padding: 30px 0 70px 0;
-}
-
-.works-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-}
-
-/* Карточки с видео */
-.work-card {
-    background: #ffffff;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    border: 1px solid #e2e8f0;
-    display: flex;
-    flex-direction: column;
-}
-
-/* Настройки адаптивного контейнера под плеер Инстаграма */
-.work-card__video {
-    width: 100%;
-    height: 480px; /* Идеальная высота для вертикальных видео-рилс */
-    background-color: #000000;
+    margin-bottom: 40px;
     position: relative;
 }
 
-.work-card__video iframe {
+/* Сетка для видео-карточек (3 колонки на ПК, 2 на планшетах, 1 на мобилках) */
+.works__grid-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+    align-items: start;
+}
+
+/* Карточка для видео */
+.work-card {
     width: 100%;
-    height: 100%;
-    border: none;
-    display: block;
-}
-
-.work-card__content {
-    padding: 20px;
-    flex-grow: 1;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.work-card__title {
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: #0f172a;
-    margin-bottom: 8px;
-}
-
-.work-card__desc {
-    font-size: 0.85rem;
-    color: #475569;
-    line-height: 1.4;
-    margin-bottom: 15px;
-}
-
-.work-card__city {
-    font-size: 0.8rem;
-    font-weight: 600;
-    color: #1e2e3d;
-    background: #f1f5f9;
-    padding: 4px 10px;
-    border-radius: 4px;
-    align-self: flex-start;
-}
-
-/* Секция с формой внизу */
-.works-cta-section {
-    background: linear-gradient(135deg, #1e2e3d 0%, #111b24 100%);
-    padding: 60px 0;
-    color: #ffffff;
-}
-
-.cta-box {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.cta-box__title {
-    font-size: 1.8rem;
-    font-weight: 700;
-    margin-bottom: 10px;
-}
-
-.cta-box__subtitle {
-    font-size: 1rem;
-    color: #cbd5e1;
-    margin-bottom: 30px;
-}
-
-.cta-inline-form {
-    display: flex;
-    gap: 15px;
     justify-content: center;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04); /* Легкая тень для объема */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
 }
 
-.cta-input {
-    flex: 1;
-    max-width: 250px;
-    padding: 14px;
-    border: none;
-    border-radius: 6px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.95rem;
-    outline: none;
+/* Эффект при наведении на карточку */
+.work-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
 }
 
-.cta-btn {
+/* Жесткий фикс адаптивности для Iframe Инстаграма */
+.work-card iframe.instagram-media {
+    width: 100% !important;
+    min-width: 326px !important;
+    max-width: 540px !important;
+    margin: 0 auto !important;
+    border: none !important;
+    background: #ffffff;
+}
+
+/* ==========================================================================
+   ПРОМО-БЛОК INSTAGRAM (СНИЗУ СТРАНИЦЫ)
+   ========================================================================== */
+
+.instagram-promo-block {
+    max-width: 800px;
+    margin: 60px auto 0 auto;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+.instagram-promo-block p {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #475569;
+    margin-bottom: 25px;
+}
+
+/* Кнопка перехода в профиль */
+.btn--primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #004b87; /* Синий фирменный цвет под твой макет */
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
     padding: 14px 28px;
-    background: #38bdf8;
-    color: #111b24;
-    border: none;
-    border-radius: 6px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.95rem;
-    font-weight: 700;
-    cursor: pointer;
-    transition: background 0.2s;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
-.cta-btn:hover {
-    background: #7dd3fc;
+.btn--primary:hover {
+    background-color: #003561; /* Темнее при наведении */
+}
+
+.btn--primary:active {
+    transform: scale(0.98);
+}
+
+/* Иконка внутри кнопки */
+.icon-btn {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+/* ==========================================================================
+   АДАПТИВНОСТЬ ДЛЯ МОБИЛЬНЫХ УСТРОЙСТВ
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    .works-page {
+        padding: 40px 0;
+    }
+
+    .section-title {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+
+    .works__grid-gallery {
+        gap: 20px; /* Меньше отступы на смартфонах */
+    }
+
+    .instagram-promo-block {
+        padding: 30px 20px;
+        margin-top: 40px;
+    }
+
+    .instagram-promo-block p {
+        font-size: 16px;
+    }
 }
