@@ -1,149 +1,20 @@
 /* ==========================================================================
-   ОБЩИЕ СТИЛИ ДЛЯ ВСЕГО САЙТА (common.css)
+   СТИЛИ ДЛЯ СВЕТЛОГО И ЧИСТОГО ПОДВАЛА (FOOTER)
    ========================================================================== */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Inter', sans-serif;
-    background-color: #fcfcfc;
-    color: #0f172a;
-    line-height: 1.5;
-}
-
-.container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* --------------------------------------------------------------------------
-   ШАПКА САЙТА (HEADER)
-   -------------------------------------------------------------------------- */
-.header {
-    background-color: #ffffff;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    padding: 15px 0;
-}
-
-.header__container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-/* Логотип */
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    text-decoration: none;
-}
-
-.logo__img {
-    height: 45px;
-    width: auto;
-    object-fit: contain;
-}
-
-.logo__text {
-    font-weight: 700;
-    font-size: 20px;
-    color: #1e293b;
-    letter-spacing: 0.5px;
-}
-
-/* Меню навигации */
-.nav {
-    display: flex;
-    gap: 30px;
-}
-
-.nav__link {
-    text-decoration: none;
-    color: #475569;
-    font-weight: 500;
-    font-size: 16px;
-    transition: color 0.2s ease;
-    padding: 5px 0;
-}
-
-.nav__link:hover,
-.nav__link.active {
-    color: #004b87;
-}
-
-/* Контакты в шапке */
-.header__contacts {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.phone-link {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    text-decoration: none;
-    color: #1e293b;
-    font-weight: 600;
-    font-size: 16px;
-}
-
-.icon-small {
-    width: 18px;
-    height: 18px;
-    object-fit: contain;
-}
-
-/* Кнопка WhatsApp в шапке */
-.btn--whatsapp-header {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background-color: #25D366; /* Зеленый цвет WhatsApp */
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 14px;
-    padding: 10px 18px;
-    border-radius: 8px;
-    transition: background-color 0.2s ease;
-}
-
-.btn--whatsapp-header:hover {
-    background-color: #1ebd58;
-}
-
-.icon-btn {
-    width: 18px;
-    height: 18px;
-    object-fit: contain;
-}
-
-/* --------------------------------------------------------------------------
-   ПОДВАЛ САЙТА (FOOTER)
-   -------------------------------------------------------------------------- */
 .footer {
-    background-color: #1e293b;
-    color: #cbd5e1;
+    background-color: #f4f9fd; /* Нежный, очень светлый серо-голубой фон */
+    color: #2c3e50; /* Читаемый темно-серый цвет текста */
     padding: 60px 0 20px 0;
     margin-top: auto;
+    font-family: 'Inter', sans-serif;
+    border-top: 1px solid #e1eef7; /* Тонкая светлая полоса сверху */
 }
 
 .footer__container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     gap: 40px;
-    flex-wrap: wrap;
 }
 
 .footer__col {
@@ -152,168 +23,56 @@ body {
 }
 
 .footer__col h4 {
-    color: #ffffff;
     font-size: 18px;
     font-weight: 700;
     margin-bottom: 20px;
-}
-
-.footer__desc {
-    font-size: 14px;
-    line-height: 1.6;
-}
-
-.footer__link {
-    display: block;
-    color: #cbd5e1;
-    text-decoration: none;
-    margin-bottom: 12px;
-    font-size: 15px;
-    transition: color 0.2s ease;
-}
-
-.footer__link:hover {
-    color: #ffffff;
-}
-
-.footer__phone {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: 600;
-    margin-bottom: 20px;
-}
-
-.footer__socials {
-    display: flex;
-    gap: 15px;
-}
-
-.footer__socials a img {
-    width: 32px;
-    height: 32px;
-    transition: transform 0.2s ease;
-}
-
-.footer__socials a img:hover {
-    transform: scale(1.1);
-}
-
-.footer__copy {
-    text-align: center;
-    border-top: 1px solid #334155;
-    margin-top: 40px;
-    padding-top: 20px;
-    font-size: 13px;
-    color: #64748b;
-}
-
-/* --------------------------------------------------------------------------
-   АДАПТИВНОСТЬ ДЛЯ ШАПКИ И ПОДВАЛА
-   -------------------------------------------------------------------------- */
-@media (max-width: 768px) {
-    .header__container {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
-    }
-
-    .header__contacts {
-        flex-direction: column;
-        gap: 10px;
-        width: 100%;
-    }
-
-    .phone-link {
-        justify-content: center;
-    }
-
-    .btn--whatsapp-header {
-        width: 100%;
-        justify-content: center;
-    }
-
-    .footer__container {
-        flex-direction: column;
-        gap: 30px;
-    }
-}
-/* ==========================================================================
-   СТИЛИ ДЛЯ КРАСИВОГО ПОДВАЛА (FOOTER)
-   ========================================================================== */
-.footer {
-    background-color: #1a242f; /* Глубокий темный графит, как на референсах */
-    color: #ffffff;
-    padding: 60px 0 20px 0;
-    margin-top: auto; /* Фиксирует подвал внизу, если страница короткая */
-    font-family: 'Inter', sans-serif;
-}
-
-.footer__container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 40px;
-}
-
-.footer__col {
-    flex: 1;
-    min-width: 250px; /* Чтобы на мобилках колонки аккуратно падали друг под друга */
-}
-
-.footer__col h4 {
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 20px;
-    color: #ffffff;
+    color: #007bf2; /* Акцентный голубой цвет для заголовков */
     position: relative;
 }
 
-/* Аккуратная декоративная линия под заголовками в подвале */
 .footer__col h4::after {
     content: '';
     display: block;
     width: 35px;
-    height: 2px;
-    background-color: #25d366; /* Зеленый акцент под WhatsApp */
+    height: 3px;
+    background-color: #25d366; /* WhatsApp зеленый акцент */
     margin-top: 8px;
 }
 
 .footer__desc {
     font-size: 14px;
     line-height: 1.6;
-    color: #b0b8c1; /* Приглушенный светлый текст, приятный для глаз */
+    color: #5a6e85; /* Красивый приглушенный текст */
 }
 
 .footer__link {
     display: block;
-    color: #b0b8c1;
+    color: #4a5b6d;
     text-decoration: none;
     font-size: 15px;
     margin-bottom: 12px;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, padding-left 0.3s ease;
 }
 
 .footer__link:hover {
-    color: #ffffff; /* Подсветка при наведении */
+    color: #007bf2;
+    padding-left: 5px; /* Интерактивное смещение при наведении */
 }
 
 .footer__phone {
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    color: #ffffff;
+    color: #2c3e50;
     text-decoration: none;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 700;
     margin-bottom: 20px;
-    transition: transform 0.3s ease;
+    transition: color 0.3s ease;
 }
 
 .footer__phone:hover {
-    transform: translateX(5px); /* Легкий интерактивный сдвиг */
+    color: #007bf2;
 }
 
 .footer__phone .icon-small {
@@ -321,7 +80,6 @@ body {
     height: 18px;
 }
 
-/* Блок с круглыми иконками соцсетей */
 .footer__socials {
     display: flex;
     gap: 15px;
@@ -333,13 +91,13 @@ body {
     justify-content: center;
     width: 42px;
     height: 42px;
-    background-color: rgba(255, 255, 255, 0.08);
+    background-color: #e6f4fe; /* Светло-голубые круглые кнопочки */
     border-radius: 50%;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .footer__socials a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: #bae1ff;
     transform: translateY(-3px);
 }
 
@@ -349,21 +107,17 @@ body {
     object-fit: contain;
 }
 
-/* Самая нижняя плашка с копирайтом */
 .footer__copy {
     margin-top: 50px;
     padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid #e1eef7;
     text-align: center;
     font-size: 13px;
-    color: #717d8a;
+    color: #8fa2b6;
 }
 
-/* Адаптивность для мобильных телефонов */
+/* Мобильная адаптивность */
 @media (max-width: 768px) {
-    .footer {
-        padding: 40px 0 20px 0;
-    }
     .footer__container {
         flex-direction: column;
         gap: 30px;
