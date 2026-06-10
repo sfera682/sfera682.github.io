@@ -2,56 +2,54 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SFERA PROM KZ — Обновление кухонь в Павлодаре</title>
+    <link rel="stylesheet" href="common.css">
     <link rel="stylesheet" href="index.css">
+    <title>SFERA PROM KZ — Обновление кухонь в Павлодаре</title>
 </head>
 <body>
-
-    <header>
+    <header class="container">
         <div class="logo">SFERA PROM KZ</div>
-        <nav>
-            <a href="#">О НАС</a>
-            <a href="#">КАТАЛОГ</a>
-            <a href="#">РАБОТЫ</a>
-            <a href="#">КОНТАКТЫ</a>
-        </nav>
+        <nav><a href="#about">О НАС</a><a href="#catalog">КАТАЛОГ</a><a href="works.html">РАБОТЫ</a><a href="#contacts">КОНТАКТЫ</a></nav>
         <div class="header-phone">+7 776 068 04 58</div>
     </header>
 
-    <section class="hero">
+    <section class="hero container">
         <div class="hero-content">
-            <h1>ОБНОВЛЯЕМ КУХНИ<br>С ЗАБОТОЙ О ДЕТАЛЯХ</h1>
-            <p>Профессиональное обновление и реставрация кухонных гарнитуров в Павлодаре без переплат за новую мебель.</p>
+            <h1>ОБНОВЛЯЕМ КУХНИ С ЗАБОТОЙ О ДЕТАЛЯХ</h1>
+            <p>Профессиональное обновление и реставрация кухонных гарнитуров в Павлодаре.</p>
             <button class="btn-main">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</button>
         </div>
         <img src="assets/img/bg.png" class="hero-img">
     </section>
 
-    <section class="steps">
-        <h2>КАК МЫ РАБОТАЕМ</h2>
-        <div class="steps-grid">
-            <div class="step-card"><img src="assets/img/icon-measure.png"><h3>1. ЗАМЕР И КОНСУЛЬТАЦИЯ</h3><p>Выезд мастера бесплатно</p></div>
-            <div class="step-card"><img src="assets/img/icon-catalog.png"><h3>2. ВЫБОР МАТЕРИАЛОВ</h3><p>Подбор идеальных цветов</p></div>
-            <div class="step-card"><img src="assets/img/icon-build.png"><h3>3. ПРОИЗВОДСТВО</h3><p>Качественная сборка</p></div>
-            <div class="step-card"><img src="assets/img/icon-ready.png"><h3>4. ГОТОВАЯ КУХНЯ</h3><p>Гарантия на работы</p></div>
+    <section id="about" class="about container">
+        <h2>О КОМПАНИИ</h2>
+        <p>Мы вдыхаем новую жизнь в вашу кухню, меняя фасады и столешницы.</p>
+    </section>
+
+    <section id="catalog" class="catalog container">
+        <h2>КАТАЛОГ МАТЕРИАЛОВ</h2>
+        <div class="catalog-grid">
+            <div class="cat-card"><img src="assets/img/matte.jpg"><h3>Матовый</h3></div>
+            <div class="cat-card"><img src="assets/img/gloss.jpg"><h3>Глянцевый</h3></div>
+            <div class="cat-card"><img src="assets/img/wood.jpg"><h3>Древесный</h3></div>
+            <div class="cat-card"><img src="assets/img/stone.jpg"><h3>Камень</h3></div>
         </div>
     </section>
 
-    <section class="banner-promo">
-        <div class="banner-box">
-            <img src="assets/img/work-process.jpg">
-            <div class="banner-text">
-                <h3>БЕСПЛАТНЫЙ ВЫЕЗД НА ЗАМЕР</h3>
-                <p>Наш специалист приедет с образцами материалов в удобное для вас время.</p>
-                <button class="btn-main">ЗАПИСАТЬСЯ НА ЗАМЕР</button>
+    <section id="contacts" class="contacts container">
+        <h2>СВЯЗАТЬСЯ С НАМИ</h2>
+        <div class="contacts-grid">
+            <div class="map-placeholder">
+                <p>Павлодар, ул. Абая, 123</p>
+            </div>
+            <div class="contact-info">
+                <p>Тел: +7 776 068 04 58</p>
+                <p>Email: info@sferaprom.kz</p>
             </div>
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2026 SFERA PROM KZ. Все права защищены.</p>
-    </footer>
-
+    <footer><p>&copy; 2026 SFERA PROM KZ. Все права защищены.</p></footer>
 </body>
 </html>
