@@ -44,14 +44,15 @@
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
 }
 
-/* Фикс адаптивности под Iframe Инстаграма */
-.work-card iframe.instagram-media {
+/* Фикс адаптивности для официальных виджетов Инстаграма */
+.work-card .instagram-media {
     width: 100% !important;
     min-width: 326px !important;
     max-width: 540px !important;
     margin: 0 auto !important;
     border: none !important;
-    background: #ffffff;
+    background: #ffffff !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05) !important; /* Добавим аккуратную тень карточкам */
 }
 
 /* --------------------------------------------------------------------------
