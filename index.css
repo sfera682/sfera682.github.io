@@ -1,39 +1,18 @@
-/* Базовая настройка */
-body { font-family: 'Arial', sans-serif; margin: 0; color: #162a3d; }
-h2 { text-align: center; font-size: 32px; margin-bottom: 40px; }
+body { font-family: sans-serif; margin: 0; color: #162a3d; }
+
+/* Hero секция */
+.hero { display: grid; grid-template-columns: 1fr 1fr; align-items: center; padding: 50px; background: #f8fbff; }
+.hero-img { width: 100%; border-radius: 20px; }
 
 /* Сетка "Как мы работаем" */
-.steps { padding: 50px 20px; background: #f8fbff; }
-.steps-grid { 
-    display: grid; 
-    grid-template-columns: repeat(4, 1fr); 
-    gap: 20px; 
-    max-width: 1000px; 
-    margin: 0 auto; 
-}
-.step-item { 
-    background: white; 
-    padding: 20px; 
-    border-radius: 15px; 
-    text-align: center; 
-    border: 1px solid #e1e8ed;
-}
-.step-item img { display: block; margin: 0 auto 15px; width: 50px; }
+.steps { padding: 50px; }
+.steps-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.step-card { text-align: center; padding: 20px; border: 1px solid #e1e8ed; border-radius: 15px; }
+.step-card img { width: 50px; margin-bottom: 10px; }
 
-/* Секция замерщика */
-.promo-banner { max-width: 1000px; margin: 50px auto; padding: 20px; }
-.promo-content { 
-    display: flex; 
-    align-items: center; 
-    gap: 40px; 
-    background: #fff; 
-    padding: 30px; 
-    border-radius: 20px; 
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-}
-.promo-img { width: 40%; border-radius: 15px; }
-.promo-text { flex: 1; }
-button { 
-    background: #007bff; color: white; border: none; 
-    padding: 15px 30px; border-radius: 10px; cursor: pointer; font-weight: bold; 
-}
+/* Баннер замера */
+.banner-box { display: flex; align-items: center; gap: 30px; background: #fff; padding: 30px; border-radius: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+.banner-box img { width: 400px; border-radius: 15px; }
+
+/* Кнопки */
+button { background: #007bff; color: white; border: none; padding: 15px 30px; border-radius: 10px; cursor: pointer; }
