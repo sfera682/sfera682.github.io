@@ -1,109 +1,65 @@
-/* ОБЩИЕ НАСТРОЙКИ */
-body {
-    margin: 0;
-    font-family: 'Manrope', sans-serif;
-    color: #2c3e50;
-}
+/* Сброс и базовые настройки */
+* { box-sizing: border-box; }
+body { margin: 0; font-family: 'Manrope', sans-serif; color: #162a3d; background: #fcfdfe; }
 
-/* ГЛАВНЫЙ ЭКРАН (HERO) */
-.hero {
-    padding: 60px 0;
-    background: #fcfdfe;
-}
-.hero__container {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-}
-.hero__image-block {
-    flex: 1;
-}
-.hero__image {
-    width: 100%;
-    border-radius: 20px;
-}
+/* Шапка и контейнеры */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
-/* СЕТКА "КАК МЫ РАБОТАЕМ" */
-.steps-section {
-    padding: 60px 0;
-    text-align: center;
+/* Первый экран */
+.hero { padding: 60px 0; display: flex; align-items: center; }
+.hero__container { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+.hero__image { width: 100%; border-radius: 20px; }
+
+/* Сетка "Как мы работаем" */
+.steps-section { padding: 80px 0; }
+.steps__grid { 
+    display: grid; 
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 30px; 
+    margin-top: 40px; 
 }
-.steps__grid {
+.step-card { 
+    text-align: center; 
+    padding: 30px; 
+    background: #fff; 
+    border-radius: 20px; 
+    border: 1px solid #eef4f9;
+}
+.step-card__icon-wrap { margin-bottom: 20px; }
+.step-card__icon-wrap img { width: 60px; height: 60px; object-fit: contain; }
+
+/* Сетка каталога */
+.catalog__grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     margin-top: 30px;
 }
-.step-card {
-    background: #ffffff;
-    padding: 25px;
-    border-radius: 20px;
-    border: 1px solid #eef4f9;
-    transition: 0.3s;
-}
-.step-card:hover {
-    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-}
-.step-card__icon-wrap img {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 15px;
-}
+.catalog-item { background: #fff; padding: 15px; border-radius: 10px; border: 1px solid #eee; }
+.catalog-item__patch { height: 100px; border-radius: 8px; margin-bottom: 10px; }
 
-/* СЕТКА "ПОЧЕМУ ВЫБИРАЮТ НАС" */
-.features-section {
-    padding: 60px 0;
-    background: #f8fbff;
-}
-.features__grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-}
-.feature-card {
-    background: #fff;
-    padding: 20px;
-    border-radius: 15px;
-    text-align: center;
-}
+/* Блоки с фото (Замерщик/Доставка) */
+.info-promo-card { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; margin-bottom: 40px; }
+.info-promo-card--reverse { direction: rtl; }
+.info-promo-card__content { direction: ltr; }
+.info-promo-card__img img { width: 100%; border-radius: 20px; }
 
-/* БЛОКИ С ФОТО */
-.info-promo-card {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    background: #fff;
-    padding: 30px;
-    border-radius: 20px;
-}
-.info-promo-card__img img {
-    width: 400px;
-    border-radius: 15px;
-}
+/* Форма */
+.cta-form-section { padding: 60px 0; background: #f8fbff; text-align: center; }
+.form-inputs-row { display: flex; justify-content: center; gap: 15px; margin-top: 20px; }
+.form-input { padding: 15px; width: 250px; border: 1px solid #ccc; border-radius: 10px; }
 
-/* ФОРМА ЗАЯВКИ */
-.cta-form-section {
-    padding: 60px 0;
-    background: #eef4f9;
-    text-align: center;
+/* Сетка "Почему выбирают нас" */
+.features__grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 30px; 
+    margin-top: 40px; 
 }
-.promo-form-block form {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
-}
-input {
-    padding: 12px 20px;
-    border-radius: 10px;
-    border: 1px solid #ccc;
-    width: 250px;
-}
-.btn--primary {
-    background: #007bff;
-    color: white;
-    padding: 12px 25px;
-    border-radius: 10px;
-    border: none;
-    cursor: pointer;
+.feature-card { background: #fff; padding: 30px; border-radius: 20px; text-align: center; border: 1px solid #eee; }
+
+/* Адаптив для мобилок */
+@media (max-width: 768px) {
+    .hero__container, .steps__grid, .info-promo-card, .catalog__grid { grid-template-columns: 1fr; }
+    .form-inputs-row { flex-direction: column; align-items: center; }
 }
