@@ -65,9 +65,14 @@
     font-weight: 600;
 }
 
-/* Форма захвата */
-.hero-form-box {
-    flex: 0 0 380px;
+.hero {
+    /* Меняем сплошной цвет на картинку с синим фильтром */
+    background-image: linear-gradient(rgba(0, 75, 135, 0.85), rgba(0, 75, 135, 0.85)), url('./assets/img/bg.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 100px 0;
+    color: #ffffff;
 }
 
 .lead-form {
