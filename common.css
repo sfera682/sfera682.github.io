@@ -1,6 +1,31 @@
+/* Базовые настройки */
 body { margin: 0; font-family: 'Arial', sans-serif; color: #162a3d; }
 .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
-header { display: flex; justify-content: space-between; align-items: center; padding: 25px 0; border-bottom: 1px solid #eee; }
-nav a { margin-left: 30px; text-decoration: none; color: #162a3d; font-weight: bold; }
-footer { background: #f8fbff; padding: 40px; text-align: center; margin-top: 50px; }
+/* Шапка (Header) */
+header { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 25px 0; 
+    border-bottom: 1px solid #eee; 
+    background: #fff;
+}
+.logo { font-weight: 800; font-size: 22px; color: #162a3d; }
+nav a { 
+    margin-left: 30px; 
+    text-decoration: none; 
+    color: #162a3d; 
+    font-weight: 600; 
+    font-size: 14px; 
+}
+.header-phone { font-weight: 800; font-size: 18px; }
+
+/* Подвал (Footer) */
+footer { 
+    background: #f8fbff; 
+    padding: 40px 0; 
+    text-align: center; 
+    margin-top: 50px; 
+    border-top: 1px solid #eee; 
+}
