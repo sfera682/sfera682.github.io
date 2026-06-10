@@ -1,4 +1,7 @@
-/* Базовые настройки для всего сайта */
+/* ==========================================================================
+   ОБЩИЕ СТИЛИ ДЛЯ ВСЕГО САЙТА (common.css)
+   ========================================================================== */
+
 * {
     margin: 0;
     padding: 0;
@@ -6,87 +9,234 @@
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #f8fafc;
+    font-family: 'Inter', sans-serif;
+    background-color: #fcfcfc;
     color: #0f172a;
+    line-height: 1.5;
 }
 
-/* Контейнер по центру */
-.main-container {
+.container {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* ОБЩАЯ ШАПКА */
-.site-header {
+/* --------------------------------------------------------------------------
+   ШАПКА САЙТА (HEADER)
+   -------------------------------------------------------------------------- */
+.header {
     background-color: #ffffff;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     padding: 15px 0;
 }
 
-.header-flex {
+.header__container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 }
 
-.site-logo img {
-    max-height: 50px;
+/* Логотип */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.logo__img {
+    height: 45px;
     width: auto;
-    display: block;
+    object-fit: contain;
 }
 
-.site-nav {
+.logo__text {
+    font-weight: 700;
+    font-size: 20px;
+    color: #1e293b;
+    letter-spacing: 0.5px;
+}
+
+/* Меню навигации */
+.nav {
     display: flex;
     gap: 30px;
 }
 
-.nav-item {
+.nav__link {
     text-decoration: none;
-    color: #334155;
+    color: #475569;
     font-weight: 500;
-    font-size: 0.95rem;
-    transition: color 0.2s;
+    font-size: 16px;
+    transition: color 0.2s ease;
+    padding: 5px 0;
 }
 
-.nav-item:hover, .nav-item.active {
-    color: #1e2e3d;
-    font-weight: 600;
+.nav__link:hover,
+.nav__link.active {
+    color: #004b87;
 }
 
-.header-contacts-block {
+/* Контакты в шапке */
+.header__contacts {
     display: flex;
     align-items: center;
-    gap: 25px;
+    gap: 20px;
 }
 
-.phone-number-link {
+.phone-link {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
     text-decoration: none;
-    color: #0f172a;
+    color: #1e293b;
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 16px;
 }
 
-.header-icon-phone {
-    width: 18px !important;
-    height: 18px !important;
+.icon-small {
+    width: 18px;
+    height: 18px;
     object-fit: contain;
 }
 
-.header-socials {
-    display: flex;
-    gap: 12px;
+/* Кнопка WhatsApp в шапке */
+.btn--whatsapp-header {
+    display: inline-flex;
     align-items: center;
+    gap: 8px;
+    background-color: #25D366; /* Зеленый цвет WhatsApp */
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 10px 18px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
 }
 
-.social-icon-btn img {
-    width: 26px !important;
-    height: 26px !important;
+.btn--whatsapp-header:hover {
+    background-color: #1ebd58;
+}
+
+.icon-btn {
+    width: 18px;
+    height: 18px;
     object-fit: contain;
+}
+
+/* --------------------------------------------------------------------------
+   ПОДВАЛ САЙТА (FOOTER)
+   -------------------------------------------------------------------------- */
+.footer {
+    background-color: #1e293b;
+    color: #cbd5e1;
+    padding: 60px 0 20px 0;
+    margin-top: auto;
+}
+
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.footer__col {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer__col h4 {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.footer__desc {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer__link {
     display: block;
+    color: #cbd5e1;
+    text-decoration: none;
+    margin-bottom: 12px;
+    font-size: 15px;
+    transition: color 0.2s ease;
+}
+
+.footer__link:hover {
+    color: #ffffff;
+}
+
+.footer__phone {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.footer__socials {
+    display: flex;
+    gap: 15px;
+}
+
+.footer__socials a img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.2s ease;
+}
+
+.footer__socials a img:hover {
+    transform: scale(1.1);
+}
+
+.footer__copy {
+    text-align: center;
+    border-top: 1px solid #334155;
+    margin-top: 40px;
+    padding-top: 20px;
+    font-size: 13px;
+    color: #64748b;
+}
+
+/* --------------------------------------------------------------------------
+   АДАПТИВНОСТЬ ДЛЯ ШАПКИ И ПОДВАЛА
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+    .header__container {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .header__contacts {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .phone-link {
+        justify-content: center;
+    }
+
+    .btn--whatsapp-header {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .footer__container {
+        flex-direction: column;
+        gap: 30px;
+    }
 }
