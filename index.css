@@ -1,65 +1,39 @@
-/* Сброс и базовые настройки */
-* { box-sizing: border-box; }
-body { margin: 0; font-family: 'Manrope', sans-serif; color: #162a3d; background: #fcfdfe; }
-
-/* Шапка и контейнеры */
-.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-
-/* Первый экран */
-.hero { padding: 60px 0; display: flex; align-items: center; }
-.hero__container { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
-.hero__image { width: 100%; border-radius: 20px; }
+/* Базовая настройка */
+body { font-family: 'Arial', sans-serif; margin: 0; color: #162a3d; }
+h2 { text-align: center; font-size: 32px; margin-bottom: 40px; }
 
 /* Сетка "Как мы работаем" */
-.steps-section { padding: 80px 0; }
-.steps__grid { 
+.steps { padding: 50px 20px; background: #f8fbff; }
+.steps-grid { 
     display: grid; 
     grid-template-columns: repeat(4, 1fr); 
-    gap: 30px; 
-    margin-top: 40px; 
+    gap: 20px; 
+    max-width: 1000px; 
+    margin: 0 auto; 
 }
-.step-card { 
+.step-item { 
+    background: white; 
+    padding: 20px; 
+    border-radius: 15px; 
     text-align: center; 
-    padding: 30px; 
+    border: 1px solid #e1e8ed;
+}
+.step-item img { display: block; margin: 0 auto 15px; width: 50px; }
+
+/* Секция замерщика */
+.promo-banner { max-width: 1000px; margin: 50px auto; padding: 20px; }
+.promo-content { 
+    display: flex; 
+    align-items: center; 
+    gap: 40px; 
     background: #fff; 
+    padding: 30px; 
     border-radius: 20px; 
-    border: 1px solid #eef4f9;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
-.step-card__icon-wrap { margin-bottom: 20px; }
-.step-card__icon-wrap img { width: 60px; height: 60px; object-fit: contain; }
-
-/* Сетка каталога */
-.catalog__grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    margin-top: 30px;
-}
-.catalog-item { background: #fff; padding: 15px; border-radius: 10px; border: 1px solid #eee; }
-.catalog-item__patch { height: 100px; border-radius: 8px; margin-bottom: 10px; }
-
-/* Блоки с фото (Замерщик/Доставка) */
-.info-promo-card { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; margin-bottom: 40px; }
-.info-promo-card--reverse { direction: rtl; }
-.info-promo-card__content { direction: ltr; }
-.info-promo-card__img img { width: 100%; border-radius: 20px; }
-
-/* Форма */
-.cta-form-section { padding: 60px 0; background: #f8fbff; text-align: center; }
-.form-inputs-row { display: flex; justify-content: center; gap: 15px; margin-top: 20px; }
-.form-input { padding: 15px; width: 250px; border: 1px solid #ccc; border-radius: 10px; }
-
-/* Сетка "Почему выбирают нас" */
-.features__grid { 
-    display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-    gap: 30px; 
-    margin-top: 40px; 
-}
-.feature-card { background: #fff; padding: 30px; border-radius: 20px; text-align: center; border: 1px solid #eee; }
-
-/* Адаптив для мобилок */
-@media (max-width: 768px) {
-    .hero__container, .steps__grid, .info-promo-card, .catalog__grid { grid-template-columns: 1fr; }
-    .form-inputs-row { flex-direction: column; align-items: center; }
+.promo-img { width: 40%; border-radius: 15px; }
+.promo-text { flex: 1; }
+button { 
+    background: #007bff; color: white; border: none; 
+    padding: 15px 30px; border-radius: 10px; cursor: pointer; font-weight: bold; 
 }
