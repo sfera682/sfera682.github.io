@@ -1,173 +1,248 @@
-/* ГЛАВНЫЙ ЭКРАН */
-.hero-section {
-    background-image: linear-gradient(135deg, rgba(30, 46, 61, 0.85) 0%, rgba(17, 27, 36, 0.9) 100%), 
-                      url('assets/img/png.png'); 
+/* ==========================================================================
+   ГЛАВНАЯ СТРАНИЦА (index.css)
+   ========================================================================== */
+
+:root {
+    --primary-color: #1e293b;
+    --accent-color: #004b87;
+    --text-dark: #0f172a;
+    --text-muted: #475569;
+}
+
+/* --------------------------------------------------------------------------
+   БЛОК HERO (Первый экран сайта)
+   -------------------------------------------------------------------------- */
+.hero {
+    /* Если фон не виден, поменяй bg.jpg на bg.png ниже */
+    background-image: linear-gradient(rgba(30, 41, 59, 0.88), rgba(30, 41, 59, 0.88)), url('./assets/img/bg.jpg');
+    background-position: center center;
     background-size: cover;
-    background-position: center;
     background-repeat: no-repeat;
-    padding: 70px 0;
+    padding: 90px 0;
     color: #ffffff;
-    min-height: 520px;
-    display: flex;
-    align-items: center;
 }
 
-.hero-container {
+/* Флекс-сетка для разделения контента и формы */
+.hero__container {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    align-items: center;
-    gap: 40px;
+    gap: 50px;
 }
 
-.hero-info {
+/* Левая часть - Заголовки */
+.hero__content {
     flex: 1;
     max-width: 620px;
 }
 
-.hero-title {
-    font-size: 2.6rem;
-    font-weight: 800;
-    letter-spacing: 0.5px;
-    margin-bottom: 15px;
+.hero__title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 42px;
     line-height: 1.2;
+    margin-bottom: 15px;
+    letter-spacing: -0.5px;
 }
 
-.hero-subtitle {
-    font-size: 1.15rem;
-    font-weight: 400;
-    line-height: 1.5;
-    margin-bottom: 35px;
+.hero__subtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
     color: #cbd5e1;
+    margin-bottom: 40px;
 }
 
-.hero-bullets {
+/* Список преимуществ */
+.hero__features {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-.hero-bullets li {
+.hero__features li {
     display: flex;
     align-items: flex-start;
     gap: 15px;
-    font-size: 1rem;
-    line-height: 1.4;
-    margin-bottom: 18px;
+    margin-bottom: 20px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
 }
 
-.bullet-check {
-    width: 22px !important;
-    height: 22px !important;
+.feature-icon {
+    width: 20px;
+    height: 20px;
+    margin-top: 2px;
     object-fit: contain;
-    flex-shrink: 0;
 }
 
-.hero-bullets strong {
-    color: #38bdf8;
-    font-weight: 600;
-}
-
-.hero {
-    /* Меняем сплошной цвет на картинку с синим фильтром */
-    background-image: linear-gradient(rgba(0, 75, 135, 0.85), rgba(0, 75, 135, 0.85)), url('./assets/img/bg.jpg');
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding: 100px 0;
-    color: #ffffff;
-}
-
-.lead-form {
+/* Компактный контейнер для формы (ФОРМА БОЛЬШЕ НЕ РАСТЯГИВАЕТСЯ) */
+.hero__form-wrapper {
+    flex: 0 1 400px;
     background: #ffffff;
-    padding: 35px 30px;
-    border-radius: 12px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-    color: #0f172a;
+    padding: 40px 30px;
+    border-radius: 16px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
 }
 
-.lead-form__title {
-    font-size: 1.3rem;
+.hero__form-wrapper h3 {
+    color: var(--text-dark);
+    font-family: 'Inter', sans-serif;
+    font-size: 22px;
     font-weight: 700;
     text-align: center;
     margin-bottom: 25px;
     line-height: 1.3;
 }
 
-.form-input {
+/* Поля формы */
+.hero__form input {
     width: 100%;
-    padding: 14px;
-    margin-bottom: 15px;
-    border: 1px solid #e2e8f0;
-    border-radius: 6px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.95rem;
+    padding: 15px 16px;
+    margin-bottom: 16px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    color: var(--text-dark);
+    box-sizing: border-box;
+    transition: border-color 0.2s ease;
+}
+
+.hero__form input:focus {
+    border-color: var(--accent-color);
     outline: none;
-    color: #0f172a;
 }
 
-.form-input:focus {
-    border-color: #1e2e3d;
-}
-
-.form-btn {
+/* Кнопка отправки формы */
+.btn--submit {
     width: 100%;
-    padding: 15px;
-    background: #1e2e3d;
+    background-color: var(--accent-color);
     color: #ffffff;
-    border: none;
-    border-radius: 6px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.95rem;
+    font-family: 'Inter', sans-serif;
     font-weight: 600;
+    font-size: 16px;
+    padding: 16px;
+    border: none;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background 0.2s;
+    transition: background-color 0.2s ease;
 }
 
-.form-btn:hover {
-    background: #2c4257;
+.btn--submit:hover {
+    background-color: #003561;
 }
 
-/* БЛОК ПРЕИМУЩЕСТВ */
-.why-us {
-    padding: 60px 0;
+/* --------------------------------------------------------------------------
+   СЕКЦИЯ ПОЧЕМУ ВЫБИРАЮТ НАС
+   -------------------------------------------------------------------------- */
+.features-section {
+    padding: 80px 0;
     background-color: #ffffff;
 }
 
-.section-heading {
-    text-align: center;
-    font-size: 1.4rem;
+.section-title {
+    font-family: 'Inter', sans-serif;
     font-weight: 700;
-    letter-spacing: 0.5px;
-    margin-bottom: 40px;
-    color: #0f172a;
+    font-size: 32px;
+    color: var(--text-dark);
+    text-align: center;
+    margin-bottom: 50px;
 }
 
-.benefits-grid {
+/* Сетка карточек преимуществ */
+.features__grid {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-.benefit-card {
+.feature-card {
     background: #ffffff;
     border: 1px solid #e2e8f0;
-    padding: 20px 10px;
-    border-radius: 8px;
+    border-radius: 12px;
+    padding: 30px 20px;
     text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+}
+
+.feature-card__icon-wrap {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 20px auto;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.benefit-card img {
-    width: 40px !important;
-    height: 40px !important;
+.feature-card__icon-wrap img {
+    max-width: 100%;
+    max-height: 100%;
     object-fit: contain;
-    margin-bottom: 12px;
 }
 
-.benefit-card p {
-    font-size: 0.8rem;
-    font-weight: 500;
-    color: #334155;
-    line-height: 1.3;
+.feature-card p {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-dark);
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   АДАПТИВНОСТЬ ПОД МОБИЛЬНЫЕ СМАРТФОНЫ И ПЛАНШЕТЫ
+   -------------------------------------------------------------------------- */
+@media (max-width: 992px) {
+    .hero {
+        padding: 60px 0;
+    }
+
+    .hero__container {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .hero__content {
+        max-width: 100%;
+    }
+
+    .hero__title {
+        font-size: 32px;
+    }
+
+    .hero__subtitle {
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+
+    .hero__features li {
+        text-align: left;
+        justify-content: center;
+    }
+
+    .hero__form-wrapper {
+        width: 100%;
+        max-width: 450px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero__title {
+        font-size: 26px;
+    }
+    
+    .section-title {
+        font-size: 24px;
+    }
 }
