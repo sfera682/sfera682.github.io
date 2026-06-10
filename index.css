@@ -1,8 +1,3 @@
-/* ==========================================================================
-   СТИЛИ ГЛАВНОЙ СТРАНИЦЫ — SFERA PROM KZ (СВЕТЛЫЙ И ВОЗДУШНЫЙ ДИЗАЙН)
-   ========================================================================== */
-
-/* Главный баннер (Hero) */
 .hero {
     background-color: #ffffff;
     padding: 80px 0;
@@ -30,7 +25,7 @@
 }
 
 .hero__title span {
-    color: #007bf2; /* Акцентный красивый голубой */
+    color: #007bf2;
 }
 
 .hero__subtitle {
@@ -40,7 +35,6 @@
     margin-bottom: 30px;
 }
 
-/* Список преимуществ на главном баннере */
 .hero__features {
     margin-bottom: 35px;
 }
@@ -71,10 +65,9 @@
     box-shadow: 0 20px 40px rgba(0, 123, 242, 0.08);
 }
 
-/* Секция "Почему выбирают нас" */
 .features-section {
     padding: 80px 0;
-    background-color: #f8fbfe; /* Очень легкий голубоватый фон для разделения секций */
+    background-color: #f8fbfe;
     text-align: center;
 }
 
@@ -140,14 +133,13 @@
     line-height: 1.5;
 }
 
-/* Блок формы заявки / Лид-форма */
 .cta-form-section {
     padding: 60px 0;
     background-color: #ffffff;
 }
 
 .promo-form-block {
-    background: linear-gradient(135deg, #e6f4fe 0%, #cce7ff 100%); /* Красивый нежно-голубой градиент */
+    background: linear-gradient(135deg, #e6f4fe 0%, #cce7ff 100%);
     border-radius: 20px;
     padding: 50px 40px;
     text-align: center;
@@ -170,7 +162,6 @@
     font-weight: 500;
 }
 
-/* Инпуты формы */
 .form-inputs-row {
     display: flex;
     flex-wrap: wrap;
@@ -202,7 +193,6 @@
     box-shadow: 0 0 0 3px rgba(0, 123, 242, 0.15);
 }
 
-/* Мессенджеры под формой */
 .form-messenger-notice {
     display: flex;
     align-items: center;
@@ -218,7 +208,6 @@
     height: 20px;
 }
 
-/* Адаптивность для мобилок */
 @media (max-width: 992px) {
     .hero__container {
         flex-direction: column;
