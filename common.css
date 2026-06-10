@@ -1,8 +1,8 @@
-/* Базовые настройки */
-body { margin: 0; font-family: 'Arial', sans-serif; color: #162a3d; }
+/* --- БАЗОВЫЕ НАСТРОЙКИ --- */
+body { margin: 0; font-family: 'Arial', sans-serif; color: #162a3d; line-height: 1.6; }
 .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
-/* Шапка (Header) */
+/* --- ШАПКА (HEADER) --- */
 header { 
     display: flex; 
     justify-content: space-between; 
@@ -18,14 +18,63 @@ nav a {
     color: #162a3d; 
     font-weight: 600; 
     font-size: 14px; 
+    transition: color 0.3s;
 }
-.header-phone { font-weight: 800; font-size: 18px; }
+nav a:hover { color: #1d7be5; }
+.header-phone { font-weight: 800; font-size: 18px; color: #1677ff; }
 
-/* Подвал (Footer) */
+/* --- ПОДВАЛ (FOOTER) - ТЕМНЫЙ, С КАРТОЙ И МЕНЮ --- */
 footer { 
-    background: #f8fbff; 
-    padding: 40px 0; 
-    text-align: center; 
+    background: #162a3d; 
+    color: #fff; 
+    padding: 60px 0 30px; 
     margin-top: 50px; 
-    border-top: 1px solid #eee; 
+}
+.footer-container { 
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 40px; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 0 20px; 
+}
+.footer-section h4 { 
+    margin-top: 0;
+    margin-bottom: 20px; 
+    border-bottom: 2px solid #1d7be5; 
+    display: inline-block; 
+    padding-bottom: 5px;
+}
+.footer-section a { 
+    display: block; 
+    color: #ccc; 
+    text-decoration: none; 
+    margin-bottom: 10px; 
+    transition: 0.3s;
+}
+.footer-section a:hover { color: #fff; }
+.social-links { display: flex; gap: 15px; margin-top: 15px; }
+.social-links a { color: #fff; font-size: 14px; }
+
+/* Карта */
+.map-box { 
+    height: 150px; 
+    background: #fff; 
+    border-radius: 8px; 
+    overflow: hidden; 
+}
+.copyright { 
+    text-align: center; 
+    margin-top: 40px; 
+    font-size: 12px; 
+    color: #888; 
+    border-top: 1px solid #2d455c;
+    padding-top: 20px;
+}
+
+/* --- АДАПТИВНОСТЬ (ЧТОБЫ НЕ СЪЕЗЖАЛО) --- */
+@media(max-width: 768px) {
+    .footer-container { grid-template-columns: 1fr; text-align: center; }
+    .footer-section h4 { border: none; }
+    .social-links { justify-content: center; }
 }
