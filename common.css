@@ -1,8 +1,6 @@
 body { margin: 0; font-family: 'Arial', sans-serif; color: #162a3d; }
 .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
-header { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; border-bottom: 1px solid #eee; }
-nav a { margin-left: 20px; text-decoration: none; color: #162a3d; font-weight: bold; }
-.btn-whatsapp { background: #25d366; color: white; padding: 10px 20px; border-radius: 20px; text-decoration: none; }
-
+header { display: flex; justify-content: space-between; align-items: center; padding: 25px 0; border-bottom: 1px solid #eee; }
+nav a { margin-left: 30px; text-decoration: none; color: #162a3d; font-weight: bold; }
 footer { background: #f8fbff; padding: 40px; text-align: center; margin-top: 50px; }
