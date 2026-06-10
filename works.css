@@ -1,7 +1,3 @@
-/* ==========================================================================
-   СТИЛИ СТРАНИЦЫ ПОРТФОЛИО — SFERA PROM KZ (СВЕТЛЫЙ И ВОЗДУШНЫЙ ДИЗАЙН)
-   ========================================================================== */
-
 .works-page {
     background-color: #ffffff;
     padding: 60px 0;
@@ -17,7 +13,6 @@
     position: relative;
 }
 
-/* Мощная адаптивная сетка для Инстаграм-виджетов */
 .works__grid-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -25,27 +20,24 @@
     margin-bottom: 60px;
 }
 
-/* Карточки под видео */
 .work-card {
     background: #ffffff;
     border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.03); /* Еле заметная нежная тень */
-    border: 1px solid #e9f2f9; /* Светлая рамочка в цвет концепта */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.03);
+    border: 1px solid #e9f2f9;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    padding: 10px; /* Небольшой отступ внутри карточки для аккуратности */
+    padding: 10px;
 }
 
-/* Эффект парения при наведении на видео */
 .work-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 15px 35px rgba(0, 123, 242, 0.12); /* Мягкое голубое свечение */
+    box-shadow: 0 15px 35px rgba(0, 123, 242, 0.12);
     border-color: #bae1ff;
 }
 
-/* Промо-блок Инстаграма внизу страницы */
 .instagram-promo-block {
-    background: linear-gradient(135deg, #e6f4fe 0%, #cce7ff 100%); /* Нежно-голубой градиент */
+    background: linear-gradient(135deg, #e6f4fe 0%, #cce7ff 100%);
     border-radius: 20px;
     padding: 45px 40px;
     text-align: center;
@@ -62,7 +54,6 @@
     font-weight: 500;
 }
 
-/* Адаптивность под мобильные телефоны */
 @media (max-width: 768px) {
     .section-title {
         font-size: 28px;
@@ -70,7 +61,7 @@
     }
     
     .works__grid-gallery {
-        grid-template-columns: 1fr; /* На мобилках видео встают в одну колонку во всю ширину */
+        grid-template-columns: 1fr;
         gap: 20px;
     }
     
