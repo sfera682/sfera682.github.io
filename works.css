@@ -2,25 +2,23 @@
    СТРАНИЦА "НАШИ РАБОТЫ" (works.css)
    ========================================================================== */
 
-/* Основной контейнер страницы */
 .works-page {
     padding: 60px 0;
-    background-color: #fcfcfc; /* Светлый приятный фон, как на макете */
-    min-height: calc(100vh - 200px); /* Чтобы футер не прилипал к верху, если видео долго грузятся */
+    background-color: #fcfcfc;
+    min-height: calc(100vh - 200px); /* Чтобы футер не прыгал во время загрузки видео */
 }
 
-/* Главный заголовок */
+/* Заголовок страницы */
 .section-title {
     font-family: 'Inter', sans-serif;
     font-weight: 700;
     font-size: 36px;
     color: #1e293b;
     text-align: center;
-    margin-bottom: 40px;
-    position: relative;
+    margin-bottom: 50px;
 }
 
-/* Сетка для видео-карточек (3 колонки на ПК, 2 на планшетах, 1 на мобилках) */
+/* Сетка для видео (3 в ряд на мониторах, автоматически перестраивается) */
 .works__grid-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -29,25 +27,24 @@
     align-items: start;
 }
 
-/* Карточка для видео */
+/* Карточка, в которой сидит видео */
 .work-card {
     width: 100%;
     display: flex;
     justify-content: center;
     background: #ffffff;
     border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04); /* Легкая тень для объема */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     overflow: hidden;
 }
 
-/* Эффект при наведении на карточку */
 .work-card:hover {
     transform: translateY(-4px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
 }
 
-/* Жесткий фикс адаптивности для Iframe Инстаграма */
+/* Фикс адаптивности под Iframe Инстаграма */
 .work-card iframe.instagram-media {
     width: 100% !important;
     min-width: 326px !important;
@@ -57,10 +54,9 @@
     background: #ffffff;
 }
 
-/* ==========================================================================
-   ПРОМО-БЛОК INSTAGRAM (СНИЗУ СТРАНИЦЫ)
-   ========================================================================== */
-
+/* --------------------------------------------------------------------------
+   БЛОК С ПРИЗЫВОМ В ИНСТАГРАМ (СНИЗУ СТРАНИЦЫ)
+   -------------------------------------------------------------------------- */
 .instagram-promo-block {
     max-width: 800px;
     margin: 60px auto 0 auto;
@@ -80,13 +76,13 @@
     margin-bottom: 25px;
 }
 
-/* Кнопка перехода в профиль */
+/* Главная кнопка перехода */
 .btn--primary {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
-    background-color: #004b87; /* Синий фирменный цвет под твой макет */
+    background-color: #004b87; /* Твой синий цвет */
     color: #ffffff;
     font-family: 'Inter', sans-serif;
     font-weight: 600;
@@ -98,24 +94,16 @@
 }
 
 .btn--primary:hover {
-    background-color: #003561; /* Темнее при наведении */
+    background-color: #003561;
 }
 
 .btn--primary:active {
     transform: scale(0.98);
 }
 
-/* Иконка внутри кнопки */
-.icon-btn {
-    width: 20px;
-    height: 20px;
-    object-fit: contain;
-}
-
-/* ==========================================================================
-   АДАПТИВНОСТЬ ДЛЯ МОБИЛЬНЫХ УСТРОЙСТВ
-   ========================================================================== */
-
+/* --------------------------------------------------------------------------
+   АДАПТИВНОСТЬ ДЛЯ МОБИЛЬНЫХ СМАРТФОНОВ
+   -------------------------------------------------------------------------- */
 @media (max-width: 768px) {
     .works-page {
         padding: 40px 0;
@@ -127,7 +115,7 @@
     }
 
     .works__grid-gallery {
-        gap: 20px; /* Меньше отступы на смартфонах */
+        gap: 20px;
     }
 
     .instagram-promo-block {
