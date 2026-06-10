@@ -1,13 +1,8 @@
-/* Общие стили */
-* { box-sizing: border-box; }
-body { font-family: 'Manrope', sans-serif; margin: 0; color: #162a3d; }
+body { margin: 0; font-family: 'Arial', sans-serif; color: #162a3d; }
 .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
-/* Шапка */
 header { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; border-bottom: 1px solid #eee; }
-.logo { font-weight: 800; font-size: 22px; }
-nav a { margin: 0 15px; text-decoration: none; color: #162a3d; font-weight: 600; }
-.header-phone { font-weight: bold; background: #007bff; color: #fff; padding: 10px 20px; border-radius: 8px; }
+nav a { margin-left: 20px; text-decoration: none; color: #162a3d; font-weight: bold; }
+.btn-whatsapp { background: #25d366; color: white; padding: 10px 20px; border-radius: 20px; text-decoration: none; }
 
-/* Подвал */
-footer { background: #f8fbff; padding: 40px 0; text-align: center; margin-top: 50px; border-top: 1px solid #eee; }
+footer { background: #f8fbff; padding: 40px; text-align: center; margin-top: 50px; }
