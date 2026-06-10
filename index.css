@@ -1,18 +1,22 @@
-body { font-family: sans-serif; margin: 0; color: #162a3d; }
+body { font-family: 'Manrope', sans-serif; margin: 0; color: #162a3d; }
 
-/* Hero секция */
-.hero { display: grid; grid-template-columns: 1fr 1fr; align-items: center; padding: 50px; background: #f8fbff; }
+/* Шапка */
+header { display: flex; justify-content: space-between; padding: 20px 50px; align-items: center; border-bottom: 1px solid #eee; }
+nav a { margin: 0 15px; text-decoration: none; color: #162a3d; font-weight: bold; }
+
+/* Hero */
+.hero { display: grid; grid-template-columns: 1fr 1fr; padding: 60px 50px; gap: 50px; align-items: center; }
+.hero h1 { font-size: 48px; }
 .hero-img { width: 100%; border-radius: 20px; }
 
-/* Сетка "Как мы работаем" */
-.steps { padding: 50px; }
+/* Сетка работы */
+.steps { padding: 60px 50px; background: #f8fbff; }
 .steps-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
-.step-card { text-align: center; padding: 20px; border: 1px solid #e1e8ed; border-radius: 15px; }
-.step-card img { width: 50px; margin-bottom: 10px; }
+.step-card { background: #fff; padding: 30px; border-radius: 20px; text-align: center; border: 1px solid #e1e8ed; }
+.step-card img { width: 60px; margin-bottom: 15px; }
 
-/* Баннер замера */
-.banner-box { display: flex; align-items: center; gap: 30px; background: #fff; padding: 30px; border-radius: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
-.banner-box img { width: 400px; border-radius: 15px; }
+/* Баннер */
+.banner-box { display: flex; gap: 40px; padding: 50px; background: #fff; align-items: center; border-radius: 20px; border: 1px solid #eee; }
+.banner-box img { width: 450px; border-radius: 15px; }
 
-/* Кнопки */
-button { background: #007bff; color: white; border: none; padding: 15px 30px; border-radius: 10px; cursor: pointer; }
+.btn-main { background: #0056b3; color: white; padding: 20px 40px; border: none; border-radius: 10px; cursor: pointer; font-size: 16px; }
