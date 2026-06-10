@@ -1,130 +1,81 @@
 /* ==========================================================================
-   СТРАНИЦА "НАШИ РАБОТЫ" (works.css)
+   СТИЛИ СТРАНИЦЫ ПОРТФОЛИО — SFERA PROM KZ (СВЕТЛЫЙ И ВОЗДУШНЫЙ ДИЗАЙН)
    ========================================================================== */
 
 .works-page {
+    background-color: #ffffff;
     padding: 60px 0;
-    background-color: #fcfcfc;
-    min-height: calc(100vh - 200px); /* Чтобы футер не прыгал во время загрузки видео */
+    font-family: 'Inter', sans-serif;
 }
 
-/* Заголовок страницы */
 .section-title {
-    font-family: 'Inter', sans-serif;
-    font-weight: 700;
-    font-size: 36px;
-    color: #1e293b;
+    font-size: 38px;
+    font-weight: 800;
+    color: #1a3044;
     text-align: center;
     margin-bottom: 50px;
+    position: relative;
 }
 
-/* Сетка для видео (3 в ряд на мониторах, автоматически перестраивается) */
+/* Мощная адаптивная сетка для Инстаграм-виджетов */
 .works__grid-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     gap: 30px;
     margin-bottom: 60px;
-    align-items: start;
 }
 
-/* Карточка, в которой сидит видео */
+/* Карточки под видео */
 .work-card {
-    width: 100%;
-    display: flex;
-    justify-content: center;
     background: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    overflow: hidden;
-}
-
-.work-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-}
-
-/* Фикс адаптивности для официальных виджетов Инстаграма */
-.work-card .instagram-media {
-    width: 100% !important;
-    min-width: 326px !important;
-    max-width: 540px !important;
-    margin: 0 auto !important;
-    border: none !important;
-    background: #ffffff !important;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05) !important; /* Добавим аккуратную тень карточкам */
-}
-
-/* --------------------------------------------------------------------------
-   БЛОК С ПРИЗЫВОМ В ИНСТАГРАМ (СНИЗУ СТРАНИЦЫ)
-   -------------------------------------------------------------------------- */
-.instagram-promo-block {
-    max-width: 800px;
-    margin: 60px auto 0 auto;
-    background: #ffffff;
-    border: 1px solid #e2e8f0;
     border-radius: 16px;
-    padding: 40px 30px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.03); /* Еле заметная нежная тень */
+    border: 1px solid #e9f2f9; /* Светлая рамочка в цвет концепта */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 10px; /* Небольшой отступ внутри карточки для аккуратности */
+}
+
+/* Эффект парения при наведении на видео */
+.work-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(0, 123, 242, 0.12); /* Мягкое голубое свечение */
+    border-color: #bae1ff;
+}
+
+/* Промо-блок Инстаграма внизу страницы */
+.instagram-promo-block {
+    background: linear-gradient(135deg, #e6f4fe 0%, #cce7ff 100%); /* Нежно-голубой градиент */
+    border-radius: 20px;
+    padding: 45px 40px;
     text-align: center;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+    max-width: 850px;
+    margin: 60px auto 0 auto;
+    box-shadow: 0 12px 30px rgba(0, 123, 242, 0.05);
 }
 
 .instagram-promo-block p {
-    font-family: 'Inter', sans-serif;
-    font-size: 18px;
-    line-height: 1.6;
-    color: #475569;
-    margin-bottom: 25px;
-}
-
-/* Главная кнопка перехода */
-.btn--primary {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    background-color: #004b87; /* Твой синий цвет */
-    color: #ffffff;
-    font-family: 'Inter', sans-serif;
-    font-weight: 600;
     font-size: 16px;
-    padding: 14px 28px;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: background-color 0.2s ease, transform 0.1s ease;
+    line-height: 1.6;
+    color: #1a3044;
+    margin-bottom: 25px;
+    font-weight: 500;
 }
 
-.btn--primary:hover {
-    background-color: #003561;
-}
-
-.btn--primary:active {
-    transform: scale(0.98);
-}
-
-/* --------------------------------------------------------------------------
-   АДАПТИВНОСТЬ ДЛЯ МОБИЛЬНЫХ СМАРТФОНОВ
-   -------------------------------------------------------------------------- */
+/* Адаптивность под мобильные телефоны */
 @media (max-width: 768px) {
-    .works-page {
-        padding: 40px 0;
-    }
-
     .section-title {
         font-size: 28px;
-        margin-bottom: 30px;
+        margin-bottom: 35px;
     }
-
+    
     .works__grid-gallery {
+        grid-template-columns: 1fr; /* На мобилках видео встают в одну колонку во всю ширину */
         gap: 20px;
     }
-
+    
     .instagram-promo-block {
         padding: 30px 20px;
         margin-top: 40px;
-    }
-
-    .instagram-promo-block p {
-        font-size: 16px;
     }
 }
