@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -5,25 +7,32 @@
 }
 
 body {
-    font-family: 'Inter', sans-serif;
-    background-color: #ffffff;
+    font-family: 'Manrope', sans-serif;
+    background-color: #fcfdfe;
     color: #2c3e50;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    letter-spacing: -0.2px;
 }
 
 .container {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 24px;
 }
 
+/* Фиксированная размытая шапка */
 .header {
-    background-color: #ffffff;
-    padding: 20px 0;
-    border-bottom: 1px solid #e1eef7;
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(0, 123, 242, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .header__container {
@@ -39,29 +48,26 @@ body {
     text-decoration: none;
 }
 
-.logo__img {
-    width: 40px;
-    height: 40px;
-    object-fit: contain;
-}
-
 .logo__text {
     font-size: 20px;
-    font-weight: 700;
-    color: #1a3044;
+    font-weight: 800;
+    color: #162a3d;
+    letter-spacing: -0.5px;
 }
 
 .nav {
     display: flex;
-    gap: 30px;
+    gap: 32px;
 }
 
 .nav__link {
-    color: #4a5b6d;
+    color: #5c6f84;
     text-decoration: none;
-    font-size: 16px;
-    font-weight: 500;
-    transition: color 0.3s ease;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 4px 0;
 }
 
 .nav__link:hover, .nav__link.active {
@@ -71,51 +77,47 @@ body {
 .header__contacts {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 24px;
 }
 
 .phone-link {
     display: flex;
     align-items: center;
     gap: 8px;
-    color: #2c3e50;
+    color: #162a3d;
     text-decoration: none;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 700;
 }
 
-.icon-small {
-    width: 18px;
-    height: 18px;
-}
-
+/* Красивые скругленные кнопки */
 .btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
-    padding: 12px 24px;
-    border-radius: 8px;
+    padding: 14px 28px;
+    border-radius: 50px;
     font-size: 15px;
-    font-weight: 600;
+    font-weight: 700;
     text-decoration: none;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    transition: all 0.3s ease;
     border: none;
 }
 
-.btn:active {
-    transform: scale(0.98);
+.btn:hover {
+    transform: translateY(-2px);
 }
 
 .btn--primary {
     background-color: #007bf2;
     color: #ffffff;
+    box-shadow: 0 8px 20px rgba(0, 123, 242, 0.15);
 }
 
 .btn--primary:hover {
-    background-color: #0062c4;
-    box-shadow: 0 5px 15px rgba(0, 123, 242, 0.2);
+    background-color: #006cd5;
 }
 
 .btn--whatsapp-header {
@@ -125,106 +127,90 @@ body {
 
 .btn--whatsapp-header:hover {
     background-color: #20ba5a;
-    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.2);
 }
 
-.icon-btn {
-    width: 20px;
-    height: 20px;
-}
-
+/* Светлый стильный подвал сайта */
 .footer {
-    background-color: #f4f9fd;
+    background: linear-gradient(180deg, #fcfdfe 0%, #f4f8fc 100%);
     color: #2c3e50;
-    padding: 60px 0 20px 0;
+    padding: 80px 0 30px 0;
     margin-top: auto;
-    border-top: 1px solid #e1eef7;
+    border-top: 1px solid rgba(0, 123, 242, 0.06);
 }
 
 .footer__container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 40px;
+    gap: 48px;
 }
 
 .footer__col {
     flex: 1;
-    min-width: 250px;
+    min-width: 260px;
 }
 
 .footer__col h4 {
-    font-size: 18px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    color: #007bf2;
-    position: relative;
-}
-
-.footer__col h4::after {
-    content: '';
-    display: block;
-    width: 35px;
-    height: 3px;
-    background-color: #25d366;
-    margin-top: 8px;
+    font-size: 16px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-bottom: 24px;
+    color: #162a3d;
 }
 
 .footer__desc {
     font-size: 14px;
     line-height: 1.6;
-    color: #5a6e85;
+    color: #607286;
 }
 
 .footer__link {
     display: block;
-    color: #4a5b6d;
+    color: #607286;
     text-decoration: none;
     font-size: 15px;
-    margin-bottom: 12px;
-    transition: color 0.3s ease, padding-left 0.3s ease;
+    font-weight: 500;
+    margin-bottom: 14px;
+    transition: all 0.2s ease;
 }
 
 .footer__link:hover {
     color: #007bf2;
-    padding-left: 5px;
+    padding-left: 4px;
 }
 
 .footer__phone {
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    color: #2c3e50;
+    color: #162a3d;
     text-decoration: none;
     font-size: 16px;
     font-weight: 700;
-    margin-bottom: 20px;
-    transition: color 0.3s ease;
-}
-
-.footer__phone:hover {
-    color: #007bf2;
+    margin-bottom: 24px;
 }
 
 .footer__socials {
     display: flex;
-    gap: 15px;
+    gap: 12px;
 }
 
 .footer__socials a {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 42px;
-    height: 42px;
-    background-color: #e6f4fe;
+    width: 44px;
+    height: 44px;
+    background-color: #ffffff;
+    border: 1px solid #e1ecf5;
     border-radius: 50%;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .footer__socials a:hover {
-    background-color: #bae1ff;
-    transform: translateY(-3px);
+    transform: translateY(-4px);
+    border-color: #007bf2;
 }
 
 .footer__socials img {
@@ -234,33 +220,29 @@ body {
 }
 
 .footer__copy {
-    margin-top: 50px;
-    padding-top: 20px;
-    border-top: 1px solid #e1eef7;
+    margin-top: 60px;
+    padding-top: 24px;
+    border-top: 1px solid #e3edf5;
     text-align: center;
     font-size: 13px;
     color: #8fa2b6;
+    font-weight: 500;
 }
 
 @media (max-width: 768px) {
     .header__container {
         flex-direction: column;
-        gap: 15px;
-        text-align: center;
+        gap: 16px;
     }
     .nav {
-        margin: 10px 0;
+        gap: 20px;
     }
     .header__contacts {
         flex-direction: column;
-        gap: 10px;
-        width: 100%;
+        gap: 12px;
     }
     .footer__container {
         flex-direction: column;
-        gap: 30px;
-    }
-    .footer__col {
-        min-width: 100%;
+        gap: 32px;
     }
 }
