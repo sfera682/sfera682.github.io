@@ -1,67 +1,44 @@
-/* 1. CSS Переменные: определяем общую палитру один раз */
-:root {
-    --primary-color: #1677ff;      /* Основной синий цвет кнопок */
-    --text-color: #162a3d;         /* Цвет основного текста */
-    --bg-color: #f8fbff;           /* Фон страниц */
-    --footer-bg: #162a3d;          /* Фон подвала */
-    --white: #ffffff;
-}
+/* works.css */
+.works-title { text-align: center; margin: 50px 0; color: #162a3d; font-size: 32px; text-transform: uppercase; }
 
-/* 2. Семантический сброс: общие стили для всех элементов */
-*, *::before, *::after {
-    box-sizing: border-box; /* Правильная модель блоков */
-}
-
-body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-    color: var(--text-color);
-    background-color: var(--bg-color);
-    line-height: 1.6; /* Улучшенная читаемость текста */
-}
-
-/* 3. Макетная сетка: семантически верно делим пространство */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* 4. Оформление заголовков: иерархический подход */
-h1, h2, h3 {
-    color: var(--text-color);
-    font-weight: 800;
-}
-
-/* 5. Компонентный подход: стили для видео-карточек */
 .works-grid {
     display: grid;
-    /* Семантически правильная адаптивность без media-запросов */
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2rem;
-    padding: 2rem 0;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+    padding: 20px;
 }
 
 .video-card {
-    background: var(--white);
+    background: #fff;
     border-radius: 12px;
     overflow: hidden;
-    /* Делаем тень мягкой и ненавязчивой */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease;
+    margin-bottom: 20px;
 }
 
-.video-card:hover {
-    transform: translateY(-5px); /* Эффект при наведении */
+.instagram-media {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06) !important;
 }
 
-/* 6. Правильное оформление ссылок */
-a {
-    text-decoration: none;
-    color: inherit;
-    transition: color 0.3s ease;
+.btn-container { 
+    text-align: center; 
+    margin: 40px 0 80px; 
 }
 
-a:hover {
-    color: var(--primary-color);
+.btn-more { 
+    background: #1677ff; 
+    color: #fff; 
+    border: none; 
+    padding: 15px 40px; 
+    border-radius: 8px; 
+    cursor: pointer; 
+    font-size: 16px; 
+    font-weight: 700; 
+    transition: 0.3s;
+}
+
+.btn-more:hover { 
+    background: #0d5bb5; 
 }
