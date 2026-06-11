@@ -1,77 +1,67 @@
-/* works.css */
-body { background: #f8fbff; }
-
-.works-title { text-align: center; margin: 50px 0; font-size: 32px; font-weight: 800; text-transform: uppercase; }
-
-.works-list { display: flex; flex-direction: column; gap: 40px; }
-
-/* Карточка проекта (Двухколоночная, как на образце image_3.png) */
-.work-card { 
-    display: grid; 
-    grid-template-columns: 320px 1fr; /* Фиксированная ширина для видео, остальное тексту */
-    gap: 30px; 
-    background: #fff; 
-    padding: 20px; 
-    border-radius: 10px; 
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-    align-items: center; 
+/* 1. CSS Переменные: определяем общую палитру один раз */
+:root {
+    --primary-color: #1677ff;      /* Основной синий цвет кнопок */
+    --text-color: #162a3d;         /* Цвет основного текста */
+    --bg-color: #f8fbff;           /* Фон страниц */
+    --footer-bg: #162a3d;          /* Фон подвала */
+    --white: #ffffff;
 }
 
-/* Контейнер видео (Стиль как image_3.png) */
-.video-container { 
-    position: relative; 
-    width: 320px; /* Вертикальный формат как Reels */
-    height: 570px; /* Пропорции 9:16 */
-    background: #fff; 
-    border: 2px solid #ddd; 
-    border-radius: 10px; 
-    overflow: hidden; 
+/* 2. Семантический сброс: общие стили для всех элементов */
+*, *::before, *::after {
+    box-sizing: border-box; /* Правильная модель блоков */
 }
 
-/* Принудительно скрываем стандартный заголовок и подпись Instagram, оставляя только видео */
-.instagram-media { 
-    margin: 0 !important; 
-    padding: 0 !important; 
-    border: none !important; 
-    width: 100% !important; 
-    height: 100% !important; 
-    min-width: 100% !important; 
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    line-height: 1.6; /* Улучшенная читаемость текста */
 }
 
-.instagram-media iframe {
-    height: 100% !important; 
-    top: 0 !important; 
-    position: relative !important; 
+/* 3. Макетная сетка: семантически верно делим пространство */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-/* Инфо-блок справа (Текст как image_3.png) */
-.work-info h3 { margin-top: 0; font-size: 20px; color: #1677ff; }
-.work-info ul { list-style: none; padding: 0; margin-top: 20px; }
-.work-info li { margin-bottom: 10px; font-size: 16px; position: relative; }
-
-/* Кнопка "Подробнее" (Стиль как image_3.png) */
-.btn-more { 
-    margin-top: 30px; 
-    background: transparent; 
-    color: #1677ff; 
-    border: 1px solid #1677ff; 
-    padding: 10px 20px; 
-    border-radius: 6px; 
-    font-weight: 600; 
-    cursor: pointer; 
-    transition: 0.3s;
+/* 4. Оформление заголовков: иерархический подход */
+h1, h2, h3 {
+    color: var(--text-color);
+    font-weight: 800;
 }
-.btn-more:hover { background: #1677ff; color: #fff; }
 
-/* Блок замера (Стиль как image_3.png) */
-.delivery-box { display: grid; grid-template-columns: 300px 1fr; gap: 30px; background: #eef5fc; border-radius: 10px; padding: 20px; margin: 60px 0 30px; }
-.delivery-box img { width: 100%; border-radius: 8px; }
-.delivery-box div { padding: 20px; }
-.btn-call { background: #1677ff; color: #fff; border: none; padding: 12px 24px; border-radius: 6px; cursor: pointer; font-weight: bold; margin-top: 20px; }
+/* 5. Компонентный подход: стили для видео-карточек */
+.works-grid {
+    display: grid;
+    /* Семантически правильная адаптивность без media-запросов */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
 
-/* Адаптив для мобильных (в одну колонку) */
-@media(max-width: 768px) {
-    .work-card { grid-template-columns: 1fr; text-align: center; }
-    .video-container { width: 100%; height: auto; aspect-ratio: 9/16; }
-    .delivery-box { grid-template-columns: 1fr; text-align: center; }
+.video-card {
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    /* Делаем тень мягкой и ненавязчивой */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.video-card:hover {
+    transform: translateY(-5px); /* Эффект при наведении */
+}
+
+/* 6. Правильное оформление ссылок */
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--primary-color);
 }
