@@ -1,1 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Каталог декоров — SFERA PROM KZ</title>
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="catalog.css">
+</head>
+<body>
+    <header class="container">
+        <div class="logo">SFERA PROM KZ</div>
+        <nav>
+            <a href="index.html" class="nav-link">ГЛАВНАЯ</a>
+            <a href="works.html" class="nav-link">РАБОТЫ</a>
+            <a href="catalog.html" class="nav-link active">СТОЛЕШНИЦЫ</a>
+        </nav>
+    </header>
 
+    <main class="container">
+        <h1 class="catalog-title">КАТАЛОГ ДЕКОРОВ</h1>
+        
+        <div class="filter-container">
+            <button class="filter-btn active" onclick="filterSelection('all')">Все</button>
+            <button class="filter-btn" onclick="filterSelection('wood')">Древесные</button>
+            <button class="filter-btn" onclick="filterSelection('fancy')">Фантазийные</button>
+        </div>
+
+        <div class="catalog-grid" id="catalog-grid">
+            <div class="product-card wood">
+                <img src="assets/img/dub-sonoma.jpg" alt="Дуб Сонома">
+                <h3>Дуб Сонома</h3>
+            </div>
+            <div class="product-card fancy">
+                <img src="assets/img/beton.jpg" alt="Бетон">
+                <h3>Бетон Пайн</h3>
+            </div>
+            </div>
+    </main>
+
+    <script>
+        function filterSelection(category) {
+            const cards = document.querySelectorAll('.product-card');
+            cards.forEach(card => {
+                if (category === 'all' || card.classList.contains(category)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
