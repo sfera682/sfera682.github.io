@@ -2,60 +2,70 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Каталог декоров — SFERA PROM KZ</title>
     <link rel="stylesheet" href="common.css">
     <link rel="stylesheet" href="catalog.css">
 </head>
 <body>
-    <header class="container">
-        <div class="logo">SFERA PROM KZ</div>
-        <nav>
+
+<header class="container">
+    <div class="logo">SFERA PROM KZ</div>
+    <nav>
         <a href="index.html" class="nav-link">ГЛАВНАЯ</a>
         <a href="works.html" class="nav-link">РАБОТЫ</a>
-        <a href="catalog.html" class="nav-link">СТОЛЕШНИЦЫ</a>
+        <a href="catalog.html" class="nav-link active">СТОЛЕШНИЦЫ</a>
         <a href="facades.html" class="nav-link">ФАСАДЫ</a>
-        </nav>
-    </header>
+    </nav>
+    <div class="header-phone">+7 776 068 04 58</div>
+</header>
 
-    <main class="container">
-        <h1 class="catalog-title">КАТАЛОГ ДЕКОРОВ</h1>
-        
-        <div class="filter-container">
-            <button class="filter-btn active" onclick="filterSelection('all')">Все</button>
-            <button class="filter-btn" onclick="filterSelection('wood')">Древесные</button>
-            <button class="filter-btn" onclick="filterSelection('fancy')">Фантазийные</button>
+<main class="container">
+    <h1 class="works-title">КАТАЛОГ ДЕКОРОВ</h1>
+
+    <div class="filter-container">
+        <button class="filter-btn active" onclick="filterSelection('all', this)">Все</button>
+        <button class="filter-btn" onclick="filterSelection('wood', this)">Древесные</button>
+        <button class="filter-btn" onclick="filterSelection('fancy', this)">Фантазийные</button>
+    </div>
+
+    <div class="catalog-grid" id="catalog-grid">
+        <div class="product-card wood">
+            <img src="assets/img/dub-sonoma.jpg" alt="Дуб Сонома">
+            <h3>Дуб Сонома</h3>
         </div>
+        <div class="product-card fancy">
+            <img src="assets/img/beton.jpg" alt="Бетон">
+            <h3>Бетон Пайн</h3>
+        </div>
+    </div>
+</main>
 
-        <div class="catalog-grid" id="catalog-grid">
-            <div class="product-card wood">
-                <img src="assets/img/dub-sonoma.jpg" alt="Дуб Сонома">
-                <h3>Дуб Сонома</h3>
-            </div>
-            <div class="product-card fancy">
-                <img src="assets/img/beton.jpg" alt="Бетон">
-                <h3>Бетон Пайн</h3>
-            </div>
-            </div>
-    </main>
+<div id="footer-placeholder"></div>
 
-    <script>
-        function filterSelection(category) {
-            const cards = document.querySelectorAll('.product-card');
-            cards.forEach(card => {
-                if (category === 'all' || card.classList.contains(category)) {
-                    card.style.display = 'block';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        }
-    </script>
-    <script>
+<script>
+    // Подключение футера
     fetch('footer.html')
         .then(response => response.text())
-        .then(data => {
-            document.getElementById('footer-placeholder').innerHTML = data;
+        .then(data => { document.getElementById('footer-placeholder').innerHTML = data; });
+
+    // Фильтрация
+    function filterSelection(category, btn) {
+        const cards = document.querySelectorAll('.product-card');
+        const buttons = document.querySelectorAll('.filter-btn');
+        
+        buttons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        cards.forEach(card => {
+            if (category === 'all' || card.classList.contains(category)) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
         });
-    </script>
+    }
+</script>
+
 </body>
 </html>
