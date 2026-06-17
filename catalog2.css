@@ -1,5 +1,29 @@
-body { font-family: 'Segoe UI', Arial, sans-serif; padding: 40px; background-color: #f9f9f9; }
-h1 { text-align: center; color: #333; margin-bottom: 40px; }
+body { 
+    font-family: 'Segoe UI', Arial, sans-serif; 
+    padding: 40px; 
+    background-color: #f9f9f9; 
+}
+
+h1 { 
+    text-align: center; 
+    color: #333; 
+    margin-bottom: 40px; 
+}
+
+/* Стили для разделов категорий */
+.category-section { 
+    margin-bottom: 60px; 
+}
+
+.category-title { 
+    font-size: 1.8em; 
+    color: #2c3e50; 
+    margin-bottom: 30px; 
+    border-bottom: 4px solid #007bff; /* Синий цвет в тон телефону */
+    display: inline-block; 
+    padding-right: 20px; 
+    padding-bottom: 5px;
+}
 
 .catalog-grid {
     display: grid;
@@ -15,13 +39,15 @@ h1 { text-align: center; color: #333; margin-bottom: 40px; }
     padding: 12px;
     border-radius: 12px;
     text-align: center;
+    border: 1px solid #e1e1e1; /* Добавлена тонкая рамка */
     box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .product-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    border-color: #007bff; /* Рамка при наведении становится синей */
 }
 
 .product-card img {
