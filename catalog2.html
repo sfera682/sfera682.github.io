@@ -2,410 +2,94 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Каталог фасадов</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог фасадов — SFERA PROM KZ</title>
+    <link rel="stylesheet" href="common.css">
     <style>
-        body { font-family: 'Arial', sans-serif; padding: 20px; background-color: #f4f4f4; }
-        h1 { text-align: center; color: #333; }
+        .catalog-container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
+        h1 { text-align: center; color: #333; margin-bottom: 30px; }
+        
+        /* Стили для категорий */
+        .category-section { margin-bottom: 40px; }
+        .category-title { 
+            font-size: 1.4em; 
+            color: #444; 
+            margin-bottom: 20px; 
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ddd;
+        }
+        
         .catalog-grid { 
             display: grid; 
-            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); 
-            gap: 20px; 
-            max-width: 1200px;
-            margin: 0 auto;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); 
+            gap: 15px; 
         }
         .product-card { 
             background: white;
-            border: 1px solid #ddd; 
-            padding: 10px; 
+            border: 1px solid #eee; 
+            padding: 8px; 
             text-align: center; 
-            border-radius: 8px; 
+            border-radius: 6px; 
             transition: transform 0.2s;
         }
-        .product-card:hover { transform: scale(1.05); }
-        .product-card img { width: 100%; height: 120px; object-fit: cover; border-radius: 4px; }
-        .product-name { display: block; margin-top: 10px; font-size: 0.85em; color: #333; font-weight: bold; }
+        .product-card:hover { transform: scale(1.03); border: 1px solid #333; }
+        .product-card img { width: 100%; height: 100px; object-fit: cover; border-radius: 4px; display: block; }
+        .product-name { display: block; margin-top: 8px; font-size: 0.8em; color: #333; font-weight: bold; }
     </style>
 </head>
 <body>
 
-    <h1>Каталог фасадов</h1>
-    <div class="catalog-grid">
-        <div class="product-card">
-            <img src="assets/img/akaciasvetl.jpg" alt="Акация светлая">
-            <span class="product-name">Акация светлая</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/alyuminii.jpg" alt="Алюминий">
-            <span class="product-name">Алюминий</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/atlantik.jpg" alt="Атлантик">
-            <span class="product-name">Атлантик</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/bazalt.jpg" alt="Базальт">
-            <span class="product-name">Базальт</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/beli.jpg" alt="Белый">
-            <span class="product-name">Белый</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/betonpain.jpg" alt="Бетон пайн">
-            <span class="product-name">Бетон пайн</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/bezhevi.jpg" alt="Бежевый">
-            <span class="product-name">Бежевый</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/bodegabelaya.jpg" alt="Бодега белая">
-            <span class="product-name">Бодега белая</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/bodegasvetl.jpg" alt="Бодега светлая">
-            <span class="product-name">Бодега светлая</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/bukbavariyasvetl.jpg" alt="Бук бавария светлый">
-            <span class="product-name">Бук бавария светлый</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/bukbavariyatemn.jpg" alt="Бук бавария темный">
-            <span class="product-name">Бук бавария темный</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/cementsvetli.jpg" alt="Цемент светлый">
-            <span class="product-name">Цемент светлый</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/cementtemn.jpg" alt="Цемент темный">
-            <span class="product-name">Цемент темный</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/chemi.jpg" alt="Черный">
-            <span class="product-name">Черный</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/dubanzona.jpg" alt="Дуб анзона">
-            <span class="product-name">Дуб анзона</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/dubatlanta.jpg" alt="Дуб атланта">
-            <span class="product-name">Дуб атланта</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/dubdzhagger.jpg" alt="Дуб джаггер">
-            <span class="product-name">Дуб джаггер</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/dubintra.jpg" alt="Дуб интра">
-            <span class="product-name">Дуб интра</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/dubkoburg.jpg" alt="Дуб кобург">
-            <span class="product-name">Дуб кобург</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/dubkronberg.jpg" alt="Дуб кронберг">
-            <span class="product-name">Дуб кронберг</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/dubpallada.jpg" alt="Дуб паллада">
-            <span class="product-name">Дуб паллада</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/dubponente.jpg" alt="Дуб поненте">
-            <span class="product-name">Дуб поненте</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/dubsamdal.jpg" alt="Дуб самдал">
-            <span class="product-name">Дуб самдал</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/dubsedan.jpg" alt="Дуб седан">
-            <span class="product-name">Дуб седан</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/dubsonoma.jpg" alt="Дуб сонома">
-            <span class="product-name">Дуб сонома</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/dubtermo.jpg" alt="Дуб термо">
-            <span class="product-name">Дуб термо</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/dubunratti.jpg" alt="Дуб унратти">
-            <span class="product-name">Дуб унратти</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/dubvbelenni.jpg" alt="Дуб вбеленни">
-            <span class="product-name">Дуб вбеленни</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/dubvotan.jpg" alt="Дуб вотан">
-            <span class="product-name">Дуб вотан</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/dubyustus.jpg" alt="Дуб юстус">
-            <span class="product-name">Дуб юстус</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/ena.jpg" alt="Эна">
-            <span class="product-name">Эна</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/feirstoun.jpg" alt="Фейрстоун">
-            <span class="product-name">Фейрстоун</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/findus.jpg" alt="Финдус">
-            <span class="product-name">Финдус</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/forest.jpg" alt="Форест">
-            <span class="product-name">Форест</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/goluboi.jpg" alt="Голубой">
-            <span class="product-name">Голубой</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/indigo.jpg" alt="Индиго">
-            <span class="product-name">Индиго</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/kamen.jpg" alt="Камень">
-            <span class="product-name">Камень</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/kanadskidub.jpg" alt="Канадский дуб">
-            <span class="product-name">Канадский дуб</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/kapuchino.jpg" alt="Капучино">
-            <span class="product-name">Капучино</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/kena.jpg" alt="Кена">
-            <span class="product-name">Кена</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/klentanzai.jpg" alt="Клен танзай">
-            <span class="product-name">Клен танзай</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/krasni.jpg" alt="Красный">
-            <span class="product-name">Красный</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/krem.jpg" alt="Крем">
-            <span class="product-name">Крем</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/lavanda.jpg" alt="Лаванда">
-            <span class="product-name">Лаванда</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/loft.jpg" alt="Лофт">
-            <span class="product-name">Лофт</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/loki.jpg" alt="Локи">
-            <span class="product-name">Локи</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/maringa.jpg" alt="Маринга">
-            <span class="product-name">Маринга</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/muskat.jpg" alt="Мускат">
-            <span class="product-name">Мускат</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/nocheekko.jpg" alt="Ноче екко">
-            <span class="product-name">Ноче екко</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/nochegvarneri.jpg" alt="Ноче гварнери">
-            <span class="product-name">Ноче гварнери</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/nochepegasso.jpg" alt="Ноче пегассо">
-            <span class="product-name">Ноче пегассо</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/oleandr.jpg" alt="Олеандр">
-            <span class="product-name">Олеандр</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/oleandrbezh.jpg" alt="Олеандр бежевый">
-            <span class="product-name">Олеандр бежевый</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/olha.jpg" alt="Ольха">
-            <span class="product-name">Ольха</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/olhasvetl.jpg" alt="Ольха светлая">
-            <span class="product-name">Ольха светлая</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/oranzh.jpg" alt="Оранж">
-            <span class="product-name">Оранж</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/orchdonskoi.jpg" alt="Орех донской">
-            <span class="product-name">Орех донской</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/orchitalyanski.jpg" alt="Орех итальянский">
-            <span class="product-name">Орех итальянский</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/orchpaldao.jpg" alt="Орех палдао">
-            <span class="product-name">Орех палдао</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/orchtavolato.jpg" alt="Орех таволато">
-            <span class="product-name">Орех таволато</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/pikard.jpg" alt="Пикард">
-            <span class="product-name">Пикард</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/planka.jpg" alt="Планка">
-            <span class="product-name">Планка</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/rozovii.jpg" alt="Розовый">
-            <span class="product-name">Розовый</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/rozoviikvarc.jpg" alt="Розовый кварц">
-            <span class="product-name">Розовый кварц</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/salatovii.jpg" alt="Салатовый">
-            <span class="product-name">Салатовый</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/seri.jpg" alt="Серый">
-            <span class="product-name">Серый</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/shalfei.jpg" alt="Шалфей">
-            <span class="product-name">Шалфей</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/sini.jpg" alt="Синий">
-            <span class="product-name">Синий</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/sirius.jpg" alt="Сириус">
-            <span class="product-name">Сириус</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/slivavallis.jpg" alt="Слива валлис">
-            <span class="product-name">Слива валлис</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/sosnaastrid.jpg" alt="Сосна астрид">
-            <span class="product-name">Сосна астрид</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/sosnavbelenaya.jpg" alt="Сосна беленая">
-            <span class="product-name">Сосна беленая</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/sosnavinterber.jpg" alt="Сосна винтерберг">
-            <span class="product-name">Сосна винтерберг</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/svetlozhelti.jpg" alt="Светло-желтый">
-            <span class="product-name">Светло-желтый</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/syperbeli.jpg" alt="Супер белый">
-            <span class="product-name">Супер белый</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/tefi.jpg" alt="Тефи">
-            <span class="product-name">Тефи</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/tegola.jpg" alt="Тегола">
-            <span class="product-name">Тегола</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/terrakota.jpg" alt="Терракота">
-            <span class="product-name">Терракота</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/titan.jpg" alt="Титан">
-            <span class="product-name">Титан</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/tuya.jpg" alt="Туя">
-            <span class="product-name">Туя</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/venge.jpg" alt="Венге">
-            <span class="product-name">Венге</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/vengecavo.jpg" alt="Венге каво">
-            <span class="product-name">Венге каво</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/vengelinum.jpg" alt="Венге линум">
-            <span class="product-name">Венге линум</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/vengesvetl.jpg" alt="Венге светлый">
-            <span class="product-name">Венге светлый</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/vishnyahansen.jpg" alt="Вишня хансен">
-            <span class="product-name">Вишня хансен</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/vishnyaoksford.jpg" alt="Вишня оксфорд">
-            <span class="product-name">Вишня оксфорд</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/yasenankorbel.jpg" alt="Ясень анкор белый">
-            <span class="product-name">Ясень анкор белый</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/yasenankorsvetl.jpg" alt="Ясень анкор светлый">
-            <span class="product-name">Ясень анкор светлый</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/yasenankortemn.jpg" alt="Ясень анкор темный">
-            <span class="product-name">Ясень анкор темный</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/yasenbornholm.jpg" alt="Ясень борнхольм">
-            <span class="product-name">Ясень борнхольм</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/yasenribera.jpg" alt="Ясень рибера">
-            <span class="product-name">Ясень рибера</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/yasenshimosvetl.jpg" alt="Ясень шимо светлый">
-            <span class="product-name">Ясень шимо светлый</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/yasenshimotemn.jpg" alt="Ясень шимо темный">
-            <span class="product-name">Ясень шимо темный</span>
-        </div>
-        <div class="product-card">
-            <img src="assets/img/zhelti.jpg" alt="Желтый">
-            <span class="product-name">Желтый</span>
-        </div>
-    </div>
+    <header class="container">
+        <div class="logo">SFERA PROM KZ</div>
+        <nav>
+            <a href="index.html" class="nav-link">ГЛАВНАЯ</a>
+            <a href="works.html" class="nav-link">РАБОТЫ</a>
+            <a href="catalog1.html" class="nav-link">СТОЛЕШНИЦЫ</a>
+            <a href="catalog2.html" class="nav-link active">ФАСАДЫ</a>
+        </nav>
+        <div class="header-phone">+7 776 068 04 58</div>
+    </header>
+
+    <main class="catalog-container">
+        <h1>Каталог фасадов</h1>
+
+        <section class="category-section">
+            <h2 class="category-title">Древесные декоры</h2>
+            <div class="catalog-grid">
+                <div class="product-card"><img src="assets/img/akaciasvetl.jpg" alt="Акация светлая"><span class="product-name">Акация светлая</span></div>
+                <div class="product-card"><img src="assets/img/dubsonoma.jpg" alt="Дуб сонома"><span class="product-name">Дуб сонома</span></div>
+                <div class="product-card"><img src="assets/img/yasenshimotemn.jpg" alt="Ясень шимо темный"><span class="product-name">Ясень шимо темный</span></div>
+                <div class="product-card"><img src="assets/img/venge.jpg" alt="Венге"><span class="product-name">Венге</span></div>
+                </div>
+        </section>
+
+        <section class="category-section">
+            <h2 class="category-title">Текстурные декоры</h2>
+            <div class="catalog-grid">
+                <div class="product-card"><img src="assets/img/betonpain.jpg" alt="Бетон пайн"><span class="product-name">Бетон пайн</span></div>
+                <div class="product-card"><img src="assets/img/cementsvetli.jpg" alt="Цемент светлый"><span class="product-name">Цемент светлый</span></div>
+                <div class="product-card"><img src="assets/img/loft.jpg" alt="Лофт"><span class="product-name">Лофт</span></div>
+                <div class="product-card"><img src="assets/img/kamen.jpg" alt="Камень"><span class="product-name">Камень</span></div>
+                </div>
+        </section>
+
+        <section class="category-section">
+            <h2 class="category-title">Однотонные декоры</h2>
+            <div class="catalog-grid">
+                <div class="product-card"><img src="assets/img/beli.jpg" alt="Белый"><span class="product-name">Белый</span></div>
+                <div class="product-card"><img src="assets/img/chemi.jpg" alt="Черный"><span class="product-name">Черный</span></div>
+                <div class="product-card"><img src="assets/img/krasni.jpg" alt="Красный"><span class="product-name">Красный</span></div>
+                <div class="product-card"><img src="assets/img/sini.jpg" alt="Синий"><span class="product-name">Синий</span></div>
+                <div class="product-card"><img src="assets/img/zhelti.jpg" alt="Желтый"><span class="product-name">Желтый</span></div>
+                </div>
+        </section>
+
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        fetch('footer.html').then(r => r.text()).then(d => document.getElementById('footer-placeholder').innerHTML = d);
+    </script>
 </body>
 </html>
