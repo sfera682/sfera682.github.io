@@ -15,14 +15,16 @@ h1 {
     margin-bottom: 60px; 
 }
 
-.category-title { 
-    font-size: 1.8em; 
-    color: #2c3e50; 
-    margin-bottom: 30px; 
-    border-bottom: 4px solid #007bff; /* Синий цвет в тон телефону */
-    display: inline-block; 
-    padding-right: 20px; 
-    padding-bottom: 5px;
+.category-title {
+    font-size: 1.8em;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    margin-top: 40px; /* Добавим отступ сверху для разделения */
+    padding-bottom: 10px; /* Расстояние между текстом и линией */
+    border-bottom: 4px solid #007bff; /* Тот самый синий цвет */
+    display: block; /* Заставляет заголовок растянуться на всю ширину */
+    text-align: left; /* Можно поменять на center, если хотите по центру */
+    width: 100%;
 }
 
 .catalog-grid {
