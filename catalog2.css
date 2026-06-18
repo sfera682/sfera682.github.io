@@ -1,68 +1,35 @@
-body { 
-    font-family: 'Segoe UI', Arial, sans-serif; 
-    padding: 40px; 
-    background-color: #f9f9f9; 
+/* Убираем стандартный маркер браузера */
+summary {
+    list-style: none;
+    cursor: pointer;
+    outline: none;
+}
+summary::-webkit-details-marker {
+    display: none;
 }
 
-h1 { 
-    text-align: center; 
-    color: #333; 
-    margin-bottom: 40px; 
-}
-
-/* Стили для разделов категорий */
-.category-section { 
-    margin-bottom: 60px; 
-}
-
+/* Стили заголовка */
 .category-title {
     font-size: 1.8em;
     color: #2c3e50;
-    margin-bottom: 30px;
-    margin-top: 40px; /* Добавим отступ сверху для разделения */
-    padding-bottom: 10px; /* Расстояние между текстом и линией */
-    border-bottom: 4px solid #007bff; /* Тот самый синий цвет */
-    display: block; /* Заставляет заголовок растянуться на всю ширину */
-    text-align: left; /* Можно поменять на center, если хотите по центру */
+    margin: 40px 0 20px 0;
+    padding-bottom: 10px;
+    border-bottom: 4px solid #007bff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
 }
 
-.catalog-grid {
-    display: grid;
-    /* Автоматически подстраивает количество колонок */
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 25px;
-    max-width: 1200px;
-    margin: 0 auto;
+/* Анимация стрелочки */
+.category-title span {
+    transition: transform 0.3s ease;
+    font-size: 0.6em;
+    display: inline-block;
+    transform: rotate(0deg); /* Когда открыто - смотрит вниз */
 }
 
-.product-card {
-    background: white;
-    padding: 12px;
-    border-radius: 12px;
-    text-align: center;
-    border: 1px solid #e1e1e1; /* Добавлена тонкая рамка */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-}
-
-.product-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-    border-color: #007bff; /* Рамка при наведении становится синей */
-}
-
-.product-card img {
-    width: 100%;
-    height: 200px; /* Увеличенная высота для красоты */
-    object-fit: cover;
-    border-radius: 8px;
-}
-
-.product-name {
-    display: block;
-    margin-top: 12px;
-    font-size: 14px;
-    color: #444;
-    font-weight: 600;
+/* Когда список ЗАКРЫТ - поворачиваем вверх */
+details:not([open]) .category-title span {
+    transform: rotate(180deg);
 }
