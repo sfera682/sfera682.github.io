@@ -1,14 +1,28 @@
-/* Убираем стандартный маркер браузера */
+/* Сброс стандартных стилей для details/summary */
 summary {
     list-style: none;
     cursor: pointer;
     outline: none;
-}
-summary::-webkit-details-marker {
-    display: none;
+    user-select: none; /* Чтобы текст не выделялся при клике */
 }
 
-/* Стили заголовка */
+summary::-webkit-details-marker {
+    display: none; /* Убирает стандартный треугольник в Chrome/Safari */
+}
+
+/* Общий контейнер каталога */
+.catalog-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Секция категории */
+.category-section {
+    margin-bottom: 30px;
+}
+
+/* Заголовок категории */
 .category-title {
     font-size: 1.8em;
     color: #2c3e50;
@@ -21,15 +35,52 @@ summary::-webkit-details-marker {
     width: 100%;
 }
 
-/* Анимация стрелочки */
+/* Стрелочка */
 .category-title span {
     transition: transform 0.3s ease;
     font-size: 0.6em;
     display: inline-block;
-    transform: rotate(0deg); /* Когда открыто - смотрит вниз */
+    transform: rotate(0deg); /* Открыто: смотрит вниз */
 }
 
-/* Когда список ЗАКРЫТ - поворачиваем вверх */
+/* Поворот стрелки при закрытом состоянии */
 details:not([open]) .category-title span {
-    transform: rotate(180deg);
+    transform: rotate(180deg); /* Закрыто: смотрит вверх */
+}
+
+/* Сетка товаров */
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding-top: 20px;
+}
+
+/* Карточка товара */
+.product-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.2s;
+    background: #fff;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    display: block;
+}
+
+.product-name {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 0.9em;
 }
