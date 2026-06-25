@@ -29,7 +29,7 @@ h1 {
     padding: 10px;
     color: #2c3e50;
     transition: color 0.3s;
-    list-style: none; /* Убирает стандартный маркер details */
+    list-style: none;
 }
 
 .category-title:hover {
@@ -67,7 +67,6 @@ h1 {
     display: block;
 }
 
-/* Подписи под картинками */
 .product-card span {
     display: block;
     margin-top: 8px;
@@ -76,7 +75,7 @@ h1 {
     color: #444;
 }
 
-/* Итоговый блок */
+/* --- ИСПРАВЛЕННЫЙ ИТОГОВЫЙ БЛОК --- */
 #final-choice {
     margin-top: 40px;
     padding: 30px;
@@ -84,6 +83,28 @@ h1 {
     border: 2px solid #2e7d32;
     border-radius: 10px;
     text-align: center;
+}
+
+.selection-preview {
+    display: flex; 
+    justify-content: center; 
+    gap: 40px; 
+    margin: 25px 0;
+}
+
+.preview-item img {
+    width: 150px; 
+    height: 150px; 
+    object-fit: cover; 
+    border-radius: 10px; 
+    border: 3px solid #fff;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.preview-item p {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #2c3e50;
 }
 
 /* Кнопка сброса */
@@ -107,5 +128,12 @@ button:hover {
 @media (max-width: 600px) {
     .catalog-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+    .selection-preview {
+        gap: 15px;
+    }
+    .preview-item img {
+        width: 100px;
+        height: 100px;
     }
 }
