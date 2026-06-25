@@ -50,10 +50,9 @@ details:not([open]) .category-title span {
 
 /* Сетка товаров */
 .catalog-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
-    padding-top: 20px;
+    /* Меняем 200px на 150px для лучшего отображения на смартфонах */
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
 }
 
 /* Карточка товара */
