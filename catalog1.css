@@ -86,11 +86,17 @@ details:not([open]) .category-title span {
 /* --- АДАПТИВНОСТЬ ДЛЯ ТЕЛЕФОНОВ --- */
 @media (max-width: 600px) {
     .catalog-grid {
-        /* На телефонах строго 2 колонки */
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
+        /* Меняем repeat(2, 1fr) на 1fr, чтобы была 1 карточка в ряд */
+        grid-template-columns: 1fr; 
+        gap: 15px;
     }
+    
     .category-title {
         font-size: 1.2em;
+    }
+    
+    /* Дополнительно: увеличим карточку, чтобы она выглядела солиднее на весь экран */
+    .product-card {
+        padding: 15px;
     }
 }
