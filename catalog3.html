@@ -68,20 +68,42 @@
         </section>
 
         <section id="color-section" style="display: none; margin-top: 50px;">
-            <h2>Шаг 2: Выберите цвет</h2>
-            <div class="catalog-grid">
-                <div class="product-card" onclick="selectColor('Белый глянец', 'assets/mdf/cv/bel-gl.webp')"><img src="assets/mdf/cv/bel-gl.webp"><span>Белый глянец</span></div>
-                <div class="product-card" onclick="selectColor('Графит глянец', 'assets/mdf/cv/ch-gl.webp')"><img src="assets/mdf/cv/ch-gl.webp"><span>Графит глянец</span></div>
-                <div class="product-card" onclick="selectColor('Графит матовый', 'assets/mdf/cv/ch-mat.webp')"><img src="assets/mdf/cv/ch-mat.webp"><span>Графит матовый</span></div>
-                <div class="product-card" onclick="selectColor('Фарандола глянец', 'assets/mdf/cv/farandola-gl.webp')"><img src="assets/mdf/cv/farandola-gl.webp"><span>Фарандола глянец</span></div>
-                <div class="product-card" onclick="selectColor('Какао перламутр', 'assets/mdf/cv/kakao-mat.webp')"><img src="assets/mdf/cv/kakao-mat.webp"><span>Какао перламутр</span></div>
-                <div class="product-card" onclick="selectColor('Кофе с молоком', 'assets/mdf/cv/kofe-mat.webp')"><img src="assets/mdf/cv/kofe-mat.webp"><span>Кофе с молоком</span></div>
-                <div class="product-card" onclick="selectColor('Макиотти глянец', 'assets/mdf/cv/makkiotti-gl.webp')"><img src="assets/mdf/cv/makkiotti-gl.webp"><span>Макиотти глянец</span></div>
-                <div class="product-card" onclick="selectColor('Молочный глянец', 'assets/mdf/cv/mol-gl.webp')"><img src="assets/mdf/cv/mol-gl.webp"><span>Молочный глянец</span></div>
-                <div class="product-card" onclick="selectColor('Оранж матовый', 'assets/mdf/cv/or-mat.webp')"><img src="assets/mdf/cv/or-mat.webp"><span>Оранж матовый</span></div>
-                <div class="product-card" onclick="selectColor('Серый матовый', 'assets/mdf/cv/ser-mat.webp')"><img src="assets/mdf/cv/ser-mat.webp"><span>Серый матовый</span></div>
-                <div class="product-card" onclick="selectColor('Зелёный матовый', 'assets/mdf/cv/z-mat.webp')"><img src="assets/mdf/cv/z-mat.webp"><span>Зелёный матовый</span></div>
-            </div>
+        <h2>Шаг 2: Выберите цвет</h2>
+    
+    <details class="category-section">
+        <summary class="category-title">Глянцевые <span>▼</span></summary>
+        <div class="catalog-grid">
+            <div class="product-card" onclick="selectColor('Белый глянец', 'assets/mdf/cv/bel-gl.webp')"><img src="assets/mdf/cv/bel-gl.webp"><span>Белый глянец</span></div>
+            <div class="product-card" onclick="selectColor('Графит глянец', 'assets/mdf/cv/ch-gl.webp')"><img src="assets/mdf/cv/ch-gl.webp"><span>Графит глянец</span></div>
+            <div class="product-card" onclick="selectColor('Фарандола глянец', 'assets/mdf/cv/farandola-gl.webp')"><img src="assets/mdf/cv/farandola-gl.webp"><span>Фарандола глянец</span></div>
+            <div class="product-card" onclick="selectColor('Макиотти глянец', 'assets/mdf/cv/makkiotti-gl.webp')"><img src="assets/mdf/cv/makkiotti-gl.webp"><span>Макиотти глянец</span></div>
+            <div class="product-card" onclick="selectColor('Молочный глянец', 'assets/mdf/cv/mol-gl.webp')"><img src="assets/mdf/cv/mol-gl.webp"><span>Молочный глянец</span></div>
+        </div>
+    </details>
+
+    <details class="category-section">
+        <summary class="category-title">Матовые <span>▼</span></summary>
+        <div class="catalog-grid">
+            <div class="product-card" onclick="selectColor('Графит матовый', 'assets/mdf/cv/ch-mat.webp')"><img src="assets/mdf/cv/ch-mat.webp"><span>Графит матовый</span></div>
+            <div class="product-card" onclick="selectColor('Какао перламутр', 'assets/mdf/cv/kakao-mat.webp')"><img src="assets/mdf/cv/kakao-mat.webp"><span>Какао перламутр</span></div>
+            <div class="product-card" onclick="selectColor('Кофе с молоком', 'assets/mdf/cv/kofe-mat.webp')"><img src="assets/mdf/cv/kofe-mat.webp"><span>Кофе с молоком</span></div>
+            <div class="product-card" onclick="selectColor('Оранж матовый', 'assets/mdf/cv/or-mat.webp')"><img src="assets/mdf/cv/or-mat.webp"><span>Оранж матовый</span></div>
+            <div class="product-card" onclick="selectColor('Серый матовый', 'assets/mdf/cv/ser-mat.webp')"><img src="assets/mdf/cv/ser-mat.webp"><span>Серый матовый</span></div>
+            <div class="product-card" onclick="selectColor('Зелёный матовый', 'assets/mdf/cv/z-mat.webp')"><img src="assets/mdf/cv/z-mat.webp"><span>Зелёный матовый</span></div>
+        </div>
+    </details>
+
+    <details class="category-section">
+        <summary class="category-title">Металлик <span>▼</span></summary>
+        <div class="catalog-grid">
+            <div class="product-card" onclick="selectColor('Белый металлик', 'assets/mdf/cv/bel-met.webp')"><img src="assets/mdf/cv/bel-met.webp"><span>Белый металлик</span></div>
+            <div class="product-card" onclick="selectColor('Ваниль металлик', 'assets/mdf/cv/van-met.webp')"><img src="assets/mdf/cv/van-met.webp"><span>Ваниль металлик</span></div>
+            <div class="product-card" onclick="selectColor('Серый металлик', 'assets/mdf/cv/ser-met.webp')"><img src="assets/mdf/cv/ser-met.webp"><span>Серый металлик</span></div>
+            <div class="product-card" onclick="selectColor('Сирень металлик', 'assets/mdf/cv/sir-met.webp')"><img src="assets/mdf/cv/sir-met.webp"><span>Сирень металлик</span></div>
+            <div class="product-card" onclick="selectColor('Сталь металлик', 'assets/mdf/cv/stal-met.webp')"><img src="assets/mdf/cv/stal-met.webp"><span>Сталь металлик</span></div>
+            <div class="product-card" onclick="selectColor('Шампань металлик', 'assets/mdf/cv/sham-met.webp')"><img src="assets/mdf/cv/sham-met.webp"><span>Шампань металлик</span></div>
+        </div>
+    </details>
         </section>
 
         <div id="final-choice" class="final-block" style="display: none;">
