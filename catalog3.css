@@ -128,14 +128,21 @@ button:hover {
 
 /* --- АДАПТИВНОСТЬ --- */
 @media (max-width: 600px) {
-    /* На телефонах всегда 2 колонки */
+    /* На телефонах: 1 колонка во всю ширину */
     .catalog-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
+        grid-template-columns: 1fr;
+        gap: 15px;
     }
+    
+    /* Дополнительно: адаптируем размер карточки для удобства */
+    .product-card {
+        padding: 15px;
+    }
+
     .selection-preview {
         gap: 15px;
     }
+    
     .preview-item img {
         width: 100px;
         height: 100px;
