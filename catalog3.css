@@ -1,6 +1,6 @@
 /* catalog3.css */
 
-/* Общие отступы и шрифты */
+/* Общие настройки */
 .catalog-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -15,20 +15,21 @@ h1 {
 
 /* Секции выбора */
 .category-section {
-    margin-bottom: 40px;
-    padding: 20px;
+    margin-bottom: 20px;
+    padding: 15px;
     background: #f9f9f9;
     border-radius: 12px;
 }
 
 /* Заголовки категорий */
 .category-title {
-    font-size: 1.4em;
+    font-size: 1.2em;
     font-weight: bold;
     cursor: pointer;
     padding: 10px;
     color: #2c3e50;
     transition: color 0.3s;
+    list-style: none; /* Убирает стандартный маркер details */
 }
 
 .category-title:hover {
@@ -38,9 +39,9 @@ h1 {
 /* Сетка карточек */
 .catalog-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    gap: 20px;
-    margin-top: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
 }
 
 /* Карточки товаров */
@@ -66,12 +67,40 @@ h1 {
     display: block;
 }
 
-.product-name {
+/* Подписи под картинками */
+.product-card span {
     display: block;
-    margin-top: 10px;
-    font-size: 0.95em;
+    margin-top: 8px;
+    font-size: 0.9em;
     font-weight: 500;
     color: #444;
+}
+
+/* Итоговый блок */
+#final-choice {
+    margin-top: 40px;
+    padding: 30px;
+    background: #e8f5e9;
+    border: 2px solid #2e7d32;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Кнопка сброса */
+button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #b71c1c;
 }
 
 /* Адаптивность для телефонов */
