@@ -1,1 +1,96 @@
+/* --- Сброс стилей для details/summary --- */
+summary {
+    list-style: none;
+    cursor: pointer;
+    outline: none;
+    user-select: none;
+}
+summary::-webkit-details-marker {
+    display: none;
+}
 
+/* --- Общий контейнер --- */
+.catalog-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.category-section {
+    margin-bottom: 30px;
+}
+
+/* --- Заголовки категорий --- */
+.category-title {
+    font-size: 1.5em;
+    color: #2c3e50;
+    margin: 40px 0 20px 0;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #007bff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.category-title span {
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+details:not([open]) .category-title span {
+    transform: rotate(180deg);
+}
+
+/* --- Сетка товаров (Оптимизирована для ПК и телефона) --- */
+.catalog-grid {
+    display: grid;
+    /* На ПК: минимум 180px на карточку */
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+    margin-top: 15px;
+}
+
+/* --- Карточки --- */
+.product-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-color: #007bff;
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    display: block;
+}
+
+.product-name {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 0.9em;
+    color: #444;
+}
+
+/* --- АДАПТИВНОСТЬ ДЛЯ ТЕЛЕФОНОВ --- */
+@media (max-width: 600px) {
+    .catalog-grid {
+        /* На телефонах строго 2 колонки */
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    .category-title {
+        font-size: 1.2em;
+    }
+}
