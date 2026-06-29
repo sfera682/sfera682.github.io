@@ -6,13 +6,8 @@
     <title>Каталог столешниц и фартуков — SFERA PROM KZ</title>
     <link rel="stylesheet" href="common.css">
     <link rel="stylesheet" href="catalog1.css">
-    <style>
-        .product-card { cursor: pointer; transition: 0.3s; padding: 10px; border: 1px solid #eee; border-radius: 8px; text-align: center; }
-        .product-card:hover { transform: scale(1.03); border: 1px solid #007bff; }
-        .product-card img { width: 100%; height: auto; display: block; border-radius: 6px; }
-        .product-name { display: block; margin-top: 8px; font-weight: 500; }
-        .final-block { margin: 40px auto; padding: 30px; border: 2px solid #007bff; text-align: center; max-width: 500px; background: #e3f2fd; border-radius: 10px; }
-    </style>
+    <!-- Подключаем стили Luminous -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/luminous-lightbox/2.3.2/luminous-basic.min.css">
 </head>
 <body>
     <header class="container">
@@ -30,87 +25,78 @@
     <main class="catalog-container">
         <h1>Каталог столешниц и фартуков</h1>
 
+        <!-- 1. Древесные текстуры -->
         <section class="category-section">
             <details open>
                 <summary class="category-title">Древесные текстуры <span>▼</span></summary>
                 <div class="catalog-grid">
-                    <div class="product-card" onclick="selectProduct('Блэквуд Ячменный', 'assets/img/blekvudyachmn.jpg')"><img src="assets/img/blekvudyachmn.jpg"><span class="product-name">Блэквуд Ячменный</span></div>
-                    <div class="product-card" onclick="selectProduct('Дуб Приморский Белый', 'assets/img/dubprimbel.jpg')"><img src="assets/img/dubprimbel.jpg"><span class="product-name">Дуб Приморский Белый</span></div>
-                    <div class="product-card" onclick="selectProduct('Дуб Приморский Сатиновый', 'assets/img/dubprimsat.jpg')"><img src="assets/img/dubprimsat.jpg"><span class="product-name">Дуб Приморский Сатиновый</span></div>
-                    <div class="product-card" onclick="selectProduct('Канадский Дуб', 'assets/img/kandub.jpg')"><img src="assets/img/kandub.jpg"><span class="product-name">Канадский Дуб</span></div>
-                    <div class="product-card" onclick="selectProduct('Дуб Вотан', 'assets/img/dubvotan.jpg')"><img src="assets/img/dubvotan.jpg"><span class="product-name">Дуб Вотан</span></div>
-                    <div class="product-card" onclick="selectProduct('Дуб Бунратти', 'assets/img/dubburan.jpg')"><img src="assets/img/dubburan.jpg"><span class="product-name">Дуб Бунратти</span></div>
-                    <div class="product-card" onclick="selectProduct('Бискайская сосна', 'assets/img/bisksosn.jpg')"><img src="assets/img/bisksosn.jpg"><span class="product-name">Бискайская сосна</span></div>
-                    <div class="product-card" onclick="selectProduct('Дуб Кера', 'assets/img/dubkera.jpg')"><img src="assets/img/dubkera.jpg"><span class="product-name">Дуб Кера</span></div>
-                    <div class="product-card" onclick="selectProduct('Дуб Самдал', 'assets/img/dubsamdal.jpg')"><img src="assets/img/dubsamdal.jpg"><span class="product-name">Дуб Самдал</span></div>
-                    <div class="product-card" onclick="selectProduct('Дуб Сантана', 'assets/img/dubsantana.jpg')"><img src="assets/img/dubsantana.jpg"><span class="product-name">Дуб Сантана</span></div>
-                    <div class="product-card" onclick="selectProduct('Дуб Харбор', 'assets/img/dubharb.jpg')"><img src="assets/img/dubharb.jpg"><span class="product-name">Дуб Харбор</span></div>
-                    <div class="product-card" onclick="selectProduct('Комано', 'assets/img/komano.jpg')"><img src="assets/img/komano.jpg"><span class="product-name">Комано</span></div>
-                    <div class="product-card" onclick="selectProduct('Дуб Пальмера', 'assets/img/dubpalmera.jpeg')"><img src="assets/img/dubpalmera.jpeg"><span class="product-name">Дуб Пальмера</span></div>
-                    <div class="product-card" onclick="selectProduct('Ясень Серфсайд Натуральный', 'assets/img/yasenserfnatur.jpg')"><img src="assets/img/yasenserfnatur.jpg"><span class="product-name">Ясень Серфсайд Натуральный</span></div>
-                    <div class="product-card" onclick="selectProduct('Ясень Прибрежный Светлый', 'assets/img/yasenpribrsvet.jpg')"><img src="assets/img/yasenpribrsvet.jpg"><span class="product-name">Ясень Прибрежный Светлый</span></div>
+                    <div class="product-card"><a href="assets/img/blekvudyachmn.jpg" class="lightbox"><img src="assets/img/blekvudyachmn.jpg" alt="Блэквуд Ячменный"></a><span class="product-name">Блэквуд Ячменный</span></div>
+                    <div class="product-card"><a href="assets/img/dubprimbel.jpg" class="lightbox"><img src="assets/img/dubprimbel.jpg" alt="Дуб Приморский Белый"></a><span class="product-name">Дуб Приморский Белый</span></div>
+                    <div class="product-card"><a href="assets/img/dubprimsat.jpg" class="lightbox"><img src="assets/img/dubprimsat.jpg" alt="Дуб Приморский Сатиновый"></a><span class="product-name">Дуб Приморский Сатиновый</span></div>
+                    <div class="product-card"><a href="assets/img/kandub.jpg" class="lightbox"><img src="assets/img/kandub.jpg" alt="Канадский Дуб"></a><span class="product-name">Канадский Дуб</span></div>
+                    <div class="product-card"><a href="assets/img/dubvotan.jpg" class="lightbox"><img src="assets/img/dubvotan.jpg" alt="Дуб Вотан"></a><span class="product-name">Дуб Вотан</span></div>
+                    <div class="product-card"><a href="assets/img/dubburan.jpg" class="lightbox"><img src="assets/img/dubburan.jpg" alt="Дуб Бунратти"></a><span class="product-name">Дуб Бунратти</span></div>
+                    <div class="product-card"><a href="assets/img/bisksosn.jpg" class="lightbox"><img src="assets/img/bisksosn.jpg" alt="Бискайская сосна"></a><span class="product-name">Бискайская сосна</span></div>
+                    <div class="product-card"><a href="assets/img/dubkera.jpg" class="lightbox"><img src="assets/img/dubkera.jpg" alt="Дуб Кера"></a><span class="product-name">Дуб Кера</span></div>
+                    <div class="product-card"><a href="assets/img/dubsamdal.jpg" class="lightbox"><img src="assets/img/dubsamdal.jpg" alt="Дуб Самдал"></a><span class="product-name">Дуб Самдал</span></div>
+                    <div class="product-card"><a href="assets/img/dubsantana.jpg" class="lightbox"><img src="assets/img/dubsantana.jpg" alt="Дуб Сантана"></a><span class="product-name">Дуб Сантана</span></div>
+                    <div class="product-card"><a href="assets/img/dubharb.jpg" class="lightbox"><img src="assets/img/dubharb.jpg" alt="Дуб Харбор"></a><span class="product-name">Дуб Харбор</span></div>
+                    <div class="product-card"><a href="assets/img/komano.jpg" class="lightbox"><img src="assets/img/komano.jpg" alt="Комано"></a><span class="product-name">Комано</span></div>
+                    <div class="product-card"><a href="assets/img/dubpalmera.jpeg" class="lightbox"><img src="assets/img/dubpalmera.jpeg" alt="Дуб Пальмера"></a><span class="product-name">Дуб Пальмера</span></div>
+                    <div class="product-card"><a href="assets/img/yasenserfnatur.jpg" class="lightbox"><img src="assets/img/yasenserfnatur.jpg" alt="Ясень Серфсайд Натуральный"></a><span class="product-name">Ясень Серфсайд Натуральный</span></div>
+                    <div class="product-card"><a href="assets/img/yasenpribrsvet.jpg" class="lightbox"><img src="assets/img/yasenpribrsvet.jpg" alt="Ясень Прибрежный Светлый"></a><span class="product-name">Ясень Прибрежный Светлый</span></div>
                 </div>
             </details>
         </section>
 
+        <!-- 2. Мраморные -->
         <section class="category-section">
             <details>
                 <summary class="category-title">Мраморные и каменные фактуры <span>▼</span></summary>
                 <div class="catalog-grid">
-                    <div class="product-card" onclick="selectProduct('Мрамор Белый', 'assets/img/mrambel.jpg')"><img src="assets/img/mrambel.jpg"><span class="product-name">Мрамор Белый</span></div>
-                    <div class="product-card" onclick="selectProduct('Королевский Опал Светлый', 'assets/img/korop.jpg')"><img src="assets/img/korop.jpg"><span class="product-name">Королевский Опал Светлый</span></div>
-                    <div class="product-card" onclick="selectProduct('Мрамор Марквина Белый', 'assets/img/mrammarkv.jpg')"><img src="assets/img/mrammarkv.jpg"><span class="product-name">Мрамор Марквина Белый</span></div>
-                    <div class="product-card" onclick="selectProduct('Мрамор Бежевый', 'assets/img/mrambezh.jpg')"><img src="assets/img/mrambezh.jpg"><span class="product-name">Мрамор Бежевый</span></div>
-                    <div class="product-card" onclick="selectProduct('Мрамор Черный', 'assets/img/mramchern.jpg')"><img src="assets/img/mramchern.jpg"><span class="product-name">Мрамор Черный</span></div>
-                    <div class="product-card" onclick="selectProduct('Семолина бежевая', 'assets/img/semolbezh.jpg')"><img src="assets/img/semolbezh.jpg"><span class="product-name">Семолина бежевая</span></div>
-                    <div class="product-card" onclick="selectProduct('Калакатта', 'assets/img/kalakatta.jpg')"><img src="assets/img/kalakatta.jpg"><span class="product-name">Калакатта</span></div>
-                    <div class="product-card" onclick="selectProduct('Мрамор Марквина Черный', 'assets/img/mrammarkchern.jpg')"><img src="assets/img/mrammarkchern.jpg"><span class="product-name">Мрамор Марквина Черный</span></div>
-                    <div class="product-card" onclick="selectProduct('Азул Оникс', 'assets/img/azuloniks.jpg')"><img src="assets/img/azuloniks.jpg"><span class="product-name">Азул Оникс</span></div>
-                    <div class="product-card" onclick="selectProduct('Галактика', 'assets/img/galaktika.jpg')"><img src="assets/img/galaktika.jpg"><span class="product-name">Галактика</span></div>
-                    <div class="product-card" onclick="selectProduct('Гранж', 'assets/img/granzh.jpg')"><img src="assets/img/granzh.jpg"><span class="product-name">Гранж</span></div>
-                    <div class="product-card" onclick="selectProduct('Лавант', 'assets/img/lavant.jpeg')"><img src="assets/img/lavant.jpeg"><span class="product-name">Лавант</span></div>
-                    <div class="product-card" onclick="selectProduct('Индийский Шишам', 'assets/img/indshisham.jpeg')"><img src="assets/img/indshisham.jpeg"><span class="product-name">Индийский Шишам</span></div>
+                    <div class="product-card"><a href="assets/img/mrambel.jpg" class="lightbox"><img src="assets/img/mrambel.jpg" alt="Мрамор Белый"></a><span class="product-name">Мрамор Белый</span></div>
+                    <div class="product-card"><a href="assets/img/korop.jpg" class="lightbox"><img src="assets/img/korop.jpg" alt="Королевский Опал Светлый"></a><span class="product-name">Королевский Опал Светлый</span></div>
+                    <div class="product-card"><a href="assets/img/mrammarkv.jpg" class="lightbox"><img src="assets/img/mrammarkv.jpg" alt="Мрамор Марквина Белый"></a><span class="product-name">Мрамор Марквина Белый</span></div>
+                    <div class="product-card"><a href="assets/img/mrambezh.jpg" class="lightbox"><img src="assets/img/mrambezh.jpg" alt="Мрамор Бежевый"></a><span class="product-name">Мрамор Бежевый</span></div>
+                    <div class="product-card"><a href="assets/img/mramchern.jpg" class="lightbox"><img src="assets/img/mramchern.jpg" alt="Мрамор Черный"></a><span class="product-name">Мрамор Черный</span></div>
+                    <div class="product-card"><a href="assets/img/semolbezh.jpg" class="lightbox"><img src="assets/img/semolbezh.jpg" alt="Семолина бежевая"></a><span class="product-name">Семолина бежевая</span></div>
+                    <div class="product-card"><a href="assets/img/kalakatta.jpg" class="lightbox"><img src="assets/img/kalakatta.jpg" alt="Калакатта"></a><span class="product-name">Калакатта</span></div>
+                    <div class="product-card"><a href="assets/img/mrammarkchern.jpg" class="lightbox"><img src="assets/img/mrammarkchern.jpg" alt="Мрамор Марквина Черный"></a><span class="product-name">Мрамор Марквина Черный</span></div>
+                    <div class="product-card"><a href="assets/img/azuloniks.jpg" class="lightbox"><img src="assets/img/azuloniks.jpg" alt="Азул Оникс"></a><span class="product-name">Азул Оникс</span></div>
+                    <div class="product-card"><a href="assets/img/galaktika.jpg" class="lightbox"><img src="assets/img/galaktika.jpg" alt="Галактика"></a><span class="product-name">Галактика</span></div>
+                    <div class="product-card"><a href="assets/img/granzh.jpg" class="lightbox"><img src="assets/img/granzh.jpg" alt="Гранж"></a><span class="product-name">Гранж</span></div>
+                    <div class="product-card"><a href="assets/img/lavant.jpeg" class="lightbox"><img src="assets/img/lavant.jpeg" alt="Лавант"></a><span class="product-name">Лавант</span></div>
+                    <div class="product-card"><a href="assets/img/indshisham.jpeg" class="lightbox"><img src="assets/img/indshisham.jpeg" alt="Индийский Шишам"></a><span class="product-name">Индийский Шишам</span></div>
                 </div>
             </details>
         </section>
 
+        <!-- 3. Нейтральные -->
         <section class="category-section">
             <details>
                 <summary class="category-title">Нейтральные и однотонные <span>▼</span></summary>
                 <div class="catalog-grid">
-                    <div class="product-card" onclick="selectProduct('Белый', 'assets/img/bel.jpg')"><img src="assets/img/bel.jpg"><span class="product-name">Белый</span></div>
-                    <div class="product-card" onclick="selectProduct('Сосна Бетонная', 'assets/img/sosnbet.jpg')"><img src="assets/img/sosnbet.jpg"><span class="product-name">Сосна Бетонная</span></div>
-                    <div class="product-card" onclick="selectProduct('Цемент Светлый', 'assets/img/tsemsvet.jpg')"><img src="assets/img/tsemsvet.jpg"><span class="product-name">Цемент Светлый</span></div>
-                    <div class="product-card" onclick="selectProduct('Цемент Черный', 'assets/img/tsemchern.jpg')"><img src="assets/img/tsemchern.jpg"><span class="product-name">Цемент Черный</span></div>
-                    <div class="product-card" onclick="selectProduct('Черная Бронза', 'assets/img/chernabron.jpg')"><img src="assets/img/chernabron.jpg"><span class="product-name">Черная Бронза</span></div>
-                    <div class="product-card" onclick="selectProduct('Черное Серебро', 'assets/img/chernsereb.jpeg')"><img src="assets/img/chernsereb.jpeg"><span class="product-name">Черное Серебро</span></div>
-                    <div class="product-card" onclick="selectProduct('Черный Тунис', 'assets/img/cherntunis.jpg')"><img src="assets/img/cherntunis.jpg"><span class="product-name">Черный Тунис</span></div>
+                    <div class="product-card"><a href="assets/img/bel.jpg" class="lightbox"><img src="assets/img/bel.jpg" alt="Белый"></a><span class="product-name">Белый</span></div>
+                    <div class="product-card"><a href="assets/img/sosnbet.jpg" class="lightbox"><img src="assets/img/sosnbet.jpg" alt="Сосна Бетонная"></a><span class="product-name">Сосна Бетонная</span></div>
+                    <div class="product-card"><a href="assets/img/tsemsvet.jpg" class="lightbox"><img src="assets/img/tsemsvet.jpg" alt="Цемент Светлый"></a><span class="product-name">Цемент Светлый</span></div>
+                    <div class="product-card"><a href="assets/img/tsemchern.jpg" class="lightbox"><img src="assets/img/tsemchern.jpg" alt="Цемент Черный"></a><span class="product-name">Цемент Черный</span></div>
+                    <div class="product-card"><a href="assets/img/chernabron.jpg" class="lightbox"><img src="assets/img/chernabron.jpg" alt="Черная Бронза"></a><span class="product-name">Черная Бронза</span></div>
+                    <div class="product-card"><a href="assets/img/chernsereb.jpeg" class="lightbox"><img src="assets/img/chernsereb.jpeg" alt="Черное Серебро"></a><span class="product-name">Черное Серебро</span></div>
+                    <div class="product-card"><a href="assets/img/cherntunis.jpg" class="lightbox"><img src="assets/img/cherntunis.jpg" alt="Черный Тунис"></a><span class="product-name">Черный Тунис</span></div>
                 </div>
             </details>
         </section>
-
-        <div id="final-choice" class="final-block" style="display: none;">
-            <h2>Ваш выбор:</h2>
-            <img id="summary-img" src="" style="width: 200px; margin: 10px 0; border-radius: 8px;">
-            <p id="summary-name" style="font-size: 1.2em; font-weight: bold;"></p>
-            <button onclick="resetSelection()" style="padding: 10px 20px; cursor: pointer;">Сбросить выбор</button>
-        </div>
     </main>
 
     <div id="footer-placeholder"></div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/luminous-lightbox/2.3.2/luminous.min.js"></script>
     <script>
+        // Инициализация лайтбокса
+        new LuminousGallery(document.querySelectorAll(".catalog-grid a.lightbox"));
+        
+        // Подгрузка футера
         fetch('footer.html').then(r => r.text()).then(d => document.getElementById('footer-placeholder').innerHTML = d);
-        function selectProduct(name, imgPath) {
-            document.getElementById('summary-name').innerText = name;
-            document.getElementById('summary-img').src = imgPath;
-            document.getElementById('final-choice').style.display = 'block';
-            document.getElementById('final-choice').scrollIntoView({ behavior: 'smooth' });
-        }
-        function resetSelection() {
-            document.getElementById('final-choice').style.display = 'none';
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
     </script>
 </body>
 </html>
