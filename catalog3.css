@@ -1,5 +1,3 @@
-/* catalog3.css */
-
 /* Общие настройки */
 .catalog-container {
     max-width: 1200px;
@@ -147,4 +145,27 @@ button:hover {
         width: 100px;
         height: 100px;
     }
+}
+/* Исправление отображения ссылок для Luminous */
+.product-card a.lightbox {
+    display: block;
+    cursor: zoom-in;
+    line-height: 0; /* Убирает лишние отступы под картинкой */
+}
+
+.product-card a.lightbox img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.2s ease;
+}
+
+/* Эффект при наведении (опционально) */
+.product-card a.lightbox:hover img {
+    transform: scale(1.02);
+}
+
+/* Обеспечение корректного наложения лайтбокса */
+.lum-lightbox {
+    z-index: 9999 !important;
 }
