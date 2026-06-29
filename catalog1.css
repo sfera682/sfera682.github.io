@@ -42,13 +42,12 @@ details:not([open]) .category-title span {
     transform: rotate(180deg);
 }
 
-/* --- Сетка товаров (Оптимизирована для ПК и телефона) --- */
+/* --- Сетка товаров --- */
 .catalog-grid {
     display: grid;
-    /* На ПК: минимум 180px на карточку */
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 20px;
-    margin-top: 15px;
+    margin-top: 20px;
 }
 
 /* --- Карточки --- */
@@ -59,64 +58,6 @@ details:not([open]) .category-title span {
     padding: 10px;
     text-align: center;
     transition: transform 0.2s, box-shadow 0.2s;
-    cursor: pointer;
-}
-
-.product-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    border-color: #007bff;
-}
-
-.product-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 4px;
-    display: block;
-}
-
-.product-name {
-    display: block;
-    margin-top: 10px;
-    font-weight: bold;
-    font-size: 0.9em;
-    color: #444;
-}
-
-/* --- АДАПТИВНОСТЬ ДЛЯ ТЕЛЕФОНОВ --- */
-@media (max-width: 600px) {
-    .catalog-grid {
-        /* Меняем repeat(2, 1fr) на 1fr, чтобы была 1 карточка в ряд */
-        grid-template-columns: 1fr; 
-        gap: 15px;
-    }
-    
-    .category-title {
-        font-size: 1.2em;
-    }
-    
-    /* Дополнительно: увеличим карточку, чтобы она выглядела солиднее на весь экран */
-    .product-card {
-        padding: 15px;
-    }
-}
-/* Основная сетка каталога */
-.catalog-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
-    padding: 20px;
-}
-
-/* Карточка товара */
-.product-card {
-    cursor: pointer;
-    transition: all 0.3s ease;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    text-align: center;
-    background: #fff;
 }
 
 .product-card:hover {
@@ -125,11 +66,19 @@ details:not([open]) .category-title span {
     border-color: #007bff;
 }
 
+/* --- Стили для лайтбокса --- */
+.product-card a.lightbox {
+    display: block;
+    cursor: zoom-in;
+    line-height: 0;
+}
+
 .product-card img {
     width: 100%;
-    height: 150px; /* Фиксированная высота для единообразия */
+    height: 150px;
     object-fit: cover;
     border-radius: 4px;
+    display: block;
 }
 
 .product-name {
@@ -140,41 +89,18 @@ details:not([open]) .category-title span {
     color: #333;
 }
 
-/* Стили для секций с выпадающим списком */
-.category-section {
-    margin-bottom: 20px;
-    padding: 10px;
+/* --- Адаптивность для телефонов --- */
+@media (max-width: 600px) {
+    .catalog-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    .category-title {
+        font-size: 1.2em;
+    }
 }
 
-.category-title {
-    font-size: 1.2em;
-    font-weight: bold;
-    cursor: pointer;
-    padding: 10px;
-    background: #f8f9fa;
-    border-radius: 5px;
-    list-style: none; /* Убирает стандартный маркер */
+/* --- Исправление для лайтбокса --- */
+.lum-lightbox {
+    z-index: 9999 !important;
 }
-
-/* Блок финального выбора */
-.final-block {
-    margin: 40px auto;
-    padding: 30px;
-    border: 2px solid #007bff;
-    text-align: center;
-    max-width: 500px;
-    background: #e3f2fd;
-    border-radius: 10px;
-}
-
-.final-block h2 { margin-top: 0; }
-.final-block button {
-    padding: 10px 20px;
-    background: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 15px;
-}
-.final-block button:hover { background: #0056b3; }
