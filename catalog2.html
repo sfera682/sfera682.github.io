@@ -148,8 +148,9 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/luminous-lightbox/2.3.2/luminous.min.js"></script>
     <script>
-        new LuminousGallery(document.querySelectorAll(".catalog-grid"));
-        fetch('footer.html').then(r => r.text()).then(d => document.getElementById('footer-placeholder').innerHTML = d);
+    // Правильно: находим все ссылки с классом .lightbox и передаем их в Luminous
+    new LuminousGallery(document.querySelectorAll(".catalog-grid a.lightbox"));
+    fetch('footer.html').then(r => r.text()).then(d => document.getElementById('footer-placeholder').innerHTML = d);
     </script>
 </body>
 </html>
