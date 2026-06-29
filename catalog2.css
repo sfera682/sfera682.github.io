@@ -101,3 +101,30 @@ details:not([open]) .category-title span {
         padding: 15px;
     }
 }
+/* --- Стили для поддержки Luminous (лайтбокса) --- */
+
+/* Убираем лишние отступы у ссылки, оборачивающей картинку */
+.product-card a.lightbox {
+    display: block;
+    cursor: zoom-in;
+    line-height: 0; 
+}
+
+/* Эффект легкого увеличения при наведении на карточку */
+.product-card:hover a.lightbox img {
+    transform: scale(1.02);
+    transition: transform 0.2s ease;
+}
+
+/* Гарантируем, что картинка внутри ссылки ведет себя корректно */
+.product-card a.lightbox img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.2s ease;
+}
+
+/* Настройка самого лайтбокса, чтобы он был поверх всего */
+.lum-lightbox {
+    z-index: 9999 !important;
+}
