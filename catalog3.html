@@ -6,6 +6,7 @@
     <title>Каталог фасадов МДФ — SFERA PROM KZ</title>
     <link rel="stylesheet" href="common.css">
     <link rel="stylesheet" href="catalog3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/luminous-lightbox/2.3.2/luminous-basic.min.css">
 </head>
 <body>
     <header class="container">
@@ -22,128 +23,76 @@
 
     <main class="catalog-container">
         <h1>Каталог фасадов МДФ</h1>
-            <p style="text-align: center; margin-bottom: 30px; font-weight: bold;">Шаг 1: Выберите вид фрезеровки</p>
+        <p style="text-align: center; margin-bottom: 30px; font-weight: bold;">Шаг 1: Выберите вид фрезеровки</p>
 
         <section id="facade-selection">
             <details open class="category-section">
                 <summary class="category-title">Классические и рамочные фасады <span>▼</span></summary>
                 <div class="catalog-grid">
-                    <div class="product-card" onclick="selectFacade('Gaudi', 'assets/mdf/gaudi.webp')"><img src="assets/mdf/gaudi.webp"><span>Gaudi</span></div>
-                    <div class="product-card" onclick="selectFacade('Lux', 'assets/mdf/lux.webp')"><img src="assets/mdf/lux.webp"><span>Lux</span></div>
-                    <div class="product-card" onclick="selectFacade('Lux 1', 'assets/mdf/lux1.webp')"><img src="assets/mdf/lux1.webp"><span>Lux 1</span></div>
-                    <div class="product-card" onclick="selectFacade('Lux 2', 'assets/mdf/lux2.webp')"><img src="assets/mdf/lux2.webp"><span>Lux 2</span></div>
-                    <div class="product-card" onclick="selectFacade('Резной 1', 'assets/mdf/rez1.webp')"><img src="assets/mdf/rez1.webp"><span>Резной 1</span></div>
-                    <div class="product-card" onclick="selectFacade('Резной 2', 'assets/mdf/rez2.webp')"><img src="assets/mdf/rez2.webp"><span>Резной 2</span></div>
-                    <div class="product-card" onclick="selectFacade('Резной 3', 'assets/mdf/rez3.webp')"><img src="assets/mdf/rez3.webp"><span>Резной 3</span></div>
-                    <div class="product-card" onclick="selectFacade('Резной 4', 'assets/mdf/rez4.webp')"><img src="assets/mdf/rez4.webp"><span>Резной 4</span></div>
-                    <div class="product-card" onclick="selectFacade('Резной 5', 'assets/mdf/rez5.webp')"><img src="assets/mdf/rez5.webp"><span>Резной 5</span></div>
-                    <div class="product-card" onclick="selectFacade('Рибера 1', 'assets/mdf/ri1.webp')"><img src="assets/mdf/ri1.webp"><span>Рибера 1</span></div>
-                    <div class="product-card" onclick="selectFacade('Рибера 2', 'assets/mdf/ri2.webp')"><img src="assets/mdf/ri2.webp"><span>Рибера 2</span></div>
+                    <div class="product-card">
+                        <a href="assets/mdf/gaudi.webp" class="lightbox"><img src="assets/mdf/gaudi.webp" onclick="selectFacade('Gaudi', 'assets/mdf/gaudi.webp')"></a><span>Gaudi</span>
+                    </div>
+                    <div class="product-card">
+                        <a href="assets/mdf/lux.webp" class="lightbox"><img src="assets/mdf/lux.webp" onclick="selectFacade('Lux', 'assets/mdf/lux.webp')"></a><span>Lux</span>
+                    </div>
+                    <div class="product-card">
+                        <a href="assets/mdf/lux1.webp" class="lightbox"><img src="assets/mdf/lux1.webp" onclick="selectFacade('Lux 1', 'assets/mdf/lux1.webp')"></a><span>Lux 1</span>
+                    </div>
+                    <div class="product-card">
+                        <a href="assets/mdf/lux2.webp" class="lightbox"><img src="assets/mdf/lux2.webp" onclick="selectFacade('Lux 2', 'assets/mdf/lux2.webp')"></a><span>Lux 2</span>
+                    </div>
+                    <div class="product-card">
+                        <a href="assets/mdf/rez1.webp" class="lightbox"><img src="assets/mdf/rez1.webp" onclick="selectFacade('Резной 1', 'assets/mdf/rez1.webp')"></a><span>Резной 1</span>
+                    </div>
+                    <div class="product-card">
+                        <a href="assets/mdf/rez2.webp" class="lightbox"><img src="assets/mdf/rez2.webp" onclick="selectFacade('Резной 2', 'assets/mdf/rez2.webp')"></a><span>Резной 2</span>
+                    </div>
+                    <div class="product-card">
+                        <a href="assets/mdf/rez3.webp" class="lightbox"><img src="assets/mdf/rez3.webp" onclick="selectFacade('Резной 3', 'assets/mdf/rez3.webp')"></a><span>Резной 3</span>
+                    </div>
+                    <div class="product-card">
+                        <a href="assets/mdf/rez4.webp" class="lightbox"><img src="assets/mdf/rez4.webp" onclick="selectFacade('Резной 4', 'assets/mdf/rez4.webp')"></a><span>Резной 4</span>
+                    </div>
+                    <div class="product-card">
+                        <a href="assets/mdf/rez5.webp" class="lightbox"><img src="assets/mdf/rez5.webp" onclick="selectFacade('Резной 5', 'assets/mdf/rez5.webp')"></a><span>Резной 5</span>
+                    </div>
+                    <div class="product-card">
+                        <a href="assets/mdf/ri1.webp" class="lightbox"><img src="assets/mdf/ri1.webp" onclick="selectFacade('Рибера 1', 'assets/mdf/ri1.webp')"></a><span>Рибера 1</span>
+                    </div>
+                    <div class="product-card">
+                        <a href="assets/mdf/ri2.webp" class="lightbox"><img src="assets/mdf/ri2.webp" onclick="selectFacade('Рибера 2', 'assets/mdf/ri2.webp')"></a><span>Рибера 2</span>
+                    </div>
                 </div>
             </details>
 
             <details class="category-section">
                 <summary class="category-title">Линейные и рельефные <span>▼</span></summary>
                 <div class="catalog-grid">
-                    <div class="product-card" onclick="selectFacade('Волна 1', 'assets/mdf/1(1).webp')"><img src="assets/mdf/1(1).webp"><span>Волна 1</span></div>
-                    <div class="product-card" onclick="selectFacade('Волна 2', 'assets/mdf/1(2).webp')"><img src="assets/mdf/1(2).webp"><span>Волна 2</span></div>
-                    <div class="product-card" onclick="selectFacade('Полосы 11', 'assets/mdf/11.webp')"><img src="assets/mdf/11.webp"><span>Полосы 11</span></div>
-                    <div class="product-card" onclick="selectFacade('Полосы 12', 'assets/mdf/12.webp')"><img src="assets/mdf/12.webp"><span>Полосы 12</span></div>
-                    <div class="product-card" onclick="selectFacade('Полосы 13', 'assets/mdf/13.webp')"><img src="assets/mdf/13.webp"><span>Полосы 13</span></div>
-                    <div class="product-card" onclick="selectFacade('Риф 1', 'assets/mdf/rif1.webp')"><img src="assets/mdf/rif1.webp"><span>Риф 1</span></div>
-                    <div class="product-card" onclick="selectFacade('Риф 2', 'assets/mdf/rif2.webp')"><img src="assets/mdf/rif2.webp"><span>Риф 2</span></div>
-                    <div class="product-card" onclick="selectFacade('Риф 3', 'assets/mdf/rif3.webp')"><img src="assets/mdf/rif3.webp"><span>Риф 3</span></div>
+                    <div class="product-card"><a href="assets/mdf/1(1).webp" class="lightbox"><img src="assets/mdf/1(1).webp" onclick="selectFacade('Волна 1', 'assets/mdf/1(1).webp')"></a><span>Волна 1</span></div>
+                    <div class="product-card"><a href="assets/mdf/1(2).webp" class="lightbox"><img src="assets/mdf/1(2).webp" onclick="selectFacade('Волна 2', 'assets/mdf/1(2).webp')"></a><span>Волна 2</span></div>
+                    <div class="product-card"><a href="assets/mdf/11.webp" class="lightbox"><img src="assets/mdf/11.webp" onclick="selectFacade('Полосы 11', 'assets/mdf/11.webp')"></a><span>Полосы 11</span></div>
+                    <div class="product-card"><a href="assets/mdf/12.webp" class="lightbox"><img src="assets/mdf/12.webp" onclick="selectFacade('Полосы 12', 'assets/mdf/12.webp')"></a><span>Полосы 12</span></div>
+                    <div class="product-card"><a href="assets/mdf/13.webp" class="lightbox"><img src="assets/mdf/13.webp" onclick="selectFacade('Полосы 13', 'assets/mdf/13.webp')"></a><span>Полосы 13</span></div>
+                    <div class="product-card"><a href="assets/mdf/rif1.webp" class="lightbox"><img src="assets/mdf/rif1.webp" onclick="selectFacade('Риф 1', 'assets/mdf/rif1.webp')"></a><span>Риф 1</span></div>
+                    <div class="product-card"><a href="assets/mdf/rif2.webp" class="lightbox"><img src="assets/mdf/rif2.webp" onclick="selectFacade('Риф 2', 'assets/mdf/rif2.webp')"></a><span>Риф 2</span></div>
+                    <div class="product-card"><a href="assets/mdf/rif3.webp" class="lightbox"><img src="assets/mdf/rif3.webp" onclick="selectFacade('Риф 3', 'assets/mdf/rif3.webp')"></a><span>Риф 3</span></div>
                 </div>
             </details>
 
             <details class="category-section">
                 <summary class="category-title">Геометрические и узорные <span>▼</span></summary>
                 <div class="catalog-grid">
-                    <div class="product-card" onclick="selectFacade('Узор 1', 'assets/mdf/ne1.webp')"><img src="assets/mdf/ne1.webp"><span>Узор 1</span></div>
-                    <div class="product-card" onclick="selectFacade('Узор 2', 'assets/mdf/ne2.webp')"><img src="assets/mdf/ne2.webp"><span>Узор 2</span></div>
-                    <div class="product-card" onclick="selectFacade('Узор 3', 'assets/mdf/ne3.webp')"><img src="assets/mdf/ne3.webp"><span>Узор 3</span></div>
-                    <div class="product-card" onclick="selectFacade('Узор 4', 'assets/mdf/ne4.webp')"><img src="assets/mdf/ne4.webp"><span>Узор 4</span></div>
+                    <div class="product-card"><a href="assets/mdf/ne1.webp" class="lightbox"><img src="assets/mdf/ne1.webp" onclick="selectFacade('Узор 1', 'assets/mdf/ne1.webp')"></a><span>Узор 1</span></div>
+                    <div class="product-card"><a href="assets/mdf/ne2.webp" class="lightbox"><img src="assets/mdf/ne2.webp" onclick="selectFacade('Узор 2', 'assets/mdf/ne2.webp')"></a><span>Узор 2</span></div>
+                    <div class="product-card"><a href="assets/mdf/ne3.webp" class="lightbox"><img src="assets/mdf/ne3.webp" onclick="selectFacade('Узор 3', 'assets/mdf/ne3.webp')"></a><span>Узор 3</span></div>
+                    <div class="product-card"><a href="assets/mdf/ne4.webp" class="lightbox"><img src="assets/mdf/ne4.webp" onclick="selectFacade('Узор 4', 'assets/mdf/ne4.webp')"></a><span>Узор 4</span></div>
                 </div>
             </details>
         </section>
 
         <section id="color-section" style="display: none; margin-top: 50px;">
-        <h2>Шаг 2: Выберите цвет</h2>
-    
-    <details class="category-section">
-        <summary class="category-title">Древесные <span>▼</span></summary>
-        <div class="catalog-grid">
-            <div class="product-card" onclick="selectColor('Дуб крафт табачный', 'assets/mdf/cv/dim-d.webp')"><img src="assets/mdf/cv/dim-d.webp"><span>Дуб крафт табачный</span></div>
-            <div class="product-card" onclick="selectColor('Дуб натур', 'assets/mdf/cv/iz-d.webp')"><img src="assets/mdf/cv/iz-d.webp"><span>Дуб натур</span></div>
-            <div class="product-card" onclick="selectColor('Изумрудное дерево', 'assets/mdf/cv/kratab-d.webp')"><img src="assets/mdf/cv/kratab-d.webp"><span>Изумрудное дерево</span></div>
-            <div class="product-card" onclick="selectColor('Крымское дерево', 'assets/mdf/cv/krim-d.webp')"><img src="assets/mdf/cv/krim-d.webp"><span>Крымское дерево</span></div>
-            <div class="product-card" onclick="selectColor('Лазурное дерево', 'assets/mdf/cv/laz-d.webp')"><img src="assets/mdf/cv/laz-d.webp"><span>Лазурное дерево</span></div>
-            <div class="product-card" onclick="selectColor('Махагон древесная', 'assets/mdf/cv/mah-d.webp')"><img src="assets/mdf/cv/mah-d.webp"><span>Махагон древесная</span></div>
-            <div class="product-card" onclick="selectColor('Оливковое дерево', 'assets/mdf/cv/ol-d.webp')"><img src="assets/mdf/cv/ol-d.webp"><span>Оливковое дерево</span></div>
-            <div class="product-card" onclick="selectColor('Орех Гварнери', 'assets/mdf/cv/orgva-d.webp')"><img src="assets/mdf/cv/orgva-d.webp"><span>Орех Гварнери</span></div>
-            <div class="product-card" onclick="selectColor('Пепельный', 'assets/mdf/cv/pep-d.webp')"><img src="assets/mdf/cv/pep-d.webp"><span>Пепельный</span></div>
-            <div class="product-card" onclick="selectColor('Санторини белый', 'assets/mdf/cv/sant-d.webp')"><img src="assets/mdf/cv/sant-d.webp"><span>Санторини белый</span></div>
-            <div class="product-card" onclick="selectColor('Скандинавский дуб бежевый', 'assets/mdf/cv/skabe-d.webp')"><img src="assets/mdf/cv/skabe-d.webp"><span>Скандинавский дуб бежевый</span></div>
-            <div class="product-card" onclick="selectColor('Скандинавский дуб золотой', 'assets/mdf/cv/skan-d.webp')"><img src="assets/mdf/cv/skan-d.webp"><span>Скандинавский дуб золотой</span></div>
-            <div class="product-card" onclick="selectColor('Скандинавский дуб коричневый', 'assets/mdf/cv/skazo-d.webp')"><img src="assets/mdf/cv/skazo-d.webp"><span>Скандинавский дуб коричневый</span></div>
-            <div class="product-card" onclick="selectColor('Снежное дерево', 'assets/mdf/cv/sn-d.webp')"><img src="assets/mdf/cv/sn-d.webp"><span>Снежное дерево</span></div>
-            <div class="product-card" onclick="selectColor('Дуб сонома тиснёный', 'assets/mdf/cv/sonom-d.webp')"><img src="assets/mdf/cv/sonom-d.webp"><span>Дуб сонома тиснёный</span></div>
-            <div class="product-card" onclick="selectColor('Венге', 'assets/mdf/cv/vehge-d.webp')"><img src="assets/mdf/cv/vehge-d.webp"><span>Венге</span></div>
-            <div class="product-card" onclick="selectColor('Ясень белый', 'assets/mdf/cv/yasenbel-d.webp')"><img src="assets/mdf/cv/yasenbel-d.webp"><span>Ясень белый</span></div>
-            <div class="product-card" onclick="selectColor('Ясень жемчуг', 'assets/mdf/cv/yasenzh-d.webp')"><img src="assets/mdf/cv/yasenzh-d.webp"><span>Ясень жемчуг</span></div>
-        </div>
-    </details>
-    
-    <details class="category-section">
-        <summary class="category-title">Бетон и мрамор <span>▼</span></summary>
-        <div class="catalog-grid">
-            <div class="product-card" onclick="selectColor('Туран', 'assets/mdf/cv/turan.webp')"><img src="assets/mdf/cv/turan.webp"><span>Туран</span></div>
-            <div class="product-card" onclick="selectColor('Томирис', 'assets/mdf/cv/tomi.webp')"><img src="assets/mdf/cv/tomi.webp"><span>Томирис</span></div>
-            <div class="product-card" onclick="selectColor('Аманат', 'assets/mdf/cv/aman.webp')"><img src="assets/mdf/cv/aman.webp"><span>Аманат</span></div>
-            <div class="product-card" onclick="selectColor('Альтаир', 'assets/mdf/cv/alta.webp')"><img src="assets/mdf/cv/alta.webp"><span>Альтаир</span></div>
-            <div class="product-card" onclick="selectColor('Алпамыс', 'assets/mdf/cv/alpa.webp')"><img src="assets/mdf/cv/alpa.webp"><span>Алпамыс</span></div>
-            <div class="product-card" onclick="selectColor('Бетон светлый', 'assets/mdf/cv/betonsv.webp')"><img src="assets/mdf/cv/betonsv.webp"><span>Бетон светлый</span></div>
-            <div class="product-card" onclick="selectColor('Бетон тёмный', 'assets/mdf/cv/betontemn.webp')"><img src="assets/mdf/cv/betontemn.webp"><span>Бетон тёмный</span></div>
-            <div class="product-card" onclick="selectColor('Дюна Мистраль', 'assets/mdf/cv/dunamist.webp')"><img src="assets/mdf/cv/dunamist.webp"><span>Дюна Мистраль</span></div>
-            <div class="product-card" onclick="selectColor('Дюна Норд', 'assets/mdf/cv/dunanord.webp')"><img src="assets/mdf/cv/dunanord.webp"><span>Дюна Норд</span></div>
-        </div>
-    </details>     
-            
-    <details class="category-section">
-        <summary class="category-title">Глянцевые <span>▼</span></summary>
-        <div class="catalog-grid">
-            <div class="product-card" onclick="selectColor('Белый глянец', 'assets/mdf/cv/bel-gl.webp')"><img src="assets/mdf/cv/bel-gl.webp"><span>Белый глянец</span></div>
-            <div class="product-card" onclick="selectColor('Графит глянец', 'assets/mdf/cv/ch-gl.webp')"><img src="assets/mdf/cv/ch-gl.webp"><span>Графит глянец</span></div>
-            <div class="product-card" onclick="selectColor('Фарандола глянец', 'assets/mdf/cv/farandola-gl.webp')"><img src="assets/mdf/cv/farandola-gl.webp"><span>Фарандола глянец</span></div>
-            <div class="product-card" onclick="selectColor('Макиотти глянец', 'assets/mdf/cv/makkiotti-gl.webp')"><img src="assets/mdf/cv/makkiotti-gl.webp"><span>Макиотти глянец</span></div>
-            <div class="product-card" onclick="selectColor('Молочный глянец', 'assets/mdf/cv/mol-gl.webp')"><img src="assets/mdf/cv/mol-gl.webp"><span>Молочный глянец</span></div>
-        </div>
-    </details>
-
-    <details class="category-section">
-        <summary class="category-title">Матовые <span>▼</span></summary>
-        <div class="catalog-grid">
-            <div class="product-card" onclick="selectColor('Графит матовый', 'assets/mdf/cv/ch-mat.webp')"><img src="assets/mdf/cv/ch-mat.webp"><span>Графит матовый</span></div>
-            <div class="product-card" onclick="selectColor('Какао перламутр', 'assets/mdf/cv/kakao-mat.webp')"><img src="assets/mdf/cv/kakao-mat.webp"><span>Какао перламутр</span></div>
-            <div class="product-card" onclick="selectColor('Кофе с молоком', 'assets/mdf/cv/kofe-mat.webp')"><img src="assets/mdf/cv/kofe-mat.webp"><span>Кофе с молоком</span></div>
-            <div class="product-card" onclick="selectColor('Оранж матовый', 'assets/mdf/cv/or-mat.webp')"><img src="assets/mdf/cv/or-mat.webp"><span>Оранж матовый</span></div>
-            <div class="product-card" onclick="selectColor('Серый матовый', 'assets/mdf/cv/ser-mat.webp')"><img src="assets/mdf/cv/ser-mat.webp"><span>Серый матовый</span></div>
-            <div class="product-card" onclick="selectColor('Зелёный матовый', 'assets/mdf/cv/z-mat.webp')"><img src="assets/mdf/cv/z-mat.webp"><span>Зелёный матовый</span></div>
-        </div>
-    </details>
-
-    <details class="category-section">
-        <summary class="category-title">Металлик <span>▼</span></summary>
-        <div class="catalog-grid">
-            <div class="product-card" onclick="selectColor('Белый металлик', 'assets/mdf/bel-met.webp')"><img src="assets/mdf/bel-met.webp"><span>Белый металлик</span></div>
-            <div class="product-card" onclick="selectColor('Ваниль металлик', 'assets/mdf/van-met.webp')"><img src="assets/mdf/van-met.webp"><span>Ваниль металлик</span></div>
-            <div class="product-card" onclick="selectColor('Серый металлик', 'assets/mdf/ser-met.webp')"><img src="assets/mdf/ser-met.webp"><span>Серый металлик</span></div>
-            <div class="product-card" onclick="selectColor('Сирень металлик', 'assets/mdf/sir-met.webp')"><img src="assets/mdf/sir-met.webp"><span>Сирень металлик</span></div>
-            <div class="product-card" onclick="selectColor('Сталь металлик', 'assets/mdf/stal-met.webp')"><img src="assets/mdf/stal-met.webp"><span>Сталь металлик</span></div>
-            <div class="product-card" onclick="selectColor('Шампань металлик', 'assets/mdf/sham-met.webp')"><img src="assets/mdf/sham-met.webp"><span>Шампань металлик</span></div>
-        </div>
-    </details>
-        </section>
+            <h2>Шаг 2: Выберите цвет</h2>
+            </section>
 
         <div id="final-choice" class="final-block" style="display: none;">
             <h2>Ваш выбор готов!</h2>
@@ -162,8 +111,14 @@
     </main>
 
     <div id="footer-placeholder"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/luminous-lightbox/2.3.2/luminous.min.js"></script>
     <script>
+        // Инициализация Luminous
+        new LuminousGallery(document.querySelectorAll(".catalog-grid"));
+
         fetch('footer.html').then(r => r.text()).then(d => document.getElementById('footer-placeholder').innerHTML = d);
+        
         let selectedFacadeName = "";
         let selectedFacadeImg = "";
         function selectFacade(name, imgPath) {
