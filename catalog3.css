@@ -169,3 +169,48 @@ button:hover {
 .lum-lightbox {
     z-index: 9999 !important;
 }
+/* 1. Стили для кнопки "Увеличить" */
+.view-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 6px 12px;
+    background: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 11px; /* Чуть меньше основного текста */
+    color: #555;
+    cursor: zoom-in;
+    transition: all 0.2s;
+}
+
+.view-btn:hover {
+    background: #007bff;
+    color: #fff;
+    border-color: #007bff;
+}
+
+/* 2. Отключаем hover-эффект для ссылок лайтбокса внутри карточек */
+/* Чтобы при наведении на "Увеличить" карточка не "прыгала" от scale */
+.product-card a.view-btn:hover img {
+    transform: none;
+}
+
+/* 3. Улучшаем отступы в карточке, чтобы контент не слипался */
+.product-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 4. Чтобы иконка лайтбокса не мешала клику */
+.product-card img {
+    pointer-events: none; /* Картинка не перехватывает клик, он уходит на product-card */
+}
+
+/* 5. Убедимся, что кнопка увеличения кликабельна отдельно */
+.product-card .view-btn {
+    pointer-events: auto; /* Возвращаем кликабельность самой кнопке */
+    z-index: 10;
+}
