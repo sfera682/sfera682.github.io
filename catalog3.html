@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="common.css">
     <link rel="stylesheet" href="catalog3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/luminous-lightbox/2.3.2/luminous-basic.min.css">
+    <style>
+        .view-btn { display: inline-block; margin-top: 10px; padding: 5px 10px; background: #f8f9fa; border: 1px solid #ccc; border-radius: 4px; text-decoration: none; font-size: 12px; color: #333; cursor: zoom-in; }
+        .view-btn:hover { background: #e2e6ea; }
+    </style>
 </head>
 <body>
     <header class="container">
@@ -29,82 +33,60 @@
             <details open class="category-section">
                 <summary class="category-title">Классические и рамочные фасады <span>▼</span></summary>
                 <div class="catalog-grid">
-                    <div class="product-card" onclick="selectFacade('Gaudi', 'assets/mdf/gaudi.webp')">
-                        <a href="assets/mdf/gaudi.webp" class="lightbox"><img src="assets/mdf/gaudi.webp"></a><span>Gaudi</span>
-                    </div>
-                    <div class="product-card" onclick="selectFacade('Lux', 'assets/mdf/lux.webp')">
-                        <a href="assets/mdf/lux.webp" class="lightbox"><img src="assets/mdf/lux.webp"></a><span>Lux</span>
-                    </div>
-                    <div class="product-card" onclick="selectFacade('Lux 1', 'assets/mdf/lux1.webp')">
-                        <a href="assets/mdf/lux1.webp" class="lightbox"><img src="assets/mdf/lux1.webp"></a><span>Lux 1</span>
-                    </div>
-                    <div class="product-card" onclick="selectFacade('Lux 2', 'assets/mdf/lux2.webp')">
-                        <a href="assets/mdf/lux2.webp" class="lightbox"><img src="assets/mdf/lux2.webp"></a><span>Lux 2</span>
-                    </div>
-                    <div class="product-card" onclick="selectFacade('Резной 1', 'assets/mdf/rez1.webp')">
-                        <a href="assets/mdf/rez1.webp" class="lightbox"><img src="assets/mdf/rez1.webp"></a><span>Резной 1</span>
-                    </div>
-                    <div class="product-card" onclick="selectFacade('Резной 2', 'assets/mdf/rez2.webp')">
-                        <a href="assets/mdf/rez2.webp" class="lightbox"><img src="assets/mdf/rez2.webp"></a><span>Резной 2</span>
-                    </div>
-                    <div class="product-card" onclick="selectFacade('Резной 3', 'assets/mdf/rez3.webp')">
-                        <a href="assets/mdf/rez3.webp" class="lightbox"><img src="assets/mdf/rez3.webp"></a><span>Резной 3</span>
-                    </div>
-                    <div class="product-card" onclick="selectFacade('Резной 4', 'assets/mdf/rez4.webp')">
-                        <a href="assets/mdf/rez4.webp" class="lightbox"><img src="assets/mdf/rez4.webp"></a><span>Резной 4</span>
-                    </div>
-                    <div class="product-card" onclick="selectFacade('Резной 5', 'assets/mdf/rez5.webp')">
-                        <a href="assets/mdf/rez5.webp" class="lightbox"><img src="assets/mdf/rez5.webp"></a><span>Резной 5</span>
-                    </div>
-                    <div class="product-card" onclick="selectFacade('Рибера 1', 'assets/mdf/ri1.webp')">
-                        <a href="assets/mdf/ri1.webp" class="lightbox"><img src="assets/mdf/ri1.webp"></a><span>Рибера 1</span>
-                    </div>
-                    <div class="product-card" onclick="selectFacade('Рибера 2', 'assets/mdf/ri2.webp')">
-                        <a href="assets/mdf/ri2.webp" class="lightbox"><img src="assets/mdf/ri2.webp"></a><span>Рибера 2</span>
-                    </div>
+                    <div class="product-card" onclick="selectFacade('Gaudi', 'assets/mdf/gaudi.webp')"><img src="assets/mdf/gaudi.webp"><span>Gaudi</span></div>
+                    <div class="product-card" onclick="selectFacade('Lux', 'assets/mdf/lux.webp')"><img src="assets/mdf/lux.webp"><span>Lux</span></div>
+                    <div class="product-card" onclick="selectFacade('Lux 1', 'assets/mdf/lux1.webp')"><img src="assets/mdf/lux1.webp"><span>Lux 1</span></div>
+                    <div class="product-card" onclick="selectFacade('Lux 2', 'assets/mdf/lux2.webp')"><img src="assets/mdf/lux2.webp"><span>Lux 2</span></div>
+                    <div class="product-card" onclick="selectFacade('Резной 1', 'assets/mdf/rez1.webp')"><img src="assets/mdf/rez1.webp"><span>Резной 1</span></div>
+                    <div class="product-card" onclick="selectFacade('Резной 2', 'assets/mdf/rez2.webp')"><img src="assets/mdf/rez2.webp"><span>Резной 2</span></div>
+                    <div class="product-card" onclick="selectFacade('Резной 3', 'assets/mdf/rez3.webp')"><img src="assets/mdf/rez3.webp"><span>Резной 3</span></div>
+                    <div class="product-card" onclick="selectFacade('Резной 4', 'assets/mdf/rez4.webp')"><img src="assets/mdf/rez4.webp"><span>Резной 4</span></div>
+                    <div class="product-card" onclick="selectFacade('Резной 5', 'assets/mdf/rez5.webp')"><img src="assets/mdf/rez5.webp"><span>Резной 5</span></div>
+                    <div class="product-card" onclick="selectFacade('Рибера 1', 'assets/mdf/ri1.webp')"><img src="assets/mdf/ri1.webp"><span>Рибера 1</span></div>
+                    <div class="product-card" onclick="selectFacade('Рибера 2', 'assets/mdf/ri2.webp')"><img src="assets/mdf/ri2.webp"><span>Рибера 2</span></div>
                 </div>
             </details>
 
             <details class="category-section">
                 <summary class="category-title">Линейные и рельефные <span>▼</span></summary>
                 <div class="catalog-grid">
-                    <div class="product-card" onclick="selectFacade('Волна 1', 'assets/mdf/1(1).webp')"><a href="assets/mdf/1(1).webp" class="lightbox"><img src="assets/mdf/1(1).webp"></a><span>Волна 1</span></div>
-                    <div class="product-card" onclick="selectFacade('Волна 2', 'assets/mdf/1(2).webp')"><a href="assets/mdf/1(2).webp" class="lightbox"><img src="assets/mdf/1(2).webp"></a><span>Волна 2</span></div>
-                    <div class="product-card" onclick="selectFacade('Полосы 11', 'assets/mdf/11.webp')"><a href="assets/mdf/11.webp" class="lightbox"><img src="assets/mdf/11.webp"></a><span>Полосы 11</span></div>
-                    <div class="product-card" onclick="selectFacade('Полосы 12', 'assets/mdf/12.webp')"><a href="assets/mdf/12.webp" class="lightbox"><img src="assets/mdf/12.webp"></a><span>Полосы 12</span></div>
-                    <div class="product-card" onclick="selectFacade('Полосы 13', 'assets/mdf/13.webp')"><a href="assets/mdf/13.webp" class="lightbox"><img src="assets/mdf/13.webp"></a><span>Полосы 13</span></div>
-                    <div class="product-card" onclick="selectFacade('Риф 1', 'assets/mdf/rif1.webp')"><a href="assets/mdf/rif1.webp" class="lightbox"><img src="assets/mdf/rif1.webp"></a><span>Риф 1</span></div>
-                    <div class="product-card" onclick="selectFacade('Риф 2', 'assets/mdf/rif2.webp')"><a href="assets/mdf/rif2.webp" class="lightbox"><img src="assets/mdf/rif2.webp"></a><span>Риф 2</span></div>
-                    <div class="product-card" onclick="selectFacade('Риф 3', 'assets/mdf/rif3.webp')"><a href="assets/mdf/rif3.webp" class="lightbox"><img src="assets/mdf/rif3.webp"></a><span>Риф 3</span></div>
+                    <div class="product-card" onclick="selectFacade('Волна 1', 'assets/mdf/1(1).webp')"><img src="assets/mdf/1(1).webp"><span>Волна 1</span></div>
+                    <div class="product-card" onclick="selectFacade('Волна 2', 'assets/mdf/1(2).webp')"><img src="assets/mdf/1(2).webp"><span>Волна 2</span></div>
+                    <div class="product-card" onclick="selectFacade('Полосы 11', 'assets/mdf/11.webp')"><img src="assets/mdf/11.webp"><span>Полосы 11</span></div>
+                    <div class="product-card" onclick="selectFacade('Полосы 12', 'assets/mdf/12.webp')"><img src="assets/mdf/12.webp"><span>Полосы 12</span></div>
+                    <div class="product-card" onclick="selectFacade('Полосы 13', 'assets/mdf/13.webp')"><img src="assets/mdf/13.webp"><span>Полосы 13</span></div>
+                    <div class="product-card" onclick="selectFacade('Риф 1', 'assets/mdf/rif1.webp')"><img src="assets/mdf/rif1.webp"><span>Риф 1</span></div>
+                    <div class="product-card" onclick="selectFacade('Риф 2', 'assets/mdf/rif2.webp')"><img src="assets/mdf/rif2.webp"><span>Риф 2</span></div>
+                    <div class="product-card" onclick="selectFacade('Риф 3', 'assets/mdf/rif3.webp')"><img src="assets/mdf/rif3.webp"><span>Риф 3</span></div>
                 </div>
             </details>
 
             <details class="category-section">
                 <summary class="category-title">Геометрические и узорные <span>▼</span></summary>
                 <div class="catalog-grid">
-                    <div class="product-card" onclick="selectFacade('Узор 1', 'assets/mdf/ne1.webp')"><a href="assets/mdf/ne1.webp" class="lightbox"><img src="assets/mdf/ne1.webp"></a><span>Узор 1</span></div>
-                    <div class="product-card" onclick="selectFacade('Узор 2', 'assets/mdf/ne2.webp')"><a href="assets/mdf/ne2.webp" class="lightbox"><img src="assets/mdf/ne2.webp"></a><span>Узор 2</span></div>
-                    <div class="product-card" onclick="selectFacade('Узор 3', 'assets/mdf/ne3.webp')"><a href="assets/mdf/ne3.webp" class="lightbox"><img src="assets/mdf/ne3.webp"></a><span>Узор 3</span></div>
-                    <div class="product-card" onclick="selectFacade('Узор 4', 'assets/mdf/ne4.webp')"><a href="assets/mdf/ne4.webp" class="lightbox"><img src="assets/mdf/ne4.webp"></a><span>Узор 4</span></div>
+                    <div class="product-card" onclick="selectFacade('Узор 1', 'assets/mdf/ne1.webp')"><img src="assets/mdf/ne1.webp"><span>Узор 1</span></div>
+                    <div class="product-card" onclick="selectFacade('Узор 2', 'assets/mdf/ne2.webp')"><img src="assets/mdf/ne2.webp"><span>Узор 2</span></div>
+                    <div class="product-card" onclick="selectFacade('Узор 3', 'assets/mdf/ne3.webp')"><img src="assets/mdf/ne3.webp"><span>Узор 3</span></div>
+                    <div class="product-card" onclick="selectFacade('Узор 4', 'assets/mdf/ne4.webp')"><img src="assets/mdf/ne4.webp"><span>Узор 4</span></div>
                 </div>
             </details>
         </section>
 
         <section id="color-section" style="display: none; margin-top: 50px;">
             <h2>Шаг 2: Выберите цвет</h2>
-            </section>
+            <div class="catalog-grid">
+                <div class="product-card" onclick="selectColor('Название цвета', 'путь/к/цвету.webp')">
+                    <img src="путь/к/цвету.webp"><span>Название цвета</span>
+                    <a href="путь/к/цвету.webp" class="lightbox view-btn" onclick="event.stopPropagation()">Увеличить</a>
+                </div>
+            </div>
+        </section>
 
         <div id="final-choice" class="final-block" style="display: none;">
             <h2>Ваш выбор готов!</h2>
             <div class="selection-preview">
-                <div class="preview-item">
-                    <img id="summary-img-facade" src="" alt="Фасад">
-                    <p id="name-facade"></p>
-                </div>
-                <div class="preview-item">
-                    <img id="summary-img-color" src="" alt="Цвет">
-                    <p id="name-color"></p>
-                </div>
+                <div class="preview-item"><img id="summary-img-facade" src=""><p id="name-facade"></p></div>
+                <div class="preview-item"><img id="summary-img-color" src=""><p id="name-color"></p></div>
             </div>
             <button onclick="resetSelection()">Вернуться к выбору</button>
         </div>
@@ -114,15 +96,12 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/luminous-lightbox/2.3.2/luminous.min.js"></script>
     <script>
-        new LuminousGallery(document.querySelectorAll(".catalog-grid"));
-
+        new LuminousGallery(document.querySelectorAll(".view-btn"));
         fetch('footer.html').then(r => r.text()).then(d => document.getElementById('footer-placeholder').innerHTML = d);
         
-        let selectedFacadeName = "";
-        let selectedFacadeImg = "";
+        let selectedFacadeName = ""; let selectedFacadeImg = "";
         function selectFacade(name, imgPath) {
-            selectedFacadeName = name;
-            selectedFacadeImg = imgPath;
+            selectedFacadeName = name; selectedFacadeImg = imgPath;
             document.getElementById('color-section').style.display = 'block';
             document.getElementById('color-section').scrollIntoView({ behavior: 'smooth' });
         }
