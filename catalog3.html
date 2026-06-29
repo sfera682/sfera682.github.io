@@ -8,8 +8,10 @@
     <link rel="stylesheet" href="catalog3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/luminous-lightbox/2.3.2/luminous-basic.min.css">
     <style>
-        .view-btn { display: inline-block; margin-top: 10px; padding: 5px 10px; background: #f8f9fa; border: 1px solid #ccc; border-radius: 4px; text-decoration: none; font-size: 12px; color: #333; cursor: zoom-in; }
-        .view-btn:hover { background: #e2e6ea; }
+        .view-btn { display: inline-block; margin-top: 10px; padding: 5px 10px; background: #f0f0f0; border: 1px solid #ccc; border-radius: 4px; text-decoration: none; font-size: 11px; color: #333; cursor: zoom-in; }
+        .view-btn:hover { background: #e0e0e0; }
+        .product-card img { pointer-events: none; }
+        .product-card .view-btn { pointer-events: auto; }
     </style>
 </head>
 <body>
@@ -74,12 +76,80 @@
 
         <section id="color-section" style="display: none; margin-top: 50px;">
             <h2>Шаг 2: Выберите цвет</h2>
-            <div class="catalog-grid">
-                <div class="product-card" onclick="selectColor('Название цвета', 'путь/к/цвету.webp')">
-                    <img src="путь/к/цвету.webp"><span>Название цвета</span>
-                    <a href="путь/к/цвету.webp" class="lightbox view-btn" onclick="event.stopPropagation()">Увеличить</a>
+            
+            <details class="category-section">
+                <summary class="category-title">Древесные <span>▼</span></summary>
+                <div class="catalog-grid">
+                    <div class="product-card" onclick="selectColor('Дуб крафт табачный', 'assets/mdf/cv/dim-d.webp')"><img src="assets/mdf/cv/dim-d.webp"><span>Дуб крафт табачный</span><a href="assets/mdf/cv/dim-d.webp" class="lightbox view-btn" onclick="event.stopPropagation()">Увеличить</a></div>
+                    <div class="product-card" onclick="selectColor('Дуб натур', 'assets/mdf/cv/iz-d.webp')"><img src="assets/mdf/cv/iz-d.webp"><span>Дуб натур</span><a href="assets/mdf/cv/iz-d.webp" class="lightbox view-btn" onclick="event.stopPropagation()">Увеличить</a></div>
+                    <div class="product-card" onclick="selectColor('Изумрудное дерево', 'assets/mdf/cv/kratab-d.webp')"><img src="assets/mdf/cv/kratab-d.webp"><span>Изумрудное дерево</span><a href="assets/mdf/cv/kratab-d.webp" class="lightbox view-btn" onclick="event.stopPropagation()">Увеличить</a></div>
+                    <div class="product-card" onclick="selectColor('Крымское дерево', 'assets/mdf/cv/krim-d.webp')"><img src="assets/mdf/cv/krim-d.webp"><span>Крымское дерево</span><a href="assets/mdf/cv/krim-d.webp" class="lightbox view-btn" onclick="event.stopPropagation()">Увеличить</a></div>
+                    <div class="product-card" onclick="selectColor('Лазурное дерево', 'assets/mdf/cv/laz-d.webp')"><img src="assets/mdf/cv/laz-d.webp"><span>Лазурное дерево</span><a href="assets/mdf/cv/laz-d.webp" class="lightbox view-btn" onclick="event.stopPropagation()">Увеличить</a></div>
+                    <div class="product-card" onclick="selectColor('Махагон древесная', 'assets/mdf/cv/mah-d.webp')"><img src="assets/mdf/cv/mah-d.webp"><span>Махагон древесная</span><a href="assets/mdf/cv/mah-d.webp" class="lightbox view-btn" onclick="event.stopPropagation()">Увеличить</a></div>
+                    <div class="product-card" onclick="selectColor('Оливковое дерево', 'assets/mdf/cv/ol-d.webp')"><img src="assets/mdf/cv/ol-d.webp"><span>Оливковое дерево</span><a href="assets/mdf/cv/ol-d.webp" class="lightbox view-btn" onclick="event.stopPropagation()">Увеличить</a></div>
+                    <div class="product-card" onclick="selectColor('Орех Гварнери', 'assets/mdf/cv/orgva-d.webp')"><img src="assets/mdf/cv/orgva-d.webp"><span>Орех Гварнери</span><a href="assets/mdf/cv/orgva-d.webp" class="lightbox view-btn" onclick="event.stopPropagation()">Увеличить</a></div>
+                    <div class="product-card" onclick="selectColor('Пепельный', 'assets/mdf/cv/pep-d.webp')"><img src="assets/mdf/cv/pep-d.webp"><span>Пепельный</span><a href="assets/mdf/cv/pep-d.webp" class="lightbox view-btn" onclick="event.stopPropagation()">Увеличить</a></div>
+                    <div class="product-card" onclick="selectColor('Санторини белый', 'assets/mdf/cv/sant-d.webp')"><img src="assets/mdf/cv/sant-d.webp"><span>Санторини белый</span><a href="assets/mdf/cv/sant-d.webp" class="lightbox view-btn" onclick="event.stopPropagation()">Увеличить</a></div>
+                    <div class="product-card" onclick="selectColor('Скандинавский дуб бежевый', 'assets/mdf/cv/skabe-d.webp')"><img src="assets/mdf/cv/skabe-d.webp"><span>Скандинавский дуб бежевый</span><a href="assets/mdf/cv/skabe-d.webp" class="lightbox view-btn" onclick="event.stopPropagation()">Увеличить</a></div>
+                    <div class="product-card" onclick="selectColor('Скандинавский дуб золотой', 'assets/mdf/cv/skan-d.webp')"><img src="assets/mdf/cv/skan-d.webp"><span>Скандинавский дуб золотой</span><a href="assets/mdf/cv/skan-d.webp" class="lightbox view-btn" onclick="event.stopPropagation()">Увеличить</a></div>
+                    <div class="product-card" onclick="selectColor('Скандинавский дуб коричневый', 'assets/mdf/cv/skazo-d.webp')"><img src="assets/mdf/cv/skazo-d.webp"><span>Скандинавский дуб коричневый</span><a href="assets/mdf/cv/skazo-d.webp" class="lightbox view-btn" onclick="event.stopPropagation()">Увеличить</a></div>
+                    <div class="product-card" onclick="selectColor('Снежное дерево', 'assets/mdf/cv/sn-d.webp')"><img src="assets/mdf/cv/sn-d.webp"><span>Снежное дерево</span><a href="assets/mdf/cv/sn-d.webp" class="lightbox view-btn" onclick="event.stopPropagation()">Увеличить</a></div>
+                    <div class="product-card" onclick="selectColor('Дуб сонома тиснёный', 'assets/mdf/cv/sonom-d.webp')"><img src="assets/mdf/cv/sonom-d.webp"><span>Дуб сонома тиснёный</span><a href="assets/mdf/cv/sonom-d.webp" class="lightbox view-btn" onclick="event.stopPropagation()">Увеличить</a></div>
+                    <div class="product-card" onclick="selectColor('Венге', 'assets/mdf/cv/vehge-d.webp')"><img src="assets/mdf/cv/vehge-d.webp"><span>Венге</span><a href="assets/mdf/cv/vehge-d.webp" class="lightbox view-btn" onclick="event.stopPropagation()">Увеличить</a></div>
+                    <div class="product-card" onclick="selectColor('Ясень белый', 'assets/mdf/cv/yasenbel-d.webp')"><img src="assets/mdf/cv/yasenbel-d.webp"><span>Ясень белый</span><a href="assets/mdf/cv/yasenbel-d.webp" class="lightbox view-btn" onclick="event.stopPropagation()">Увеличить</a></div>
+                    <div class="product-card" onclick="selectColor('Ясень жемчуг', 'assets/mdf/cv/yasenzh-d.webp')"><img src="assets/mdf/cv/yasenzh-d.webp"><span>Ясень жемчуг</span><a href="assets/mdf/cv/yasenzh-d.webp" class="lightbox view-btn" onclick="event.stopPropagation()">Увеличить</a></div>
                 </div>
-            </div>
+            </details>
+
+            <details class="category-section">
+                <summary class="category-title">Бетон и мрамор <span>▼</span></summary>
+                <div class="catalog-grid">
+                    <div class="product-card" onclick="selectColor('Туран', 'assets/mdf/cv/turan.webp')"><img src="assets/mdf/cv/turan.webp"><span>Туран</span><a href="assets/mdf/cv/turan.webp" class="lightbox view-btn" onclick="event.stopPropagation()">Увеличить</a></div>
+                    <div class="product-card" onclick="selectColor('Томирис', 'assets/mdf/cv/tomi.webp')"><img src="assets/mdf/cv/tomi.webp"><span>Томирис</span><a href="assets/mdf/cv/tomi.webp" class="lightbox view-btn" onclick="event.stopPropagation()">Увеличить</a></div>
+                    <div class="product-card" onclick="selectColor('Аманат', 'assets/mdf/cv/aman.webp')"><img src="assets/mdf/cv/aman.webp"><span>Аманат</span><a href="assets/mdf/cv/aman.webp" class="lightbox view-btn" onclick="event.stopPropagation()">Увеличить</a></div>
+                    <div class="product-card" onclick="selectColor('Альтаир', 'assets/mdf/cv/alta.webp')"><img src="assets/mdf/cv/alta.webp"><span>Альтаир</span><a href="assets/mdf/cv/alta.webp" class="lightbox view-btn" onclick="event.stopPropagation()">Увеличить</a></div>
+                    <div class="product-card" onclick="selectColor('Алпамыс', 'assets/mdf/cv/alpa.webp')"><img src="assets/mdf/cv/alpa.webp"><span>Алпамыс</span><a href="assets/mdf/cv/alpa.webp" class="lightbox view-btn" onclick="event.stopPropagation()">Увеличить</a></div>
+                    <div class="product-card" onclick="selectColor('Бетон светлый', 'assets/mdf/cv/betonsv.webp')"><img src="assets/mdf/cv/betonsv.webp"><span>Бетон светлый</span><a href="assets/mdf/cv/betonsv.webp" class="lightbox view-btn" onclick="event.stopPropagation()">Увеличить</a></div>
+                    <div class="product-card" onclick="selectColor('Бетон тёмный', 'assets/mdf/cv/betontemn.webp')"><img src="assets/mdf/cv/betontemn.webp"><span>Бетон тёмный</span><a href="assets/mdf/cv/betontemn.webp" class="lightbox view-btn" onclick="event.stopPropagation()">Увеличить</a></div>
+                    <div class="product-card" onclick="selectColor('Дюна Мистраль', 'assets/mdf/cv/dunamist.webp')"><img src="assets/mdf/cv/dunamist.webp"><span>Дюна Мистраль</span><a href="assets/mdf/cv/dunamist.webp" class="lightbox view-btn" onclick="event.stopPropagation()">Увеличить</a></div>
+                    <div class="product-card" onclick="selectColor('Дюна Норд', 'assets/mdf/cv/dunanord.webp')"><img src="assets/mdf/cv/dunanord.webp"><span>Дюна Норд</span><a href="assets/mdf/cv/dunanord.webp" class="lightbox view-btn" onclick="event.stopPropagation()">Увеличить</a></div>
+                </div>
+            </details>
+
+            <details class="category-section">
+                <summary class="category-title">Глянцевые <span>▼</span></summary>
+                <div class="catalog-grid">
+                    <div class="product-card" onclick="selectColor('Белый глянец', 'assets/mdf/cv/bel-gl.webp')"><img src="assets/mdf/cv/bel-gl.webp"><span>Белый глянец</span><a href="assets/mdf/cv/bel-gl.webp" class="lightbox view-btn" onclick="event.stopPropagation()">Увеличить</a></div>
+                    <div class="product-card" onclick="selectColor('Графит глянец', 'assets/mdf/cv/ch-gl.webp')"><img src="assets/mdf/cv/ch-gl.webp"><span>Графит глянец</span><a href="assets/mdf/cv/ch-gl.webp" class="lightbox view-btn" onclick="event.stopPropagation()">Увеличить</a></div>
+                    <div class="product-card" onclick="selectColor('Фарандола глянец', 'assets/mdf/cv/farandola-gl.webp')"><img src="assets/mdf/cv/farandola-gl.webp"><span>Фарандола глянец</span><a href="assets/mdf/cv/farandola-gl.webp" class="lightbox view-btn" onclick="event.stopPropagation()">Увеличить</a></div>
+                    <div class="product-card" onclick="selectColor('Макиотти глянец', 'assets/mdf/cv/makkiotti-gl.webp')"><img src="assets/mdf/cv/makkiotti-gl.webp"><span>Макиотти глянец</span><a href="assets/mdf/cv/makkiotti-gl.webp" class="lightbox view-btn" onclick="event.stopPropagation()">Увеличить</a></div>
+                    <div class="product-card" onclick="selectColor('Молочный глянец', 'assets/mdf/cv/mol-gl.webp')"><img src="assets/mdf/cv/mol-gl.webp"><span>Молочный глянец</span><a href="assets/mdf/cv/mol-gl.webp" class="lightbox view-btn" onclick="event.stopPropagation()">Увеличить</a></div>
+                </div>
+            </details>
+
+            <details class="category-section">
+                <summary class="category-title">Матовые <span>▼</span></summary>
+                <div class="catalog-grid">
+                    <div class="product-card" onclick="selectColor('Графит матовый', 'assets/mdf/cv/ch-mat.webp')"><img src="assets/mdf/cv/ch-mat.webp"><span>Графит матовый</span><a href="assets/mdf/cv/ch-mat.webp" class="lightbox view-btn" onclick="event.stopPropagation()">Увеличить</a></div>
+                    <div class="product-card" onclick="selectColor('Какао перламутр', 'assets/mdf/cv/kakao-mat.webp')"><img src="assets/mdf/cv/kakao-mat.webp"><span>Какао перламутр</span><a href="assets/mdf/cv/kakao-mat.webp" class="lightbox view-btn" onclick="event.stopPropagation()">Увеличить</a></div>
+                    <div class="product-card" onclick="selectColor('Кофе с молоком', 'assets/mdf/cv/kofe-mat.webp')"><img src="assets/mdf/cv/kofe-mat.webp"><span>Кофе с молоком</span><a href="assets/mdf/cv/kofe-mat.webp" class="lightbox view-btn" onclick="event.stopPropagation()">Увеличить</a></div>
+                    <div class="product-card" onclick="selectColor('Оранж матовый', 'assets/mdf/cv/or-mat.webp')"><img src="assets/mdf/cv/or-mat.webp"><span>Оранж матовый</span><a href="assets/mdf/cv/or-mat.webp" class="lightbox view-btn" onclick="event.stopPropagation()">Увеличить</a></div>
+                    <div class="product-card" onclick="selectColor('Серый матовый', 'assets/mdf/cv/ser-mat.webp')"><img src="assets/mdf/cv/ser-mat.webp"><span>Серый матовый</span><a href="assets/mdf/cv/ser-mat.webp" class="lightbox view-btn" onclick="event.stopPropagation()">Увеличить</a></div>
+                    <div class="product-card" onclick="selectColor('Зелёный матовый', 'assets/mdf/cv/z-mat.webp')"><img src="assets/mdf/cv/z-mat.webp"><span>Зелёный матовый</span><a href="assets/mdf/cv/z-mat.webp" class="lightbox view-btn" onclick="event.stopPropagation()">Увеличить</a></div>
+                </div>
+            </details>
+
+            <details class="category-section">
+                <summary class="category-title">Металлик <span>▼</span></summary>
+                <div class="catalog-grid">
+                    <div class="product-card" onclick="selectColor('Белый металлик', 'assets/mdf/bel-met.webp')"><img src="assets/mdf/bel-met.webp"><span>Белый металлик</span><a href="assets/mdf/bel-met.webp" class="lightbox view-btn" onclick="event.stopPropagation()">Увеличить</a></div>
+                    <div class="product-card" onclick="selectColor('Ваниль металлик', 'assets/mdf/van-met.webp')"><img src="assets/mdf/van-met.webp"><span>Ваниль металлик</span><a href="assets/mdf/van-met.webp" class="lightbox view-btn" onclick="event.stopPropagation()">Увеличить</a></div>
+                    <div class="product-card" onclick="selectColor('Серый металлик', 'assets/mdf/ser-met.webp')"><img src="assets/mdf/ser-met.webp"><span>Серый металлик</span><a href="assets/mdf/ser-met.webp" class="lightbox view-btn" onclick="event.stopPropagation()">Увеличить</a></div>
+                    <div class="product-card" onclick="selectColor('Сирень металлик', 'assets/mdf/sir-met.webp')"><img src="assets/mdf/sir-met.webp"><span>Сирень металлик</span><a href="assets/mdf/sir-met.webp" class="lightbox view-btn" onclick="event.stopPropagation()">Увеличить</a></div>
+                    <div class="product-card" onclick="selectColor('Сталь металлик', 'assets/mdf/stal-met.webp')"><img src="assets/mdf/stal-met.webp"><span>Сталь металлик</span><a href="assets/mdf/stal-met.webp" class="lightbox view-btn" onclick="event.stopPropagation()">Увеличить</a></div>
+                    <div class="product-card" onclick="selectColor('Шампань металлик', 'assets/mdf/sham-met.webp')"><img src="assets/mdf/sham-met.webp"><span>Шампань металлик</span><a href="assets/mdf/sham-met.webp" class="lightbox view-btn" onclick="event.stopPropagation()">Увеличить</a></div>
+                </div>
+            </details>
         </section>
 
         <div id="final-choice" class="final-block" style="display: none;">
