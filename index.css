@@ -10,15 +10,112 @@ body { font-family: Arial, sans-serif; margin: 0; background: #f4f8fc; color: #1
 .hero-list li:before { content: "✓"; position: absolute; left: 0; color: #1d7be5; font-weight: bold; }
 .hero-right { position: relative; overflow: hidden; }
 .hero-image { width: 100%; height: 100%; object-fit: cover; }
+/* =======================
+   КАЛЬКУЛЯТОР
+======================= */
 
-.hero-form { 
-    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); 
-    background: white; padding: 30px; border-radius: 18px; width: 320px; 
-    box-shadow: 0 10px 30px rgba(0,0,0,.15); z-index: 10;
+.hero-calculator{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:430px;
+    background:#fff;
+    border-radius:20px;
+    padding:30px;
+    box-sizing:border-box;
+    box-shadow:0 18px 45px rgba(0,0,0,.18);
+    z-index:20;
 }
-.hero-form h3 { text-align: center; margin-bottom: 20px; }
-.hero-form input { width: 100%; padding: 14px; margin-bottom: 12px; border: 1px solid #ddd; border-radius: 8px; box-sizing: border-box; }
-.hero-form button { width: 100%; background: #1677ff; color: white; border: none; padding: 15px; border-radius: 8px; font-weight: bold; cursor: pointer; }
+
+.hero-calculator h3{
+    margin:0 0 20px;
+    text-align:center;
+    font-size:28px;
+    font-weight:800;
+}
+
+.hero-calculator h4{
+    margin:25px 0 20px;
+    font-size:22px;
+}
+
+.progress{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:15px;
+}
+
+.step{
+    width:16px;
+    height:16px;
+    border-radius:50%;
+    background:#d8d8d8;
+}
+
+.step.active{
+    background:#1677ff;
+}
+
+.line{
+    flex:1;
+    height:4px;
+    background:#d8d8d8;
+    margin:0 8px;
+    border-radius:20px;
+}
+
+.calc-step{
+    text-align:center;
+    color:#666;
+    margin-bottom:25px;
+}
+
+.calc-option{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:14px 18px;
+    border:1px solid #e4e4e4;
+    border-radius:12px;
+    margin-bottom:14px;
+    cursor:pointer;
+    transition:.25s;
+}
+
+.calc-option:hover{
+    border-color:#1677ff;
+    background:#f5f9ff;
+}
+
+.calc-option input{
+    width:18px;
+    height:18px;
+}
+
+.calc-option span{
+    font-size:18px;
+    font-weight:600;
+}
+
+.calc-next{
+    width:100%;
+    margin-top:18px;
+    padding:16px;
+    border:none;
+    border-radius:12px;
+    background:#1677ff;
+    color:#fff;
+    font-size:18px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.25s;
+}
+
+.calc-next:hover{
+    background:#0d66df;
+}
 
 /* --- ОСТАЛЬНЫЕ СЕКЦИИ --- */
 .about-section { background: #ffffff; padding: 80px 0; }
@@ -35,7 +132,63 @@ body { font-family: Arial, sans-serif; margin: 0; background: #f4f8fc; color: #1
 .step-card h3 { font-size: 18px; margin-bottom: 10px; }
 .step-card p { color: #666; }
 
-.delivery-section { padding: 80px 0; background: white; }
+.delivery-section { padding: 80px 0; background: white; 
+ /* =======================
+   ФОРМА ЗАМЕРА
+======================= */
+
+.measure-section{
+    background:#ffffff;
+    padding:70px 0;
+}
+
+.measure-box{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr 420px;
+    gap:50px;
+    align-items:center;
+}
+
+.measure-info h2{
+    font-size:40px;
+    margin-bottom:20px;
+}
+
+.measure-info p{
+    font-size:18px;
+    line-height:1.8;
+}
+
+.measure-form{
+    background:#f4f8fc;
+    padding:35px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.measure-form input{
+    width:100%;
+    padding:16px;
+    margin-bottom:18px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    box-sizing:border-box;
+    font-size:16px;
+}
+
+.measure-form button{
+    width:100%;
+    padding:17px;
+    border:none;
+    border-radius:10px;
+    background:#1677ff;
+    color:white;
+    font-size:17px;
+    font-weight:700;
+    cursor:pointer;
+}                 
 .delivery-box { display: grid; grid-template-columns: 350px 1fr; gap: 40px; background: #eef5fc; border-radius: 20px; overflow: hidden; }
 .delivery-box img { width: 100%; height: 100%; object-fit: cover; }
 .delivery-box div { padding: 40px; }
@@ -62,6 +215,20 @@ body { font-family: Arial, sans-serif; margin: 0; background: #f4f8fc; color: #1
 
 /* Смартфоны */
 @media(max-width: 600px) {
+    .hero-calculator{
+    position:static;
+    transform:none;
+    width:95%;
+    margin:20px auto;
+}
+
+.measure-box{
+    grid-template-columns:1fr;
+}
+
+.measure-info{
+    text-align:center;
+}
     .hero-left h1 { font-size: 32px; }
     .hero-form { 
         position: static; 
