@@ -205,43 +205,121 @@ body { font-family: Arial, sans-serif; margin: 0; background: #f4f8fc; color: #1
    background: white; padding: 25px; 
    border-radius: 15px; text-align: center; font-weight: 600; box-shadow: 0 2px 8px rgba(0,0,0,.05); }
 
-/* --- АДАПТИВНАЯ ВЕРСТКА --- */
+/* ---------- АДАПТИВ ---------- */
 
-/* Планшеты и ноутбуки */
-@media(max-width: 992px) {
-    .hero { grid-template-columns: 1fr; min-height: auto; }
-    .hero-left { padding: 40px 20px; }
-    .about-grid { grid-template-columns: 1fr; }
-    .steps-grid { grid-template-columns: repeat(2, 1fr); }
-    .delivery-box { grid-template-columns: 1fr; }
-    .advantages-grid { grid-template-columns: repeat(2, 1fr); }
-}
+/* Планшеты */
+@media (max-width: 992px) {
 
-/* Смартфоны */
-@media(max-width: 600px) {
-    .hero-calculator{
-    position:static;
-    transform:none;
-    width:95%;
-    margin:20px auto;
-}
-
-.measure-box{
-    grid-template-columns:1fr;
-}
-
-.measure-info{
-    text-align:center;
-}
-    .hero-left h1 { font-size: 32px; }
-    .hero-form { 
-        position: static; 
-        transform: none; 
-        width: 90%; 
-        margin: 20px auto; 
+    .hero{
+        grid-template-columns:1fr;
+        min-height:auto;
     }
-    .steps-grid { grid-template-columns: 1fr; }
-    .advantages-grid { grid-template-columns: 1fr; }
-    .delivery-box div { padding: 20px; }
-    .delivery-box h2 { font-size: 24px; }
+
+    .hero-left{
+        padding:50px 30px;
+    }
+
+    .hero-right{
+        min-height:700px;
+    }
+
+    .hero-calculator{
+        width:450px;
+    }
+
+    .about-grid{
+        grid-template-columns:1fr;
+    }
+
+    .measure-box{
+        grid-template-columns:1fr;
+        gap:30px;
+    }
+
+    .steps-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .delivery-box{
+        grid-template-columns:1fr;
+    }
+
+    .advantages-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+
+/* Телефоны */
+@media (max-width:600px){
+
+    .hero{
+        grid-template-columns:1fr;
+    }
+
+    .hero-left{
+        padding:35px 20px;
+    }
+
+    .hero-left h1{
+        font-size:34px;
+    }
+
+    .hero-list li{
+        font-size:17px;
+    }
+
+    .hero-right{
+        min-height:auto;
+    }
+
+    .hero-calculator{
+        position:static;
+        transform:none;
+        width:94%;
+        margin:25px auto;
+        padding:22px;
+    }
+
+    .hero-calculator h3{
+        font-size:24px;
+    }
+
+    .hero-calculator h4{
+        font-size:20px;
+    }
+
+    .calc-option span{
+        font-size:16px;
+    }
+
+    .measure-box{
+        grid-template-columns:1fr;
+    }
+
+    .measure-info{
+        text-align:center;
+    }
+
+    .measure-info h2{
+        font-size:28px;
+    }
+
+    .steps-grid{
+        grid-template-columns:1fr;
+    }
+
+    .advantages-grid{
+        grid-template-columns:1fr;
+    }
+
+    .delivery-box div{
+        padding:25px;
+    }
+
+    .delivery-box h2{
+        font-size:28px;
+    }
+
 }
