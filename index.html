@@ -38,42 +38,48 @@
     </div>
     <div class="hero-right">
         <img src="assets/img/bg.png" alt="Кухня" class="hero-image">
-        <div class="hero-calculator">
+      <div class="hero-calculator">
 
-    <h3>КАЛЬКУЛЯТОР СТОИМОСТИ</h3>
+<h3>КАЛЬКУЛЯТОР СТОИМОСТИ</h3>
+<div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+<div class="calc-page active" id="page1">
+<p class="calc-step">Шаг 1 из 4</p>
+<h4>Что хотите обновить?</h4>
+<label class="calc-card"><input type="checkbox" id="facades"><span>🪵 Фасады</span></label>
+<label class="calc-card"><input type="checkbox" id="countertop"><span>⬛ Столешницу</span></label>
+<label class="calc-card"><input type="checkbox" id="backsplash"><span>🧱 Фартук</span></label>
+<button class="calc-next" onclick="nextStep()">Далее →</button>
+</div>
+<div class="calc-page" id="page2">
+<p class="calc-step">Шаг 2 из 4</p>
+<h4>Материал фасадов</h4>
+<label class="calc-card"><input type="radio" name="material" value="22000"><span>ЛДСП<br><small>22 000 ₸ / м²</small></span></label>
+<label class="calc-card"><input type="radio" name="material" value="36000"><span>МДФ<br><small>36 000 ₸ / м²</small></span></label>
+<button class="calc-back" onclick="prevStep()">← Назад</button>
+<button class="calc-next" onclick="nextStep()">Далее →</button>
+</div>
+          <div class="calc-page" id="page3">
+<p class="calc-step">Шаг 3 из 4</p>
+<h4>Размеры кухни</h4>
+<input class="calc-input" type="number" id="length" placeholder="Длина кухни (см)">
+<input class="calc-input" type="number" id="bottom" placeholder="Высота нижних фасадов (см)">
+<input class="calc-input" type="number" id="top" placeholder="Высота верхних фасадов (см)">
+<input class="calc-input" type="number" id="counterLength" placeholder="Длина столешницы (см)">
+<input class="calc-input" type="number" id="backsplashLength" placeholder="Длина фартука (см)">
+<button class="calc-back" onclick="prevStep()">← Назад</button>
+<button class="calc-next" onclick="calculateTotal()">Рассчитать →</button>
+</div>
+<div class="calc-page" id="page4">
+<p class="calc-step">Готово</p>
+<h4>Предварительная стоимость</h4>
+<div class="calc-total" id="totalPrice">0 ₸</div>
+<p class="calc-note">
+Стоимость является предварительной.<br>
+Точная стоимость определяется после бесплатного замера.
+</p>
+<button class="calc-back" onclick="prevStep()">← Назад</button>
+</div>
 
-    <div class="progress">
-        <div class="step active"></div>
-        <div class="line"></div>
-        <div class="step"></div>
-        <div class="line"></div>
-        <div class="step"></div>
-        <div class="line"></div>
-        <div class="step"></div>
-    </div>
-
-    <p class="calc-step">Шаг 1 из 4</p>
-
-    <h4>Что хотите обновить?</h4>
-
-    <label class="calc-option">
-        <input type="checkbox" id="facades">
-        <span>Фасады</span>
-    </label>
-
-    <label class="calc-option">
-        <input type="checkbox" id="countertop">
-        <span>Столешницу</span>
-    </label>
-
-    <label class="calc-option">
-        <input type="checkbox" id="backsplash">
-        <span>Фартук</span>
-    </label>
-
-    <button class="calc-next">
-        Далее →
-    </button>
 </div>
     </div>
 </section>
