@@ -1,0 +1,147 @@
+<div class="hero-calculator">
+<h2>КАЛЬКУЛЯТОР СТОИМОСТИ</h2>
+<div class="progress">
+    <div class="progress-fill" id="progress"></div>
+</div>
+<div class="step-counter">
+    <span id="stepText">Шаг 1 из 4</span>
+</div>
+<!-- =================== -->
+<!-- ШАГ 1 -->
+<!-- =================== -->
+<div class="calc-screen active" id="screen1">
+<h3>Что хотите обновить?</h3>
+<div class="cards">
+<label class="card">
+<input type="checkbox" id="facades">
+<div>
+<h4>Фасады</h4>
+<p>Замена фасадов кухни</p>
+</div>
+</label>
+<label class="card">
+<input type="checkbox" id="countertop">
+<div>
+<h4>Столешницу</h4>
+<p>Замена столешницы</p>
+</div>
+</label>
+<label class="card">
+<input type="checkbox" id="backsplash">
+<div>
+<h4>Фартук</h4>
+<p>Замена кухонного фартука</p>
+</div>
+</label>
+</div>
+<div class="buttons">
+<button class="next" onclick="nextStep()">Далее →
+</button>
+</div>
+</div>
+<!-- =================== -->
+<!-- ШАГ 2 -->
+<!-- =================== -->
+<div class="calc-screen" id="screen2">
+<h3>Выберите материалы</h3>
+<div id="facadesBlock">
+<h4>Материал фасадов</h4>
+<div class="cards">
+<label class="card">
+<input type="radio" name="facadeMaterial" value="ldsp">
+<div>
+<h4>ЛДСП</h4>
+<p>22 000 ₸ / м²</p>
+</div>
+</label>
+<label class="card">
+<input type="radio" name="facadeMaterial" value="mdf">
+<div>
+<h4>МДФ</h4>
+<p>36 000 ₸ / м²</p>
+</div>
+</label>
+</div>
+</div>
+<div id="countertopBlock">
+<h4>Столешница</h4>
+<div class="cards">
+<label class="card">
+<input type="radio" name="countertopType" value="49000">
+<div>
+<h4>Полуматовая</h4>
+<p>49 000 ₸</p>
+</div>
+</label>
+<label class="card">
+<input type="radio" name="countertopType" value="55000">
+<div>
+<h4>Глянцевая</h4>
+<p>55 000 ₸</p>
+</div>
+</label>
+</div>
+</div>
+<div class="buttons">
+<button class="back" onclick="prevStep()">← Назад</button>
+<button class="next" onclick="nextStep()">Далее →</button>
+</div>
+</div>
+<!-- =================== -->
+<!-- ШАГ 3 -->
+<!-- =================== -->
+<div class="calc-screen" id="screen3">
+<h3>Введите размеры</h3>
+<div id="facadesSizes">
+<h4>Фасады</h4>
+<input type="number" id="kitchenLength" class="calc-input" placeholder="Длина кухни (см)">
+<input type="number" id="bottomHeight" class="calc-input" placeholder="Высота нижних фасадов (см)">
+<input type="number" id="topHeight" class="calc-input" placeholder="Высота верхних фасадов (см)">
+</div>
+<div id="countertopSizes">
+<h4>Столешница</h4>
+<input type="number" id="countertopLength" class="calc-input" placeholder="Длина столешницы (см)">
+</div>
+<div id="backsplashSizes">
+<h4>Фартук</h4>
+<input type="number" id="backsplashLength" class="calc-input" placeholder="Длина фартука (см)">
+</div>
+<div class="buttons">
+<button class="back" onclick="prevStep()">← Назад</button>
+<button class="next" onclick="calculate()">Рассчитать →</button>
+</div>
+</div>
+<!-- =================== -->
+<!-- ШАГ 4 -->
+<!-- =================== -->
+<div class="calc-screen" id="screen4">
+<h3>Предварительная стоимость</h3>
+<div class="result-card">
+<div class="result-row">
+<span>Материалы</span>
+<b id="materialsPrice">0 ₸</b>
+</div>
+<div class="result-row">
+<span>Работы</span>
+<b id="workPrice">0 ₸</b>
+</div>
+<hr>
+<div class="result-total">
+<span>ИТОГО</span>
+<b id="totalPrice">0 ₸</b>
+</div>
+</div>
+<p class="result-note">
+Стоимость является предварительной.<br>
+Итоговая цена зависит от состояния кухни,
+необходимости замены фурнитуры и дополнительных работ.<br>
+Точная стоимость определяется после бесплатного замера.
+</p>
+<div class="buttons">
+<button class="back" onclick="prevStep()">← Назад</button>
+<button class="next" onclick="location.href='#measure'">
+Записаться на замер
+</button>
+</div>
+</div>
+</div>
