@@ -39,10 +39,11 @@
     color:#162a3d;
 }
 
-#screenSelect h3{
+.screen-title{
     margin:0;
     text-align:center;
     font-size:30px;
+    font-weight:700;
     color:#162a3d;
 }
 
@@ -100,12 +101,12 @@
 }
 
 .select-card{
-    display:flex;
+    display:block;
     align-items:center;
     gap:18px;
     border:2px solid #e6edf6;
     border-radius:20px;
-    padding:20px;
+    padding:22px;
     cursor:pointer;
     transition:.25s;
     background:#fff;
@@ -126,72 +127,27 @@
 
 }
 
-.card-icon{
-
-    width:65px;
-
-    height:65px;
-
-    border-radius:18px;
-
-    background:#eef5ff;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    font-size:32px;
-
-    transition:.25s;
-
-}
-
 .card-info{
-
     flex:1;
-
 }
 
 .card-info h3{
-
     margin:0;
-
     font-size:22px;
-
     font-weight:700;
-
     color:#162a3d;
-
 }
 
 .card-info p{
-
     margin:8px 0 0;
-
     color:#7b8898;
-
     font-size:15px;
-
     line-height:1.5;
-
 }
 
 .select-card:has(input:checked){
-
     border-color:#1677ff;
-
     background:#f4f9ff;
-
-}
-
-.select-card:has(input:checked) .card-icon{
-
-    background:#1677ff;
-
-    color:#fff;
-
 }
 
 /*=========================================
@@ -212,15 +168,6 @@
 
 }
 
-.calc-card h3{
-
-    margin:0 0 20px;
-
-    font-size:22px;
-
-    color:#162a3d;
-
-}
 /*=========================================
             ВЫБОР МАТЕРИАЛА
 =========================================*/
@@ -246,6 +193,8 @@
     font-size:18px;
     font-weight:700;
     color:#162a3d;
+    padding:18px;
+overflow:hidden;    
 }
 
 .choice:hover{
@@ -262,6 +211,22 @@
     z-index:2;
 }
 
+.choice::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(135deg,#1677ff,#3b97ff);
+    opacity:0;
+    transition:.25s;
+}
+
+.choice:has(input:checked)::before{
+    opacity:1;
+}
+
+.choice:has(input:checked) span{
+    color:#fff;
+}
 .choice:has(input:checked){
     background:#1677ff;
     border-color:#1677ff;
@@ -422,7 +387,7 @@
     padding:28px;
 }
 
-.hero-calculator h2{
+.hero-calculator h1{
     font-size:26px;
 }
 
@@ -462,12 +427,6 @@
 
 .progress{
     margin:20px 0 10px;
-}
-
-.card-icon{
-    width:52px;
-    height:52px;
-    font-size:26px;
 }
 
 .card-info h3{
