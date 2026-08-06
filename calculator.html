@@ -6,87 +6,124 @@
 <div class="step-counter">
     <span id="stepText">Шаг 1 из 4</span>
 </div>
+    
 <!-- =================== -->
 <!-- ШАГ 1 -->
 <!-- =================== -->
 <div class="calc-screen active" id="screen1">
-<h3>Что хотите обновить?</h3>
-<div class="cards">
-<label class="card">
-    <input type="checkbox" hidden>
-        <div class="card-icon">🪵</div>
-    <div class="card-text">
-            <h4>Фасады</h4>
-            <p>Полностью изменим внешний вид кухни</p>
+    <h2>Рассчитайте стоимость кухни</h2>
+    <p class="calc-subtitle">Выберите, что хотите обновить</p>
+    <div class="select-grid">
+        <label class="select-card">
+            <input type="checkbox" id="facades">
+            <div class="card-icon">🪵</div>
+            <div class="card-info">
+                <h3>Фасады</h3>
+                <p>Полностью обновить внешний вид кухни</p>
+            </div>
+        </label>
+        <label class="select-card">
+            <input type="checkbox" id="countertop">
+            <div class="card-icon">⬛</div>
+            <div class="card-info">
+                <h3>Столешница</h3>
+                <p>Замена столешницы на новую</p>
+            </div>
+        </label>
+        <label class="select-card">
+            <input type="checkbox" id="backsplash">
+            <div class="card-icon">🧱</div>
+            <div class="card-info">
+                <h3>Фартук</h3>
+                <p>Современный кухонный фартук</p>
+            </div>
+        </label>
     </div>
-</label>
-<label class="card">
-<input type="checkbox" id="countertop">
-<div>
-<h4>Столешницу</h4>
-<p>Замена столешницы</p>
+    <div class="calc-buttons">
+        <button class="calc-next" onclick="nextStep()">Далее →
+        </button>
+    </div>
 </div>
-</label>
-<label class="card">
-<input type="checkbox" id="backsplash">
-<div>
-<h4>Фартук</h4>
-<p>Замена кухонного фартука</p>
-</div>
-</label>
-</div>
-<div class="buttons">
-<button class="next" onclick="nextStep()">Далее →
-</button>
-</div>
-</div>
-<!-- =================== -->
+    
+<!-- ========================= -->
 <!-- ШАГ 2 -->
-<!-- =================== -->
+<!-- ========================= -->
 <div class="calc-screen" id="screen2">
-<h3>Выберите материалы</h3>
-<div id="facadesBlock">
-<h4>Материал фасадов</h4>
-<div class="cards">
-<label class="card">
-<input type="radio" name="facadeMaterial" value="ldsp">
-<div>
-<h4>ЛДСП</h4>
-<p>22 000 ₸ / м²</p>
-</div>
-</label>
-<label class="card">
-<input type="radio" name="facadeMaterial" value="mdf">
-<div>
-<h4>МДФ</h4>
-<p>36 000 ₸ / м²</p>
-</div>
-</label>
-</div>
-</div>
-<div id="countertopBlock">
-<h4>Столешница</h4>
-<div class="cards">
-<label class="card">
-<input type="radio" name="countertopType" value="49000">
-<div>
-<h4>Полуматовая</h4>
-<p>49 000 ₸</p>
-</div>
-</label>
-<label class="card">
-<input type="radio" name="countertopType" value="55000">
-<div>
-<h4>Глянцевая</h4>
-<p>55 000 ₸</p>
-</div>
-</label>
-</div>
-</div>
-<div class="buttons">
-<button class="back" onclick="prevStep()">← Назад</button>
-<button class="next" onclick="nextStep()">Далее →</button>
-</div>
+    <h2>Укажите параметры</h2>
+    <p class="calc-subtitle">Заполните данные только для выбранных позиций</p>
+    <!-- ======= ФАСАДЫ ======= -->
+    <div class="calc-card" id="facadesCard">
+        <h3>🪵 Фасады</h3>
+        <div class="choice-grid">
+            <label class="choice">
+                <input type="radio" name="facadeMaterial" value="ldsp">
+                <span>ЛДСП</span>
+            </label>
+            <label class="choice">
+                <input type="radio" name="facadeMaterial" value="mdf">
+                <span>МДФ</span>
+            </label>
+        </div>
+        <input
+            type="number"
+            class="calc-input"
+            id="kitchenLength"
+            placeholder="Длина гарнитура (см)">
+        <input
+            type="number"
+            class="calc-input"
+            id="topHeight"
+            placeholder="Высота верхних фасадов (см)">
+        <input
+            type="number"
+            class="calc-input"
+            id="bottomHeight"
+            placeholder="Высота нижних фасадов (см)">
+    </div>
+    <!-- ======= СТОЛЕШНИЦА ======= -->
+    <div class="calc-card" id="countertopCard">
+        <h3>⬛ Столешница</h3>
+        <div class="choice-grid">
+            <label class="choice">
+                <input type="radio" name="countertopType" value="49000">
+                <span>Полуматовая</span>
+            </label>
+            <label class="choice">
+                <input type="radio" name="countertopType" value="55000">
+                <span>Глянцевая</span>
+            </label>
+        </div>
+        <input
+            type="number"
+            class="calc-input"
+            id="countertopLength"
+            placeholder="Длина столешницы (см)">
+    </div>
+    <!-- ======= ФАРТУК ======= -->
+    <div class="calc-card" id="backsplashCard">
+        <h3>🧱 Фартук</h3>
+        <div class="choice-grid">
+            <label class="choice">
+                <input type="radio" name="backsplashType" value="41000">
+                <span>Полуматовый</span>
+            </label>
+            <label class="choice">
+                <input type="radio" name="backsplashType" value="41000">
+                <span>Глянцевый</span>
+            </label>
+        </div>
+        <input
+            type="number"
+            class="calc-input"
+            id="backsplashLength"
+            placeholder="Длина фартука (см)">
+    </div>
+    <div class="calc-buttons">
+        <button class="calc-back" onclick="prevStep()">← Назад
+        </button>
+        <button class="calc-next" onclick="calculate()">Рассчитать →
+        </button>
+    </div>
 </div>
 <!-- =================== -->
 <!-- ШАГ 3 -->
