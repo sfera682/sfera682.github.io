@@ -125,61 +125,50 @@
         </button>
     </div>
 </div>
-<!-- =================== -->
+<!-- ========================= -->
 <!-- ШАГ 3 -->
-<!-- =================== -->
+<!-- ========================= -->
 <div class="calc-screen" id="screen3">
-<h3>Введите размеры</h3>
-<div id="facadesSizes">
-<h4>Фасады</h4>
-<input type="number" id="kitchenLength" class="calc-input" placeholder="Длина кухни (см)">
-<input type="number" id="bottomHeight" class="calc-input" placeholder="Высота нижних фасадов (см)">
-<input type="number" id="topHeight" class="calc-input" placeholder="Высота верхних фасадов (см)">
-</div>
-<div id="countertopSizes">
-<h4>Столешница</h4>
-<input type="number" id="countertopLength" class="calc-input" placeholder="Длина столешницы (см)">
-</div>
-<div id="backsplashSizes">
-<h4>Фартук</h4>
-<input type="number" id="backsplashLength" class="calc-input" placeholder="Длина фартука (см)">
-</div>
-<div class="buttons">
-<button class="back" onclick="prevStep()">← Назад</button>
-<button class="next" onclick="calculate()">Рассчитать →</button>
-</div>
-</div>
-<!-- =================== -->
-<!-- ШАГ 4 -->
-<!-- =================== -->
-<div class="calc-screen" id="screen4">
-<h3>Предварительная стоимость</h3>
-<div class="result-card">
-<div class="result-row">
-<span>Материалы</span>
-<b id="materialsPrice">0 ₸</b>
-</div>
-<div class="result-row">
-<span>Работы</span>
-<b id="workPrice">0 ₸</b>
-</div>
-<hr>
-<div class="result-total">
-<span>ИТОГО</span>
-<b id="totalPrice">0 ₸</b>
-</div>
-</div>
-<p class="result-note">
-Стоимость является предварительной.<br>
-Итоговая цена зависит от состояния кухни,
-необходимости замены фурнитуры и дополнительных работ.<br>
-Точная стоимость определяется после бесплатного замера.
-</p>
-<div class="buttons">
-<button class="back" onclick="prevStep()">← Назад</button>
-<button class="next" onclick="location.href='#measure'">
-Записаться на замер
-</button>
-</div>
+    <div class="result-icon">💰
+    </div>
+    <h2>Ваш предварительный расчет</h2>
+    <p class="calc-subtitle">
+        Стоимость рассчитана автоматически
+    </p>
+    <div class="result-box">
+        <div class="result-item">
+            <span>Материалы</span>
+            <strong id="materialsPrice">0 ₸
+            </strong>
+        </div>
+        <div class="result-item">
+            <span>Работы</span>
+            <strong id="workPrice">0 ₸
+            </strong>
+        </div>
+        <div class="result-divider"></div>
+        <div class="result-total">
+            <span>ИТОГО</span>
+            <strong id="totalPrice">0 ₸
+            </strong>
+        </div>
+    </div>
+    <div class="result-info">
+        ✔ Стоимость является предварительной.<br>
+        ✔ Итоговая цена зависит от состояния кухни,
+        необходимости замены фурнитуры и дополнительных работ.<br>
+        ✔ После бесплатного замера мы подготовим точную смету.
+    </div>
+    <div class="calc-buttons">
+        <button
+            class="calc-back"
+            onclick="prevStep()">← Назад
+        </button>
+        <button
+            class="calc-next"
+            onclick="document.getElementById('measure').scrollIntoView({behavior:'smooth'})">
+            Записаться на замер
+        </button>
+    </div>
 </div>
 </div>
