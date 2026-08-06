@@ -23,6 +23,14 @@
     color:#162a3d;
 }
 
+.card-subtitle{
+    margin:8px 0 25px;
+    color:#7d8797;
+    font-size:15px;
+    line-height:1.5;
+    text-align:center;
+}
+
 .calc-subtitle{
     margin:12px 0 30px;
     text-align:center;
