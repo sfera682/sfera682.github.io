@@ -4,145 +4,220 @@ const screens = document.querySelectorAll(".calc-screen");
 const progress = document.getElementById("progress");
 const stepText = document.getElementById("stepText");
 
-function showStep(){
+function showStep() {
+    screens.forEach(screen => {
+        screen.classList.remove("active");
+    });
 
-screens.forEach(s=>s.classList.remove("active"));
+    const currentScreen = {
+        1: "screenSelect",
+        2: "screenFacade",
+        3: "screenCountertop",
+        4: "screenBacksplash",
+        5: "screenResult"
+    };
 
-document.getElementById("screen"+step).classList.add("active");
+    const screenId = currentScreen[step];
+    const screen = document.getElementById(screenId);
 
-progress.style.width=(step*25)+"%";
+    if (screen) {
+        screen.classList.add("active");
+    }
 
-stepText.innerHTML="Шаг "+step+" из 4";
+    if (progress) {
+        progress.style.width = ((step - 1) * 25) + "%";
+    }
 
+    if (stepText) {
+        stepText.textContent = "Шаг " + step;
+    }
 }
 
-function nextStep(){
+function nextStep() {
+    if (step === 1) {
+        const facades = document.getElementById("facades").checked;
+        const countertop = document.getElementById("countertop").checked;
+        const backsplash = document.getElementById("backsplash").checked;
 
-if(step==1){
+        if (!facades && !countertop && !backsplash) {
+            alert("Выберите хотя бы один вариант.");
+            return;
+        }
 
-document.getElementById("facadesBlock").style.display=
-document.getElementById("facades").checked?"block":"none";
+        if (facades) {
+            step = 2;
+        } else if (countertop) {
+            step = 3;
+        } else if (backsplash) {
+            step = 4;
+        }
 
-document.getElementById("countertopBlock").style.display=
-document.getElementById("countertop").checked?"block":"none";
+        showStep();
+        return;
+    }
 
+    if (step === 2) {
+        const countertop = document.getElementById("countertop").checked;
+        const backsplash = document.getElementById("backsplash").checked;
+
+        if (countertop) {
+            step = 3;
+        } else if (backsplash) {
+            step = 4;
+        } else {
+            calculate();
+            return;
+        }
+
+        showStep();
+        return;
+    }
+
+    if (step === 3) {
+        const backsplash = document.getElementById("backsplash").checked;
+
+        if (backsplash) {
+            step = 4;
+            showStep();
+        } else {
+            calculate();
+        }
+
+        return;
+    }
+
+    if (step === 4) {
+        calculate();
+        return;
+    }
 }
 
-if(step==2){
+function prevStep() {
+    if (step === 5) {
+        if (document.getElementById("backsplash").checked) {
+            step = 4;
+        } else if (document.getElementById("countertop").checked) {
+            step = 3;
+        } else if (document.getElementById("facades").checked) {
+            step = 2;
+        } else {
+            step = 1;
+        }
 
-document.getElementById("facadesSizes").style.display=
-document.getElementById("facades").checked?"block":"none";
+        showStep();
+        return;
+    }
 
-document.getElementById("countertopSizes").style.display=
-document.getElementById("countertop").checked?"block":"none";
+    if (step === 4) {
+        if (document.getElementById("countertop").checked) {
+            step = 3;
+        } else if (document.getElementById("facades").checked) {
+            step = 2;
+        } else {
+            step = 1;
+        }
 
-document.getElementById("backsplashSizes").style.display=
-document.getElementById("backsplash").checked?"block":"none";
+        showStep();
+        return;
+    }
 
+    if (step === 3) {
+        if (document.getElementById("facades").checked) {
+            step = 2;
+        } else {
+            step = 1;
+        }
+
+        showStep();
+        return;
+    }
+
+    if (step === 2) {
+        step = 1;
+        showStep();
+    }
 }
 
-if(step<4){
+function calculate() {
+    let material = 0;
+    let work = 0;
 
-step++;
+    const facades = document.getElementById("facades").checked;
+    const countertop = document.getElementById("countertop").checked;
+    const backsplash = document.getElementById("backsplash").checked;
+
+    if (facades) {
+        const length = parseFloat(
+            document.getElementById("kitchenLength").value
+        ) || 0;
+
+        const top = parseFloat(
+            document.getElementById("topHeight").value
+        ) || 0;
+
+        const bottom = parseFloat(
+            document.getElementById("bottomHeight").value
+        ) || 0;
+
+        const area = (length * (top + bottom)) / 10000;
+
+        let price = 22000;
+
+        const facadeMaterial = document.querySelector(
+            "input[name='facadeMaterial']:checked"
+        );
+
+        if (facadeMaterial && facadeMaterial.value === "mdf") {
+            price = 36000;
+        }
+
+        material += area * price;
+        work += 38000;
+    }
+
+    if (countertop) {
+        const length = parseFloat(
+            document.getElementById("countertopLength").value
+        ) || 0;
+
+        const sheets = Math.ceil(length / 300);
+
+        let price = 49000;
+
+        const countertopType = document.querySelector(
+            "input[name='countertopType']:checked"
+        );
+
+        if (countertopType) {
+            price = parseInt(countertopType.value);
+        }
+
+        material += price * sheets;
+        work += 45000;
+    }
+
+    if (backsplash) {
+        const length = parseFloat(
+            document.getElementById("backsplashLength").value
+        ) || 0;
+
+        const sheets = Math.ceil(length / 300);
+
+        material += 41000 * sheets;
+        work += 25000;
+    }
+
+    document.getElementById("materialsPrice").textContent =
+        Math.round(material).toLocaleString("ru-RU") + " ₸";
+
+    document.getElementById("workPrice").textContent =
+        Math.round(work).toLocaleString("ru-RU") + " ₸";
+
+    document.getElementById("totalPrice").textContent =
+        Math.round(material + work).toLocaleString("ru-RU") + " ₸";
+
+    step = 5;
+    showStep();
+}
 
 showStep();
-
-}
-
-}
-
-function prevStep(){
-
-if(step>1){
-
-step--;
-
-showStep();
-
-}
-
-}
-
-showStep();
-
-function calculate(){
-
-let material=0;
-
-let work=0;
-
-if(document.getElementById("facades").checked){
-
-let length=parseFloat(document.getElementById("kitchenLength").value)||0;
-
-let top=parseFloat(document.getElementById("topHeight").value)||0;
-
-let bottom=parseFloat(document.getElementById("bottomHeight").value)||0;
-
-let area=(length*(top+bottom))/10000;
-
-let price=22000;
-
-if(document.querySelector("input[name='facadeMaterial']:checked")){
-
-if(document.querySelector("input[name='facadeMaterial']:checked").value=="mdf")
-
-price=36000;
-
-}
-
-material+=area*price;
-
-work+=38000;
-
-}
-
-if(document.getElementById("countertop").checked){
-
-let len=parseFloat(document.getElementById("countertopLength").value)||0;
-
-let sheets=Math.ceil(len/300);
-
-let topPrice=49000;
-
-if(document.querySelector("input[name='countertopType']:checked")){
-
-topPrice=parseInt(document.querySelector("input[name='countertopType']:checked").value);
-
-}
-
-material+=topPrice*sheets;
-
-work+=45000;
-
-}
-
-if(document.getElementById("backsplash").checked){
-
-let len=parseFloat(document.getElementById("backsplashLength").value)||0;
-
-let sheets=Math.ceil(len/300);
-
-material+=41000*sheets;
-
-work+=25000;
-
-}
-
-document.getElementById("materialsPrice").innerHTML=
-
-material.toLocaleString("ru-RU")+" ₸";
-
-document.getElementById("workPrice").innerHTML=
-
-work.toLocaleString("ru-RU")+" ₸";
-
-document.getElementById("totalPrice").innerHTML=
-
-(material+work).toLocaleString("ru-RU")+" ₸";
-
-step=4;
-
-showStep();
-
-}
