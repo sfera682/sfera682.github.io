@@ -1,325 +1,1003 @@
-/* --- БАЗОВЫЕ НАСТРОЙКИ --- */
-body { font-family: Arial, sans-serif; margin: 0; background: #f4f8fc; color: #162a3d; }
+/* =========================================
+   БАЗОВЫЕ НАСТРОЙКИ
+========================================= */
 
-/* --- HERO (Первый экран) --- */
-.hero { display: grid; grid-template-columns: 1fr 1fr; min-height: 650px; background: white; }
-.hero-left { padding: 80px 60px; display: flex; flex-direction: column; justify-content: center; }
-.hero-left h1 { font-size: 56px; line-height: 1.1; margin-bottom: 35px; font-weight: 800; }
-.hero-list { list-style: none; padding: 0; margin: 0; }
-.hero-list li { margin-bottom: 18px; font-size: 20px; position: relative; padding-left: 35px; }
-.hero-list li:before { content: "✓"; position: absolute; left: 0; color: #1d7be5; font-weight: bold; }
-.hero-right { position: relative; overflow: hidden; }
-.hero-image { width: 100%; height: 100%; object-fit: cover; }
-/* =======================
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f4f8fc;
+    color: #162a3d;
+}
+
+
+/* =========================================
+   HERO — ПЕРВЫЙ ЭКРАН
+========================================= */
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 560px;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+.hero-left {
+    padding: 50px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-left h1 {
+    font-size: 56px;
+    line-height: 1.1;
+    margin: 0 0 35px;
+    font-weight: 800;
+}
+
+.hero-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.hero-list li {
+    margin-bottom: 18px;
+    font-size: 20px;
+    position: relative;
+    padding-left: 35px;
+}
+
+.hero-list li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #1d7be5;
+    font-weight: bold;
+}
+
+
+/* =========================================
+   ФОТО
+========================================= */
+
+.hero-right {
+    position: relative;
+    height: 560px;
+    overflow: hidden;
+}
+
+.hero-image {
+    width: 100%;
+    height: 560px;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* =========================================
    КАЛЬКУЛЯТОР
-======================= */
+========================================= */
 
-.hero-calculator{
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-    width:430px;
-    background:#fff;
-    border-radius:20px;
-    padding:30px;
-    box-sizing:border-box;
-    box-shadow:0 18px 45px rgba(0,0,0,.18);
-    z-index:20;
+.hero-calculator {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 430px;
+    max-width: calc(100% - 40px);
+
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 30px;
+
+    box-shadow: 0 18px 45px rgba(0, 0, 0, .18);
+
+    z-index: 20;
 }
 
-.hero-calculator h3{
-    margin:0 0 20px;
-    text-align:center;
-    font-size:28px;
-    font-weight:800;
+
+/* =========================================
+   ЗАГОЛОВКИ КАЛЬКУЛЯТОРА
+========================================= */
+
+.hero-calculator h1 {
+    margin: 0;
+    text-align: center;
+    font-size: 31px;
+    font-weight: 800;
+    color: #162a3d;
 }
 
-.hero-calculator h4{
-    margin:25px 0 20px;
-    font-size:22px;
+.hero-calculator h2 {
+    color: #162a3d;
 }
 
-.progress{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    margin-bottom:15px;
+.hero-calculator h3 {
+    margin: 0;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 800;
+    color: #162a3d;
 }
 
-.step{
-    width:16px;
-    height:16px;
-    border-radius:50%;
-    background:#d8d8d8;
+.hero-calculator h4 {
+    margin: 25px 0 20px;
+    font-size: 22px;
 }
 
-.step.active{
-    background:#1677ff;
+.screen-title {
+    margin: 0;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    color: #162a3d;
 }
 
-.line{
-    flex:1;
-    height:4px;
-    background:#d8d8d8;
-    margin:0 8px;
-    border-radius:20px;
+.card-subtitle {
+    margin: 8px 0 25px;
+    color: #7d8797;
+    font-size: 15px;
+    line-height: 1.5;
+    text-align: center;
 }
 
-.calc-step{
-    text-align:center;
-    color:#666;
-    margin-bottom:25px;
+
+/* =========================================
+   ПРОГРЕСС
+========================================= */
+
+.progress {
+    width: 100%;
+    height: 8px;
+    background: #e8eef8;
+    border-radius: 30px;
+    overflow: hidden;
+    margin: 28px 0 10px;
 }
 
-.calc-option{
-    display:flex;
-    align-items:center;
-    gap:12px;
-    padding:14px 18px;
-    border:1px solid #e4e4e4;
-    border-radius:12px;
-    margin-bottom:14px;
-    cursor:pointer;
-    transition:.25s;
+.progress-fill {
+    width: 33%;
+    height: 100%;
+    background: linear-gradient(90deg, #1677ff, #3d96ff);
+    transition: .35s;
 }
 
-.calc-option:hover{
-    border-color:#1677ff;
-    background:#f5f9ff;
+.step-counter {
+    text-align: center;
+    color: #8a96a8;
+    font-size: 14px;
+    margin-bottom: 28px;
 }
 
-.calc-option input{
-    width:18px;
-    height:18px;
+
+/* =========================================
+   ЭКРАНЫ КАЛЬКУЛЯТОРА
+========================================= */
+
+.hero-calculator .calc-screen {
+    display: none !important;
 }
 
-.calc-option span{
-    font-size:18px;
-    font-weight:600;
+.hero-calculator .calc-screen.active {
+    display: block !important;
 }
 
-.calc-next{
-    width:100%;
-    margin-top:18px;
-    padding:16px;
-    border:none;
-    border-radius:12px;
-    background:#1677ff;
-    color:#fff;
-    font-size:18px;
-    font-weight:700;
-    cursor:pointer;
-    transition:.25s;
+
+/* =========================================
+   ВЫБОР УСЛУГ
+========================================= */
+
+.select-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
 }
 
-.calc-next:hover{
-    background:#0d66df;
+.select-card {
+    display: block;
+    border: 2px solid #e6edf6;
+    border-radius: 20px;
+    padding: 22px;
+    cursor: pointer;
+    transition: .25s;
+    background: #ffffff;
 }
 
-/* --- ОСТАЛЬНЫЕ СЕКЦИИ --- */
-.about-section { background: #ffffff; padding: 80px 0; }
-.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
-.about-grid h2 { font-size: 42px; margin-bottom: 25px; }
-.about-grid p { font-size: 18px; line-height: 1.8; }
-.about-img { width: 100%; border-radius: 20px; }
+.select-card:hover {
+    border-color: #1677ff;
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(22, 119, 255, .14);
+}
 
-.steps-section { background: #f4f8fc; padding: 80px 0; }
-.steps-section h2 { text-align: center; font-size: 42px; margin-bottom: 50px; }
-.steps-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 25px; }
-.step-card { text-align: center; background: white; padding: 30px; border-radius: 18px; }
-.step-card img { width: 70px; height: 70px; object-fit: contain; margin-bottom: 15px; }
-.step-card h3 { font-size: 18px; margin-bottom: 10px; }
-.step-card p { color: #666; }
+.select-card input {
+    display: none;
+}
 
-.delivery-section { padding: 80px 0; background: white; 
- /* =======================
+.card-info {
+    flex: 1;
+}
+
+.card-info h3 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 700;
+    color: #162a3d;
+}
+
+.card-info p {
+    margin: 8px 0 0;
+    color: #7b8898;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.select-card:has(input:checked) {
+    border-color: #1677ff;
+    background: #f4f9ff;
+}
+
+
+/* =========================================
+   КАРТОЧКА ШАГА
+========================================= */
+
+.calc-card {
+    background: #f8fbff;
+    border-radius: 20px;
+    padding: 24px;
+    margin-bottom: 22px;
+    border: 1px solid #e7edf7;
+}
+
+
+/* =========================================
+   ВЫБОР МАТЕРИАЛА
+========================================= */
+
+.choice-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 22px;
+}
+
+.choice {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 70px;
+
+    border: 2px solid #e6edf6;
+    border-radius: 16px;
+
+    background: #ffffff;
+
+    cursor: pointer;
+    transition: .25s;
+
+    font-size: 18px;
+    font-weight: 700;
+    color: #162a3d;
+
+    padding: 18px;
+    overflow: hidden;
+}
+
+.choice:hover {
+    border-color: #1677ff;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(22, 119, 255, .15);
+}
+
+.choice input {
+    display: none;
+}
+
+.choice span {
+    position: relative;
+    z-index: 2;
+}
+
+.choice::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        135deg,
+        #1677ff,
+        #3b97ff
+    );
+
+    opacity: 0;
+    transition: .25s;
+}
+
+.choice:has(input:checked)::before {
+    opacity: 1;
+}
+
+.choice:has(input:checked) span {
+    color: #ffffff;
+}
+
+.choice:has(input:checked) {
+    background: #1677ff;
+    border-color: #1677ff;
+}
+
+
+/* =========================================
+   INPUT
+========================================= */
+
+.calc-input {
+    width: 100%;
+    height: 56px;
+
+    padding: 0 18px;
+    margin-bottom: 15px;
+
+    border: 2px solid #e4ebf5;
+    border-radius: 14px;
+
+    background: #ffffff;
+
+    box-sizing: border-box;
+
+    font-size: 17px;
+    transition: .25s;
+}
+
+.calc-input::placeholder {
+    color: #9ba7b7;
+}
+
+.calc-input:focus {
+    outline: none;
+    border-color: #1677ff;
+    box-shadow: 0 0 0 4px rgba(22, 119, 255, .08);
+}
+
+
+/* =========================================
+   КНОПКИ
+========================================= */
+
+.calc-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 28px;
+}
+
+.calc-back,
+.calc-next {
+    flex: 1;
+
+    height: 56px;
+
+    border: none;
+    border-radius: 14px;
+
+    font-size: 17px;
+    font-weight: 700;
+
+    cursor: pointer;
+    transition: .25s;
+}
+
+.calc-back {
+    background: #edf2f8;
+    color: #162a3d;
+}
+
+.calc-back:hover {
+    background: #dde7f2;
+}
+
+.calc-next {
+    background: linear-gradient(
+        90deg,
+        #1677ff,
+        #2e8cff
+    );
+
+    color: #ffffff;
+}
+
+.calc-next:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px rgba(22, 119, 255, .25);
+}
+
+
+/* =========================================
+   РЕЗУЛЬТАТ
+========================================= */
+
+.result-icon {
+    width: 90px;
+    height: 90px;
+
+    margin: 0 auto 20px;
+
+    border-radius: 50%;
+
+    background: linear-gradient(
+        135deg,
+        #1677ff,
+        #4ca2ff
+    );
+
+    color: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 42px;
+
+    box-shadow: 0 15px 35px rgba(22, 119, 255, .25);
+}
+
+.result-box {
+    margin-top: 25px;
+
+    background: #f8fbff;
+
+    border: 1px solid #e6edf6;
+
+    border-radius: 20px;
+
+    padding: 28px;
+}
+
+.result-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 18px;
+
+    font-size: 18px;
+    color: #162a3d;
+}
+
+.result-item strong {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.result-divider {
+    height: 1px;
+    background: #dfe8f3;
+    margin: 22px 0;
+}
+
+.result-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.result-total span {
+    font-size: 24px;
+    font-weight: 700;
+    color: #162a3d;
+}
+
+.result-total strong {
+    font-size: 42px;
+    font-weight: 800;
+    color: #1677ff;
+}
+
+.result-info {
+    margin-top: 25px;
+
+    padding: 18px 20px;
+
+    background: #eef6ff;
+
+    border-left: 4px solid #1677ff;
+
+    border-radius: 14px;
+
+    color: #5d6a7b;
+
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   ОСТАЛЬНЫЕ СЕКЦИИ
+========================================= */
+
+.about-section {
+    background: #ffffff;
+    padding: 80px 0;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.about-grid h2 {
+    font-size: 42px;
+    margin-bottom: 25px;
+}
+
+.about-grid p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.about-img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+
+/* =========================================
+   ЭТАПЫ
+========================================= */
+
+.steps-section {
+    background: #f4f8fc;
+    padding: 80px 0;
+}
+
+.steps-section h2 {
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 50px;
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.step-card {
+    text-align: center;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 18px;
+}
+
+.step-card img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.step-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.step-card p {
+    color: #666;
+}
+
+
+/* =========================================
    ФОРМА ЗАМЕРА
-======================= */
+========================================= */
+
+.measure-section {
+    background: #ffffff;
+    padding: 70px 0;
 }
 
-.measure-section{
-    background:#ffffff;
-    padding:70px 0;
+.measure-box {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 420px;
+
+    gap: 50px;
+
+    align-items: center;
 }
 
-.measure-box{
-    max-width:1100px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:1fr 420px;
-    gap:50px;
-    align-items:center;
+.measure-info h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
 }
 
-.measure-info h2{
-    font-size:40px;
-    margin-bottom:20px;
+.measure-info p {
+    font-size: 18px;
+    line-height: 1.8;
 }
 
-.measure-info p{
-    font-size:18px;
-    line-height:1.8;
+.measure-form {
+    background: #f4f8fc;
+
+    padding: 35px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
 }
 
-.measure-form{
-    background:#f4f8fc;
-    padding:35px;
-    border-radius:20px;
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
+.measure-form input {
+    width: 100%;
+
+    padding: 16px;
+    margin-bottom: 18px;
+
+    border: 1px solid #ddd;
+    border-radius: 10px;
+
+    box-sizing: border-box;
+
+    font-size: 16px;
 }
 
-.measure-form input{
-    width:100%;
-    padding:16px;
-    margin-bottom:18px;
-    border:1px solid #ddd;
-    border-radius:10px;
-    box-sizing:border-box;
-    font-size:16px;
+.measure-form button {
+    width: 100%;
+
+    padding: 17px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #1677ff;
+
+    color: #ffffff;
+
+    font-size: 17px;
+    font-weight: 700;
+
+    cursor: pointer;
 }
 
-.measure-form button{
-    width:100%;
-    padding:17px;
-    border:none;
-    border-radius:10px;
-    background:#1677ff;
-    color:white;
-    font-size:17px;
-    font-weight:700;
-    cursor:pointer;
-}        
 
-.delivery-box { display: grid; grid-template-columns: 350px 1fr; gap: 40px; background: #eef5fc; border-radius: 20px; overflow: hidden; }
-.delivery-box img { width: 100%; height: 100%; object-fit: cover; }
-.delivery-box div { padding: 40px; }
-.delivery-box h2 { font-size: 36px; margin-bottom: 20px; }
-.delivery-box p { font-size: 18px; margin-bottom: 25px; }
-.delivery-box button { background: #1677ff; color: white; border: none; padding: 15px 30px; border-radius: 10px; cursor: pointer; font-weight: bold; }
+/* =========================================
+   ДОСТАВКА
+========================================= */
 
-.advantages { background: #f4f8fc; padding: 80px 0; }
-.advantages h2 { text-align: center; font-size: 42px; margin-bottom: 50px; }
-.advantages-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-.advantages-grid div { 
-   background: white; padding: 25px; 
-   border-radius: 15px; text-align: center; font-weight: 600; box-shadow: 0 2px 8px rgba(0,0,0,.05); }
+.delivery-section {
+    padding: 80px 0;
+    background: #ffffff;
+}
 
-/* ---------- АДАПТИВ ---------- */
+.delivery-box {
+    display: grid;
+    grid-template-columns: 350px 1fr;
 
-/* Планшеты */
+    gap: 40px;
+
+    background: #eef5fc;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+.delivery-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.delivery-box div {
+    padding: 40px;
+}
+
+.delivery-box h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.delivery-box p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.delivery-box button {
+    background: #1677ff;
+
+    color: #ffffff;
+
+    border: none;
+
+    padding: 15px 30px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+
+/* =========================================
+   ПРЕИМУЩЕСТВА
+========================================= */
+
+.advantages {
+    background: #f4f8fc;
+    padding: 80px 0;
+}
+
+.advantages h2 {
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 50px;
+}
+
+.advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.advantages-grid div {
+    background: #ffffff;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    font-weight: 600;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .05);
+}
+
+
+/* =========================================
+   АДАПТИВ — ПЛАНШЕТ
+========================================= */
+
 @media (max-width: 992px) {
 
-    .hero{
-        grid-template-columns:1fr;
-        min-height:auto;
+    .hero {
+        grid-template-columns: 1fr;
+        height: auto;
     }
 
-    .hero-left{
-        padding:50px 30px;
+    .hero-left {
+        padding: 50px 30px;
     }
 
-    .hero-right{
-        min-height:700px;
+    .hero-right {
+        height: 650px;
+        min-height: 650px;
     }
 
-    .hero-calculator{
-        width:450px;
+    .hero-image {
+        height: 650px;
     }
 
-    .about-grid{
-        grid-template-columns:1fr;
+    .hero-calculator {
+        width: 450px;
+        max-width: calc(100% - 40px);
     }
 
-    .measure-box{
-        grid-template-columns:1fr;
-        gap:30px;
+    .about-grid {
+        grid-template-columns: 1fr;
     }
 
-    .steps-grid{
-        grid-template-columns:repeat(2,1fr);
+    .measure-box {
+        grid-template-columns: 1fr;
+        gap: 30px;
     }
 
-    .delivery-box{
-        grid-template-columns:1fr;
+    .steps-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .advantages-grid{
-        grid-template-columns:repeat(2,1fr);
+    .delivery-box {
+        grid-template-columns: 1fr;
     }
 
+    .advantages-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 
-/* Телефоны */
-@media (max-width:600px){
+/* =========================================
+   АДАПТИВ — ТЕЛЕФОН
+========================================= */
 
-    .hero{
-        grid-template-columns:1fr;
+@media (max-width: 600px) {
+
+    .hero {
+        grid-template-columns: 1fr;
+        height: auto;
     }
 
-    .hero-left{
-        padding:35px 20px;
+    .hero-left {
+        padding: 35px 20px;
     }
 
-    .hero-left h1{
-        font-size:34px;
+    .hero-left h1 {
+        font-size: 34px;
     }
 
-    .hero-list li{
-        font-size:17px;
+    .hero-list li {
+        font-size: 17px;
     }
 
-    .hero-right{
-        min-height:auto;
+    .hero-right {
+        height: auto;
+        min-height: 0;
+        padding: 20px 0;
+        background: #ffffff;
     }
 
-    .hero-calculator{
-        position:static;
-        transform:none;
-        width:94%;
-        margin:25px auto;
-        padding:22px;
+    .hero-image {
+        height: 350px;
     }
 
-    .hero-calculator h3{
-        font-size:24px;
+    .hero-calculator {
+        position: absolute;
+
+        top: 50%;
+        left: 50%;
+
+        transform: translate(-50%, -50%);
+
+        width: 94%;
+        max-width: 94%;
+
+        padding: 22px;
     }
 
-    .hero-calculator h4{
-        font-size:20px;
+    .hero-calculator h1 {
+        font-size: 26px;
     }
 
-    .calc-option span{
-        font-size:16px;
+    .hero-calculator h3 {
+        font-size: 24px;
     }
 
-    .measure-box{
-        grid-template-columns:1fr;
+    .hero-calculator h4 {
+        font-size: 20px;
     }
 
-    .measure-info{
-        text-align:center;
+    .screen-title {
+        font-size: 25px;
     }
 
-    .measure-info h2{
-        font-size:28px;
+    .card-info h3 {
+        font-size: 20px;
     }
 
-    .steps-grid{
-        grid-template-columns:1fr;
+    .card-info p {
+        font-size: 14px;
     }
 
-    .advantages-grid{
-        grid-template-columns:1fr;
+    .choice-grid {
+        grid-template-columns: 1fr;
     }
 
-    .delivery-box div{
-        padding:25px;
+    .calc-buttons {
+        flex-direction: column;
     }
 
-    .delivery-box h2{
-        font-size:28px;
+    .calc-back,
+    .calc-next {
+        width: 100%;
     }
 
+    .result-total strong {
+        font-size: 34px;
+    }
+
+    .measure-box {
+        grid-template-columns: 1fr;
+    }
+
+    .measure-info {
+        text-align: center;
+    }
+
+    .measure-info h2 {
+        font-size: 28px;
+    }
+
+    .steps-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .advantages-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .delivery-box div {
+        padding: 25px;
+    }
+
+    .delivery-box h2 {
+        font-size: 28px;
+    }
+}
+
+
+/* =========================================
+   ОЧЕНЬ МАЛЕНЬКИЕ ТЕЛЕФОНЫ
+========================================= */
+
+@media (max-width: 400px) {
+
+    .hero-left h1 {
+        font-size: 30px;
+    }
+
+    .hero-image {
+        height: 300px;
+    }
+
+    .hero-calculator {
+        padding: 18px;
+    }
+
+    .hero-calculator h1 {
+        font-size: 23px;
+    }
+
+    .screen-title {
+        font-size: 22px;
+    }
+
+    .calc-card {
+        padding: 18px;
+    }
+
+    .calc-input {
+        height: 52px;
+        font-size: 16px;
+    }
+
+    .choice {
+        min-height: 58px;
+        font-size: 16px;
+    }
+
+    .result-box {
+        padding: 20px;
+    }
+
+    .result-item {
+        font-size: 16px;
+    }
+
+    .result-item strong {
+        font-size: 18px;
+    }
+
+    .result-total span {
+        font-size: 20px;
+    }
+
+    .result-total strong {
+        font-size: 30px;
+    }
+
+    .result-info {
+        font-size: 14px;
+    }
 }
