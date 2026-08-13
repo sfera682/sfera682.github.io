@@ -1,6 +1,9 @@
 /*=========================================
         КАЛЬКУЛЯТОР SFERA PROM
 =========================================*/
+.hero-calculator{
+    border:10px solid red !important;
+}
 
 .hero-calculator{
     width:470px;
