@@ -472,3 +472,12 @@ overflow:hidden;
 }
 
 }
+/* ПРИНУДИТЕЛЬНО СКРЫВАЕМ НЕАКТИВНЫЕ ЭКРАНЫ */
+
+.hero-calculator .calc-screen{
+    display:none !important;
+}
+
+.hero-calculator .calc-screen.active{
+    display:block !important;
+}
