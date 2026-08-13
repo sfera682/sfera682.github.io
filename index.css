@@ -1,1095 +1,630 @@
-/* =========================================================
-   БАЗОВЫЕ НАСТРОЙКИ
-========================================================= */
-
-* {
-    box-sizing: border-box;
+body{
+font-family:Arial,sans-serif;
+margin:0;
+background:#f4f8fc;
+color:#162a3d;
+overflow-x:hidden;
 }
-
-html {
-    scroll-behavior: smooth;
+.hero{
+display:grid;
+grid-template-columns:1fr 1fr;
+min-height:720px;
+background:#fff;
+align-items:center;
 }
-
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f4f8fc;
-    color: #162a3d;
-    overflow-x: hidden;
+.hero-left{
+padding:60px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+box-sizing:border-box;
 }
-
-
-/* =========================================================
-   HERO — ПЕРВЫЙ ЭКРАН
-========================================================= */
-
-.hero {
-    position: relative;
-    display: grid;
-    grid-template-columns: 52% 48%;
-    min-height: 650px;
-    background: #ffffff;
-    overflow: hidden;
+.hero-left h1{
+font-size:56px;
+line-height:1.08;
+margin:0 0 35px;
+font-weight:800;
+color:#162a3d;
 }
-
-
-/* Левая часть */
-
-.hero-left {
-    padding: 70px 60px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-    z-index: 2;
+.hero-list{
+list-style:none;
+padding:0;
+margin:0;
 }
-
-.hero-left h1 {
-    font-size: 56px;
-    line-height: 1.08;
-    margin: 0 0 35px;
-    font-weight: 800;
-    color: #162a3d;
+.hero-list li{
+margin-bottom:18px;
+font-size:20px;
+position:relative;
+padding-left:35px;
+line-height:1.4;
 }
-
-.hero-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.hero-list li:before{
+content:"✓";
+position:absolute;
+left:0;
+top:0;
+color:#1677ff;
+font-weight:bold;
 }
-
-.hero-list li {
-    margin-bottom: 18px;
-    font-size: 20px;
-    line-height: 1.4;
-    position: relative;
-    padding-left: 35px;
+.hero-right{
+position:relative;
+height:620px;
+margin:40px 40px 40px 0;
+border-radius:30px;
+overflow:hidden;
 }
-
-.hero-list li:before {
-    content: "✓";
-    position: absolute;
-    left: 0;
-    top: 0;
-    color: #1677ff;
-    font-weight: bold;
+.hero-image{
+width:100%;
+height:100%;
+display:block;
+object-fit:cover;
+object-position:center;
 }
-
-
-/* =========================================================
-   ПРАВАЯ ЧАСТЬ HERO
-========================================================= */
-
-.hero-right {
-    position: relative;
-    min-width: 0;
-    height: 650px;
-    overflow: hidden;
+#calculator{
+position:absolute;
+inset:0;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:25px;
+box-sizing:border-box;
 }
-
-
-/* Фото */
-
-.hero-image {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
+.hero-calculator{
+position:relative;
+width:470px;
+max-width:100%;
+max-height:calc(100% - 20px);
+background:#fff;
+border-radius:28px;
+padding:32px;
+box-sizing:border-box;
+box-shadow:0 20px 50px rgba(0,0,0,.25);
+z-index:20;
+overflow-y:auto;
 }
-
-
-/* =========================================================
-   КАЛЬКУЛЯТОР
-========================================================= */
-
-.hero-calculator {
-    position: absolute;
-
-    /* СТРОГО ПО ЦЕНТРУ ПРАВОЙ ЧАСТИ */
-    top: 50%;
-    left: 50%;
-
-    transform: translate(-50%, -50%);
-
-    width: min(430px, calc(100% - 50px));
-
-    max-height: calc(100% - 40px);
-
-    overflow-y: auto;
-
-    background: #ffffff;
-
-    border-radius: 22px;
-
-    padding: 30px;
-
-    box-shadow:
-        0 20px 50px rgba(0, 0, 0, 0.20);
-
-    z-index: 20;
+.hero-calculator h1{
+font-size:34px;
+line-height:1.1;
+margin:0 0 25px;
+text-align:center;
+font-weight:800;
+color:#162a3d;
 }
-
-
-/* Заголовок калькулятора */
-
-.hero-calculator h1 {
-    margin: 0 0 22px;
-    text-align: center;
-
-    font-size: 30px;
-    line-height: 1.15;
-
-    font-weight: 800;
-    color: #162a3d;
+.hero-calculator h2{
+font-size:28px;
+line-height:1.2;
+margin:0 0 12px;
+text-align:center;
+color:#162a3d;
 }
-
-.hero-calculator h2 {
-    margin: 20px 0 10px;
-
-    text-align: center;
-
-    font-size: 28px;
-    line-height: 1.2;
-
-    color: #162a3d;
+.hero-calculator h3{
+font-size:25px;
+line-height:1.2;
+margin:0 0 18px;
+text-align:center;
+font-weight:800;
+color:#162a3d;
 }
-
-.hero-calculator h3 {
-    margin: 0 0 18px;
-
-    text-align: center;
-
-    font-size: 28px;
-    font-weight: 800;
+.hero-calculator h4{
+margin:20px 0;
+font-size:22px;
 }
-
-.hero-calculator h4 {
-    margin: 25px 0 20px;
-    font-size: 22px;
+.card-subtitle{
+font-size:16px;
+line-height:1.5;
+color:#7d8da0;
+text-align:center;
+margin:0 0 22px;
 }
-
-
-/* =========================================================
-   ПРОГРЕСС
-========================================================= */
-
-.progress {
-    width: 100%;
-    height: 8px;
-
-    background: #e8eef7;
-
-    border-radius: 20px;
-
-    overflow: hidden;
-
-    margin-bottom: 15px;
+.progress{
+width:100%;
+height:8px;
+background:#e8eef6;
+border-radius:20px;
+overflow:hidden;
+margin-bottom:14px;
+display:block;
 }
-
-.progress-fill {
-    width: 25%;
-    height: 100%;
-
-    background: #1677ff;
-
-    border-radius: 20px;
-
-    transition: width 0.3s ease;
+.progress-fill{
+height:100%;
+width:25%;
+background:#1677ff;
+border-radius:20px;
+transition:.3s;
 }
-
-.step-counter {
-    text-align: center;
-
-    color: #7c8da3;
-
-    font-size: 15px;
-
-    margin-bottom: 25px;
+.step-counter{
+text-align:center;
+font-size:15px;
+color:#7d8da0;
+margin-bottom:25px;
 }
-
-
-/* =========================================================
-   ПОДЗАГОЛОВКИ
-========================================================= */
-
-.screen-title {
-    text-align: center;
-
-    font-size: 28px;
-
-    margin: 20px 0 10px;
+.calc-screen{
+display:none;
 }
-
-.card-subtitle {
-    text-align: center;
-
-    color: #7c8da3;
-
-    font-size: 16px;
-
-    line-height: 1.5;
-
-    margin: 0 0 25px;
+.calc-screen.active{
+display:block;
 }
-
-
-/* =========================================================
-   ЭКРАНЫ
-========================================================= */
-
-.calc-screen {
-    display: none;
+.screen-title{
+font-size:28px;
+font-weight:800;
+text-align:center;
+margin:0 0 10px;
 }
-
-.calc-screen.active {
-    display: block;
+.select-grid{
+display:flex;
+flex-direction:column;
+gap:12px;
 }
-
-
-/* =========================================================
-   КАРТОЧКИ ВЫБОРА
-========================================================= */
-
-.select-grid,
-.choice-grid {
-    display: grid;
-
-    gap: 12px;
-
-    width: 100%;
+.select-card{
+display:flex;
+align-items:center;
+gap:15px;
+padding:18px;
+border:1px solid #dce5ef;
+border-radius:16px;
+cursor:pointer;
+transition:.2s;
+background:#fff;
+box-sizing:border-box;
 }
-
-
-/* Большие карточки */
-
-.select-card {
-    display: block;
-
-    padding: 20px;
-
-    border: 2px solid #e3ebf5;
-
-    border-radius: 18px;
-
-    cursor: pointer;
-
-    transition: all 0.25s ease;
-
-    background: #ffffff;
+.select-card:hover{
+border-color:#1677ff;
+background:#f7faff;
 }
-
-.select-card:hover {
-    border-color: #1677ff;
-
-    background: #f7faff;
+.select-card input{
+width:20px;
+height:20px;
+accent-color:#1677ff;
+flex-shrink:0;
 }
-
-
-/* Скрываем стандартный checkbox */
-
-.select-card input {
-    display: none;
+.card-info h3{
+font-size:20px;
+text-align:left;
+margin:0 0 5px;
 }
-
-
-/* Выбранная карточка */
-
-.select-card:has(input:checked) {
-    border-color: #1677ff;
-
-    background: #f3f8ff;
-
-    box-shadow: 0 5px 15px rgba(22,119,255,0.08);
+.card-info p{
+margin:0;
+font-size:14px;
+color:#7d8da0;
 }
-
-
-.card-info h3 {
-    margin: 0 0 8px;
-
-    text-align: center;
-
-    font-size: 22px;
-
-    color: #162a3d;
+.calc-card{
+width:100%;
 }
-
-.card-info p {
-    margin: 0;
-
-    text-align: center;
-
-    color: #7c8da3;
-
-    font-size: 15px;
+.choice-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:12px;
+margin-bottom:18px;
 }
-
-
-/* =========================================================
-   RADIO / ВЫБОР МАТЕРИАЛА
-========================================================= */
-
-.choice-grid {
-    grid-template-columns: 1fr 1fr;
-
-    margin-bottom: 20px;
+.choice{
+display:flex;
+align-items:center;
+justify-content:center;
+padding:15px 10px;
+border:1px solid #dce5ef;
+border-radius:12px;
+cursor:pointer;
+transition:.2s;
+font-weight:600;
 }
-
-.choice {
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    min-height: 52px;
-
-    border: 2px solid #e3ebf5;
-
-    border-radius: 12px;
-
-    cursor: pointer;
-
-    transition: 0.25s;
-
-    font-weight: 700;
+.choice:hover{
+border-color:#1677ff;
+background:#f7faff;
 }
-
-.choice:hover {
-    border-color: #1677ff;
-
-    background: #f7faff;
+.choice input{
+margin-right:8px;
+accent-color:#1677ff;
 }
-
-.choice input {
-    display: none;
+.calc-input{
+width:100%;
+height:52px;
+padding:0 16px;
+margin-bottom:14px;
+border:1px solid #dce5ef;
+border-radius:12px;
+box-sizing:border-box;
+font-size:16px;
+color:#162a3d;
+outline:none;
+background:#fff;
 }
-
-.choice:has(input:checked) {
-    border-color: #1677ff;
-
-    background: #f3f8ff;
-
-    color: #1677ff;
+.calc-input:focus{
+border-color:#1677ff;
+box-shadow:0 0 0 3px rgba(22,119,255,.1);
 }
-
-
-/* =========================================================
-   INPUT
-========================================================= */
-
-.calc-input {
-    width: 100%;
-
-    height: 55px;
-
-    padding: 0 16px;
-
-    margin-bottom: 14px;
-
-    border: 1px solid #dce5ef;
-
-    border-radius: 12px;
-
-    background: #ffffff;
-
-    font-size: 16px;
-
-    color: #162a3d;
-
-    outline: none;
+.calc-buttons{
+display:flex;
+gap:10px;
+margin-top:10px;
 }
-
-.calc-input:focus {
-    border-color: #1677ff;
-
-    box-shadow: 0 0 0 3px rgba(22,119,255,0.10);
-}
-
-.calc-input::placeholder {
-    color: #9aa9bb;
-}
-
-
-/* =========================================================
-   КНОПКИ
-========================================================= */
-
-.calc-buttons {
-    display: flex;
-
-    gap: 10px;
-
-    margin-top: 18px;
-}
-
 .calc-next,
-.calc-back {
-    min-height: 52px;
-
-    border: none;
-
-    border-radius: 12px;
-
-    padding: 0 18px;
-
-    font-size: 16px;
-
-    font-weight: 700;
-
-    cursor: pointer;
-
-    transition: 0.25s;
+.calc-back{
+flex:1;
+min-height:52px;
+padding:14px 18px;
+border:none;
+border-radius:12px;
+font-size:16px;
+font-weight:700;
+cursor:pointer;
+transition:.2s;
+box-sizing:border-box;
 }
-
-.calc-next {
-    flex: 1;
-
-    background: #1677ff;
-
-    color: #ffffff;
+.calc-next{
+background:#1677ff;
+color:#fff;
 }
-
-.calc-next:hover {
-    background: #0d66df;
+.calc-next:hover{
+background:#0d66df;
 }
-
-.calc-back {
-    background: #edf2f7;
-
-    color: #162a3d;
+.calc-back{
+background:#eef3f8;
+color:#162a3d;
 }
-
-.calc-back:hover {
-    background: #dfe7f0;
+.calc-back:hover{
+background:#e0e8f1;
 }
-
-
-/* =========================================================
-   РЕЗУЛЬТАТ
-========================================================= */
-
-.result-icon {
-    text-align: center;
-
-    font-size: 42px;
-
-    margin-bottom: 10px;
+.result-icon{
+text-align:center;
+font-size:42px;
+margin-bottom:10px;
 }
-
-.result-box {
-    background: #f4f8fc;
-
-    border-radius: 16px;
-
-    padding: 20px;
+.result-box{
+background:#f4f8fc;
+border-radius:16px;
+padding:20px;
+margin:20px 0;
 }
-
-.result-item {
-    display: flex;
-
-    justify-content: space-between;
-
-    gap: 20px;
-
-    padding: 10px 0;
-
-    font-size: 16px;
+.result-item{
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:15px;
+padding:10px 0;
+font-size:16px;
 }
-
-.result-item strong {
-    white-space: nowrap;
+.result-item strong{
+font-size:17px;
 }
-
-.result-divider {
-    height: 1px;
-
-    background: #dce5ef;
-
-    margin: 10px 0;
+.result-divider{
+height:1px;
+background:#dce5ef;
+margin:8px 0;
 }
-
-.result-total {
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: center;
-
-    font-size: 19px;
-
-    font-weight: 800;
+.result-total{
+display:flex;
+justify-content:space-between;
+align-items:center;
+font-size:19px;
+padding-top:10px;
 }
-
-.result-total strong {
-    color: #1677ff;
+.result-total strong{
+font-size:24px;
+color:#1677ff;
 }
-
-.result-info {
-    margin-top: 18px;
-
-    padding: 15px;
-
-    background: #f7f9fc;
-
-    border-radius: 12px;
-
-    font-size: 13px;
-
-    line-height: 1.6;
-
-    color: #66788c;
+.result-info{
+font-size:13px;
+line-height:1.6;
+color:#718195;
+background:#f8fafc;
+border-radius:12px;
+padding:15px;
+margin-bottom:15px;
 }
-
-
-/* =========================================================
-   О КОМПАНИИ
-========================================================= */
-
-.about-section {
-    background: #ffffff;
-
-    padding: 80px 0;
+.about-section{
+background:#fff;
+padding:80px 0;
 }
-
-.about-grid {
-    max-width: 1100px;
-
-    margin: 0 auto;
-
-    padding: 0 25px;
-
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 50px;
-
-    align-items: center;
+.about-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+align-items:center;
 }
-
-.about-grid h2 {
-    font-size: 42px;
-
-    margin-bottom: 25px;
+.about-grid h2{
+font-size:42px;
+margin:0 0 25px;
 }
-
-.about-grid p {
-    font-size: 18px;
-
-    line-height: 1.8;
+.about-grid p{
+font-size:18px;
+line-height:1.8;
 }
-
-.about-img {
-    display: block;
-
-    width: 100%;
-
-    max-height: 450px;
-
-    object-fit: cover;
-
-    border-radius: 20px;
+.about-img{
+width:100%;
+height:650px;
+object-fit:cover;
+border-radius:30px;
+display:block;
 }
-
-
-/* =========================================================
-   ЭТАПЫ
-========================================================= */
-
-.steps-section {
-    background: #f4f8fc;
-
-    padding: 80px 0;
+.steps-section{
+background:#f4f8fc;
+padding:80px 0;
 }
-
-.steps-section h2 {
-    text-align: center;
-
-    font-size: 42px;
-
-    margin-bottom: 50px;
+.steps-section h2{
+text-align:center;
+font-size:42px;
+margin:0 0 50px;
 }
-
-.steps-grid {
-    max-width: 1100px;
-
-    margin: 0 auto;
-
-    padding: 0 25px;
-
-    display: grid;
-
-    grid-template-columns: repeat(4, 1fr);
-
-    gap: 25px;
+.steps-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:25px;
 }
-
-.step-card {
-    text-align: center;
-
-    background: #ffffff;
-
-    padding: 30px;
-
-    border-radius: 18px;
+.step-card{
+text-align:center;
+background:#fff;
+padding:30px;
+border-radius:18px;
 }
-
-.step-card img {
-    width: 70px;
-
-    height: 70px;
-
-    object-fit: contain;
-
-    margin-bottom: 15px;
+.step-card img{
+width:70px;
+height:70px;
+object-fit:contain;
+margin-bottom:15px;
 }
-
-.step-card h3 {
-    font-size: 18px;
-
-    margin-bottom: 10px;
+.step-card h3{
+font-size:18px;
+margin-bottom:10px;
 }
-
-.step-card p {
-    color: #666;
+.step-card p{
+color:#666;
 }
-
-
-/* =========================================================
-   ФОРМА ЗАМЕРА
-========================================================= */
-
-.measure-section {
-    background: #ffffff;
-
-    padding: 70px 0;
+.delivery-section{
+padding:80px 0;
+background:#fff;
 }
-
-.measure-box {
-    max-width: 1100px;
-
-    margin: auto;
-
-    padding: 0 25px;
-
-    display: grid;
-
-    grid-template-columns: 1fr 420px;
-
-    gap: 50px;
-
-    align-items: center;
+.delivery-box{
+display:grid;
+grid-template-columns:350px 1fr;
+gap:40px;
+background:#eef5fc;
+border-radius:20px;
+overflow:hidden;
 }
-
-.measure-info h2 {
-    font-size: 40px;
-
-    margin-bottom: 20px;
+.delivery-box img{
+width:100%;
+height:100%;
+object-fit:cover;
 }
-
-.measure-info p {
-    font-size: 18px;
-
-    line-height: 1.8;
+.delivery-box div{
+padding:40px;
 }
-
-.measure-form {
-    background: #f4f8fc;
-
-    padding: 35px;
-
-    border-radius: 20px;
-
-    box-shadow: 0 10px 30px rgba(0,0,0,.08);
+.delivery-box h2{
+font-size:36px;
+margin-bottom:20px;
 }
-
-.measure-form input {
-    width: 100%;
-
-    padding: 16px;
-
-    margin-bottom: 18px;
-
-    border: 1px solid #ddd;
-
-    border-radius: 10px;
-
-    box-sizing: border-box;
-
-    font-size: 16px;
+.delivery-box p{
+font-size:18px;
+margin-bottom:25px;
 }
-
-.measure-form button {
-    width: 100%;
-
-    padding: 17px;
-
-    border: none;
-
-    border-radius: 10px;
-
-    background: #1677ff;
-
-    color: white;
-
-    font-size: 17px;
-
-    font-weight: 700;
-
-    cursor: pointer;
+.delivery-box button{
+background:#1677ff;
+color:#fff;
+border:none;
+padding:15px 30px;
+border-radius:10px;
+cursor:pointer;
+font-weight:bold;
 }
-
-
-/* =========================================================
-   ДОСТАВКА
-========================================================= */
-
-.delivery-section {
-    padding: 80px 0;
-
-    background: white;
+.measure-section{
+background:#fff;
+padding:70px 0;
 }
-
-.delivery-box {
-    max-width: 1100px;
-
-    margin: auto;
-
-    display: grid;
-
-    grid-template-columns: 350px 1fr;
-
-    gap: 40px;
-
-    background: #eef5fc;
-
-    border-radius: 20px;
-
-    overflow: hidden;
+.measure-box{
+max-width:1100px;
+margin:auto;
+display:grid;
+grid-template-columns:1fr 420px;
+gap:50px;
+align-items:center;
 }
-
-.delivery-box img {
-    width: 100%;
-
-    height: 100%;
-
-    min-height: 300px;
-
-    object-fit: cover;
+.measure-info h2{
+font-size:40px;
+margin-bottom:20px;
 }
-
-.delivery-box div {
-    padding: 40px;
+.measure-info p{
+font-size:18px;
+line-height:1.8;
 }
-
-.delivery-box h2 {
-    font-size: 36px;
-
-    margin-bottom: 20px;
+.measure-form{
+background:#f4f8fc;
+padding:35px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
 }
-
-.delivery-box p {
-    font-size: 18px;
-
-    margin-bottom: 25px;
+.measure-form input{
+width:100%;
+padding:16px;
+margin-bottom:18px;
+border:1px solid #ddd;
+border-radius:10px;
+box-sizing:border-box;
+font-size:16px;
 }
-
-.delivery-box button {
-    background: #1677ff;
-
-    color: white;
-
-    border: none;
-
-    padding: 15px 30px;
-
-    border-radius: 10px;
-
-    cursor: pointer;
-
-    font-weight: bold;
+.measure-form button{
+width:100%;
+padding:17px;
+border:none;
+border-radius:10px;
+background:#1677ff;
+color:#fff;
+font-size:17px;
+font-weight:700;
+cursor:pointer;
 }
-
-
-/* =========================================================
-   ПРЕИМУЩЕСТВА
-========================================================= */
-
-.advantages {
-    background: #f4f8fc;
-
-    padding: 80px 0;
+.advantages{
+background:#f4f8fc;
+padding:80px 0;
 }
-
-.advantages h2 {
-    text-align: center;
-
-    font-size: 42px;
-
-    margin-bottom: 50px;
+.advantages h2{
+text-align:center;
+font-size:42px;
+margin:0 0 50px;
 }
-
-.advantages-grid {
-    max-width: 1100px;
-
-    margin: auto;
-
-    padding: 0 25px;
-
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 20px;
+.advantages-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
 }
-
-.advantages-grid div {
-    background: white;
-
-    padding: 25px;
-
-    border-radius: 15px;
-
-    text-align: center;
-
-    font-weight: 600;
-
-    box-shadow: 0 2px 8px rgba(0,0,0,.05);
+.advantages-grid div{
+background:#fff;
+padding:25px;
+border-radius:15px;
+text-align:center;
+font-weight:600;
+box-shadow:0 2px 8px rgba(0,0,0,.05);
 }
-
-
-/* =========================================================
-   ПЛАНШЕТЫ
-========================================================= */
-
-@media (max-width: 1100px) {
-
-    .hero {
-        grid-template-columns: 50% 50%;
-    }
-
-    .hero-left {
-        padding: 50px 35px;
-    }
-
-    .hero-left h1 {
-        font-size: 46px;
-    }
-
-    .hero-list li {
-        font-size: 18px;
-    }
-
-    .hero-calculator {
-        width: calc(100% - 30px);
-
-        padding: 24px;
-    }
-
-    .about-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .measure-box {
-        grid-template-columns: 1fr 380px;
-    }
+@media(max-width:1200px){
+.hero-left{
+padding:45px;
 }
-
-
-/* =========================================================
-   ПЛАНШЕТ / МАЛЕНЬКИЙ ЭКРАН
-========================================================= */
-
-@media (max-width: 800px) {
-
-    .hero {
-        display: block;
-
-        min-height: auto;
-    }
-
-    .hero-left {
-        padding: 50px 25px;
-    }
-
-    .hero-left h1 {
-        font-size: 42px;
-    }
-
-    .hero-right {
-        height: 700px;
-
-        min-height: 700px;
-    }
-
-    .hero-calculator {
-        width: min(460px, calc(100% - 40px));
-
-        max-height: calc(100% - 30px);
-
-        padding: 25px;
-    }
-
-    .about-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .measure-box {
-        grid-template-columns: 1fr;
-    }
-
-    .steps-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .delivery-box {
-        grid-template-columns: 1fr;
-    }
-
-    .advantages-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+.hero-left h1{
+font-size:48px;
 }
-
-
-/* =========================================================
-   ТЕЛЕФОН
-========================================================= */
-
-@media (max-width: 600px) {
-
-    .hero-left {
-        padding: 35px 20px;
-    }
-
-    .hero-left h1 {
-        font-size: 34px;
-    }
-
-    .hero-list li {
-        font-size: 17px;
-
-        margin-bottom: 14px;
-    }
-
-    .hero-right {
-        height: auto;
-
-        min-height: 0;
-
-        padding: 20px 0 30px;
-
-        background: #f4f8fc;
-    }
-
-    .hero-image {
-        position: absolute;
-
-        inset: 0;
-
-        width: 100%;
-
-        height: 100%;
-
-        object-fit: cover;
-    }
-
-    .hero-calculator {
-        position: relative;
-
-        top: auto;
-        left: auto;
-
-        transform: none;
-
-        width: calc(100% - 30px);
-
-        max-height: none;
-
-        margin: 0 auto;
-
-        padding: 22px;
-
-        z-index: 20;
-    }
-
-    .hero-calculator h1 {
-        font-size: 27px;
-    }
-
-    .hero-calculator h2 {
-        font-size: 24px;
-    }
-
-    .hero-calculator h3 {
-        font-size: 24px;
-    }
-
-    .choice-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .calc-buttons {
-        flex-direction: column;
-    }
-
-    .calc-next,
-    .calc-back {
-        width: 100%;
-    }
-
-    .about-section,
-    .steps-section,
-    .delivery-section,
-    .advantages {
-        padding: 55px 0;
-    }
-
-    .about-grid {
-        padding: 0 20px;
-    }
-
-    .about-grid h2 {
-        font-size: 30px;
-    }
-
-    .about-grid p {
-        font-size: 16px;
-    }
-
-    .steps-grid {
-        grid-template-columns: 1fr;
-
-        padding: 0 20px;
-    }
-
-    .advantages-grid {
-        grid-template-columns: 1fr;
-
-        padding: 0 20px;
-    }
-
-    .measure-box {
-        padding: 0 20px;
-    }
-
-    .measure-info {
-        text-align: center;
-    }
-
-    .measure-info h2 {
-        font-size: 28px;
-    }
-
-    .delivery-box {
-        margin: 0 20px;
-    }
-
-    .delivery-box div {
-        padding: 25px;
-    }
-
-    .delivery-box h2 {
-        font-size: 28px;
-    }
+.hero-right{
+margin-right:25px;
+}
+.hero-calculator{
+width:430px;
+padding:26px;
+}
+}
+@media(max-width:992px){
+.hero{
+grid-template-columns:1fr;
+min-height:auto;
+}
+.hero-left{
+padding:60px 40px;
+}
+.hero-left h1{
+font-size:48px;
+}
+.hero-right{
+height:650px;
+margin:0 30px 50px;
+}
+.hero-calculator{
+width:450px;
+}
+.about-grid{
+grid-template-columns:1fr;
+}
+.about-img{
+height:500px;
+}
+.measure-box{
+grid-template-columns:1fr;
+gap:30px;
+}
+.steps-grid{
+grid-template-columns:repeat(2,1fr);
+}
+.delivery-box{
+grid-template-columns:1fr;
+}
+.advantages-grid{
+grid-template-columns:repeat(2,1fr);
+}
+}
+@media(max-width:600px){
+.hero{
+grid-template-columns:1fr;
+}
+.hero-left{
+padding:40px 20px;
+}
+.hero-left h1{
+font-size:36px;
+line-height:1.08;
+}
+.hero-list li{
+font-size:17px;
+}
+.hero-right{
+height:650px;
+margin:0 15px 35px;
+border-radius:22px;
+}
+#calculator{
+padding:15px;
+}
+.hero-calculator{
+width:100%;
+max-height:620px;
+padding:22px;
+border-radius:20px;
+}
+.hero-calculator h1{
+font-size:27px;
+}
+.hero-calculator h2{
+font-size:24px;
+}
+.hero-calculator h3{
+font-size:22px;
+}
+.screen-title{
+font-size:24px;
+}
+.card-subtitle{
+font-size:14px;
+}
+.select-card{
+padding:15px;
+}
+.card-info h3{
+font-size:18px;
+}
+.card-info p{
+font-size:13px;
+}
+.choice-grid{
+grid-template-columns:1fr;
+}
+.calc-buttons{
+flex-direction:column;
+}
+.about-section{
+padding:60px 20px;
+}
+.about-grid{
+gap:30px;
+}
+.about-grid h2{
+font-size:32px;
+}
+.about-grid p{
+font-size:17px;
+}
+.about-img{
+height:400px;
+}
+.steps-section{
+padding:60px 20px;
+}
+.steps-section h2{
+font-size:32px;
+}
+.steps-grid{
+grid-template-columns:1fr;
+}
+.delivery-section{
+padding:60px 20px;
+}
+.delivery-box{
+grid-template-columns:1fr;
+}
+.delivery-box h2{
+font-size:28px;
+}
+.advantages{
+padding:60px 20px;
+}
+.advantages h2{
+font-size:32px;
+}
+.advantages-grid{
+grid-template-columns:1fr;
+}
 }
