@@ -1,578 +1,414 @@
-/*=========================================
-        КАЛЬКУЛЯТОР SFERA PROM
-=========================================*/
+/* =========================================
+   КАЛЬКУЛЯТОР SFERA PROM
+========================================= */
+
+#calculator{
+position:absolute;
+inset:0;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:15px;
+box-sizing:border-box;
+}
 
 .hero-calculator{
-    width:470px;
-    max-width:100%;
-    max-height:calc(100% - 20px);
-    background:#ffffff;
-    border-radius:28px;
-    padding:35px;
-    box-sizing:border-box;
-    box-shadow:0 25px 70px rgba(0,0,0,.18);
-    animation:fade .35s;
-    position:relative;
-    z-index:20;
-    overflow-y:auto;
-    overflow-x:hidden;
+width:430px;
+max-width:100%;
+height:550px;
+background:#fff;
+border-radius:26px;
+padding:24px;
+box-sizing:border-box;
+box-shadow:0 20px 50px rgba(0,0,0,.20);
+position:relative;
+z-index:20;
+overflow:hidden;
 }
 
-.hero-calculator *{
-    box-sizing:border-box;
-    max-width:100%;
-}
-
-/*=========================================
-                ЗАГОЛОВОК
-=========================================*/
+/* ЗАГОЛОВОК */
 
 .hero-calculator h1{
-    margin:0;
-    text-align:center;
-    font-size:31px;
-    line-height:1.1;
-    font-weight:800;
-    color:#162a3d;
-    overflow-wrap:break-word;
+margin:0 0 16px;
+text-align:center;
+font-size:29px;
+line-height:1.05;
+font-weight:800;
+color:#162a3d;
 }
 
 .card-subtitle{
-    margin:8px 0 25px;
-    color:#7d8797;
-    font-size:15px;
-    line-height:1.5;
-    text-align:center;
-}
-
-.calc-card h3{
-    margin:0;
-    font-size:28px;
-    font-weight:700;
-    text-align:center;
-    color:#162a3d;
+margin:6px 0 18px;
+color:#7d8797;
+font-size:14px;
+line-height:1.4;
+text-align:center;
 }
 
 .screen-title{
-    margin:0;
-    text-align:center;
-    font-size:30px;
-    line-height:1.2;
-    font-weight:700;
-    color:#162a3d;
-    overflow-wrap:break-word;
+margin:0 0 8px;
+text-align:center;
+font-size:25px;
+line-height:1.15;
+font-weight:800;
+color:#162a3d;
 }
 
 .calc-subtitle{
-    margin:12px 0 30px;
-    text-align:center;
-    color:#748397;
-    font-size:16px;
-    line-height:1.6;
+margin:8px 0 20px;
+text-align:center;
+color:#748397;
+font-size:14px;
+line-height:1.4;
 }
 
-/*=========================================
-                ПРОГРЕСС
-=========================================*/
+/* ПРОГРЕСС */
 
 .progress{
-    width:100%;
-    height:8px;
-    background:#e8eef8;
-    border-radius:30px;
-    overflow:hidden;
-    margin:28px 0 10px;
+width:100%;
+height:7px;
+background:#e8eef8;
+border-radius:20px;
+overflow:hidden;
+margin:18px 0 8px;
 }
 
 .progress-fill{
-    width:25%;
-    height:100%;
-    background:linear-gradient(90deg,#1677ff,#3d96ff);
-    border-radius:30px;
-    transition:.35s;
+height:100%;
+width:25%;
+background:#1677ff;
+border-radius:20px;
+transition:.3s;
 }
 
 .step-counter{
-    text-align:center;
-    color:#8a96a8;
-    font-size:14px;
-    margin-bottom:28px;
+text-align:center;
+color:#8a96a8;
+font-size:13px;
+margin-bottom:18px;
 }
 
-/*=========================================
-                ЭКРАНЫ
-=========================================*/
+/* ЭКРАНЫ */
 
 .calc-screen{
-    display:none !important;
-    width:100%;
-    animation:fade .35s;
+display:none;
 }
 
 .calc-screen.active{
-    display:block !important;
+display:block;
 }
 
-/*=========================================
-            ВЫБОР УСЛУГ
-=========================================*/
+/* ВЫБОР УСЛУГ */
 
 .select-grid{
-    display:flex;
-    flex-direction:column;
-    gap:18px;
-    width:100%;
+display:flex;
+flex-direction:column;
+gap:10px;
 }
 
-/* КАРТОЧКА УСЛУГИ */
-
 .select-card{
-    display:flex;
-    align-items:center;
-    gap:18px;
-    width:100%;
-    min-width:0;
-    border:2px solid #e6edf6;
-    border-radius:20px;
-    padding:22px;
-    cursor:pointer;
-    transition:.25s;
-    background:#fff;
+display:flex;
+align-items:center;
+gap:12px;
+border:1px solid #dce5ef;
+border-radius:16px;
+padding:15px;
+cursor:pointer;
+background:#fff;
+transition:.2s;
+box-sizing:border-box;
 }
 
 .select-card:hover{
-    border-color:#1677ff;
-    transform:translateY(-3px);
-    box-shadow:0 15px 35px rgba(22,119,255,.14);
+border-color:#1677ff;
+background:#f7faff;
 }
-
-/* ЧЕКБОКС — НЕ ПРЯЧЕМ */
 
 .select-card input{
-    display:block;
-    width:20px;
-    height:20px;
-    min-width:20px;
-    margin:0;
-    padding:0;
-    flex-shrink:0;
-    accent-color:#1677ff;
-    cursor:pointer;
+display:block;
+width:19px;
+height:19px;
+margin:0;
+flex:0 0 19px;
+accent-color:#1677ff;
+cursor:pointer;
 }
 
-/* ТЕКСТ КАРТОЧКИ */
-
 .card-info{
-    flex:1;
-    min-width:0;
+min-width:0;
+flex:1;
 }
 
 .card-info h3{
-    margin:0;
-    font-size:22px;
-    line-height:1.2;
-    font-weight:700;
-    color:#162a3d;
-    text-align:left;
-    overflow-wrap:break-word;
+margin:0 0 4px;
+font-size:19px;
+line-height:1.15;
+font-weight:700;
+color:#162a3d;
+text-align:left;
 }
 
 .card-info p{
-    margin:8px 0 0;
-    color:#7b8898;
-    font-size:15px;
-    line-height:1.5;
-    text-align:left;
-    overflow-wrap:break-word;
+margin:0;
+font-size:13px;
+line-height:1.35;
+color:#7b8898;
 }
 
-/* ВЫБРАННАЯ КАРТОЧКА */
-
-.select-card:has(input:checked){
-    border-color:#1677ff;
-    background:#f4f9ff;
-    box-shadow:0 8px 25px rgba(22,119,255,.08);
-}
-
-/*=========================================
-        КАРТОЧКИ ШАГА 2
-=========================================*/
+/* ВЫБОР МАТЕРИАЛА */
 
 .calc-card{
-    width:100%;
-    background:#f8fbff;
-    border-radius:20px;
-    padding:24px;
-    margin-bottom:22px;
-    border:1px solid #e7edf7;
+background:#f8fbff;
+border-radius:16px;
+padding:17px;
+margin-bottom:14px;
+border:1px solid #e7edf7;
+box-sizing:border-box;
 }
 
-/*=========================================
-            ВЫБОР МАТЕРИАЛА
-=========================================*/
-
 .choice-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:14px;
-    margin-bottom:22px;
-    width:100%;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:9px;
+margin-bottom:14px;
 }
 
 .choice{
-    position:relative;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    min-height:70px;
-    border:2px solid #e6edf6;
-    border-radius:16px;
-    background:#fff;
-    cursor:pointer;
-    transition:.25s;
-    font-size:18px;
-    font-weight:700;
-    color:#162a3d;
-    padding:18px;
-    overflow:hidden;
-}
-
-.choice:hover{
-    border-color:#1677ff;
-    transform:translateY(-2px);
-    box-shadow:0 10px 25px rgba(22,119,255,.15);
+position:relative;
+display:flex;
+align-items:center;
+justify-content:center;
+min-height:52px;
+padding:10px;
+border:1px solid #dce5ef;
+border-radius:12px;
+background:#fff;
+cursor:pointer;
+font-size:15px;
+font-weight:700;
+color:#162a3d;
+text-align:center;
+box-sizing:border-box;
 }
 
 .choice input{
-    display:none;
+display:none;
 }
 
 .choice span{
-    position:relative;
-    z-index:2;
-}
-
-.choice::before{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:linear-gradient(135deg,#1677ff,#3b97ff);
-    opacity:0;
-    transition:.25s;
-}
-
-.choice:has(input:checked)::before{
-    opacity:1;
-}
-
-.choice:has(input:checked) span{
-    color:#fff;
+position:relative;
+z-index:2;
 }
 
 .choice:has(input:checked){
-    background:#1677ff;
-    border-color:#1677ff;
-    color:#fff;
+background:#1677ff;
+border-color:#1677ff;
+color:#fff;
 }
 
-/*=========================================
-                INPUT
-=========================================*/
+/* ПОЛЯ */
 
 .calc-input{
-    width:100%;
-    height:56px;
-    padding:0 18px;
-    margin-bottom:15px;
-    border:2px solid #e4ebf5;
-    border-radius:14px;
-    background:#fff;
-    box-sizing:border-box;
-    font-size:17px;
-    color:#162a3d;
-    transition:.25s;
-}
-
-.calc-input::placeholder{
-    color:#9ba7b7;
+width:100%;
+height:46px;
+padding:0 14px;
+margin-bottom:10px;
+border:1px solid #dce5ef;
+border-radius:11px;
+background:#fff;
+box-sizing:border-box;
+font-size:14px;
+color:#162a3d;
 }
 
 .calc-input:focus{
-    outline:none;
-    border-color:#1677ff;
-    box-shadow:0 0 0 4px rgba(22,119,255,.08);
+outline:none;
+border-color:#1677ff;
+box-shadow:0 0 0 3px rgba(22,119,255,.08);
 }
 
-/*=========================================
-                КНОПКИ
-=========================================*/
+/* КНОПКИ */
 
 .calc-buttons{
-    display:flex;
-    gap:15px;
-    margin-top:28px;
-    width:100%;
+display:flex;
+gap:9px;
+margin-top:15px;
 }
 
 .calc-back,
 .calc-next{
-    flex:1;
-    min-width:0;
-    height:56px;
-    border:none;
-    border-radius:14px;
-    font-size:17px;
-    font-weight:700;
-    cursor:pointer;
-    transition:.25s;
+flex:1;
+height:46px;
+border:none;
+border-radius:11px;
+font-size:14px;
+font-weight:700;
+cursor:pointer;
+box-sizing:border-box;
 }
 
 .calc-back{
-    background:#edf2f8;
-    color:#162a3d;
-}
-
-.calc-back:hover{
-    background:#dde7f2;
+background:#edf2f8;
+color:#162a3d;
 }
 
 .calc-next{
-    background:linear-gradient(90deg,#1677ff,#2e8cff);
-    color:#fff;
+background:#1677ff;
+color:#fff;
 }
 
 .calc-next:hover{
-    transform:translateY(-2px);
-    box-shadow:0 15px 30px rgba(22,119,255,.25);
+background:#0d66df;
 }
 
-/*=========================================
-            РЕЗУЛЬТАТ
-=========================================*/
+/* РЕЗУЛЬТАТ */
 
 .result-icon{
-    width:90px;
-    height:90px;
-    margin:0 auto 20px;
-    border-radius:50%;
-    background:linear-gradient(135deg,#1677ff,#4ca2ff);
-    color:#fff;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:42px;
-    box-shadow:0 15px 35px rgba(22,119,255,.25);
+width:65px;
+height:65px;
+margin:0 auto 12px;
+border-radius:50%;
+background:#1677ff;
+color:#fff;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:30px;
 }
 
 .result-box{
-    width:100%;
-    margin-top:25px;
-    background:#f8fbff;
-    border:1px solid #e6edf6;
-    border-radius:20px;
-    padding:28px;
+margin-top:15px;
+background:#f8fbff;
+border:1px solid #e6edf6;
+border-radius:15px;
+padding:16px;
 }
 
 .result-item{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:15px;
-    margin-bottom:18px;
-    font-size:18px;
-    color:#162a3d;
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:8px;
+padding:7px 0;
+font-size:14px;
+color:#162a3d;
 }
 
 .result-item strong{
-    font-size:22px;
-    font-weight:700;
+font-size:16px;
 }
 
 .result-divider{
-    height:1px;
-    background:#dfe8f3;
-    margin:22px 0;
+height:1px;
+background:#dfe8f3;
+margin:10px 0;
 }
 
 .result-total{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:15px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:8px;
 }
 
 .result-total span{
-    font-size:24px;
-    font-weight:700;
-    color:#162a3d;
+font-size:18px;
+font-weight:700;
+color:#162a3d;
 }
 
 .result-total strong{
-    font-size:42px;
-    font-weight:800;
-    color:#1677ff;
+font-size:25px;
+font-weight:800;
+color:#1677ff;
 }
 
 .result-info{
-    margin-top:25px;
-    padding:18px 20px;
-    background:#eef6ff;
-    border-left:4px solid #1677ff;
-    border-radius:14px;
-    color:#5d6a7b;
-    font-size:15px;
-    line-height:1.8;
+margin-top:14px;
+padding:12px 14px;
+background:#eef6ff;
+border-left:3px solid #1677ff;
+border-radius:10px;
+color:#5d6a7b;
+font-size:12px;
+line-height:1.5;
 }
 
-/*=========================================
-                АНИМАЦИЯ
-=========================================*/
-
-@keyframes fade{
-    from{
-        opacity:0;
-        transform:translateY(8px);
-    }
-
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-}
-
-/*=========================================
-                АДАПТИВ
-=========================================*/
-
-@media(max-width:1200px){
-
-    .hero-calculator{
-        width:430px;
-        padding:30px;
-    }
-
-}
+/* =========================================
+   ПЛАНШЕТ
+========================================= */
 
 @media(max-width:992px){
 
-    .hero-calculator{
-        width:430px;
-        max-width:100%;
-    }
+.hero-calculator{
+width:430px;
+height:550px;
+padding:22px;
+}
 
 }
 
-@media(max-width:768px){
+/* =========================================
+   ТЕЛЕФОН
+========================================= */
 
-    .hero-calculator{
-        width:100%;
-        max-width:100%;
-        max-height:calc(100% - 20px);
-        padding:28px;
-        border-radius:24px;
-    }
+@media(max-width:600px){
 
-    .hero-calculator h1{
-        font-size:26px;
-    }
-
-    .screen-title{
-        font-size:26px;
-    }
-
-    .card-info h3{
-        font-size:20px;
-    }
-
-    .card-info p{
-        font-size:14px;
-    }
-
-    .choice-grid{
-        grid-template-columns:1fr;
-    }
-
-    .calc-buttons{
-        flex-direction:column;
-    }
-
-    .calc-back,
-    .calc-next{
-        width:100%;
-    }
-
-    .result-total strong{
-        font-size:34px;
-    }
-
+.hero-calculator{
+width:100%;
+height:540px;
+padding:19px;
+border-radius:20px;
 }
 
-@media(max-width:480px){
+.hero-calculator h1{
+font-size:25px;
+}
 
-    .hero-calculator{
-        padding:22px;
-        border-radius:18px;
-    }
+.screen-title{
+font-size:22px;
+}
 
-    .progress{
-        margin:20px 0 10px;
-    }
+.card-subtitle{
+font-size:13px;
+}
 
-    .select-card{
-        padding:18px;
-        gap:14px;
-    }
+.select-card{
+padding:13px;
+}
 
-    .select-card input{
-        width:19px;
-        height:19px;
-        min-width:19px;
-    }
+.card-info h3{
+font-size:17px;
+}
 
-    .card-info h3{
-        font-size:18px;
-    }
+.card-info p{
+font-size:12px;
+}
 
-    .card-info p{
-        font-size:13px;
-    }
+.choice-grid{
+grid-template-columns:1fr;
+gap:8px;
+}
 
-    .calc-card{
-        padding:18px;
-    }
+.choice{
+min-height:48px;
+}
 
-    .calc-input{
-        height:52px;
-        font-size:16px;
-    }
+.calc-card{
+padding:14px;
+}
 
-    .choice{
-        min-height:58px;
-        font-size:16px;
-    }
+.calc-input{
+height:44px;
+}
 
-    .result-box{
-        padding:20px;
-    }
+.calc-buttons{
+margin-top:10px;
+}
 
-    .result-item{
-        font-size:16px;
-    }
-
-    .result-item strong{
-        font-size:18px;
-    }
-
-    .result-total span{
-        font-size:20px;
-    }
-
-    .result-total strong{
-        font-size:30px;
-    }
-
-    .result-info{
-        font-size:14px;
-    }
+.calc-back,
+.calc-next{
+height:44px;
+}
 
 }
