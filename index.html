@@ -245,40 +245,76 @@ class="about-img"
 
 </section>
 
-
 <!-- =====================================================
-     БЕСПЛАТНЫЙ ВЫЕЗД НА ЗАМЕР
+     ЗАПИСЬ НА БЕСПЛАТНЫЙ ЗАМЕР
 ===================================================== -->
 
 <section class="delivery-section">
 
 <div class="container delivery-box">
 
+    <!-- ЛЕВАЯ ЧАСТЬ — ФОТО + ФОРМА -->
+    <div class="delivery-photo">
 
-<img
-src="assets/img/work-process.jpg"
-alt="Замер кухни"
->
+        <img
+        src="assets/img/work-process.jpg"
+        alt="Замер кухни"
+        >
+
+        <div class="measure-form">
+
+            <h3>ЗАПИСАТЬСЯ НА ЗАМЕР</h3>
+
+            <input
+            type="text"
+            id="measure-name"
+            placeholder="Ваше имя"
+            >
+
+            <input
+            type="text"
+            id="measure-address"
+            placeholder="Адрес"
+            >
+
+            <input
+            type="text"
+            id="measure-time"
+            placeholder="Желаемое время"
+            >
+
+            <button
+            type="button"
+            onclick="sendMeasureRequest()"
+            >
+            ЗАПИСАТЬСЯ НА ЗАМЕР
+            </button>
+
+        </div>
+
+    </div>
 
 
-<div>
+    <!-- ПРАВАЯ ЧАСТЬ — ТЕКСТ -->
+    <div class="delivery-text">
 
-<h2>
-БЕСПЛАТНЫЙ ВЫЕЗД НА ЗАМЕР
-</h2>
+        <h2>
+        БЕСПЛАТНЫЙ ВЫЕЗД<br>
+        НА ЗАМЕР
+        </h2>
 
-<p>
-Профессиональное обновление кухонь в Павлодаре.
-</p>
+        <p>
+        Приезжаем к вам в удобное время,
+        снимаем необходимые размеры
+        и помогаем определиться с материалами.
+        </p>
 
-<button
-onclick="window.open('https://wa.me/77760680458','_blank')"
->
-ЗАПИСАТЬСЯ НА ЗАМЕР
-</button>
+        <p>
+        После замера вы получите точный
+        расчёт стоимости обновления кухни.
+        </p>
 
-</div>
-
+    </div>
 
 </div>
 
