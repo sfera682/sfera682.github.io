@@ -1,3 +1,6 @@
+Да. Вот **полный итоговый CSS**. Остальное не меняю. Блок замера теперь по размеру и стилю близок к калькулятору: **470px**, а фото слева и «О КОМПАНИИ» справа находятся **на одном уровне**.
+
+```css
 body{
 font-family:Arial,sans-serif;
 margin:0;
@@ -476,31 +479,39 @@ display:block;
 
 .measure-form{
 position:absolute;
-left:30px;
-right:30px;
-bottom:30px;
+width:470px;
+max-width:calc(100% - 40px);
+left:50%;
+top:50%;
+bottom:auto;
+right:auto;
+transform:translate(-50%,-50%);
 background:rgba(255,255,255,.96);
-padding:30px;
-border-radius:20px;
-box-shadow:0 15px 40px rgba(0,0,0,.2);
+padding:32px;
+border-radius:28px;
+box-shadow:0 20px 50px rgba(0,0,0,.25);
 box-sizing:border-box;
 }
 
 .measure-form h3{
-font-size:20px;
-margin:0 0 20px;
+font-size:25px;
+line-height:1.2;
+margin:0 0 22px;
+text-align:left;
+font-weight:800;
 color:#162a3d;
 }
 
 .measure-form input{
 width:100%;
-height:48px;
-padding:0 14px;
-margin-bottom:12px;
+height:52px;
+padding:0 16px;
+margin-bottom:14px;
 border:1px solid #dce5ef;
-border-radius:10px;
+border-radius:12px;
 box-sizing:border-box;
-font-size:15px;
+font-size:16px;
+color:#162a3d;
 outline:none;
 background:#fff;
 }
@@ -512,15 +523,16 @@ box-shadow:0 0 0 3px rgba(22,119,255,.1);
 
 .measure-form button{
 width:100%;
-height:50px;
-padding:0 15px;
+height:52px;
+padding:0 18px;
 border:none;
-border-radius:10px;
+border-radius:12px;
 background:#1677ff;
 color:#fff;
-font-size:15px;
+font-size:16px;
 font-weight:700;
 cursor:pointer;
+transition:.2s;
 }
 
 .measure-form button:hover{
@@ -528,13 +540,15 @@ background:#0d66df;
 }
 
 .delivery-text{
-padding:30px;
+padding:20px;
 box-sizing:border-box;
 }
 
 .delivery-text h2{
 font-size:42px;
+line-height:1.15;
 margin:0 0 25px;
+font-weight:800;
 color:#162a3d;
 }
 
@@ -543,6 +557,36 @@ font-size:18px;
 line-height:1.8;
 margin:0 0 20px;
 color:#162a3d;
+}
+
+.about-section{
+background:#fff;
+padding:50px 0;
+}
+
+.about-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+align-items:center;
+}
+
+.about-grid h2{
+font-size:42px;
+margin:0 0 25px;
+}
+
+.about-grid p{
+font-size:18px;
+line-height:1.8;
+}
+
+.about-img{
+width:100%;
+height:600px;
+object-fit:cover;
+border-radius:30px;
+display:block;
 }
 
 .advantages{
@@ -572,93 +616,125 @@ box-shadow:0 2px 8px rgba(0,0,0,.05);
 }
 
 @media(max-width:1200px){
+
 .hero-left{
 padding:45px;
 }
+
 .hero-left h1{
 font-size:48px;
 }
+
 .hero-right{
 margin-right:25px;
 }
+
 .hero-calculator{
 width:430px;
 height:570px;
 padding:28px;
 }
+
 .delivery-box{
 gap:30px;
 }
+
 .measure-form{
-left:25px;
-right:25px;
-bottom:25px;
+width:430px;
 }
+
 }
 
 @media(max-width:992px){
+
 .hero{
 grid-template-columns:1fr;
 min-height:auto;
 }
+
 .hero-left{
 padding:60px 40px;
 }
+
 .hero-left h1{
 font-size:48px;
 }
+
 .hero-right{
 height:650px;
 margin:0 30px 50px;
 }
+
 #calculator{
 padding:20px;
 }
+
 .hero-calculator{
 width:450px;
 height:600px;
 max-width:100%;
 }
+
 .delivery-box{
 grid-template-columns:1fr;
 gap:30px;
 }
+
 .delivery-photo{
 height:600px;
 }
+
 .delivery-text{
 padding:20px 0;
 }
+
+.about-grid{
+grid-template-columns:1fr;
+}
+
+.about-img{
+height:500px;
+}
+
 .steps-grid{
 grid-template-columns:repeat(2,1fr);
 }
+
 .advantages-grid{
 grid-template-columns:repeat(2,1fr);
 }
+
 }
 
 @media(max-width:600px){
+
 .hero{
 grid-template-columns:1fr;
 }
+
 .hero-left{
 padding:40px 20px;
 }
+
 .hero-left h1{
 font-size:36px;
 line-height:1.08;
 }
+
 .hero-list li{
 font-size:17px;
 }
+
 .hero-right{
 height:650px;
 margin:0 15px 35px;
 border-radius:22px;
 }
+
 #calculator{
 padding:12px;
 }
+
 .hero-calculator{
 width:100%;
 height:625px;
@@ -666,80 +742,137 @@ max-width:100%;
 padding:20px;
 border-radius:20px;
 }
+
 .hero-calculator h1{
 font-size:26px;
 }
+
 .hero-calculator h2{
 font-size:23px;
 }
+
 .hero-calculator h3{
 font-size:20px;
 }
+
 .screen-title{
 font-size:23px;
 }
+
 .card-subtitle{
 font-size:14px;
 }
+
 .select-card{
 padding:14px;
 }
+
 .card-info h3{
 font-size:17px;
 }
+
 .card-info p{
 font-size:12px;
 }
+
 .choice-grid{
 grid-template-columns:1fr;
 }
+
 .calc-buttons{
 flex-direction:column;
 }
+
 .steps-section{
 padding:60px 20px;
 }
+
 .steps-section h2{
 font-size:32px;
 }
+
 .steps-grid{
 grid-template-columns:1fr;
 }
+
 .delivery-section{
-padding:60px 20px;
+padding:50px 20px;
 }
+
 .delivery-box{
 grid-template-columns:1fr;
+gap:30px;
 }
+
 .delivery-photo{
-height:600px;
+height:430px;
 border-radius:22px;
 }
+
 .measure-form{
-left:15px;
-right:15px;
-bottom:15px;
-padding:22px;
+width:calc(100% - 30px);
+max-width:none;
+padding:20px;
+border-radius:20px;
 }
+
 .measure-form h3{
-font-size:18px;
+font-size:20px;
+margin-bottom:18px;
 }
+
+.measure-form input{
+height:48px;
+}
+
+.measure-form button{
+height:48px;
+font-size:14px;
+}
+
 .delivery-text{
-padding:10px 0;
+padding:0 5px;
 }
+
 .delivery-text h2{
 font-size:32px;
 }
+
 .delivery-text p{
 font-size:17px;
 }
+
+.about-section{
+padding:50px 20px;
+}
+
+.about-grid{
+gap:30px;
+}
+
+.about-grid h2{
+font-size:32px;
+}
+
+.about-grid p{
+font-size:17px;
+}
+
+.about-img{
+height:400px;
+}
+
 .advantages{
 padding:60px 20px;
 }
+
 .advantages h2{
 font-size:32px;
 }
+
 .advantages-grid{
 grid-template-columns:1fr;
 }
+
 }
+```
