@@ -844,4 +844,189 @@ font-size:32px;
 .advantages-grid{
 grid-template-columns:1fr;
 }
+  /* =====================================================
+   ОБНОВИТЬ ИЛИ ИЗГОТОВИТЬ НОВУЮ КУХНЮ
+===================================================== */
+
+.choice-section{
+    background:#fff;
+    padding:80px 0;
+}
+
+.choice-header{
+    text-align:center;
+    max-width:850px;
+    margin:0 auto 45px;
+}
+
+.choice-header h2{
+    margin:0 0 15px;
+    font-size:42px;
+    line-height:1.15;
+    color:#162a3d;
+}
+
+.choice-header p{
+    margin:0;
+    font-size:18px;
+    line-height:1.6;
+    color:#718195;
+}
+
+.choice-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+    max-width:1100px;
+    margin:0 auto;
+}
+
+.choice-card{
+    background:#f4f8fc;
+    border-radius:24px;
+    overflow:hidden;
+    min-width:0;
+}
+
+.choice-image{
+    width:100%;
+    height:300px;
+    overflow:hidden;
+}
+
+.choice-image img{
+    width:100%;
+    height:100%;
+    display:block;
+    object-fit:cover;
+    object-position:center;
+}
+
+.choice-content{
+    padding:32px;
+}
+
+.choice-label{
+    display:inline-block;
+    margin-bottom:12px;
+    font-size:13px;
+    font-weight:800;
+    letter-spacing:.5px;
+    color:#1677ff;
+}
+
+.choice-content h3{
+    margin:0 0 15px;
+    font-size:28px;
+    line-height:1.2;
+    color:#162a3d;
+}
+
+.choice-content p{
+    margin:0 0 20px;
+    font-size:16px;
+    line-height:1.65;
+    color:#162a3d;
+}
+
+.choice-content ul{
+    margin:0 0 25px;
+    padding-left:20px;
+}
+
+.choice-content li{
+    margin-bottom:9px;
+    font-size:15px;
+    line-height:1.4;
+    color:#162a3d;
+}
+
+.choice-button{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-height:48px;
+    padding:0 22px;
+    background:#1677ff;
+    color:#fff;
+    text-decoration:none;
+    border-radius:10px;
+    font-size:14px;
+    font-weight:700;
+    box-sizing:border-box;
+    transition:.2s;
+}
+
+.choice-button:hover{
+    background:#0d66df;
+}
+
+
+/* =====================================================
+   АДАПТИВ
+===================================================== */
+
+@media(max-width:992px){
+
+    .choice-section{
+        padding:65px 30px;
+    }
+
+    .choice-grid{
+        grid-template-columns:1fr;
+        max-width:650px;
+    }
+
+    .choice-header h2{
+        font-size:36px;
+    }
+
+    .choice-image{
+        height:320px;
+    }
+}
+
+
+@media(max-width:600px){
+
+    .choice-section{
+        padding:55px 20px;
+    }
+
+    .choice-header{
+        margin-bottom:30px;
+    }
+
+    .choice-header h2{
+        font-size:30px;
+    }
+
+    .choice-header p{
+        font-size:16px;
+    }
+
+    .choice-card{
+        border-radius:20px;
+    }
+
+    .choice-image{
+        height:250px;
+    }
+
+    .choice-content{
+        padding:24px;
+    }
+
+    .choice-content h3{
+        font-size:24px;
+    }
+
+    .choice-content p{
+        font-size:15px;
+    }
+
+    .choice-button{
+        width:100%;
+    }
+}
 }
