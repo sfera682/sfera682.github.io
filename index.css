@@ -591,17 +591,22 @@ color:#162a3d;
 }
 
 .advantage-icon{
-    flex:0 0 48px;
-    width:48px;
-    height:48px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:12px;
-    background:#eef5ff;
-    color:#1677ff;
-    font-size:25px;
-    font-weight:700;
+flex:0 0 48px;
+width:48px;
+height:48px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:12px;
+background:#eef5ff;
+overflow:hidden;
+}
+
+.advantage-icon img{
+width:30px;
+height:30px;
+display:block;
+object-fit:contain;
 }
 
 .advantage-content{
@@ -635,17 +640,21 @@ color:#162a3d;
 }
 
 .advantages-cta-icon{
-    flex:0 0 52px;
-    width:52px;
-    height:52px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:14px;
-    background:#eef5ff;
-    color:#1677ff;
-    font-size:27px;
-    font-weight:700;
+flex:0 0 52px;
+width:52px;
+height:52px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:14px;
+background:#eef5ff;
+overflow:hidden;
+}
+.advantages-cta-icon img{
+width:30px;
+height:30px;
+display:block;
+object-fit:contain;
 }
 
 .advantages-cta-text{
@@ -811,7 +820,7 @@ font-size:18px;
 line-height:1.6;
 color:#718195;
 }
-.choice-grid{
+.choice-section .choice-grid{
 display:grid;
 grid-template-columns:1fr 1fr;
 gap:30px;
@@ -965,7 +974,7 @@ grid-template-columns:repeat(2,1fr);
 .choice-section{
 padding:65px 30px;
 }
-.choice-grid{
+.choice-section .choice-grid{
 grid-template-columns:1fr;
 max-width:650px;
 }
@@ -979,7 +988,8 @@ height:320px;
 flex-wrap:wrap;
 }
 .advantages-cta-button{
-margin-left:80px;
+width:100%;
+margin-left:0;
 }
 }
 @media(max-width:600px){
@@ -1035,7 +1045,7 @@ font-size:17px;
 .card-info p{
 font-size:12px;
 }
-.choice-grid{
+.choice-section .choice-grid{
 grid-template-columns:1fr;
 }
 .calc-buttons{
